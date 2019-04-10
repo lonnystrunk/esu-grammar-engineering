@@ -1,0 +1,518 @@
+;;; -*- Mode: TDL; Coding: utf-8 -*-
+;;; Nouns
+
+qa_1 := noun1-noun-lex &
+  [ STEM < "qa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_abs.1sg.sg-or-abs.1sg.sg._n_rel" ].
+
+ka_1 := noun1-noun-lex &
+  [ STEM < "ka" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_abs.1sg.sg_n_rel" ].
+
+lria := noun1-noun-lex &
+  [ STEM < "lria" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_vnrl.abs.sg_n_rel" ].
+
+nguq_1 := noun1-noun-lex &
+  [ STEM < "nguq" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_vnrl.abs.sg_n_rel" ].
+
+n := noun1-noun-lex &
+  [ STEM < "n" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_abs.2sg.sg.-or-abs.2sg.sg_n_rel" ].
+
+a_1 := noun1-noun-lex &
+  [ STEM < "a" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_abs.3sg.sg_n_rel" ].
+
+nga := noun1-noun-lex &
+  [ STEM < "nga" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_abs.sg_n_rel" ].
+
+na_1 := noun1-noun-lex &
+  [ STEM < "na" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ex.abs.sg.-or-ex.abs.sg-or-abs.sg_n_rel" ].
+
+i_1 := noun3-noun-lex &
+  [ STEM < "i" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_abs.3sg.pl.-or-abs.3sg.pl_n_rel" ].
+
+vut := noun3-noun-lex &
+  [ STEM < "vut" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_abs.1pl.sg_n_rel" ].
+
+aa_1 := noun4-noun-lex &
+  [ STEM < "aa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ind.3sg.3sg_n_rel" ].
+
+tuq_1 := noun4-noun-lex &
+  [ STEM < "tuq" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ind.3sg_n_rel" ].
+
+anga_1 := noun4-noun-lex &
+  [ STEM < "anga" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ind.3sg.1sg_n_rel" ].
+
+m_1 := noun4-noun-lex &
+  [ STEM < "m" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_rel.sg_n_rel" ].
+
+gu_1 := noun4-noun-lex &
+  [ STEM < "gu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_opt.2sg.3sg_n_rel" ].
+
+aqa_1 := noun4-noun-lex &
+  [ STEM < "aqa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ind.1sg.3sg_n_rel" ].
+
+tuten := noun4-noun-lex &
+  [ STEM < "tuten" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ind.2sg_n_rel" ].
+
+guq := noun4-noun-lex &
+  [ STEM < "guq" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ind.3sg_n_rel" ].
+
+an := noun4-noun-lex &
+  [ STEM < "an" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_rel.3sg.sg_n_rel" ].
+
+pailegma := noun4-noun-lex &
+  [ STEM < "pailegma" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_cnnbf.1sg_n_rel" ].
+
+luku_1 := noun4-noun-lex &
+  [ STEM < "luku" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_app.3sg_n_rel" ].
+
+mini := noun4-noun-lex &
+  [ STEM < "mini" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_3rsg.1sg_n_rel" ].
+
+aanga_1 := noun4-noun-lex &
+  [ STEM < "aanga" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ind.3sg.1sg_n_rel" ].
+
+mnun := noun4-noun-lex &
+  [ STEM < "mnun" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_all.1sg.sg_n_rel" ].
+
+ga := noun4-noun-lex &
+  [ STEM < "ga" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_int.3sg_n_rel" ].
+
+a_2 := noun4-noun-lex &
+  [ STEM < "a" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ind.3sg.3sg_n_rel" ].
+
+uten := noun4-noun-lex &
+  [ STEM < "uten" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_int.2sg_n_rel" ].
+
+ma := noun4-noun-lex &
+  [ STEM < "ma" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_rel.1sg.sg_n_rel" ].
+
+unga_1 := noun4-noun-lex &
+  [ STEM < "unga" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ind.1sg_n_rel" ].
+
+cit_1 := noun4-noun-lex &
+  [ STEM < "cit" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_int.2sg._n_rel" ].
+
+uq_1 := noun4-noun-lex &
+  [ STEM < "uq" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ind.3sg-or-ind.3sg._n_rel" ].
+
+mek_1 := noun4-noun-lex &
+  [ STEM < "mek" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_abm.sg_n_rel" ].
+
+ut := noun5-noun-lex &
+  [ STEM < "ut" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ind.3pl_n_rel" ].
+
+luki_1 := noun5-noun-lex &
+  [ STEM < "luki" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_app.3pl_n_rel" ].
+
+luci := noun5-noun-lex &
+  [ STEM < "luci" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_app.2pl_n_rel" ].
+
+nek_1 := noun5-noun-lex &
+  [ STEM < "nek" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_abm.pl_n_rel" ].
+
+m_2 := noun5-noun-lex &
+  [ STEM < "m" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_rel.pl_n_rel" ].
+
+t_1 := noun5-noun-lex &
+  [ STEM < "t" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_rel.pl_n_rel" ].
+
+arnaq := noun6-noun-lex &
+  [ STEM < "arnaq" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_woman.abs.sg-or-woman.abs.sg._n_rel" ].
+
+angyaq := noun6-noun-lex &
+  [ STEM < "angyaq" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_boat.abs.sg.-or-boat.abs.sg_n_rel" ].
+
+qayaq := noun6-noun-lex &
+  [ STEM < "qayaq" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kayak.abs.sg_n_rel" ].
+
+taqukaq := noun6-noun-lex &
+  [ STEM < "taqukaq" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_bear.abs.sg_n_rel" ].
+
+tumyaraq := noun6-noun-lex &
+  [ STEM < "tumyaraq" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_trail.abs.sg_n_rel" ].
+
+wii := noun6-noun-lex &
+  [ STEM < "wii" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_1sg_n_rel" ].
+
+maybaq := noun6-noun-lex &
+  [ STEM < "maybaq" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_p.n.abs.sg_n_rel" ].
+
+emeq := noun6-noun-lex &
+  [ STEM < "emeq" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_water.abs.sg_n_rel" ].
+
+nunaka := noun6-noun-lex &
+  [ STEM < "nunaka" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_land-_n_rel" ].
+
+peksuq := noun6-noun-lex &
+  [ STEM < "peksuq" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_egg.abs.sg_n_rel" ].
+
+yuk := noun6-noun-lex &
+  [ STEM < "yuk" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_person.abs.sg_n_rel" ].
+
+unuk := noun6-noun-lex &
+  [ STEM < "unuk" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_night.abs.sg_n_rel" ].
+
+unuaqu := noun6-noun-lex &
+  [ STEM < "unuaqu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_tomorrow_n_rel" ].
+
+ellii := noun6-noun-lex &
+  [ STEM < "ellii" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_3sg.abs_n_rel" ].
+
+saayuq := noun6-noun-lex &
+  [ STEM < "saayuq" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_tea.abs.sg_n_rel" ].
+
+angun := noun6-noun-lex &
+  [ STEM < "angun" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_man.abs.sg-or-man--or-man.abs.pl_n_rel" ].
+
+ciissiq := noun6-noun-lex &
+  [ STEM < "ciissiq" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_bug.abs.sg_n_rel" ].
+
+kuuvviaq := noun6-noun-lex &
+  [ STEM < "kuuvviaq" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_coffee.abs.sg_n_rel" ].
+
+wangkuta := noun6-noun-lex &
+  [ STEM < "wangkuta" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_1pl._n_rel" ].
+
+teng := noun8-noun-lex &
+  [ STEM < "teng" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_abs.3rpl.pl_n_rel" ].
+
+ngit := noun8-noun-lex &
+  [ STEM < "ngit" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_abs.3pl.pl._n_rel" ].
+
+ngits := noun8-noun-lex &
+  [ STEM < "ngits" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_abs.3pl.pl._n_rel" ].
+
+t_2 := noun8-noun-lex &
+  [ STEM < "t" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_abs.pl_n_rel" ].
+
+mi_1 := noun9-noun-lex &
+  [ STEM < "mi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_loc.sg_n_rel" ].
+
+mni := noun9-noun-lex &
+  [ STEM < "mni" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_loc.1sg.sg_n_rel" ].
+
+k := noun11-noun-lex &
+  [ STEM < "k" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_abs.du_n_rel" ].
+
+aqami := noun21-noun-lex &
+  [ STEM < "aqami" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_cnnwn.3rsg_n_rel" ].
+
+luteng := noun21-noun-lex &
+  [ STEM < "luteng" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_app.3rpl_n_rel" ].
+
+vaa := noun21-noun-lex &
+  [ STEM < "vaa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_exc_n_rel" ].
+
+ni_1 := noun28-noun-lex &
+  [ STEM < "ni" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_loc.pl_n_rel" ].
+
+aat := noun29-noun-lex &
+  [ STEM < "aat" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ind.3pl.3sg_n_rel" ].
+
+aatnga := noun29-noun-lex &
+  [ STEM < "aatnga" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ind.3pl.1sg_n_rel" ].
+
+mi_2 := noun31-noun-lex &
+  [ STEM < "mi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_loc_n_rel" ].
+
+ni_2 := noun31-noun-lex &
+  [ STEM < "ni" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_loc_n_rel" ].
+
+cuar := noun39-noun-lex &
+  [ STEM < "cuar" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_small.abs.sg_n_rel" ].
+
+kuciq := noun51-noun-lex &
+  [ STEM < "kuciq" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kind.abs.sg_n_rel" ].
+
+lek := noun58-noun-lex &
+  [ STEM < "lek" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_having.abs.sg_n_rel" ].
+
+inraq := noun63-noun-lex &
+  [ STEM < "inraq" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_product.abs.sg_n_rel" ].
+
+;;; Adjectives
+
+;;; Verbs
+
+tut := verb1-verb-lex &
+  [ STEM < "tut" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ind.3pl_v_rel" ].
+
+ait := verb1-verb-lex &
+  [ STEM < "ait" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ind.3pl.3pl_v_rel" ].
+
+it_1 := verb1-verb-lex &
+  [ STEM < "it" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ind.3pl.3pl_v_rel" ].
+
+luki_2 := verb2-verb-lex &
+  [ STEM < "luki" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_app.3pl_v_rel" ].
+
+tuq_2 := verb3-verb-lex &
+  [ STEM < "tuq" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_hope_v_rel" ].
+
+neri := verb3-verb-lex &
+  [ STEM < "neri" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_eat-_v_rel" ].
+
+a_3 := verb3-verb-lex &
+  [ STEM < "a" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_opt.2sg_v_rel" ].
+
+i_2 := verb3-verb-lex &
+  [ STEM < "i" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_opt.2sg-or-opt.2sg._v_rel" ].
+
+kiq := verb3-verb-lex &
+  [ STEM < "kiq" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_i.wonder_v_rel" ].
+
+na_2 := verb3-verb-lex &
+  [ STEM < "na" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_opt.2sg_v_rel" ].
+
+am := verb3-verb-lex &
+  [ STEM < "am" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_hurry-or-hurry.up_v_rel" ].
+
+gu_2 := verb4-verb-lex &
+  [ STEM < "gu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_opt.2sg.3sg_v_rel" ].
+
+anga_2 := verb6-verb-lex &
+  [ STEM < "anga" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ind.3sg.1sg_v_rel" ].
+
+aanga_2 := verb6-verb-lex &
+  [ STEM < "aanga" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ind.3sg.1sg_v_rel" ].
+
+aqa_2 := verb6-verb-lex &
+  [ STEM < "aqa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ind.1sg.3sg_v_rel" ].
+
+siu := verb7-verb-lex &
+  [ STEM < "siu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_2sg.3sg_v_rel" ].
+
+ai := verb10-verb-lex &
+  [ STEM < "ai" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ind.3sg.3pl_v_rel" ].
+
+lleq := verb11-verb-lex &
+  [ STEM < "lleq" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_vnrl.abs.sg_v_rel" ].
+
+neq := verb11-verb-lex &
+  [ STEM < "neq" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_vnnm.abs.sg_v_rel" ].
+
+mek_2 := verb11-verb-lex &
+  [ STEM < "mek" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_abm.sg_v_rel" ].
+
+nguq_2 := verb13-verb-lex &
+  [ STEM < "nguq" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ptp.3sg._v_rel" ].
+
+anek := verb13-verb-lex &
+  [ STEM < "anek" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_abm.3sg.sg_v_rel" ].
+
+llria := verb13-verb-lex &
+  [ STEM < "llria" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ptp.3sg-or-ptp.3sg._v_rel" ].
+
+a_4 := verb13-verb-lex &
+  [ STEM < "a" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_int.3sg-or-abs.3sg.sg_v_rel" ].
+
+nek_2 := verb13-verb-lex &
+  [ STEM < "nek" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_abm.3sg.sg_v_rel" ].
+
+luku_2 := verb13-verb-lex &
+  [ STEM < "luku" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_app.3sg_v_rel" ].
+
+kek := verb16-verb-lex &
+  [ STEM < "kek" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_1sg.3du._v_rel" ].
+
+ka_2 := verb16-verb-lex &
+  [ STEM < "ka" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_abs.1sg.sg_v_rel" ].
+
+lua := verb16-verb-lex &
+  [ STEM < "lua" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_app.1sg_v_rel" ].
+
+qa_2 := verb17-verb-lex &
+  [ STEM < "qa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_abs.1sg.sg_v_rel" ].
+
+nata := verb18-verb-lex &
+  [ STEM < "nata" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_app.1pl_v_rel" ].
+
+luta := verb18-verb-lex &
+  [ STEM < "luta" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_app.1pl_v_rel" ].
+
+ua_1 := verb22-verb-lex &
+  [ STEM < "ua" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ind.1sg-or-ind.1sg._v_rel" ].
+
+unga_2 := verb22-verb-lex &
+  [ STEM < "unga" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ind.1sg_v_rel" ].
+
+sia_1 := verb23-verb-lex &
+  [ STEM < "sia" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_int.1sg.3sg_v_rel" ].
+
+sia_2 := verb24-verb-lex &
+  [ STEM < "sia" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_int.1sg.3sg_v_rel" ].
+
+cit_2 := verb29-verb-lex &
+  [ STEM < "cit" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_int.2sg_v_rel" ].
+
+kenka_1 := verb32-verb-lex &
+  [ STEM < "kenka" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ptp.1sg.3pl_v_rel" ].
+
+kenka_2 := verb33-verb-lex &
+  [ STEM < "kenka" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ptp.1sg.3pl_v_rel" ].
+
+ku := verb36-verb-lex &
+  [ STEM < "ku" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_fut_v_rel" ].
+
+aa_2 := verb39-verb-lex &
+  [ STEM < "aa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ind.3sg.3sg_v_rel" ].
+
+tuq_3 := verb39-verb-lex &
+  [ STEM < "tuq" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ind.3sg_v_rel" ].
+
+uq_2 := verb39-verb-lex &
+  [ STEM < "uq" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ind.3sg.-or-ind.3sg_v_rel" ].
+
+a_5 := verb39-verb-lex &
+  [ STEM < "a" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ind.3sg.3sg_v_rel" ].
+
+luku_3 := verb43-verb-lex &
+  [ STEM < "luku" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_app.3sg_v_rel" ].
+
+nguq_3 := verb43-verb-lex &
+  [ STEM < "nguq" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ptp.3sg._v_rel" ].
+
+luni := verb44-verb-lex &
+  [ STEM < "luni" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_app.3rsg_v_rel" ].
+
+ua_2 := verb46-verb-lex &
+  [ STEM < "ua" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ind.1sg._v_rel" ].
+
+ci%21%21%21DO-NOT-USE%21%21%21 := verb48-verb-lex &
+  [ STEM < "ci!!!DO-NOT-USE!!!" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_opt.2pl_v_rel" ].
+
+li := verb49-verb-lex &
+  [ STEM < "li" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_opt.3sg._v_rel" ].
+
+anka := verb52-verb-lex &
+  [ STEM < "anka" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ind.1sg.3pl_v_rel" ].
+
+it_2 := verb56-verb-lex &
+  [ STEM < "it" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_3pl.3sg_v_rel" ].

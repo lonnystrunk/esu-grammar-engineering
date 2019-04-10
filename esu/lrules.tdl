@@ -1,0 +1,66 @@
+;;; -*- Mode: TDL; Coding: utf-8 -*-
+noun-pc1_lrt1-lex := noun-pc1_lrt1-lex-rule.
+
+noun-pc3_lrt1-lex := noun-pc3_lrt1-lex-rule.
+
+noun-pc4_lrt1-lex := noun-pc4_lrt1-lex-rule.
+
+noun-pc6_lrt1-lex := noun-pc6_lrt1-lex-rule.
+
+noun-pc10_lrt1-lex := noun-pc10_lrt1-lex-rule.
+
+noun-pc11_lrt1-lex := noun-pc11_lrt1-lex-rule.
+
+noun-pc15_lrt1-lex := noun-pc15_lrt1-lex-rule.
+
+noun-pc31_lrt1-lex := noun-pc31_lrt1-lex-rule.
+
+noun-pc48_lrt1-lex := noun-pc48_lrt1-lex-rule.
+
+noun-pc49_lrt1-lex := noun-pc49_lrt1-lex-rule.
+
+noun-pc51_lrt1-lex := noun-pc51_lrt1-lex-rule.
+
+verb-pc1_lrt1-lex := verb-pc1_lrt1-lex-rule.
+
+verb-pc4_lrt1-lex := verb-pc4_lrt1-lex-rule.
+
+verb-pc5_lrt1-lex := verb-pc5_lrt1-lex-rule.
+
+verb-pc8_lrt1-lex := verb-pc8_lrt1-lex-rule.
+
+verb-pc11_lrt1-lex := verb-pc11_lrt1-lex-rule.
+
+verb-pc12_lrt1-lex := verb-pc12_lrt1-lex-rule.
+
+verb-pc14_lrt1-lex := verb-pc14_lrt1-lex-rule.
+
+verb-pc16_lrt1-lex := verb-pc16_lrt1-lex-rule.
+
+verb-pc17_lrt1-lex := verb-pc17_lrt1-lex-rule.
+
+verb-pc21_lrt1-lex := verb-pc21_lrt1-lex-rule.
+
+verb-pc31_lrt1-lex := verb-pc31_lrt1-lex-rule.
+
+verb-pc37_lrt1-lex := verb-pc37_lrt1-lex-rule.
+
+verb-pc46_lrt1-lex := verb-pc46_lrt1-lex-rule.
+
+verb-pc47_lrt1-lex := verb-pc47_lrt1-lex-rule.
+
+verb-pc51_lrt1-lex := verb-pc51_lrt1-lex-rule.
+
+verb-pc73_lrt1-lex := verb-pc73_lrt1-lex-rule.
+
+verb-pc79_lrt1-lex := verb-pc79_lrt1-lex-rule.
+
+verb-pc90_lrt1-lex := verb-pc90_lrt1-lex-rule.
+
+verb-pc91_lrt1-lex := verb-pc91_lrt1-lex-rule.
+
+verb-pc93_lrt1-lex := verb-pc93_lrt1-lex-rule.
+
+verb-pc94_lrt1-lex := verb-pc94_lrt1-lex-rule.
+
+verb-pc101_lrt1-lex := verb-pc101_lrt1-lex-rule.
