@@ -2,7 +2,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Grammar of Central Alaskan Yup'ik
 ;;; created at:
-;;;     Wed Apr 10 01:11:27 UTC 2019
+;;;     Thu Apr 11 00:21:31 UTC 2019
 ;;; based on Matrix customization system version of:
 ;;;     Tue Nov 13 21:13:22 UTC 2018
 ;;;
@@ -18,12 +18,27 @@ non-mod-lex-item := lex-item &
 ;;; Matrix Type Addenda
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 
-head :+ [ PRON bool ].
+head :+ [ PRON bool,
+    POSSESSOR poss ].
 
 noun :+ [ CASE case ].
 
 png :+ [ PER person,
     NUM number ].
+
+cat :+ [ POSSESSUM poss ].
+
+poss := *top* &
+  [ POSS-AGR png ].
+
+basic-bare-np-phrase :+ [ SYNSEM.LOCAL.CAT [ VAL.SPEC < >,
+                       HEAD #head,
+                       POSSESSUM #possessum ],
+    HEAD-DTR.SYNSEM.LOCAL.CAT [ HEAD #head,
+                                POSSESSUM #possessum & nonpossessive ] ].
+
+basic-head-1st-comp-phrase :+ [ SYNSEM.LOCAL.CAT.POSSESSUM #poss,
+    HEAD-DTR.SYNSEM.LOCAL.CAT.POSSESSUM #poss ].
 
 basic-head-comp-phrase :+ [ SYNSEM.LOCAL.CAT.MC #mc,
     HEAD-DTR.SYNSEM.LOCAL.CAT.MC #mc ].
@@ -66,9 +81,10 @@ head-mod-phrase :+ [ SYNSEM.ATTACH #attach,
 ;;; Case
 
 case := *top*.
-rel := case.  ; rel
-abs := case.  ; abs
-loc := case.  ; loc
+real-case := case.  ; intermediate case type for all real cases
+erg := real-case.  ; erg
+abs := real-case.  ; abs
+loc := real-case.  ; loc
 
 ;;; Person
 
@@ -83,6 +99,17 @@ number := *top*.
 pl := number.
 sg := number.
 du := number.
+
+;;; Possession
+
+possession := *top*.
+possessive := poss.  ; supertype for possessive features
+nonpossessive := poss.  ; type for nonpossessive
+possessor := possessive.
+possessum := possessive.
+possessive-1 := possessive.  ; supertype for strategy 1
+possessor-1 := possessor & possessive-1.
+possessum-1 := possessum & possessive-1.
 
 ;;; Tense
 
@@ -102,12 +129,14 @@ opt := mood.
 
 noun-lex := basic-noun-lex & basic-one-arg & no-hcons-lex-item & non-mod-lex-item &
   [ ARG-ST < #spr >,
-    SYNSEM.LOCAL.CAT.VAL [ COMPS < >,
-                           SUBJ < >,
-                           SPEC < >,
-                           SPR < #spr &
-                                 [ LOCAL.CAT.HEAD det,
-                                   OPT + ] > ] ].
+    SYNSEM.LOCAL.CAT [ VAL [ COMPS < >,
+                             SUBJ < >,
+                             SPEC < >,
+                             SPR < #spr &
+                                   [ LOCAL.CAT.HEAD det,
+                                     OPT + ] > ],
+                       HEAD.POSSESSOR nonpossessive,
+                       POSSESSUM nonpossessive ] ].
 
 noun1-noun-lex := noun-lex & noun-pc1-rule-dtr & noun-pc12-rule-dtr & noun-pc13-rule-dtr & noun-pc14-rule-dtr & noun-pc17-rule-dtr & noun-pc18-rule-dtr & noun-pc2-rule-dtr & noun-pc20-rule-dtr & noun-pc21-rule-dtr & noun-pc22-or-noun-pc82-rule-dtr & noun-pc28-rule-dtr & noun-pc29-rule-dtr & noun-pc45-rule-dtr & noun-pc46-rule-dtr & noun-pc75-or-noun-pc83-rule-dtr & noun-pc93-rule-dtr.
 
@@ -156,110 +185,113 @@ verb-lex := basic-verb-lex & non-mod-lex-item &
 
 intransitive-verb-lex := verb-lex & intransitive-lex-item &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < >,
-    ARG-ST.FIRST.LOCAL.CAT.HEAD noun ].
+    ARG-ST < [ LOCAL.CAT.HEAD noun &
+                              [ CASE real-case ] ] > ].
 
 transitive-verb-lex := verb-lex & transitive-lex-item &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comps >,
-    ARG-ST < [ LOCAL.CAT.HEAD noun ],
+    ARG-ST < [ LOCAL.CAT.HEAD noun &
+                              [ CASE real-case ] ],
              #comps &
              [ LOCAL.CAT cat-sat &
                          [ VAL [ SPR < >,
                                  COMPS < > ],
-                           HEAD noun ] ] > ].
+                           HEAD noun &
+                                [ CASE real-case ] ] ] > ].
 
 abs-intransitive-verb-lex := intransitive-verb-lex &
   [ ARG-ST.FIRST.LOCAL.CAT.HEAD noun &
                                 [ CASE abs ] ].
 
-rel-abs-transitive-verb-lex := transitive-verb-lex &
+erg-abs-transitive-verb-lex := transitive-verb-lex &
   [ ARG-ST < [ LOCAL.CAT.HEAD noun &
-                              [ CASE rel ] ],
+                              [ CASE erg ] ],
              [ LOCAL.CAT.HEAD noun &
                               [ CASE abs ] ] > ].
 
 verb1-verb-lex := intransitive-verb-lex & verb-pc10-rule-dtr & verb-pc15-rule-dtr & verb-pc18-rule-dtr & verb-pc19-rule-dtr & verb-pc2-rule-dtr & verb-pc23-rule-dtr & verb-pc24-rule-dtr & verb-pc3-rule-dtr & verb-pc39-rule-dtr & verb-pc40-rule-dtr & verb-pc60-rule-dtr & verb-pc65-rule-dtr & verb-pc67-rule-dtr & verb-pc69-rule-dtr & verb-pc7-rule-dtr & verb-pc70-rule-dtr & verb-pc77-rule-dtr & verb-pc78-rule-dtr & verb-pc89-rule-dtr & verb-pc9-rule-dtr &
-  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CAT.HEAD.CASE rel ].
+  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CAT.HEAD.CASE erg ].
 
 verb2-verb-lex := intransitive-verb-lex & verb-pc10-rule-dtr & verb-pc15-rule-dtr & verb-pc18-rule-dtr & verb-pc19-rule-dtr & verb-pc2-rule-dtr & verb-pc23-rule-dtr & verb-pc24-rule-dtr & verb-pc3-rule-dtr & verb-pc60-rule-dtr & verb-pc65-rule-dtr & verb-pc67-rule-dtr & verb-pc69-rule-dtr & verb-pc70-rule-dtr & verb-pc77-rule-dtr & verb-pc78-rule-dtr & verb-pc89-rule-dtr & verb-pc9-rule-dtr &
-  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CAT.HEAD.CASE rel ].
+  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CAT.HEAD.CASE erg ].
 
 verb3-verb-lex := intransitive-verb-lex & verb-pc13-rule-dtr & verb-pc18-rule-dtr & verb-pc19-rule-dtr & verb-pc88-rule-dtr &
-  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CAT.HEAD.CASE rel ].
+  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CAT.HEAD.CASE erg ].
 
 verb4-verb-lex := transitive-verb-lex & verb-pc6-rule-dtr &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.CASE abs ].
 
 verb6-verb-lex := transitive-verb-lex & verb-pc10-rule-dtr & verb-pc45-rule-dtr & verb-pc60-rule-dtr & verb-pc62-rule-dtr & verb-pc63-rule-dtr & verb-pc65-rule-dtr & verb-pc67-rule-dtr & verb-pc69-rule-dtr & verb-pc70-rule-dtr & verb-pc77-rule-dtr & verb-pc9-rule-dtr &
   [ SYNSEM.LOCAL.CAT.VAL [ COMPS.FIRST.LOCAL.CAT.HEAD.CASE abs,
-                           SUBJ.FIRST.LOCAL.CAT.HEAD.CASE rel ] ].
+                           SUBJ.FIRST.LOCAL.CAT.HEAD.CASE erg ] ].
 
 verb7-verb-lex := intransitive-verb-lex & verb-pc10-rule-dtr & verb-pc60-rule-dtr & verb-pc65-rule-dtr & verb-pc67-rule-dtr & verb-pc69-rule-dtr & verb-pc70-rule-dtr & verb-pc77-rule-dtr & verb-pc9-rule-dtr &
-  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CAT.HEAD.CASE rel ].
+  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CAT.HEAD.CASE erg ].
 
 verb10-verb-lex := intransitive-verb-lex & verb-pc15-rule-dtr & verb-pc18-rule-dtr & verb-pc19-rule-dtr & verb-pc39-rule-dtr & verb-pc40-rule-dtr & verb-pc7-rule-dtr & verb-pc77-rule-dtr &
-  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CAT.HEAD.CASE rel ].
+  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CAT.HEAD.CASE erg ].
 
 verb11-verb-lex := intransitive-verb-lex & verb-pc105-rule-dtr & verb-pc18-rule-dtr & verb-pc19-rule-dtr & verb-pc28-rule-dtr &
-  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CAT.HEAD.CASE rel ].
+  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CAT.HEAD.CASE erg ].
 
 verb13-verb-lex := transitive-verb-lex & verb-pc10-rule-dtr & verb-pc103-rule-dtr & verb-pc105-rule-dtr & verb-pc15-rule-dtr & verb-pc18-rule-dtr & verb-pc19-rule-dtr & verb-pc2-rule-dtr & verb-pc21-rule-dtr & verb-pc23-rule-dtr & verb-pc24-rule-dtr & verb-pc3-rule-dtr & verb-pc42-rule-dtr & verb-pc43-rule-dtr & verb-pc60-rule-dtr & verb-pc65-rule-dtr & verb-pc67-rule-dtr & verb-pc69-rule-dtr & verb-pc70-rule-dtr & verb-pc77-rule-dtr & verb-pc78-rule-dtr & verb-pc89-rule-dtr & verb-pc9-rule-dtr &
-  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CAT.HEAD.CASE rel ].
+  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CAT.HEAD.CASE erg ].
 
 verb16-verb-lex := transitive-verb-lex & verb-pc10-rule-dtr & verb-pc15-rule-dtr & verb-pc18-rule-dtr & verb-pc19-rule-dtr & verb-pc2-rule-dtr & verb-pc23-rule-dtr & verb-pc24-rule-dtr & verb-pc3-rule-dtr & verb-pc31-rule-dtr & verb-pc32-rule-dtr & verb-pc33-rule-dtr & verb-pc36-rule-dtr & verb-pc60-rule-dtr & verb-pc65-rule-dtr & verb-pc67-rule-dtr & verb-pc69-rule-dtr & verb-pc70-rule-dtr & verb-pc77-rule-dtr & verb-pc78-rule-dtr & verb-pc89-rule-dtr & verb-pc9-rule-dtr &
   [ SYNSEM.LOCAL.CAT.VAL [ COMPS.FIRST.LOCAL.CAT.HEAD.CASE abs,
-                           SUBJ.FIRST.LOCAL.CAT.HEAD.CASE rel ] ].
+                           SUBJ.FIRST.LOCAL.CAT.HEAD.CASE erg ] ].
 
 verb17-verb-lex := intransitive-verb-lex & verb-pc10-rule-dtr & verb-pc15-rule-dtr & verb-pc18-rule-dtr & verb-pc19-rule-dtr & verb-pc2-rule-dtr & verb-pc23-rule-dtr & verb-pc24-rule-dtr & verb-pc3-rule-dtr & verb-pc31-rule-dtr & verb-pc32-rule-dtr & verb-pc33-rule-dtr & verb-pc36-rule-dtr & verb-pc60-rule-dtr & verb-pc65-rule-dtr & verb-pc67-rule-dtr & verb-pc69-rule-dtr & verb-pc70-rule-dtr & verb-pc77-rule-dtr & verb-pc78-rule-dtr & verb-pc89-rule-dtr & verb-pc9-rule-dtr &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CAT.HEAD.CASE abs ].
 
 verb18-verb-lex := intransitive-verb-lex & verb-pc38-rule-dtr & verb-pc39-rule-dtr & verb-pc40-rule-dtr & verb-pc77-rule-dtr &
-  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CAT.HEAD.CASE rel ].
+  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CAT.HEAD.CASE erg ].
 
 verb22-verb-lex := intransitive-verb-lex & verb-pc10-rule-dtr & verb-pc105-rule-dtr & verb-pc15-rule-dtr & verb-pc18-rule-dtr & verb-pc19-rule-dtr & verb-pc2-rule-dtr & verb-pc20-rule-dtr & verb-pc23-rule-dtr & verb-pc24-rule-dtr & verb-pc26-rule-dtr & verb-pc3-rule-dtr & verb-pc45-rule-dtr & verb-pc46-rule-dtr & verb-pc60-rule-dtr & verb-pc62-rule-dtr & verb-pc63-rule-dtr & verb-pc65-rule-dtr & verb-pc67-rule-dtr & verb-pc69-rule-dtr & verb-pc70-rule-dtr & verb-pc77-rule-dtr & verb-pc78-rule-dtr & verb-pc89-rule-dtr & verb-pc9-rule-dtr &
-  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CAT.HEAD.CASE rel ].
+  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CAT.HEAD.CASE erg ].
 
 verb23-verb-lex := intransitive-verb-lex & verb-pc23-rule-dtr & verb-pc24-rule-dtr & verb-pc47-rule-dtr & verb-pc67-rule-dtr & verb-pc69-rule-dtr & verb-pc70-rule-dtr & verb-pc77-rule-dtr & verb-pc89-rule-dtr &
-  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CAT.HEAD.CASE rel ].
+  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CAT.HEAD.CASE erg ].
 
 verb24-verb-lex := transitive-verb-lex & verb-pc23-rule-dtr & verb-pc24-rule-dtr & verb-pc47-rule-dtr & verb-pc67-rule-dtr & verb-pc69-rule-dtr & verb-pc70-rule-dtr & verb-pc77-rule-dtr & verb-pc89-rule-dtr &
   [ SYNSEM.LOCAL.CAT.VAL [ COMPS.FIRST.LOCAL.CAT.HEAD.CASE abs,
-                           SUBJ.FIRST.LOCAL.CAT.HEAD.CASE rel ] ].
+                           SUBJ.FIRST.LOCAL.CAT.HEAD.CASE erg ] ].
 
 verb29-verb-lex := intransitive-verb-lex & verb-pc18-rule-dtr & verb-pc19-rule-dtr & verb-pc52-rule-dtr & verb-pc53-rule-dtr &
-  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CAT.HEAD.CASE rel ].
+  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CAT.HEAD.CASE erg ].
 
 verb32-verb-lex := intransitive-verb-lex & verb-pc67-rule-dtr & verb-pc73-rule-dtr & verb-pc74-rule-dtr & verb-pc75-rule-dtr & verb-pc76-rule-dtr.
 
 verb33-verb-lex := transitive-verb-lex & verb-pc67-rule-dtr & verb-pc73-rule-dtr & verb-pc74-rule-dtr & verb-pc75-rule-dtr & verb-pc76-rule-dtr &
   [ SYNSEM.LOCAL.CAT.VAL [ COMPS.FIRST.LOCAL.CAT.HEAD.CASE abs,
-                           SUBJ.FIRST.LOCAL.CAT.HEAD.CASE rel ] ].
+                           SUBJ.FIRST.LOCAL.CAT.HEAD.CASE erg ] ].
 
 verb36-verb-lex := transitive-verb-lex & verb-pc80-rule-dtr &
   [ SYNSEM.LOCAL.CAT.VAL [ COMPS.FIRST.LOCAL.CAT.HEAD.CASE abs,
-                           SUBJ.FIRST.LOCAL.CAT.HEAD.CASE rel ] ].
+                           SUBJ.FIRST.LOCAL.CAT.HEAD.CASE erg ] ].
 
 verb39-verb-lex := transitive-verb-lex & verb-pc10-rule-dtr & verb-pc103-rule-dtr & verb-pc105-rule-dtr & verb-pc15-rule-dtr & verb-pc18-rule-dtr & verb-pc19-rule-dtr & verb-pc2-rule-dtr & verb-pc20-rule-dtr & verb-pc23-rule-dtr & verb-pc24-rule-dtr & verb-pc26-rule-dtr & verb-pc3-rule-dtr & verb-pc42-rule-dtr & verb-pc43-rule-dtr & verb-pc60-rule-dtr & verb-pc65-rule-dtr & verb-pc67-rule-dtr & verb-pc69-rule-dtr & verb-pc70-rule-dtr & verb-pc77-rule-dtr & verb-pc78-rule-dtr & verb-pc89-rule-dtr & verb-pc9-rule-dtr &
-  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CAT.HEAD.CASE rel ].
+  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CAT.HEAD.CASE erg ].
 
 verb43-verb-lex := intransitive-verb-lex & verb-pc10-rule-dtr & verb-pc103-rule-dtr & verb-pc105-rule-dtr & verb-pc15-rule-dtr & verb-pc18-rule-dtr & verb-pc19-rule-dtr & verb-pc2-rule-dtr & verb-pc21-rule-dtr & verb-pc23-rule-dtr & verb-pc24-rule-dtr & verb-pc3-rule-dtr & verb-pc42-rule-dtr & verb-pc43-rule-dtr & verb-pc60-rule-dtr & verb-pc65-rule-dtr & verb-pc67-rule-dtr & verb-pc69-rule-dtr & verb-pc70-rule-dtr & verb-pc77-rule-dtr & verb-pc78-rule-dtr & verb-pc89-rule-dtr & verb-pc9-rule-dtr.
 
 verb44-verb-lex := intransitive-verb-lex & verb-pc10-rule-dtr & verb-pc15-rule-dtr & verb-pc18-rule-dtr & verb-pc19-rule-dtr & verb-pc2-rule-dtr & verb-pc23-rule-dtr & verb-pc24-rule-dtr & verb-pc3-rule-dtr & verb-pc60-rule-dtr & verb-pc65-rule-dtr & verb-pc67-rule-dtr & verb-pc69-rule-dtr & verb-pc70-rule-dtr & verb-pc77-rule-dtr & verb-pc78-rule-dtr & verb-pc89-rule-dtr & verb-pc9-rule-dtr &
-  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CAT.HEAD.CASE rel ].
+  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CAT.HEAD.CASE erg ].
 
 verb46-verb-lex := transitive-verb-lex & verb-pc10-rule-dtr & verb-pc105-rule-dtr & verb-pc15-rule-dtr & verb-pc18-rule-dtr & verb-pc19-rule-dtr & verb-pc2-rule-dtr & verb-pc20-rule-dtr & verb-pc23-rule-dtr & verb-pc24-rule-dtr & verb-pc26-rule-dtr & verb-pc3-rule-dtr & verb-pc45-rule-dtr & verb-pc46-rule-dtr & verb-pc60-rule-dtr & verb-pc62-rule-dtr & verb-pc63-rule-dtr & verb-pc65-rule-dtr & verb-pc67-rule-dtr & verb-pc69-rule-dtr & verb-pc70-rule-dtr & verb-pc77-rule-dtr & verb-pc78-rule-dtr & verb-pc89-rule-dtr & verb-pc9-rule-dtr &
   [ SYNSEM.LOCAL.CAT.VAL [ COMPS.FIRST.LOCAL.CAT.HEAD.CASE abs,
-                           SUBJ.FIRST.LOCAL.CAT.HEAD.CASE rel ] ].
+                           SUBJ.FIRST.LOCAL.CAT.HEAD.CASE erg ] ].
 
 verb48-verb-lex := transitive-verb-lex & verb-pc102-rule-dtr & verb-pc89-rule-dtr & verb-pc92-rule-dtr.
 
 verb49-verb-lex := intransitive-verb-lex & verb-pc89-rule-dtr &
-  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CAT.HEAD.CASE rel ].
+  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CAT.HEAD.CASE erg ].
 
 verb52-verb-lex := intransitive-verb-lex & verb-pc10-rule-dtr & verb-pc60-rule-dtr & verb-pc65-rule-dtr & verb-pc67-rule-dtr & verb-pc69-rule-dtr & verb-pc70-rule-dtr & verb-pc77-rule-dtr & verb-pc9-rule-dtr.
 
 verb56-verb-lex := transitive-verb-lex & verb-pc102-rule-dtr & verb-pc89-rule-dtr & verb-pc92-rule-dtr &
   [ SYNSEM.LOCAL.CAT.VAL [ COMPS.FIRST.LOCAL.CAT.HEAD.CASE abs,
-                           SUBJ.FIRST.LOCAL.CAT.HEAD.CASE rel ] ].
+                           SUBJ.FIRST.LOCAL.CAT.HEAD.CASE erg ] ].
 
 ;;; Complementizers
 
@@ -269,14 +301,14 @@ verb56-verb-lex := transitive-verb-lex & verb-pc102-rule-dtr & verb-pc89-rule-dt
 
 ;;; Intermediate rule types
 
-noun-pc79-rule-dtr := word-or-lexrule.
 verb-pc6-rule-dtr := word-or-lexrule.
+noun-pc79-rule-dtr := word-or-lexrule.
 noun-pc14-rule-dtr := word-or-lexrule.
 verb-pc7-rule-dtr := word-or-lexrule.
 noun-pc22-or-noun-pc82-rule-dtr := word-or-lexrule.
 verb-pc92-rule-dtr := word-or-lexrule.
-noun-pc17-rule-dtr := word-or-lexrule.
-verb-pc46-rule-dtr := word-or-lexrule.
+verb-pc52-rule-dtr := word-or-lexrule.
+noun-pc65-rule-dtr := word-or-lexrule.
 noun-pc28-rule-dtr := word-or-lexrule.
 noun-pc37-rule-dtr := word-or-lexrule.
 noun-pc42-rule-dtr := word-or-lexrule.
@@ -293,7 +325,7 @@ noun-pc2-rule-dtr := word-or-lexrule.
 verb-pc36-rule-dtr := word-or-lexrule.
 noun-pc18-rule-dtr := word-or-lexrule.
 verb-pc78-rule-dtr := word-or-lexrule.
-verb-pc33-rule-dtr := word-or-lexrule.
+noun-pc36-rule-dtr := word-or-lexrule.
 verb-pc38-rule-dtr := word-or-lexrule.
 verb-pc20-rule-dtr := word-or-lexrule.
 verb-pc23-rule-dtr := word-or-lexrule.
@@ -301,17 +333,17 @@ noun-pc33-rule-dtr := word-or-lexrule.
 noun-pc8-rule-dtr := word-or-lexrule.
 noun-pc54-rule-dtr := word-or-lexrule.
 noun-pc12-rule-dtr := word-or-lexrule.
-verb-pc60-rule-dtr := word-or-lexrule.
+noun-pc47-rule-dtr := word-or-lexrule.
 noun-pc21-rule-dtr := word-or-lexrule.
 verb-pc19-rule-dtr := word-or-lexrule.
 verb-pc18-rule-dtr := word-or-lexrule.
 noun-pc88-rule-dtr := word-or-lexrule.
 noun-pc13-rule-dtr := word-or-lexrule.
-verb-pc52-rule-dtr := word-or-lexrule.
-noun-pc65-rule-dtr := word-or-lexrule.
+noun-pc17-rule-dtr := word-or-lexrule.
+verb-pc46-rule-dtr := word-or-lexrule.
 verb-pc32-rule-dtr := word-or-lexrule.
 verb-pc47-rule-dtr := word-or-lexrule.
-noun-pc47-rule-dtr := word-or-lexrule.
+verb-pc60-rule-dtr := word-or-lexrule.
 verb-pc105-rule-dtr := word-or-lexrule.
 noun-pc50-rule-dtr := word-or-lexrule.
 verb-pc3-rule-dtr := word-or-lexrule.
@@ -321,17 +353,16 @@ verb-pc15-rule-dtr := word-or-lexrule.
 noun-pc29-rule-dtr := word-or-lexrule.
 noun-pc64-rule-dtr := word-or-lexrule.
 noun-pc34-rule-dtr := word-or-lexrule.
-noun-pc16-rule-dtr := word-or-lexrule.
+verb-pc53-rule-dtr := word-or-lexrule.
 verb-pc102-rule-dtr := word-or-lexrule.
 verb-pc10-rule-dtr := word-or-lexrule.
 verb-pc45-rule-dtr := word-or-lexrule.
-verb-pc62-rule-dtr := word-or-lexrule.
+noun-pc45-rule-dtr := word-or-lexrule.
 verb-pc42-rule-dtr := word-or-lexrule.
 verb-pc73-rule-dtr := word-or-lexrule.
-verb-pc53-rule-dtr := word-or-lexrule.
-verb-pc65-rule-dtr := word-or-lexrule.
+noun-pc16-rule-dtr := word-or-lexrule.
 noun-pc62-rule-dtr := word-or-lexrule.
-verb-pc31-rule-dtr := word-or-lexrule.
+noun-pc107-rule-dtr := word-or-lexrule.
 noun-pc39-rule-dtr := word-or-lexrule.
 verb-pc40-rule-dtr := word-or-lexrule.
 verb-pc89-rule-dtr := word-or-lexrule.
@@ -339,6 +370,7 @@ verb-pc13-rule-dtr := word-or-lexrule.
 verb-pc77-rule-dtr := word-or-lexrule.
 noun-pc80-rule-dtr := word-or-lexrule.
 verb-pc2-rule-dtr := word-or-lexrule.
+verb-pc31-rule-dtr := word-or-lexrule.
 verb-pc75-rule-dtr := word-or-lexrule.
 verb-pc21-rule-dtr := word-or-lexrule.
 verb-pc74-rule-dtr := word-or-lexrule.
@@ -346,13 +378,13 @@ verb-pc76-rule-dtr := word-or-lexrule.
 verb-pc39-rule-dtr := word-or-lexrule.
 verb-pc103-rule-dtr := word-or-lexrule.
 verb-pc70-rule-dtr := word-or-lexrule.
-noun-pc107-rule-dtr := word-or-lexrule.
+verb-pc65-rule-dtr := word-or-lexrule.
 noun-pc5-rule-dtr := word-or-lexrule.
 verb-pc24-rule-dtr := word-or-lexrule.
 noun-pc4-rule-dtr := word-or-lexrule.
 noun-pc6-rule-dtr := word-or-lexrule.
-noun-pc45-rule-dtr := word-or-lexrule.
-noun-pc36-rule-dtr := word-or-lexrule.
+verb-pc62-rule-dtr := word-or-lexrule.
+verb-pc33-rule-dtr := word-or-lexrule.
 noun-pc93-rule-dtr := word-or-lexrule.
 verb-pc63-rule-dtr := word-or-lexrule.
 noun-pc40-rule-dtr := word-or-lexrule.
@@ -381,7 +413,7 @@ noun-pc3-lex-rule-super := add-only-no-ccont-rule & const-lex-rule & noun-pc12-r
 
 noun-pc3_lrt1-lex-rule := noun-pc3-lex-rule-super &
   [ SYNSEM.LOCAL [ CAT.HEAD.CASE abs,
-                   CONT.HOOK.INDEX.PNG.NUM pl & sg ] ].
+                   CONT.HOOK.INDEX.PNG.NUM sg ] ].
 
 noun-pc4-lex-rule-super := add-only-no-ccont-rule & const-lex-rule & noun-pc107-rule-dtr & noun-pc12-rule-dtr & noun-pc13-rule-dtr & noun-pc14-rule-dtr & noun-pc16-rule-dtr & noun-pc17-rule-dtr & noun-pc18-rule-dtr & noun-pc20-rule-dtr & noun-pc21-rule-dtr & noun-pc22-or-noun-pc82-rule-dtr & noun-pc28-rule-dtr & noun-pc29-rule-dtr & noun-pc32-rule-dtr & noun-pc33-rule-dtr & noun-pc34-rule-dtr & noun-pc36-rule-dtr & noun-pc37-rule-dtr & noun-pc39-rule-dtr & noun-pc40-rule-dtr & noun-pc41-rule-dtr & noun-pc42-rule-dtr & noun-pc45-rule-dtr & noun-pc46-rule-dtr & noun-pc47-rule-dtr & noun-pc5-rule-dtr & noun-pc54-rule-dtr & noun-pc62-rule-dtr & noun-pc64-rule-dtr & noun-pc65-rule-dtr & noun-pc66-rule-dtr & noun-pc75-or-noun-pc83-rule-dtr & noun-pc8-rule-dtr & noun-pc93-rule-dtr &
   [ DTR noun-pc4-rule-dtr ].
@@ -557,7 +589,7 @@ noun-pc49-lex-rule-super := add-only-no-ccont-rule & const-lex-rule & noun-pc50-
   [ DTR noun29-noun-lex ].
 
 noun-pc49_lrt1-lex-rule := noun-pc49-lex-rule-super &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM pl & sg ].
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM sg ].
 
 noun-pc50-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
   [ DTR noun-pc50-rule-dtr ].
@@ -683,8 +715,10 @@ verb-pc5-lex-rule-super := add-only-no-ccont-rule & const-lex-rule & verb-pc6-ru
 
 verb-pc5_lrt1-lex-rule := verb-pc5-lex-rule-super &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.MOOD opt,
-                   CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM sg,
-                                                                  PER 2nd & 3rd ] ] ].
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 2nd,
+                                                                    NUM sg ],
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 3rd,
+                                                                     NUM sg ] ] ] ].
 
 verb-pc6-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
   [ DTR verb-pc6-rule-dtr ].
@@ -701,8 +735,10 @@ verb-pc8-lex-rule-super := add-only-no-ccont-rule & const-lex-rule & verb-pc10-r
 
 verb-pc8_lrt1-lex-rule := verb-pc8-lex-rule-super &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.MOOD ind,
-                   CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM sg,
-                                                                  PER 3rd & 1st ] ] ].
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 3rd,
+                                                                    NUM sg ],
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 1st,
+                                                                     NUM sg ] ] ] ].
 
 verb-pc9-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb-pc10-rule-dtr & verb-pc60-rule-dtr & verb-pc65-rule-dtr & verb-pc67-rule-dtr & verb-pc69-rule-dtr & verb-pc70-rule-dtr & verb-pc77-rule-dtr &
   [ DTR verb-pc9-rule-dtr ].
@@ -719,8 +755,8 @@ verb-pc11-lex-rule-super := add-only-no-ccont-rule & const-lex-rule & verb-pc10-
   [ DTR verb7-verb-lex ].
 
 verb-pc11_lrt1-lex-rule := verb-pc11-lex-rule-super &
-  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM sg,
-                                                                PER 2nd & 3rd ] ].
+  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 2nd,
+                                                                NUM sg ] ].
 
 verb-pc12-lex-rule-super := add-only-no-ccont-rule & const-lex-rule & verb-pc13-rule-dtr & verb-pc18-rule-dtr & verb-pc19-rule-dtr & verb-pc88-rule-dtr &
   [ DTR verb3-verb-lex ].
@@ -757,7 +793,7 @@ verb-pc16-lex-rule-super := add-only-no-ccont-rule & const-lex-rule & verb-pc15-
 verb-pc16_lrt1-lex-rule := verb-pc16-lex-rule-super &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.MOOD ind,
                    CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 3rd,
-                                                                  NUM sg & pl ] ] ].
+                                                                  NUM sg ] ] ].
 
 verb-pc17-lex-rule-super := add-only-no-ccont-rule & const-lex-rule & verb-pc105-rule-dtr & verb-pc18-rule-dtr & verb-pc19-rule-dtr & verb-pc28-rule-dtr &
   [ DTR verb11-verb-lex ].
@@ -927,8 +963,10 @@ verb-pc47-lex-rule-super := add-only-no-ccont-rule & const-lex-rule & verb-pc23-
   [ DTR verb-pc47-rule-dtr ].
 
 verb-pc47_lrt1-lex-rule := verb-pc47-lex-rule-super &
-  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM sg,
-                                                                PER 1st & 3rd ] ].
+  [ SYNSEM.LOCAL.CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 1st,
+                                                                  NUM sg ],
+                           COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 3rd,
+                                                                   NUM sg ] ] ].
 
 verb-pc51-lex-rule-super := add-only-no-ccont-rule & const-lex-rule & verb-pc18-rule-dtr & verb-pc19-rule-dtr & verb-pc52-rule-dtr & verb-pc53-rule-dtr &
   [ DTR verb29-verb-lex ].
@@ -1005,8 +1043,10 @@ verb-pc73-lex-rule-super := add-only-no-ccont-rule & const-lex-rule & verb-pc67-
   [ DTR verb-pc73-rule-dtr ].
 
 verb-pc73_lrt1-lex-rule := verb-pc73-lex-rule-super &
-  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 1st & 3rd,
-                                                                NUM sg & pl ] ].
+  [ SYNSEM.LOCAL.CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 1st,
+                                                                  NUM sg ],
+                           COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 3rd,
+                                                                   NUM pl ] ] ].
 
 verb-pc74-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb-pc67-rule-dtr & verb-pc75-rule-dtr & verb-pc76-rule-dtr &
   [ DTR verb-pc74-rule-dtr ].
@@ -1086,15 +1126,17 @@ verb-pc94-lex-rule-super := add-only-no-ccont-rule & const-lex-rule & verb-pc10-
 
 verb-pc94_lrt1-lex-rule := verb-pc94-lex-rule-super &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.MOOD ind,
-                   CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 1st & 3rd,
-                                                                  NUM sg & pl ] ] ].
+                   CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 1st,
+                                                                  NUM sg ] ] ].
 
 verb-pc101-lex-rule-super := add-only-no-ccont-rule & const-lex-rule & verb-pc102-rule-dtr & verb-pc89-rule-dtr & verb-pc92-rule-dtr &
   [ DTR verb56-verb-lex ].
 
 verb-pc101_lrt1-lex-rule := verb-pc101-lex-rule-super &
-  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 3rd,
-                                                                NUM pl & sg ] ].
+  [ SYNSEM.LOCAL.CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 3rd,
+                                                                  NUM pl ],
+                           COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM sg,
+                                                                   PER 3rd ] ] ].
 
 verb-pc102-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
   [ DTR verb-pc102-rule-dtr ].
@@ -1135,6 +1177,43 @@ verb-pc105_lrt1-lex-rule := verb-pc105-lex-rule-super.
 ;;;;;;;;;;;;;;;;;;;
 ;;; Phrasal Types
 ;;;;;;;;;;;;;;;;;;;
+
+poss-phrase-1 := head-final &
+  [ SYNSEM.LOCAL.CAT [ HEAD #head,
+                       VAL [ COMPS < >,
+                             SUBJ < >,
+                             SPEC < >,
+                             SPR < > ] ],
+    HEAD-DTR.SYNSEM.LOCAL [ CAT [ POSSESSUM nonpossessive,
+                                  HEAD #head & noun &
+                                       [ POSSESSOR nonpossessive,
+                                         PRON - ],
+                                  VAL.SPR < [ ] > ],
+                            CONT.HOOK #hook &
+                                      [ LTOP #lbl,
+                                        INDEX #possessum &
+                                              [ COG-ST uniq-id ] ] ],
+    C-CONT [ HOOK #hook &
+                  [ INDEX #possessum ],
+             ICONS <!  !>,
+             RELS <! arg12-ev-relation &
+                     [ PRED "poss_rel",
+                       LBL #lbl,
+                       ARG1 #possessum,
+                       ARG2 #possessor ], quant-relation &
+                                          [ PRED "exist_q_rel",
+                                            ARG0 #possessum,
+                                            RSTR #harg ] !>,
+             HCONS <! qeq &
+                      [ HARG #harg,
+                        LARG #lbl ] !> ],
+    NON-HEAD-DTR.SYNSEM.LOCAL [ CONT.HOOK.INDEX #possessor,
+                                CAT [ POSSESSUM nonpossessive,
+                                      VAL.SPR < >,
+                                      HEAD noun &
+                                           [ POSSESSOR nonpossessive,
+                                             CASE erg,
+                                             PRON - ] ] ] ].
 
 ;Constraint on MC used to be part of matrix.tdl
 ;;it applies to all wo implementations, except for v2
