@@ -2,7 +2,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Grammar of Central Alaskan Yupik
 ;;; created at:
-;;;     Wed Apr 17 20:57:27 UTC 2019
+;;;     Wed Apr 17 21:49:34 UTC 2019
 ;;; based on Matrix customization system version of:
 ;;;     Tue Nov 13 21:13:22 UTC 2018
 ;;;
@@ -324,34 +324,34 @@ verb56-verb-lex := intransitive-verb-lex & verb-pc53-rule-dtr &
 
 verb-pc6-rule-dtr := word-or-lexrule.
 noun-pc20-rule-dtr := word-or-lexrule.
-verb-pc49-rule-dtr := word-or-lexrule.
+verb-pc35-rule-dtr := word-or-lexrule.
 verb-pc12-rule-dtr := word-or-lexrule.
 noun-pc2-rule-dtr := word-or-lexrule.
-verb-pc10-rule-dtr := word-or-lexrule.
+noun-pc19-rule-dtr := word-or-lexrule.
 verb-pc5-rule-dtr := word-or-lexrule.
-verb-pc11-rule-dtr := word-or-lexrule.
+verb-pc37-rule-dtr := word-or-lexrule.
 verb-pc31-rule-dtr := word-or-lexrule.
 verb-pc23-rule-dtr := word-or-lexrule.
 verb-pc53-rule-dtr := word-or-lexrule.
 noun-pc5-rule-dtr := word-or-lexrule.
-noun-pc19-rule-dtr := word-or-lexrule.
+verb-pc49-rule-dtr := word-or-lexrule.
+verb-pc10-rule-dtr := word-or-lexrule.
 noun-pc23-rule-dtr := word-or-lexrule.
-verb-pc42-rule-dtr := word-or-lexrule.
-verb-pc8-rule-dtr := word-or-lexrule.
-verb-pc37-rule-dtr := word-or-lexrule.
-verb-pc35-rule-dtr := word-or-lexrule.
-noun-pc31-rule-dtr := word-or-lexrule.
 verb-pc24-rule-dtr := word-or-lexrule.
+noun-pc46-rule-dtr := word-or-lexrule.
+noun-pc31-rule-dtr := word-or-lexrule.
+verb-pc11-rule-dtr := word-or-lexrule.
+noun-pc12-rule-dtr := word-or-lexrule.
+verb-pc42-rule-dtr := word-or-lexrule.
 noun-pc1-rule-dtr := word-or-lexrule.
 noun-pc25-rule-dtr := word-or-lexrule.
 noun-pc3-rule-dtr := word-or-lexrule.
 noun-pc34-rule-dtr := word-or-lexrule.
 verb-pc4-rule-dtr := word-or-lexrule.
 noun-pc39-rule-dtr := word-or-lexrule.
-noun-pc46-rule-dtr := word-or-lexrule.
+verb-pc8-rule-dtr := word-or-lexrule.
 verb-pc26-rule-dtr := word-or-lexrule.
 verb-pc9-rule-dtr := word-or-lexrule.
-noun-pc12-rule-dtr := word-or-lexrule.
 
 ;;; Lexical rule types
 
@@ -401,7 +401,7 @@ noun-pc4_lrt1-lex-rule := noun-pc4-lex-rule-super &
 
 noun-pc4_lrt2-lex-rule := noun-pc4-lex-rule-super &
   [ SYNSEM.LOCAL [ CAT.HEAD.CASE abs,
-                   CONT.HOOK.INDEX.PNG.NUM pl & sg ] ].
+                   CONT.HOOK.INDEX.PNG.NUM sg ] ].
 
 noun-pc4_lrt3-lex-rule := noun-pc4-lex-rule-super.
 
@@ -438,7 +438,7 @@ noun-pc16-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
   [ DTR noun6-noun-lex ].
 
 noun-pc16_lrt1-lex-rule := noun-pc16-lex-rule-super &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM pl & sg ].
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM sg ].
 
 noun-pc18-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
   [ DTR noun7-noun-lex ].
@@ -476,7 +476,7 @@ noun-pc23-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
 
 noun-pc23_lrt1-lex-rule := noun-pc23-lex-rule-super &
   [ SYNSEM.LOCAL [ CAT.HEAD.CASE abs,
-                   CONT.HOOK.INDEX.PNG.NUM sg & pl ] ].
+                   CONT.HOOK.INDEX.PNG.NUM pl ] ].
 
 noun-pc24-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
   [ DTR noun12-noun-lex ].
@@ -599,8 +599,10 @@ verb-pc1-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
 
 verb-pc1_lrt1-lex-rule := verb-pc1-lex-rule-super &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.MOOD opt,
-                   CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM sg,
-                                                                  PER 2nd & 3rd ] ] ].
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 2nd,
+                                                                    NUM sg ],
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 3rd,
+                                                                     NUM sg ] ] ] ].
 
 verb-pc2-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
   [ DTR verb3-verb-lex ].
@@ -719,8 +721,10 @@ verb-pc10-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb-pc11-r
 verb-pc10_lrt1-lex-rule := verb-pc10-lex-rule-super.
 
 verb-pc10_lrt2-lex-rule := verb-pc10-lex-rule-super &
-  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM sg,
-                                                                PER 1st & 3rd ] ].
+  [ SYNSEM.LOCAL.CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 1st,
+                                                                  NUM sg ],
+                           COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 3rd,
+                                                                   NUM sg ] ] ].
 
 verb-pc10_lrt3-lex-rule := verb-pc10-lex-rule-super &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.MOOD ind,
@@ -760,8 +764,10 @@ verb-pc15-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
   [ DTR verb13-verb-lex ].
 
 verb-pc15_lrt1-lex-rule := verb-pc15-lex-rule-super &
-  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 3rd,
-                                                                NUM pl & sg ] ].
+  [ SYNSEM.LOCAL.CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 3rd,
+                                                                  NUM pl ],
+                           COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM sg,
+                                                                   PER 3rd ] ] ].
 
 verb-pc16-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
   [ DTR verb14-verb-lex ].
@@ -790,8 +796,10 @@ verb-pc20-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
 
 verb-pc20_lrt1-lex-rule := verb-pc20-lex-rule-super &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.MOOD ind,
-                   CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM sg,
-                                                                  PER 3rd & 1st ] ] ].
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 3rd,
+                                                                    NUM sg ],
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 1st,
+                                                                     NUM sg ] ] ] ].
 
 verb-pc23-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
   [ DTR verb-pc23-rule-dtr ].
@@ -812,8 +820,10 @@ verb-pc26-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
 
 verb-pc26_lrt1-lex-rule := verb-pc26-lex-rule-super &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.MOOD ind,
-                   CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM sg,
-                                                                  PER 1st & 3rd ] ] ].
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 1st,
+                                                                    NUM sg ],
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 3rd,
+                                                                     NUM sg ] ] ] ].
 
 verb-pc26_lrt2-lex-rule := verb-pc26-lex-rule-super &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.MOOD ind,
@@ -887,8 +897,10 @@ verb-pc45-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
 
 verb-pc45_lrt1-lex-rule := verb-pc45-lex-rule-super &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.MOOD ind,
-                   CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM sg,
-                                                                  PER 3rd & 1st ] ] ].
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 3rd,
+                                                                    NUM sg ],
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 1st,
+                                                                     NUM sg ] ] ] ].
 
 verb-pc49-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
   [ DTR verb-pc49-rule-dtr ].
