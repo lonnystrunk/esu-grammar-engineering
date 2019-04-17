@@ -1,0 +1,187 @@
+Language: Central Alaskan Yupik
+Language code: esu
+Lines: orth-seg gloss translat
+Author: Marcus Martinez/Lonny Strunk
+Date: April 16, 2019
+Source a: A Grammar of Central Alaskan Yupik, Miyaoka
+Source b: Lonny Strunk
+
+#Example 1
+Source: a:30-10
+Vetted: s
+Judgement: g
+Phenomena: {case, agreement}
+angun tai-guq
+man.ABS.sg come-IND.3sg
+`the man is coming'
+
+#Example 2
+Source: a:30-10 author
+Vetted: f
+Judgement: u
+Phenomena: {case}
+angun tai-guq
+man.REL.sg come-IND.3sg
+`the man is coming'
+
+#Example 3
+Source: a:30-11a
+Vetted: s
+Judgement: g
+Phenomena: {case, agreement}
+angute-m neqa ner-aa
+man-REL.sg fish.ABS.sg eat-IND.3sg.3sg
+`the man is eating the fish'
+
+#Example 4
+Source: a:30-11a author
+Vetted: f
+Judgement: u
+Phenomena: {case}
+angute-m neqa ner-aa
+man-ABS.sg fish.REL.sg eat-IND.3sg.3sg
+`the man is eating the fish'
+
+#Example 5
+Source: a:30-12a
+Vetted: s
+Judgement: g
+Phenomena: {case, agreement}
+angute-m qimugta neq-mek cikir-aa
+man-REL.sg dog.ABS.sg fish-ABM.sg gave-IND.3sg.3sg
+`the man gave fish to the dog'
+
+#Example 6
+Source: a:30-12a author
+Vetted: f
+Judgement: u
+Phenomena: {case}
+angute-m qimugta neq-mek cikir-aa
+man-ABS.sg dog.REL.sg fish-LOC.sg gave-IND.3sg.3sg
+`the man gave fish to the dog'
+
+#Example 7
+Source: a:30-53
+Vetted: s
+Judgement: g
+Phenomena: {argument optionality}
+mikelnguq nerb-uq
+child.ABS.sg eat-IND.3sg
+`the child is eating'
+
+#Example 8
+Source: a:30-53 author
+Vetted: f
+Judgement: g
+Phenomena: {argument optionality}
+nerb-uq
+eat-IND.3sg
+`he is eating'
+
+#Example 9
+Source: a:30-55
+Vetted: s
+Judgement: g
+Phenomena: {argument optionality}
+mikelngu-u-m ner-aa
+child-EV-REL.sg eat-IND.3sg.3sg
+`the child is eating it'
+
+#Example 10
+Source: a:30-55 author
+Vetted: f
+Judgement: g
+Phenomena: {argument optionality}
+ner-aa
+eat-IND.3sg.3sg
+`he is eating it'
+
+#Example 11
+Source: a:30-57
+Vetted: s
+Judgement: g
+Phenomena: {argument optionality}
+Mikelnguq nerb-uq neq-mek
+child.ABS.sg eat-IND.3sg fish-ABM.sg
+`the child is eating fish'
+
+#Example 12
+Source: a:30-52c author
+Vetted: f
+Judgement: g
+Phenomena: {agreement}
+arna-m neqe-t kenir-ai
+woman-REL.sg fish-ABS.pl cook-IND.3sg.3pl
+`the woman cooked the fish'
+
+#Example 13
+Source: a:30-52c author
+Vetted: f
+Judgement: u
+Phenomena: {agreement}
+arna-m neqe-t kenir-aa
+woman-REL.sg fish-ABS.pl cook-IND.3sg.3sg
+`the woman cooked the fish'
+
+#Example 14
+Source: b:ex1
+Vetted: f
+Judgement: g
+Phenomena: {agreement}
+angute-t tuntu kenir-aat
+man-REL.pl caribou.ABS.sg cook-IND.3pl.3sg
+`the men cooked the caribou'
+
+#Example 15
+Source: b:ex1
+Vetted: f
+Judgement: u
+Phenomena: {agreement}
+angute-t tuntu kenir-aa
+man-REL.pl caribou.ABS.sg cook-IND.3sg.3sg
+`the men cooked the caribou'
+
+#Example 16
+Source: b:ex8
+Vetted: f
+Judgement: g
+Phenomena: {agreement}
+angute-t yurar-tut
+man-REL.pl dance-IND.3pl
+`the men are dancing'
+
+#Example 17
+Source: b:ex8
+Vetted: f
+Judgement: u
+Phenomena: {agreement}
+angute-t yurar-tuq
+man-ABS.pl dance-IND.3sg
+`the men are dancing'
+
+#Example 18
+Source: b:ex1
+Vetted: f
+Judgement: u
+Phenomena: {case}
+angute-t tuntu kenir-aat
+man-ABS.pl caribou.REL.sg cook-IND.3pl.3sg
+`the men cooked the caribou'
+
+#Example 19
+Source: b:ex8
+Vetted: f
+Judgement: u
+Phenomena: {case}
+angute-t yurar-tut
+man-REL.pl dance-IND.3pl
+`the men are dancing'
+
+#Example 20
+Source: b:ex1
+Vetted: f
+Judgement: g
+Phenomena: {argument optionality}
+tuntu kenir-aat
+caribou.ABS.sg cook-IND.3pl.3sg
+`they cooked the caribou'
