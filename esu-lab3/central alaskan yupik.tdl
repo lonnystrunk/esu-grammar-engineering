@@ -2,7 +2,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Grammar of Central Alaskan Yupik
 ;;; created at:
-;;;     Wed Apr 17 21:49:34 UTC 2019
+;;;     Fri Apr 19 04:44:17 UTC 2019
 ;;; based on Matrix customization system version of:
 ;;;     Tue Nov 13 21:13:22 UTC 2018
 ;;;
@@ -69,6 +69,10 @@ case := *top*.
 erg := case.  ; erg
 abs := case.  ; abs
 loc := case.  ; loc
+abm := case.  ; abm
+eql := case.  ; eql
+all := case.  ; all
+prl := case.  ; prl
 
 ;;; Person
 
@@ -173,6 +177,8 @@ noun48-noun-lex := noun-lex.
 
 noun49-noun-lex := noun-lex.
 
+noun50-noun-lex := noun-lex & noun-pc61-rule-dtr.
+
 ;;; Verbs
 
 verb-lex := basic-verb-lex & non-mod-lex-item &
@@ -242,7 +248,7 @@ verb14-verb-lex := transitive-verb-lex.
 
 verb17-verb-lex := transitive-verb-lex.
 
-verb18-verb-lex := transitive-verb-lex & verb-pc6-rule-dtr.
+verb18-verb-lex := transitive-verb-lex & verb-pc31-rule-dtr & verb-pc6-rule-dtr.
 
 verb20-verb-lex := transitive-verb-lex &
   [ SYNSEM.LOCAL.CAT.VAL [ COMPS.FIRST.LOCAL.CAT.HEAD.CASE abs,
@@ -324,24 +330,24 @@ verb56-verb-lex := intransitive-verb-lex & verb-pc53-rule-dtr &
 
 verb-pc6-rule-dtr := word-or-lexrule.
 noun-pc20-rule-dtr := word-or-lexrule.
-verb-pc35-rule-dtr := word-or-lexrule.
+verb-pc49-rule-dtr := word-or-lexrule.
 verb-pc12-rule-dtr := word-or-lexrule.
 noun-pc2-rule-dtr := word-or-lexrule.
-noun-pc19-rule-dtr := word-or-lexrule.
+verb-pc10-rule-dtr := word-or-lexrule.
 verb-pc5-rule-dtr := word-or-lexrule.
 verb-pc37-rule-dtr := word-or-lexrule.
 verb-pc31-rule-dtr := word-or-lexrule.
 verb-pc23-rule-dtr := word-or-lexrule.
 verb-pc53-rule-dtr := word-or-lexrule.
 noun-pc5-rule-dtr := word-or-lexrule.
-verb-pc49-rule-dtr := word-or-lexrule.
-verb-pc10-rule-dtr := word-or-lexrule.
+noun-pc19-rule-dtr := word-or-lexrule.
 noun-pc23-rule-dtr := word-or-lexrule.
-verb-pc24-rule-dtr := word-or-lexrule.
-noun-pc46-rule-dtr := word-or-lexrule.
-noun-pc31-rule-dtr := word-or-lexrule.
+verb-pc35-rule-dtr := word-or-lexrule.
+verb-pc8-rule-dtr := word-or-lexrule.
+noun-pc61-rule-dtr := word-or-lexrule.
 verb-pc11-rule-dtr := word-or-lexrule.
-noun-pc12-rule-dtr := word-or-lexrule.
+noun-pc31-rule-dtr := word-or-lexrule.
+verb-pc24-rule-dtr := word-or-lexrule.
 verb-pc42-rule-dtr := word-or-lexrule.
 noun-pc1-rule-dtr := word-or-lexrule.
 noun-pc25-rule-dtr := word-or-lexrule.
@@ -349,9 +355,10 @@ noun-pc3-rule-dtr := word-or-lexrule.
 noun-pc34-rule-dtr := word-or-lexrule.
 verb-pc4-rule-dtr := word-or-lexrule.
 noun-pc39-rule-dtr := word-or-lexrule.
-verb-pc8-rule-dtr := word-or-lexrule.
+noun-pc46-rule-dtr := word-or-lexrule.
 verb-pc26-rule-dtr := word-or-lexrule.
 verb-pc9-rule-dtr := word-or-lexrule.
+noun-pc12-rule-dtr := word-or-lexrule.
 
 ;;; Lexical rule types
 
@@ -419,7 +426,8 @@ noun-pc7-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
   [ DTR noun3-noun-lex ].
 
 noun-pc7_lrt1-lex-rule := noun-pc7-lex-rule-super &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM sg ].
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG.NUM sg,
+                   CAT.HEAD.CASE abm ] ].
 
 noun-pc12-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
   [ DTR noun-pc12-rule-dtr ].
@@ -457,7 +465,8 @@ noun-pc20-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
   [ DTR noun-pc20-rule-dtr ].
 
 noun-pc20_lrt1-lex-rule := noun-pc20-lex-rule-super &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM pl ].
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG.NUM pl,
+                   CAT.HEAD.CASE abm ] ].
 
 noun-pc21-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
   [ DTR noun9-noun-lex ].
@@ -490,6 +499,9 @@ noun-pc25-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
 noun-pc25_lrt1-lex-rule := noun-pc25-lex-rule-super &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM pl ].
 
+noun-pc25_lrt2-lex-rule := noun-pc25-lex-rule-super &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM sg ].
+
 noun-pc26-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
   [ DTR noun15-noun-lex ].
 
@@ -500,7 +512,8 @@ noun-pc27-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
   [ DTR noun17-noun-lex ].
 
 noun-pc27_lrt1-lex-rule := noun-pc27-lex-rule-super &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM sg ].
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG.NUM sg,
+                   CAT.HEAD.CASE all ] ].
 
 noun-pc29-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
   [ DTR noun19-noun-lex ].
@@ -593,6 +606,22 @@ noun-pc59-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
   [ DTR noun49-noun-lex ].
 
 noun-pc59_lrt1-lex-rule := noun-pc59-lex-rule-super.
+
+noun-pc60-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & noun-pc61-rule-dtr &
+  [ DTR noun50-noun-lex ].
+
+noun-pc60_lrt1-lex-rule := noun-pc60-lex-rule-super.
+
+noun-pc61-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
+  [ DTR noun-pc61-rule-dtr ].
+
+noun-pc61_lrt1-lex-rule := noun-pc61-lex-rule-super &
+  [ SYNSEM.LOCAL [ CAT.HEAD.CASE erg,
+                   CONT.HOOK.INDEX.PNG.NUM sg ] ].
+
+noun-pc61_lrt2-lex-rule := noun-pc61-lex-rule-super &
+  [ SYNSEM.LOCAL [ CAT.HEAD.CASE erg,
+                   CONT.HOOK.INDEX.PNG.NUM pl ] ].
 
 verb-pc1-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
   [ DTR verb2-verb-lex ].

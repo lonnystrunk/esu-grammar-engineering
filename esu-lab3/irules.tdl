@@ -157,6 +157,10 @@ noun-pc25_lrt1-suffix :=
 %suffix (* -t)
 noun-pc25_lrt1-lex-rule.
 
+noun-pc25_lrt2-suffix :=
+%suffix (* -m)
+noun-pc25_lrt2-lex-rule.
+
 noun-pc26_lrt1-suffix :=
 %suffix (* -luci)
 noun-pc26_lrt1-lex-rule.
@@ -232,6 +236,18 @@ noun-pc58_lrt1-lex-rule.
 noun-pc59_lrt1-suffix :=
 %suffix (* -kapigte)
 noun-pc59_lrt1-lex-rule.
+
+noun-pc60_lrt1-suffix :=
+%suffix (* -u)
+noun-pc60_lrt1-lex-rule.
+
+noun-pc61_lrt1-suffix :=
+%suffix (* -m)
+noun-pc61_lrt1-lex-rule.
+
+noun-pc61_lrt2-suffix :=
+%suffix (* -t)
+noun-pc61_lrt2-lex-rule.
 
 verb-pc1_lrt1-suffix :=
 %suffix (* -gu)

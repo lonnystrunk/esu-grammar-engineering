@@ -89,7 +89,7 @@ a := noun1-noun-lex &
   [ STEM < "a" >,
     SYNSEM.LKEYS.KEYREL.PRED "_ev_n_rel" ].
 
-mikelngu := noun1-noun-lex &
+mikelngu_1 := noun1-noun-lex &
   [ STEM < "mikelngu" >,
     SYNSEM.LKEYS.KEYREL.PRED "_child_n_rel" ].
 
@@ -257,13 +257,29 @@ qayaq := noun1-noun-lex &
   [ STEM < "qayaq" >,
     SYNSEM.LKEYS.KEYREL.PRED "_kayak.abs.sg_n_rel" ].
 
-unuaqu := noun1-noun-lex &
-  [ STEM < "unuaqu" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_tomorrow_n_rel" ].
+mikelnguq := noun1-noun-lex &
+  [ STEM < "mikelnguq" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_child_n_rel" ].
 
 saayuq := noun1-noun-lex &
   [ STEM < "saayuq" >,
     SYNSEM.LKEYS.KEYREL.PRED "_tea.abs.sg_n_rel" ].
+
+neqa := noun1-noun-lex &
+  [ STEM < "neqa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_fish_n_rel" ].
+
+qimugta := noun1-noun-lex &
+  [ STEM < "qimugta" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_dog_n_rel" ].
+
+tuntu := noun1-noun-lex &
+  [ STEM < "tuntu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_caribou_n_rel" ].
+
+unuaqu := noun1-noun-lex &
+  [ STEM < "unuaqu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_tomorrow_n_rel" ].
 
 nuna := noun2-noun-lex &
   [ STEM < "nuna" >,
@@ -477,6 +493,10 @@ yu := noun49-noun-lex &
   [ STEM < "yu" >,
     SYNSEM.LKEYS.KEYREL.PRED "_des_n_rel" ].
 
+mikelngu_2 := noun50-noun-lex &
+  [ STEM < "mikelngu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_child_n_rel" ].
+
 ;;; Adjectives
 
 ;;; Verbs
@@ -673,6 +693,10 @@ tuqut := verb6-verb-lex &
   [ STEM < "tuqut" >,
     SYNSEM.LKEYS.KEYREL.PRED "_kill_v_rel" ].
 
+kenir := verb6-verb-lex &
+  [ STEM < "kenir" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_cook_v_rel" ].
+
 atu%21%21%21DO-NOT-USE%21%21%21 := verb7-verb-lex &
   [ STEM < "atu!!!DO-NOT-USE!!!" >,
     SYNSEM.LKEYS.KEYREL.PRED "_sing_v_rel" ].
@@ -712,6 +736,10 @@ la%21%21%21DO-NOT-USE%21%21%21 := verb17-verb-lex &
 lar%21%21%21DO-NOT-USE%21%21%21 := verb18-verb-lex &
   [ STEM < "lar!!!DO-NOT-USE!!!" >,
     SYNSEM.LKEYS.KEYREL.PRED "_cus_v_rel" ].
+
+yurar := verb18-verb-lex &
+  [ STEM < "yurar" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_dance_v_rel" ].
 
 llru_3 := verb20-verb-lex &
   [ STEM < "llru" >,
