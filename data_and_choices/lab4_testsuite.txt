@@ -22,7 +22,7 @@ Judgement: g
 Phenomena: {adnominal possessives}
 May'a-m assik-aa pani-a.
 p.n.-REL.sg. like-IND.3sg.3sg. Da-ABS.3sg.sg.
-Mayaq likes his (another person than Mayaq's) daughter.
+`Mayaq likes his (another person than Mayaq's) daughter.'
 
 #Example 3
 Source: b
@@ -31,7 +31,7 @@ Judgement: g
 Phenomena: {negation}
 yura-nrit-uq
 dance-NEG-IND.3sg.
-he is not dancing
+`he is not dancing'
 
 #Example 4
 Source: b
@@ -40,7 +40,7 @@ Judgement: g
 Phenomena: {TAM}
 Akwaugaq nere-llru-unga
 yesterday eat-PST-IND.1sg
-Yesterday I ate.
+`Yesterday I ate.''
 
 #Example 5
 Source: b
@@ -49,7 +49,7 @@ Judgement: g
 Phenomena: {TAM}
 Akwaugaq nerb-ua
 yesterday eat-IND.1sg
-Yesterday I ate.
+`Yesterday I ate.'
 
 #Example 6
 Source: b
@@ -58,7 +58,7 @@ Judgement: g
 Phenomena: {TAM}
 Unuaqu ner-ciq-ua
 tomorrow eat-FUT-IND.1sg
-Tomorrow I will eat.
+`Tomorrow I will eat.'
 
 #Example 7
 Source: b
@@ -67,7 +67,7 @@ Judgement: u
 Phenomena: {TAM}
 Unuaqu nerb-ua
 tomorrow eat-IND.1sg
-Tomorrow I will eat.
+`Tomorrow I will eat.'
 
 #Example 8
 Source: b
@@ -76,7 +76,7 @@ Judgement: g
 Phenomena: {TAM}
 Assik-aqa nuliar-ka-qa
 like-IND.3sg.3sg wife-FUT-ABS.1sg.sg
-I like my future wife.
+`I like my future wife.'
 
 #Example 9
 Source: b
@@ -85,12 +85,148 @@ Judgement: g
 Phenomena: {TAM}
 Assik-aqa ui-l-qa
 like-IND.3sg.3sg husband-PST-ABS.1sg.sg
-I like my past husband.
+`I like my past husband.'
 
+#Example 10
+Source: b
+Vetted: f
+Judgement: u
+Phenomena: {negation}
+nrit-yura-uq
+NEG-dance-IND.3sg.
+`he is not dancing'
 
-Marcus-aam Lonny-m qimugt-iik
-name-REL.sg name-REL.sg dog-ABS.3du.sg
+#Example 11
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {TAM}
+yurar-tuq ner-luni=llu
+dance-IND.3sg. eat-APP.3Rsg.=and
+`he is dancing and eating'
 
-nere-ciq-llru-a
-eat-FUT-PST-IND.3sg.3sg
-she said he will eat
+#Example 12
+Source: b
+Vetted: f
+Judgement: u
+Phenomena: {TAM}
+yurar-tuq nerb-uq=llu
+dance-IND.3sg. eat-IND.3sg.=and
+`he is dancing and eating'
+
+#Example 13
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {TAM}
+qia-luni nerb-uq
+cry-APP.3Rsg. eat-IND.3sg.
+`crying, he is eating'
+
+#Example 14
+Source: b
+Vetted: f
+Judgement: u
+Phenomena: {TAM}
+qia-luni ner-luni
+cry-APP.3Rsg. eat-APP.3Rsg.
+`crying, he is eating'
+
+#Example 15
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {negation}
+qia-nrit-uq
+cry-NEG-IND.3sg.
+`she is not crying'
+
+#Example 16
+Source: b
+Vetted: f
+Judgement: u
+Phenomena: {negation}
+nrit-qia-uq
+NEG-cry-IND.3sg.
+`she is not crying'
+
+#Example 17
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {negation}
+assike-nrit-amken
+cry-NEG-IND.1sg.2sg.
+`I don't like you'
+
+#Example 18
+Source: b
+Vetted: f
+Judgement: u
+Phenomena: {negation}
+nrit-assike-amken
+NEG-cry-IND.1sg.2sg.
+`I don't like you'
+
+#Example 19
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {adnominal possessives}
+assik-aqa nulia-ma tuntu-a
+like-IND.1sg.3sg. wife-REL.1sg.sg caribou-ABS.3sg.sg
+`I like my wife's caribou'
+
+#Example 20
+Source: b
+Vetted: f
+Judgement: u
+Phenomena: {adnominal possessives}
+assik-aqa nulia-ma tuntu-at
+like-IND.1sg.3sg. wife-REL.1sg.sg caribou-ABS.3pl.sg
+`I like my wife's caribou'
+
+#Example 21
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {TAM}
+ner-i
+eat-OPT.2sg.
+`you (sg.) eat!'
+
+#Example 21
+Source: a:
+Vetted: f
+Judgement: g
+Phenomena: {TAM}
+aya-lta
+go-OPT.1pl.
+`let's go!'
+
+#Example 22
+Source: a:
+Vetted: f
+Judgement: g
+Phenomena: {TAM}
+ki-na tekit-a?
+who-EX.ABS.sg. arrive-INT.3sg.
+`who has arrived?'
+
+#Example 23
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {adnominal possessives}
+ui-ma qimugt-iin assik-ai mikelngu-u-t
+husband-REL.1sg.sg dog-REL.3sg.sg like-IND.3sg.3pl child-EX-ABS.pl
+`my husband's dog likes the children'
+
+#Example 24
+Source: b
+Vetted: f
+Judgement: u
+Phenomena: {adnominal possessives}
+ui-ma qimugt-iit assik-ai mikelngu-u-t
+husband-REL.1sg.sg dog-REL.3pl.sg like-IND.3sg.3pl child-EX-ABS.pl
+`my husband's dog likes the children'
