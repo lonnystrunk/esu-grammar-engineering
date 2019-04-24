@@ -1,0 +1,96 @@
+Language: Central Alaskan Yupik
+Language code: esu
+Lines: orth gloss translat
+Author: Marcus Martinez/Lonny Strunk
+Date: April 22, 2019
+Source a: A Grammar of Central Alaskan Yupik, Miyaoka
+Source b: Lonny Strunk
+
+#Example 1
+Source: a: 22-7/8
+Vetted: s
+Judgement: g
+Phenomena: {adnominal possessives}
+May'a-m pani-a assik-aa.
+p.n.-REL.sg. Da-ABS.3sg.sg. like-IND.3sg.3sg.
+(1) He likes Mayaq's daughter. (2) Mayaq likes his (another person than Mayaq's) daughter.
+
+#Example 2
+Source: a: 22-7/8
+Vetted: f
+Judgement: g
+Phenomena: {adnominal possessives}
+May'a-m assik-aa pani-a.
+p.n.-REL.sg. like-IND.3sg.3sg. Da-ABS.3sg.sg.
+Mayaq likes his (another person than Mayaq's) daughter.
+
+#Example 3
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {negation}
+yura-nrit-uq
+dance-NEG-IND.3sg.
+he is not dancing
+
+#Example 4
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {TAM}
+Akwaugaq nere-llru-unga
+yesterday eat-PST-IND.1sg
+Yesterday I ate.
+
+#Example 5
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {TAM}
+Akwaugaq nerb-ua
+yesterday eat-IND.1sg
+Yesterday I ate.
+
+#Example 6
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {TAM}
+Unuaqu ner-ciq-ua
+tomorrow eat-FUT-IND.1sg
+Tomorrow I will eat.
+
+#Example 7
+Source: b
+Vetted: f
+Judgement: u
+Phenomena: {TAM}
+Unuaqu nerb-ua
+tomorrow eat-IND.1sg
+Tomorrow I will eat.
+
+#Example 8
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {TAM}
+Assik-aqa nuliar-ka-qa
+like-IND.3sg.3sg wife-FUT-ABS.1sg.sg
+I like my future wife.
+
+#Example 9
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {TAM}
+Assik-aqa ui-l-qa
+like-IND.3sg.3sg husband-PST-ABS.1sg.sg
+I like my past husband.
+
+
+Marcus-aam Lonny-m qimugt-iik
+name-REL.sg name-REL.sg dog-ABS.3du.sg
+
+nere-ciq-llru-a
+eat-FUT-PST-IND.3sg.3sg
+she said he will eat

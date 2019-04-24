@@ -57,7 +57,6 @@ section=other-features
 section=sentential-negation
 neg-exp=1
 infl-neg=on
-neg-aux=on
 
 section=coordination
 
@@ -745,12 +744,6 @@ section=lexicon
   verb56_valence=intrans
     verb56_stem1_orth=yui
     verb56_stem1_pred=_never_v_rel
-  aux1_name=neg
-  aux1_sem=add-pred
-    aux1_stem1_orth=nric
-    aux1_stem1_pred=neg_rel
-    aux1_stem2_orth=uciit
-    aux1_stem2_pred=neg_rel
 
 section=morphology
   noun-pc1_name=noun-pc1
