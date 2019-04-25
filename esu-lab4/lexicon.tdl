@@ -9,7 +9,7 @@ emeq := noun1-noun-lex &
   [ STEM < "emeq" >,
     SYNSEM.LKEYS.KEYREL.PRED "_water.abs.sg_n_rel" ].
 
-arnaq := noun1-noun-lex &
+arnaq_1 := noun1-noun-lex &
   [ STEM < "arnaq" >,
     SYNSEM.LKEYS.KEYREL.PRED "_woman.abs.sg.-or-woman.abs.sg_n_rel" ].
 
@@ -241,7 +241,7 @@ irnia := noun1-noun-lex &
   [ STEM < "irnia" >,
     SYNSEM.LKEYS.KEYREL.PRED "_child_n_rel" ].
 
-angun := noun1-noun-lex &
+angun_1 := noun1-noun-lex &
   [ STEM < "angun" >,
     SYNSEM.LKEYS.KEYREL.PRED "_man.abs.sg-or-man-or-man.abs.pl_n_rel" ].
 
@@ -257,29 +257,13 @@ qayaq := noun1-noun-lex &
   [ STEM < "qayaq" >,
     SYNSEM.LKEYS.KEYREL.PRED "_kayak.abs.sg_n_rel" ].
 
-mikelnguq := noun1-noun-lex &
+mikelnguq_1 := noun1-noun-lex &
   [ STEM < "mikelnguq" >,
     SYNSEM.LKEYS.KEYREL.PRED "_child_n_rel" ].
 
 saayuq := noun1-noun-lex &
   [ STEM < "saayuq" >,
     SYNSEM.LKEYS.KEYREL.PRED "_tea.abs.sg_n_rel" ].
-
-neqa := noun1-noun-lex &
-  [ STEM < "neqa" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_fish_n_rel" ].
-
-qimugta := noun1-noun-lex &
-  [ STEM < "qimugta" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_dog_n_rel" ].
-
-tuntu := noun1-noun-lex &
-  [ STEM < "tuntu" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_caribou_n_rel" ].
-
-unuaqu := noun1-noun-lex &
-  [ STEM < "unuaqu" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_tomorrow_n_rel" ].
 
 nuna := noun2-noun-lex &
   [ STEM < "nuna" >,
@@ -289,7 +273,7 @@ aata := noun2-noun-lex &
   [ STEM < "aata" >,
     SYNSEM.LKEYS.KEYREL.PRED "_father_n_rel" ].
 
-nulia := noun2-noun-lex &
+nulia_1 := noun2-noun-lex &
   [ STEM < "nulia" >,
     SYNSEM.LKEYS.KEYREL.PRED "_wife_n_rel" ].
 
@@ -297,7 +281,7 @@ akuta := noun3-noun-lex &
   [ STEM < "akuta" >,
     SYNSEM.LKEYS.KEYREL.PRED "_ice.cream_n_rel" ].
 
-neq := noun3-noun-lex &
+neq_1 := noun3-noun-lex &
   [ STEM < "neq" >,
     SYNSEM.LKEYS.KEYREL.PRED "_fish_n_rel" ].
 
@@ -321,11 +305,11 @@ ellallug := noun3-noun-lex &
   [ STEM < "ellallug" >,
     SYNSEM.LKEYS.KEYREL.PRED "_rain_n_rel" ].
 
-angute := noun4-noun-lex &
+angute_1 := noun4-noun-lex &
   [ STEM < "angute" >,
     SYNSEM.LKEYS.KEYREL.PRED "_man_n_rel" ].
 
-arna := noun4-noun-lex &
+arna_1 := noun4-noun-lex &
   [ STEM < "arna" >,
     SYNSEM.LKEYS.KEYREL.PRED "_woman_n_rel" ].
 
@@ -425,7 +409,7 @@ naqugg := noun29-noun-lex &
   [ STEM < "naqugg" >,
     SYNSEM.LKEYS.KEYREL.PRED "_put.belt_n_rel" ].
 
-neqe := noun31-noun-lex &
+neqe_1 := noun31-noun-lex &
   [ STEM < "neqe" >,
     SYNSEM.LKEYS.KEYREL.PRED "_fish_n_rel" ].
 
@@ -481,7 +465,7 @@ tur := noun43-noun-lex &
   [ STEM < "tur" >,
     SYNSEM.LKEYS.KEYREL.PRED "_eat_n_rel" ].
 
-ui := noun47-noun-lex &
+ui_1 := noun47-noun-lex &
   [ STEM < "ui" >,
     SYNSEM.LKEYS.KEYREL.PRED "_husband_n_rel" ].
 
@@ -496,6 +480,94 @@ yu := noun49-noun-lex &
 mikelngu_2 := noun50-noun-lex &
   [ STEM < "mikelngu" >,
     SYNSEM.LKEYS.KEYREL.PRED "_child_n_rel" ].
+
+tuntu_1 := noun_abs_sg-noun-lex &
+  [ STEM < "tuntu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_caribou_n_rel" ].
+
+angun_2 := noun_abs_sg-noun-lex &
+  [ STEM < "angun" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_man_n_rel" ].
+
+arnaq_2 := noun_abs_sg-noun-lex &
+  [ STEM < "arnaq" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_woman_n_rel" ].
+
+neqa := noun_abs_sg-noun-lex &
+  [ STEM < "neqa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_fish_n_rel" ].
+
+qimugta := noun_abs_sg-noun-lex &
+  [ STEM < "qimugta" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_dog_n_rel" ].
+
+mikelnguq_2 := noun_abs_sg-noun-lex &
+  [ STEM < "mikelnguq" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_child_n_rel" ].
+
+tuntu_2 := noun_non_abs_sg-noun-lex &
+  [ STEM < "tuntu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_caribou_n_rel" ].
+
+mayba := noun_non_abs_sg-noun-lex &
+  [ STEM < "mayba" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_p.n._n_rel" ].
+
+pani := noun_non_abs_sg-noun-lex &
+  [ STEM < "pani" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_daughter_n_rel" ].
+
+ui_2 := noun_non_abs_sg-noun-lex &
+  [ STEM < "ui" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_husband_n_rel" ].
+
+qimugt := noun_non_abs_sg-noun-lex &
+  [ STEM < "qimugt" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_dog_n_rel" ].
+
+angute_2 := noun_non_abs_sg-noun-lex &
+  [ STEM < "angute" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_man_n_rel" ].
+
+ui_3 := noun_non_abs_sg-noun-lex &
+  [ STEM < "ui" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_husband_n_rel" ].
+
+nulia_2 := noun_non_abs_sg-noun-lex &
+  [ STEM < "nulia" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_wife_n_rel" ].
+
+nuliar := noun_non_abs_sg-noun-lex &
+  [ STEM < "nuliar" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_wife_n_rel" ].
+
+neq_2 := noun_non_abs_sg-noun-lex &
+  [ STEM < "neq" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_fish_n_rel" ].
+
+mikelngu_3 := noun_non_abs_sg-noun-lex &
+  [ STEM < "mikelngu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_child_n_rel" ].
+
+arna_2 := noun_non_abs_sg-noun-lex &
+  [ STEM < "arna" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_woman_n_rel" ].
+
+neqe_2 := noun_non_abs_sg-noun-lex &
+  [ STEM < "neqe" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_fish_n_rel" ].
+
+akwaugaq := noun_particles-noun-lex &
+  [ STEM < "akwaugaq" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_yesterday_n_rel" ].
+
+unuaqu := noun_particles-noun-lex &
+  [ STEM < "unuaqu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_tomorrow_n_rel" ].
+
+llu := noun_particles-noun-lex &
+  [ STEM < "llu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_and_n_rel" ].
 
 ;;; Adjectives
 
@@ -593,7 +665,7 @@ qenga := verb1-verb-lex &
   [ STEM < "qenga" >,
     SYNSEM.LKEYS.KEYREL.PRED "_vnrl_v_rel" ].
 
-ner := verb1-verb-lex &
+ner_1 := verb1-verb-lex &
   [ STEM < "ner" >,
     SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
 
@@ -621,7 +693,7 @@ tanger := verb1-verb-lex &
   [ STEM < "tanger" >,
     SYNSEM.LKEYS.KEYREL.PRED "_see_v_rel" ].
 
-nere := verb1-verb-lex &
+nere_1 := verb1-verb-lex &
   [ STEM < "nere" >,
     SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
 
@@ -693,7 +765,7 @@ tuqut := verb6-verb-lex &
   [ STEM < "tuqut" >,
     SYNSEM.LKEYS.KEYREL.PRED "_kill_v_rel" ].
 
-kenir := verb6-verb-lex &
+kenir_1 := verb6-verb-lex &
   [ STEM < "kenir" >,
     SYNSEM.LKEYS.KEYREL.PRED "_cook_v_rel" ].
 
@@ -737,7 +809,7 @@ lar%21%21%21DO-NOT-USE%21%21%21 := verb18-verb-lex &
   [ STEM < "lar!!!DO-NOT-USE!!!" >,
     SYNSEM.LKEYS.KEYREL.PRED "_cus_v_rel" ].
 
-yurar := verb18-verb-lex &
+yurar_1 := verb18-verb-lex &
   [ STEM < "yurar" >,
     SYNSEM.LKEYS.KEYREL.PRED "_dance_v_rel" ].
 
@@ -757,7 +829,7 @@ ksait := verb22-verb-lex &
   [ STEM < "ksait" >,
     SYNSEM.LKEYS.KEYREL.PRED "_neg_v_rel" ].
 
-nerb := verb22-verb-lex &
+nerb_1 := verb22-verb-lex &
   [ STEM < "nerb" >,
     SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
 
@@ -833,7 +905,7 @@ urt := verb45-verb-lex &
   [ STEM < "urt" >,
     SYNSEM.LKEYS.KEYREL.PRED "_become_v_rel" ].
 
-tekit := verb45-verb-lex &
+tekit_1 := verb45-verb-lex &
   [ STEM < "tekit" >,
     SYNSEM.LKEYS.KEYREL.PRED "_arrive_v_rel" ].
 
@@ -868,3 +940,55 @@ yu%21%21%21DO-NOT-USE%21%21%21 := verb55-verb-lex &
 yui := verb56-verb-lex &
   [ STEM < "yui" >,
     SYNSEM.LKEYS.KEYREL.PRED "_never_v_rel" ].
+
+yura := verb_intrans-verb-lex &
+  [ STEM < "yura" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_dance_v_rel" ].
+
+yurar_2 := verb_intrans-verb-lex &
+  [ STEM < "yurar" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_dance_v_rel" ].
+
+nerb_2 := verb_intrans-verb-lex &
+  [ STEM < "nerb" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
+
+nere_2 := verb_intrans-verb-lex &
+  [ STEM < "nere" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
+
+ner_2 := verb_intrans-verb-lex &
+  [ STEM < "ner" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
+
+tai_4 := verb_intrans-verb-lex &
+  [ STEM < "tai" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_come_v_rel" ].
+
+qia := verb_intrans-verb-lex &
+  [ STEM < "qia" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_cry_v_rel" ].
+
+aya := verb_intrans-verb-lex &
+  [ STEM < "aya" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_go_v_rel" ].
+
+tekit_2 := verb_intrans-verb-lex &
+  [ STEM < "tekit" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_arrive_v_rel" ].
+
+kenir_2 := verb_trans-verb-lex &
+  [ STEM < "kenir" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_cook_v_rel" ].
+
+ner_3 := verb_trans-verb-lex &
+  [ STEM < "ner" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
+
+assik_3 := verb_trans-verb-lex &
+  [ STEM < "assik" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_like_v_rel" ].
+
+assike := verb_trans-verb-lex &
+  [ STEM < "assike" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_like_v_rel" ].

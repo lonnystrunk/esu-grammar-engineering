@@ -63,4 +63,6 @@ E.ASPECT : E.ASPECT
 E.MOOD : E.MOOD
   ind <> ind
   opt <> opt
+  app <> app
+  int <> int
   * <> *
