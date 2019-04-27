@@ -249,45 +249,45 @@ noun-pc61_lrt2-suffix :=
 %suffix (* -t)
 noun-pc61_lrt2-lex-rule.
 
-noun-pc101_lrt1-suffix :=
+noun-pc101_lrt1_erg_sg-suffix :=
 %suffix (* -m)
-noun-pc101_lrt1-lex-rule.
+noun-pc101_lrt1_erg_sg-lex-rule.
 
-noun-pc101_lrt2-suffix :=
+noun-pc101_lrt2_abs_sg-suffix :=
 %suffix (* -a)
-noun-pc101_lrt2-lex-rule.
+noun-pc101_lrt2_abs_sg-lex-rule.
 
-noun-pc101_lrt3-suffix :=
+noun-pc101_lrt3_abs_sg-suffix :=
 %suffix (* -qa)
-noun-pc101_lrt3-lex-rule.
+noun-pc101_lrt3_abs_sg-lex-rule.
 
-noun-pc101_lrt4-suffix :=
+noun-pc101_lrt4_abs_pl-suffix :=
 %suffix (* -t)
-noun-pc101_lrt4-lex-rule.
+noun-pc101_lrt4_abs_pl-lex-rule.
 
-noun-pc101_lrt5-suffix :=
+noun-pc101_lrt5_erg_pl-suffix :=
 %suffix (* -t)
-noun-pc101_lrt5-lex-rule.
+noun-pc101_lrt5_erg_pl-lex-rule.
 
-noun-pc101_lrt6-suffix :=
+noun-pc101_lrt6_erg_sg-suffix :=
 %suffix (* -ma)
-noun-pc101_lrt6-lex-rule.
+noun-pc101_lrt6_erg_sg-lex-rule.
 
-noun-pc101_lrt7-suffix :=
+noun-pc101_lrt7_abm_sg-suffix :=
 %suffix (* -mek)
-noun-pc101_lrt7-lex-rule.
+noun-pc101_lrt7_abm_sg-lex-rule.
 
-noun-pc101_lrt8-suffix :=
+noun-pc101_lrt8_erg_sg-suffix :=
 %suffix (* -iin)
-noun-pc101_lrt8-lex-rule.
+noun-pc101_lrt8_erg_sg-lex-rule.
 
-noun-pc101_lrt9-suffix :=
+noun-pc101_lrt9_erg_pl-suffix :=
 %suffix (* -iit)
-noun-pc101_lrt9-lex-rule.
+noun-pc101_lrt9_erg_pl-lex-rule.
 
-noun-pc101_lrt10-suffix :=
+noun-pc101_lrt10_abs_sg-suffix :=
 %suffix (* -at)
-noun-pc101_lrt10-lex-rule.
+noun-pc101_lrt10_abs_sg-lex-rule.
 
 noun-pc102_lrt1-suffix :=
 %suffix (* -ka)
@@ -521,8 +521,16 @@ verb-pc100_lrt1-suffix3 :=
 %suffix (* -guq)
 verb-pc100_lrt1-lex-rule.
 
-verb-pc100_lrt2-suffix :=
+verb-pc100_lrt2-suffix1 :=
 %suffix (* -unga)
+verb-pc100_lrt2-lex-rule.
+
+verb-pc100_lrt2-suffix2 :=
+%suffix (* -ua)
+verb-pc100_lrt2-lex-rule.
+
+verb-pc100_lrt2-suffix3 :=
+%suffix (* -tua)
 verb-pc100_lrt2-lex-rule.
 
 verb-pc100_lrt3-suffix :=
@@ -569,6 +577,10 @@ verb-pc102_lrt2-suffix :=
 %suffix (* -nrit)
 verb-pc102_lrt2-lex-rule.
 
-verb-pc103_lrt1-prefix :=
-%prefix (* nrit-)
-verb-pc103_lrt1-lex-rule.
+verb-pc102_lrt3-suffix :=
+%suffix (* -ciq)
+verb-pc102_lrt3-lex-rule.
+
+verb-pc102_lrt4-suffix :=
+%suffix (* -lar)
+verb-pc102_lrt4-lex-rule.

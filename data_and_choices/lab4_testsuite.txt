@@ -6,16 +6,16 @@ Date: April 22, 2019
 Source a: A Grammar of Central Alaskan Yupik, Miyaoka
 Source b: Lonny Strunk
 
-#Example 1
+#Example 21
 Source: a: 22-7/8
 Vetted: s
 Judgement: g
 Phenomena: {adnominal possessives}
 Mayba-m pani-a assik-aa.
 p.n.-REL.sg. Da-ABS.3sg.sg. like-IND.3sg.3sg.
-(1) He likes Mayaq's daughter. (2) Mayaq likes his (another person than Mayaq's) daughter.
+`(1) He likes Mayaq's daughter. (2) Mayaq likes his (another person than Mayaq's) daughter.'
 
-#Example 2
+#Example 22
 Source: a: 22-7/8
 Vetted: f
 Judgement: g
@@ -24,7 +24,7 @@ Mayba-m assik-aa pani-a.
 p.n.-REL.sg. like-IND.3sg.3sg. Da-ABS.3sg.sg.
 `Mayaq likes his (another person than Mayaq's) daughter.'
 
-#Example 3
+#Example 23
 Source: b
 Vetted: f
 Judgement: g
@@ -33,7 +33,7 @@ yura-nrit-uq
 dance-NEG-IND.3sg.
 `he is not dancing'
 
-#Example 4
+#Example 24
 Source: b
 Vetted: f
 Judgement: g
@@ -42,7 +42,7 @@ Akwaugaq nere-llru-unga
 yesterday eat-PST-IND.1sg
 `Yesterday I ate.'
 
-#Example 5
+#Example 25
 Source: b
 Vetted: f
 Judgement: g
@@ -51,7 +51,7 @@ Akwaugaq nerb-ua
 yesterday eat-IND.1sg
 `Yesterday I ate.'
 
-#Example 6
+#Example 26
 Source: b
 Vetted: f
 Judgement: g
@@ -60,7 +60,7 @@ Unuaqu ner-ciq-ua
 tomorrow eat-FUT-IND.1sg
 `Tomorrow I will eat.'
 
-#Example 7
+#Example 27
 Source: b
 Vetted: f
 Judgement: u
@@ -69,7 +69,7 @@ Unuaqu nerb-ua
 tomorrow eat-IND.1sg
 `Tomorrow I will eat.'
 
-#Example 8
+#Example 28
 Source: b
 Vetted: f
 Judgement: g
@@ -78,7 +78,7 @@ Assik-aqa nuliar-ka-qa
 like-IND.3sg.3sg wife-FUT-ABS.1sg.sg
 `I like my future wife.'
 
-#Example 9
+#Example 29
 Source: b
 Vetted: f
 Judgement: g
@@ -87,7 +87,7 @@ Assik-aqa ui-l-qa
 like-IND.3sg.3sg husband-PST-ABS.1sg.sg
 `I like my past husband.'
 
-#Example 10
+#Example 30
 Source: b
 Vetted: f
 Judgement: u
@@ -96,7 +96,7 @@ nrit-yura-uq
 NEG-dance-IND.3sg.
 `he is not dancing'
 
-#Example 11
+#Example 31
 Source: b
 Vetted: f
 Judgement: g
@@ -105,7 +105,7 @@ yurar-tuq ner-luni=llu
 dance-IND.3sg. eat-APP.3Rsg.=and
 `he is dancing and eating'
 
-#Example 12
+#Example 32
 Source: b
 Vetted: f
 Judgement: u
@@ -114,7 +114,7 @@ yurar-tuq nerb-uq=llu
 dance-IND.3sg. eat-IND.3sg.=and
 `he is dancing and eating'
 
-#Example 13
+#Example 33
 Source: b
 Vetted: f
 Judgement: g
@@ -123,7 +123,7 @@ qia-luni nerb-uq
 cry-APP.3Rsg. eat-IND.3sg.
 `crying, he is eating'
 
-#Example 14
+#Example 34
 Source: b
 Vetted: f
 Judgement: u
@@ -132,7 +132,7 @@ qia-luni ner-luni
 cry-APP.3Rsg. eat-APP.3Rsg.
 `crying, he is eating'
 
-#Example 15
+#Example 35
 Source: b
 Vetted: f
 Judgement: g
@@ -141,7 +141,7 @@ qia-nrit-uq
 cry-NEG-IND.3sg.
 `she is not crying'
 
-#Example 16
+#Example 36
 Source: b
 Vetted: f
 Judgement: u
@@ -150,7 +150,7 @@ nrit-qia-uq
 NEG-cry-IND.3sg.
 `she is not crying'
 
-#Example 17
+#Example 37
 Source: b
 Vetted: f
 Judgement: g
@@ -159,7 +159,7 @@ assike-nrit-amken
 cry-NEG-IND.1sg.2sg.
 `I don't like you'
 
-#Example 18
+#Example 38
 Source: b
 Vetted: f
 Judgement: u
@@ -168,7 +168,7 @@ nrit-assike-amken
 NEG-cry-IND.1sg.2sg.
 `I don't like you'
 
-#Example 19
+#Example 39
 Source: b
 Vetted: f
 Judgement: g
@@ -177,7 +177,7 @@ assik-aqa nulia-ma tuntu-a
 like-IND.1sg.3sg. wife-REL.1sg.sg caribou-ABS.3sg.sg
 `I like my wife's caribou'
 
-#Example 20
+#Example 40
 Source: b
 Vetted: f
 Judgement: u
@@ -186,7 +186,7 @@ assik-aqa nulia-ma tuntu-at
 like-IND.1sg.3sg. wife-REL.1sg.sg caribou-ABS.3pl.sg
 `I like my wife's caribou'
 
-#Example 21
+#Example 41
 Source: b
 Vetted: f
 Judgement: g
@@ -195,7 +195,7 @@ ner-i
 eat-OPT.2sg.
 `you (sg.) eat!'
 
-#Example 22
+#Example 42
 Source: a:
 Vetted: f
 Judgement: g
@@ -204,7 +204,7 @@ aya-lta
 go-OPT.1pl.
 `let's go!'
 
-#Example 23
+#Example 43
 Source: a:
 Vetted: f
 Judgement: g
@@ -213,7 +213,7 @@ ki-na tekit-a?
 who-EX.ABS.sg. arrive-INT.3sg.
 `who has arrived?'
 
-#Example 24
+#Example 44
 Source: b
 Vetted: f
 Judgement: g
@@ -222,7 +222,7 @@ ui-ma qimugt-iin assik-ai mikelngu-u-t
 husband-REL.1sg.sg dog-REL.3sg.sg like-IND.3sg.3pl child-EX-ABS.pl
 `my husband's dog likes the children'
 
-#Example 25
+#Example 45
 Source: b
 Vetted: f
 Judgement: u
@@ -230,3 +230,31 @@ Phenomena: {adnominal possessives}
 ui-ma qimugt-iit assik-ai mikelngu-u-t
 husband-REL.1sg.sg dog-REL.3pl.sg like-IND.3sg.3pl child-EX-ABS.pl
 `my husband's dog likes the children'
+
+#Example 46
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {TAM}
+nere-llru-unga
+eat-PST-IND.1sg
+`I ate.'
+
+#Example 47
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {TAM}
+ner-ciq-ua
+eat-FUT-IND.1sg
+`I will eat.'
+
+#Example 48
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {TAM}
+nerb-lar-tua
+eat-CUS-IND.1sg
+`I regularly eat.'
+

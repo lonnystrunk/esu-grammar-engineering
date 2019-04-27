@@ -2,7 +2,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Grammar of Central Alaskan Yupik
 ;;; created at:
-;;;     Thu Apr 25 10:55:57 UTC 2019
+;;;     Sat Apr 27 00:24:15 UTC 2019
 ;;; based on Matrix customization system version of:
 ;;;     unknown time
 ;;;
@@ -18,12 +18,37 @@ non-mod-lex-item := lex-item &
 ;;; Matrix Type Addenda
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 
-head :+ [ PRON bool ].
+head :+ [ PRON bool,
+    POSSESSOR poss ].
 
 noun :+ [ CASE case ].
 
+inflected :+ [ NOUN-PC3-FLAG luk,
+    NOUN_PC_ABS_SG-FLAG luk,
+    VERB-PC4-FLAG luk,
+    NOUN_PC_NON_ABS_SG-FLAG luk ].
+
+infl-satisfied :+ [ NOUN-PC3-FLAG na-or-+,
+    NOUN_PC_ABS_SG-FLAG na-or-+,
+    VERB-PC4-FLAG na-or-+,
+    NOUN_PC_NON_ABS_SG-FLAG na-or-+ ].
+
 png :+ [ PER person,
     NUM number ].
+
+cat :+ [ POSSESSUM poss ].
+
+poss := *top* &
+  [ POSS-AGR png ].
+
+basic-bare-np-phrase :+ [ SYNSEM.LOCAL.CAT [ VAL.SPEC < >,
+                       HEAD #head,
+                       POSSESSUM #possessum ],
+    HEAD-DTR.SYNSEM.LOCAL.CAT [ HEAD #head,
+                                POSSESSUM #possessum & nonpossessive ] ].
+
+basic-head-1st-comp-phrase :+ [ SYNSEM.LOCAL.CAT.POSSESSUM #poss,
+    HEAD-DTR.SYNSEM.LOCAL.CAT.POSSESSUM #poss ].
 
 basic-head-comp-phrase :+ [ SYNSEM.LOCAL.CAT.MC #mc,
     HEAD-DTR.SYNSEM.LOCAL.CAT.MC #mc ].
@@ -59,6 +84,8 @@ synsem :+ [ ATTACH xmod ].
 head-mod-phrase :+ [ SYNSEM.ATTACH #attach,
     HEAD-DTR.SYNSEM.ATTACH #attach ].
 
+tam :+ [ SITUATION situation ].
+
 ;;;;;;;;;;;;;;
 ;;; Features
 ;;;;;;;;;;;;;;
@@ -66,13 +93,14 @@ head-mod-phrase :+ [ SYNSEM.ATTACH #attach,
 ;;; Case
 
 case := *top*.
-erg := case.  ; erg
-abs := case.  ; abs
-loc := case.  ; loc
-abm := case.  ; abm
-eql := case.  ; eql
-all := case.  ; all
-prl := case.  ; prl
+real-case := case.  ; intermediate case type for all real cases
+erg := real-case.  ; erg
+abs := real-case.  ; abs
+loc := real-case.  ; loc
+abm := real-case.  ; abm
+eql := real-case.  ; eql
+all := real-case.  ; all
+prl := real-case.  ; prl
 
 ;;; Person
 
@@ -88,10 +116,27 @@ pl := number.
 sg := number.
 du := number.
 
+;;; Possession
+
+possession := *top*.
+possessive := poss.  ; supertype for possessive features
+nonpossessive := poss.  ; type for nonpossessive
+possessor := possessive.
+possessum := possessive.
+possessive-1 := possessive.  ; supertype for strategy 1
+possessor-1 := possessor & possessive-1.
+possessum-1 := possessum & possessive-1.
+
 ;;; Tense
 
 pst := tense.
 fut := tense.
+
+situation := sort.
+
+;;; Situation
+
+cus := situation.
 
 ;;; Mood
 
@@ -99,6 +144,18 @@ ind := mood.
 opt := mood.
 app := mood.
 int := mood.
+ptp := mood.
+cnn := mood.
+cnnbc := cnn.
+cnnwv := cnn.
+cnnbf := cnn.
+cnnth := cnn.
+cnnif := cnn.
+cnnid := cnn.
+cnnwn := cnn.
+cnnwl := cnn.
+cnnst := cnn.
+cnnqs := cnn.
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Lexical Types
@@ -115,13 +172,15 @@ noun-lex := basic-noun-lex & basic-one-arg & no-hcons-lex-item & non-mod-lex-ite
                                  [ LOCAL.CAT.HEAD det,
                                    OPT + ] > ] ].
 
-noun1-noun-lex := noun-lex & noun-pc1-rule-dtr & noun-pc2-rule-dtr & noun-pc20-rule-dtr & noun-pc23-rule-dtr & noun-pc3-rule-dtr & noun-pc31-rule-dtr & noun-pc34-rule-dtr & noun-pc39-rule-dtr & noun-pc46-rule-dtr & noun-pc5-rule-dtr.
+noun1-noun-lex := noun-lex & noun-pc1-rule-dtr & noun-pc2-rule-dtr & noun-pc20-rule-dtr & noun-pc23-rule-dtr & noun-pc3-rule-dtr & noun-pc31-rule-dtr & noun-pc34-rule-dtr & noun-pc39-rule-dtr & noun-pc46-rule-dtr & noun-pc5-rule-dtr &
+  [ INFLECTED.NOUN-PC3-FLAG - ].
 
 noun2-noun-lex := noun-lex & noun-pc2-rule-dtr & noun-pc5-rule-dtr.
 
 noun3-noun-lex := noun-lex.
 
-noun4-noun-lex := noun-lex & noun-pc12-rule-dtr & noun-pc2-rule-dtr & noun-pc3-rule-dtr & noun-pc31-rule-dtr.
+noun4-noun-lex := noun-lex & noun-pc12-rule-dtr & noun-pc2-rule-dtr & noun-pc3-rule-dtr & noun-pc31-rule-dtr &
+  [ INFLECTED.NOUN-PC3-FLAG - ].
 
 noun6-noun-lex := noun-lex.
 
@@ -137,7 +196,8 @@ noun11-noun-lex := noun-lex & noun-pc23-rule-dtr.
 
 noun12-noun-lex := noun-lex.
 
-noun13-noun-lex := noun-lex & noun-pc25-rule-dtr & noun-pc3-rule-dtr & noun-pc31-rule-dtr.
+noun13-noun-lex := noun-lex & noun-pc25-rule-dtr & noun-pc3-rule-dtr & noun-pc31-rule-dtr &
+  [ INFLECTED.NOUN-PC3-FLAG - ].
 
 noun15-noun-lex := noun-lex.
 
@@ -181,9 +241,11 @@ noun49-noun-lex := noun-lex.
 
 noun50-noun-lex := noun-lex & noun-pc61-rule-dtr.
 
-noun_abs_sg-noun-lex := noun-lex.
+noun_abs_sg-noun-lex := noun-lex &
+  [ INFLECTED.NOUN_PC_ABS_SG-FLAG - ].
 
-noun_non_abs_sg-noun-lex := noun-lex & noun_pc_non_abs_sg-rule-dtr.
+noun_non_abs_sg-noun-lex := noun-lex & noun_pc_non_abs_sg-rule-dtr &
+  [ INFLECTED.NOUN_PC_NON_ABS_SG-FLAG - ].
 
 noun_particles-noun-lex := noun-lex.
 
@@ -202,16 +264,19 @@ verb-lex := basic-verb-lex & non-mod-lex-item &
 
 intransitive-verb-lex := verb-lex & intransitive-lex-item &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < >,
-    ARG-ST.FIRST.LOCAL.CAT.HEAD noun ].
+    ARG-ST < [ LOCAL.CAT.HEAD noun &
+                              [ CASE real-case ] ] > ].
 
 transitive-verb-lex := verb-lex & transitive-lex-item &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comps >,
-    ARG-ST < [ LOCAL.CAT.HEAD noun ],
+    ARG-ST < [ LOCAL.CAT.HEAD noun &
+                              [ CASE real-case ] ],
              #comps &
              [ LOCAL.CAT cat-sat &
                          [ VAL [ SPR < >,
                                  COMPS < > ],
-                           HEAD noun ] ] > ].
+                           HEAD noun &
+                                [ CASE real-case ] ] ] > ].
 
 abs-intransitive-verb-lex := intransitive-verb-lex &
   [ ARG-ST.FIRST.LOCAL.CAT.HEAD noun &
@@ -224,7 +289,8 @@ erg-abs-transitive-verb-lex := transitive-verb-lex &
                               [ CASE abs ] ] > ].
 
 verb1-verb-lex := intransitive-verb-lex & verb-pc10-rule-dtr & verb-pc11-rule-dtr & verb-pc12-rule-dtr & verb-pc23-rule-dtr & verb-pc24-rule-dtr & verb-pc31-rule-dtr & verb-pc35-rule-dtr & verb-pc4-rule-dtr & verb-pc5-rule-dtr & verb-pc6-rule-dtr & verb-pc9-rule-dtr &
-  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CAT.HEAD.CASE erg ].
+  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CAT.HEAD.CASE erg,
+    INFLECTED.VERB-PC4-FLAG - ].
 
 verb2-verb-lex := transitive-verb-lex &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.CASE abs ].
@@ -235,7 +301,8 @@ verb3-verb-lex := intransitive-verb-lex &
 verb4-verb-lex := transitive-verb-lex.
 
 verb5-verb-lex := intransitive-verb-lex & verb-pc23-rule-dtr & verb-pc24-rule-dtr & verb-pc4-rule-dtr &
-  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CAT.HEAD.CASE erg ].
+  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CAT.HEAD.CASE erg,
+    INFLECTED.VERB-PC4-FLAG - ].
 
 verb6-verb-lex := intransitive-verb-lex & verb-pc5-rule-dtr & verb-pc6-rule-dtr &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CAT.HEAD.CASE erg ].
@@ -328,10 +395,10 @@ verb55-verb-lex := transitive-verb-lex.
 verb56-verb-lex := intransitive-verb-lex & verb-pc53-rule-dtr &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CAT.HEAD.CASE erg ].
 
-verb_intrans-verb-lex := intransitive-verb-lex & verb_pc_derivation1-or-verb_pc_neg_prefix-rule-dtr & verb_pc_intrans-or-verb_pc_trans-rule-dtr &
+verb_intrans-verb-lex := intransitive-verb-lex & verb_pc_derivation1-rule-dtr & verb_pc_intrans-or-verb_pc_trans-rule-dtr &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CAT.HEAD.CASE abs ].
 
-verb_trans-verb-lex := transitive-verb-lex & verb_pc_derivation1-or-verb_pc_neg_prefix-rule-dtr & verb_pc_intrans-or-verb_pc_trans-rule-dtr &
+verb_trans-verb-lex := transitive-verb-lex & verb_pc_derivation1-rule-dtr & verb_pc_intrans-or-verb_pc_trans-rule-dtr &
   [ SYNSEM.LOCAL.CAT.VAL [ SUBJ.FIRST.LOCAL.CAT.HEAD.CASE erg,
                            COMPS.FIRST.LOCAL.CAT.HEAD.CASE abs ] ].
 
@@ -343,33 +410,32 @@ verb_trans-verb-lex := transitive-verb-lex & verb_pc_derivation1-or-verb_pc_neg_
 
 ;;; Intermediate rule types
 
-noun-pc34-rule-dtr := word-or-lexrule.
-verb-pc6-rule-dtr := word-or-lexrule.
+verb_pc_derivation1-rule-dtr := word-or-lexrule.
 noun-pc20-rule-dtr := word-or-lexrule.
-verb-pc35-rule-dtr := word-or-lexrule.
+verb-pc49-rule-dtr := word-or-lexrule.
 verb-pc12-rule-dtr := word-or-lexrule.
 noun-pc2-rule-dtr := word-or-lexrule.
 verb-pc10-rule-dtr := word-or-lexrule.
-verb-pc5-rule-dtr := word-or-lexrule.
-verb-pc11-rule-dtr := word-or-lexrule.
-noun_pc_non_abs_sg-rule-dtr := word-or-lexrule.
 verb_pc_intrans-or-verb_pc_trans-rule-dtr := word-or-lexrule.
+verb-pc42-rule-dtr := word-or-lexrule.
+verb-pc6-rule-dtr := word-or-lexrule.
+verb-pc37-rule-dtr := word-or-lexrule.
+noun_pc_non_abs_sg-rule-dtr := word-or-lexrule.
+noun-pc34-rule-dtr := word-or-lexrule.
 verb-pc23-rule-dtr := word-or-lexrule.
 verb-pc53-rule-dtr := word-or-lexrule.
 noun-pc5-rule-dtr := word-or-lexrule.
 noun-pc19-rule-dtr := word-or-lexrule.
-verb_pc_derivation1-or-verb_pc_neg_prefix-rule-dtr := word-or-lexrule.
 noun-pc23-rule-dtr := word-or-lexrule.
-verb-pc42-rule-dtr := word-or-lexrule.
-verb-pc49-rule-dtr := word-or-lexrule.
+verb-pc35-rule-dtr := word-or-lexrule.
 verb-pc8-rule-dtr := word-or-lexrule.
+verb-pc11-rule-dtr := word-or-lexrule.
 noun-pc31-rule-dtr := word-or-lexrule.
-verb-pc37-rule-dtr := word-or-lexrule.
-noun-pc12-rule-dtr := word-or-lexrule.
 verb-pc24-rule-dtr := word-or-lexrule.
 noun-pc61-rule-dtr := word-or-lexrule.
 noun-pc1-rule-dtr := word-or-lexrule.
 noun-pc25-rule-dtr := word-or-lexrule.
+verb-pc5-rule-dtr := word-or-lexrule.
 noun-pc3-rule-dtr := word-or-lexrule.
 verb-pc31-rule-dtr := word-or-lexrule.
 verb-pc4-rule-dtr := word-or-lexrule.
@@ -377,25 +443,37 @@ noun-pc39-rule-dtr := word-or-lexrule.
 noun-pc46-rule-dtr := word-or-lexrule.
 verb-pc26-rule-dtr := word-or-lexrule.
 verb-pc9-rule-dtr := word-or-lexrule.
+noun-pc12-rule-dtr := word-or-lexrule.
 
 ;;; Lexical rule types
 
 noun-pc1-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR noun-pc1-rule-dtr ].
+  [ INFLECTED #infl,
+    DTR noun-pc1-rule-dtr &
+        [ INFLECTED #infl ] ].
 
 noun-pc1_lrt1-lex-rule := noun-pc1-lex-rule-super &
   [ SYNSEM.LOCAL [ CAT.HEAD.CASE abs,
                    CONT.HOOK.INDEX.PNG.NUM du ] ].
 
 noun-pc2-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR noun-pc2-rule-dtr ].
+  [ INFLECTED #infl,
+    DTR noun-pc2-rule-dtr &
+        [ INFLECTED #infl ] ].
 
 noun-pc2_lrt1-lex-rule := noun-pc2-lex-rule-super &
   [ SYNSEM.LOCAL [ CAT.HEAD.CASE abs,
                    CONT.HOOK.INDEX.PNG.NUM pl ] ].
 
 noun-pc3-lex-rule-super := add-only-no-ccont-rule & noun-pc31-rule-dtr &
-  [ DTR noun-pc3-rule-dtr ].
+  [ INFLECTED [ NOUN-PC3-FLAG +,
+                VERB-PC4-FLAG #verb-pc4,
+                NOUN_PC_ABS_SG-FLAG #noun_pc_abs_sg,
+                NOUN_PC_NON_ABS_SG-FLAG #noun_pc_non_abs_sg ],
+    DTR noun-pc3-rule-dtr &
+        [ INFLECTED [ VERB-PC4-FLAG #verb-pc4,
+                      NOUN_PC_ABS_SG-FLAG #noun_pc_abs_sg,
+                      NOUN_PC_NON_ABS_SG-FLAG #noun_pc_non_abs_sg ] ] ].
 
 noun-pc3_lrt1-lex-rule := infl-lex-rule & noun-pc3-lex-rule-super.
 
@@ -418,7 +496,9 @@ noun-pc3_lrt6-lex-rule := const-lex-rule & noun-pc3-lex-rule-super &
                    CONT.HOOK.INDEX.PNG.NUM sg ] ].
 
 noun-pc4-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & noun-pc2-rule-dtr &
-  [ DTR noun2-noun-lex ].
+  [ INFLECTED #infl,
+    DTR noun2-noun-lex &
+        [ INFLECTED #infl ] ].
 
 noun-pc4_lrt1-lex-rule := noun-pc4-lex-rule-super &
   [ SYNSEM.LOCAL [ CAT.HEAD.CASE abs,
@@ -431,7 +511,9 @@ noun-pc4_lrt2-lex-rule := noun-pc4-lex-rule-super &
 noun-pc4_lrt3-lex-rule := noun-pc4-lex-rule-super.
 
 noun-pc5-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR noun-pc5-rule-dtr ].
+  [ INFLECTED #infl,
+    DTR noun-pc5-rule-dtr &
+        [ INFLECTED #infl ] ].
 
 noun-pc5_lrt1-lex-rule := noun-pc5-lex-rule-super &
   [ SYNSEM.LOCAL [ CAT.HEAD.CASE abs,
@@ -441,14 +523,18 @@ noun-pc5_lrt2-lex-rule := noun-pc5-lex-rule-super &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM sg ].
 
 noun-pc7-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR noun3-noun-lex ].
+  [ INFLECTED #infl,
+    DTR noun3-noun-lex &
+        [ INFLECTED #infl ] ].
 
 noun-pc7_lrt1-lex-rule := noun-pc7-lex-rule-super &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG.NUM sg,
                    CAT.HEAD.CASE abm ] ].
 
 noun-pc12-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR noun-pc12-rule-dtr ].
+  [ INFLECTED #infl,
+    DTR noun-pc12-rule-dtr &
+        [ INFLECTED #infl ] ].
 
 noun-pc12_lrt1-lex-rule := noun-pc12-lex-rule-super &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM sg ].
@@ -461,58 +547,76 @@ noun-pc12_lrt3-lex-rule := noun-pc12-lex-rule-super &
                    CONT.HOOK.INDEX.PNG.NUM pl ] ].
 
 noun-pc16-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR noun6-noun-lex ].
+  [ INFLECTED #infl,
+    DTR noun6-noun-lex &
+        [ INFLECTED #infl ] ].
 
 noun-pc16_lrt1-lex-rule := noun-pc16-lex-rule-super &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM sg ].
 
 noun-pc18-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR noun7-noun-lex ].
+  [ INFLECTED #infl,
+    DTR noun7-noun-lex &
+        [ INFLECTED #infl ] ].
 
 noun-pc18_lrt1-lex-rule := noun-pc18-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.HEAD.CASE loc ].
 
 noun-pc19-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR noun-pc19-rule-dtr ].
+  [ INFLECTED #infl,
+    DTR noun-pc19-rule-dtr &
+        [ INFLECTED #infl ] ].
 
 noun-pc19_lrt1-lex-rule := noun-pc19-lex-rule-super &
   [ SYNSEM.LOCAL [ CAT.HEAD.CASE abs,
                    CONT.HOOK.INDEX.PNG.NUM sg ] ].
 
 noun-pc20-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR noun-pc20-rule-dtr ].
+  [ INFLECTED #infl,
+    DTR noun-pc20-rule-dtr &
+        [ INFLECTED #infl ] ].
 
 noun-pc20_lrt1-lex-rule := noun-pc20-lex-rule-super &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG.NUM pl,
                    CAT.HEAD.CASE abm ] ].
 
 noun-pc21-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR noun9-noun-lex ].
+  [ INFLECTED #infl,
+    DTR noun9-noun-lex &
+        [ INFLECTED #infl ] ].
 
 noun-pc21_lrt1-lex-rule := noun-pc21-lex-rule-super &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM sg ].
 
 noun-pc22-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR noun10-noun-lex ].
+  [ INFLECTED #infl,
+    DTR noun10-noun-lex &
+        [ INFLECTED #infl ] ].
 
 noun-pc22_lrt1-lex-rule := noun-pc22-lex-rule-super &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM pl ].
 
 noun-pc23-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR noun-pc23-rule-dtr ].
+  [ INFLECTED #infl,
+    DTR noun-pc23-rule-dtr &
+        [ INFLECTED #infl ] ].
 
 noun-pc23_lrt1-lex-rule := noun-pc23-lex-rule-super &
   [ SYNSEM.LOCAL [ CAT.HEAD.CASE abs,
                    CONT.HOOK.INDEX.PNG.NUM pl ] ].
 
 noun-pc24-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR noun12-noun-lex ].
+  [ INFLECTED #infl,
+    DTR noun12-noun-lex &
+        [ INFLECTED #infl ] ].
 
 noun-pc24_lrt1-lex-rule := noun-pc24-lex-rule-super &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM sg ].
 
 noun-pc25-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR noun-pc25-rule-dtr ].
+  [ INFLECTED #infl,
+    DTR noun-pc25-rule-dtr &
+        [ INFLECTED #infl ] ].
 
 noun-pc25_lrt1-lex-rule := noun-pc25-lex-rule-super &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM pl ].
@@ -521,117 +625,155 @@ noun-pc25_lrt2-lex-rule := noun-pc25-lex-rule-super &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM sg ].
 
 noun-pc26-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR noun15-noun-lex ].
+  [ INFLECTED #infl,
+    DTR noun15-noun-lex &
+        [ INFLECTED #infl ] ].
 
 noun-pc26_lrt1-lex-rule := noun-pc26-lex-rule-super &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM pl ].
 
 noun-pc27-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR noun17-noun-lex ].
+  [ INFLECTED #infl,
+    DTR noun17-noun-lex &
+        [ INFLECTED #infl ] ].
 
 noun-pc27_lrt1-lex-rule := noun-pc27-lex-rule-super &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG.NUM sg,
                    CAT.HEAD.CASE all ] ].
 
 noun-pc29-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR noun19-noun-lex ].
+  [ INFLECTED #infl,
+    DTR noun19-noun-lex &
+        [ INFLECTED #infl ] ].
 
 noun-pc29_lrt1-lex-rule := noun-pc29-lex-rule-super &
   [ SYNSEM.LOCAL [ CAT.HEAD.CASE abs,
                    CONT.HOOK.INDEX.PNG.NUM sg ] ].
 
 noun-pc30-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR noun20-noun-lex ].
+  [ INFLECTED #infl,
+    DTR noun20-noun-lex &
+        [ INFLECTED #infl ] ].
 
 noun-pc30_lrt1-lex-rule := noun-pc30-lex-rule-super &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM sg ].
 
 noun-pc31-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR noun-pc31-rule-dtr ].
+  [ INFLECTED #infl,
+    DTR noun-pc31-rule-dtr &
+        [ INFLECTED #infl ] ].
 
 noun-pc31_lrt1-lex-rule := noun-pc31-lex-rule-super &
   [ SYNSEM.LOCAL [ CAT.HEAD.CASE abs,
                    CONT.HOOK.INDEX.PNG.NUM sg ] ].
 
 noun-pc34-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR noun-pc34-rule-dtr ].
+  [ INFLECTED #infl,
+    DTR noun-pc34-rule-dtr &
+        [ INFLECTED #infl ] ].
 
 noun-pc34_lrt1-lex-rule := noun-pc34-lex-rule-super &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM sg ].
 
 noun-pc36-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & noun-pc19-rule-dtr &
-  [ DTR noun23-noun-lex ].
+  [ INFLECTED #infl,
+    DTR noun23-noun-lex &
+        [ INFLECTED #infl ] ].
 
 noun-pc36_lrt1-lex-rule := noun-pc36-lex-rule-super.
 
 noun-pc37-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR noun24-noun-lex ].
+  [ INFLECTED #infl,
+    DTR noun24-noun-lex &
+        [ INFLECTED #infl ] ].
 
 noun-pc37_lrt1-lex-rule := noun-pc37-lex-rule-super &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM sg ].
 
 noun-pc39-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR noun-pc39-rule-dtr ].
+  [ INFLECTED #infl,
+    DTR noun-pc39-rule-dtr &
+        [ INFLECTED #infl ] ].
 
 noun-pc39_lrt1-lex-rule := noun-pc39-lex-rule-super &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM sg ].
 
 noun-pc43-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR noun28-noun-lex ].
+  [ INFLECTED #infl,
+    DTR noun28-noun-lex &
+        [ INFLECTED #infl ] ].
 
 noun-pc43_lrt1-lex-rule := noun-pc43-lex-rule-super &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM sg ].
 
 noun-pc44-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR noun29-noun-lex ].
+  [ INFLECTED #infl,
+    DTR noun29-noun-lex &
+        [ INFLECTED #infl ] ].
 
 noun-pc44_lrt1-lex-rule := noun-pc44-lex-rule-super &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM sg ].
 
 noun-pc46-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR noun-pc46-rule-dtr ].
+  [ INFLECTED #infl,
+    DTR noun-pc46-rule-dtr &
+        [ INFLECTED #infl ] ].
 
 noun-pc46_lrt1-lex-rule := noun-pc46-lex-rule-super &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM sg ].
 
 noun-pc49-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR noun38-noun-lex ].
+  [ INFLECTED #infl,
+    DTR noun38-noun-lex &
+        [ INFLECTED #infl ] ].
 
 noun-pc49_lrt1-lex-rule := noun-pc49-lex-rule-super &
   [ SYNSEM.LOCAL [ CAT.HEAD.CASE abs,
                    CONT.HOOK.INDEX.PNG.NUM sg ] ].
 
 noun-pc51-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR noun41-noun-lex ].
+  [ INFLECTED #infl,
+    DTR noun41-noun-lex &
+        [ INFLECTED #infl ] ].
 
 noun-pc51_lrt1-lex-rule := noun-pc51-lex-rule-super &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM sg ].
 
 noun-pc55-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR noun47-noun-lex ].
+  [ INFLECTED #infl,
+    DTR noun47-noun-lex &
+        [ INFLECTED #infl ] ].
 
 noun-pc55_lrt1-lex-rule := noun-pc55-lex-rule-super &
   [ SYNSEM.LOCAL [ CAT.HEAD.CASE abs,
                    CONT.HOOK.INDEX.PNG.NUM pl ] ].
 
 noun-pc58-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR noun48-noun-lex ].
+  [ INFLECTED #infl,
+    DTR noun48-noun-lex &
+        [ INFLECTED #infl ] ].
 
 noun-pc58_lrt1-lex-rule := noun-pc58-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.HEAD.CASE loc ].
 
 noun-pc59-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR noun49-noun-lex ].
+  [ INFLECTED #infl,
+    DTR noun49-noun-lex &
+        [ INFLECTED #infl ] ].
 
 noun-pc59_lrt1-lex-rule := noun-pc59-lex-rule-super.
 
 noun-pc60-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & noun-pc61-rule-dtr &
-  [ DTR noun50-noun-lex ].
+  [ INFLECTED #infl,
+    DTR noun50-noun-lex &
+        [ INFLECTED #infl ] ].
 
 noun-pc60_lrt1-lex-rule := noun-pc60-lex-rule-super.
 
 noun-pc61-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR noun-pc61-rule-dtr ].
+  [ INFLECTED #infl,
+    DTR noun-pc61-rule-dtr &
+        [ INFLECTED #infl ] ].
 
 noun-pc61_lrt1-lex-rule := noun-pc61-lex-rule-super &
   [ SYNSEM.LOCAL [ CAT.HEAD.CASE erg,
@@ -642,57 +784,97 @@ noun-pc61_lrt2-lex-rule := noun-pc61-lex-rule-super &
                    CONT.HOOK.INDEX.PNG.NUM pl ] ].
 
 noun_pc_abs_sg-lex-rule-super := add-only-no-ccont-rule & const-lex-rule &
-  [ DTR noun_abs_sg-noun-lex ].
+  [ INFLECTED [ NOUN_PC_ABS_SG-FLAG +,
+                NOUN-PC3-FLAG #noun-pc3,
+                NOUN_PC_NON_ABS_SG-FLAG #noun_pc_non_abs_sg,
+                VERB-PC4-FLAG #verb-pc4 ],
+    DTR noun_abs_sg-noun-lex &
+        [ INFLECTED [ NOUN-PC3-FLAG #noun-pc3,
+                      NOUN_PC_NON_ABS_SG-FLAG #noun_pc_non_abs_sg,
+                      VERB-PC4-FLAG #verb-pc4 ] ] ].
 
 noun-pc100_lrt1-lex-rule := noun_pc_abs_sg-lex-rule-super &
   [ SYNSEM.LOCAL [ CAT.HEAD.CASE abs,
                    CONT.HOOK.INDEX.PNG.NUM sg ] ].
 
-noun_pc_non_abs_sg-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR noun_pc_non_abs_sg-rule-dtr ].
+noun_pc_non_abs_sg-lex-rule-super := infl-lex-rule &
+  [ INFLECTED [ NOUN_PC_NON_ABS_SG-FLAG +,
+                NOUN-PC3-FLAG #noun-pc3,
+                VERB-PC4-FLAG #verb-pc4,
+                NOUN_PC_ABS_SG-FLAG #noun_pc_abs_sg ],
+    DTR noun_pc_non_abs_sg-rule-dtr &
+        [ INFLECTED [ NOUN-PC3-FLAG #noun-pc3,
+                      VERB-PC4-FLAG #verb-pc4,
+                      NOUN_PC_ABS_SG-FLAG #noun_pc_abs_sg ] ] ].
 
-noun-pc101_lrt1-lex-rule := noun_pc_non_abs_sg-lex-rule-super &
-  [ SYNSEM.LOCAL [ CAT.HEAD.CASE erg,
-                   CONT.HOOK.INDEX.PNG.NUM sg ] ].
+nonpossessive-lex-rule-1 := add-only-no-ccont-rule &
+  [ SYNSEM.LOCAL.CAT [ HEAD noun &
+                            [ POSSESSOR nonpossessive ],
+                       POSSESSUM nonpossessive ] ].
 
-noun-pc101_lrt2-lex-rule := noun_pc_non_abs_sg-lex-rule-super &
-  [ SYNSEM.LOCAL [ CAT.HEAD.CASE abs,
-                   CONT.HOOK.INDEX.PNG.NUM sg ] ].
+noun-pc101_lrt1_erg_sg-lex-rule := nonpossessive-lex-rule-1 & noun_pc_non_abs_sg-lex-rule-super.
 
-noun-pc101_lrt3-lex-rule := noun_pc_non_abs_sg-lex-rule-super &
-  [ SYNSEM.LOCAL [ CAT.HEAD.CASE abs,
-                   CONT.HOOK.INDEX.PNG.NUM sg ] ].
+possessum-lex-rule-1 := val-change-with-ccont-lex-rule &
+  [ C-CONT [ HOOK #hook,
+             RELS <! arg12-ev-relation &
+                     [ PRED "poss_rel",
+                       LBL #lbl,
+                       ARG1 #possessum,
+                       ARG2 #possessor ] !>,
+             HCONS <!  !>,
+             ICONS <!  !> ],
+    DTR.SYNSEM.LOCAL [ CAT [ HEAD.PRON -,
+                             VAL.SPR #spr ],
+                       CONT.HOOK #hook &
+                                 [ INDEX #possessum,
+                                   LTOP #lbl ] ],
+    SYNSEM.LOCAL.CAT [ HEAD noun &
+                            [ POSSESSOR nonpossessive ],
+                       POSSESSUM possessum-1 &
+                                 [ POSS-AGR #png ],
+                       VAL [ SPR #spr,
+                             COMPS.FIRST [ OPT -,
+                                           LOCAL [ CAT cat-sat &
+                                                       [ VAL.SPR < >,
+                                                         HEAD +np &
+                                                              [ CASE erg ] ],
+                                                   CONT.HOOK.INDEX #possessor &
+                                                                   [ PNG #png ] ] ] ] ] ].
 
-noun-pc101_lrt4-lex-rule := noun_pc_non_abs_sg-lex-rule-super &
-  [ SYNSEM.LOCAL [ CAT.HEAD.CASE abs,
-                   CONT.HOOK.INDEX.PNG.NUM pl ] ].
+noun-pc101_lrt2_abs_sg-lex-rule := noun_pc_non_abs_sg-lex-rule-super & possessum-lex-rule-1 &
+  [ SYNSEM.LOCAL.CAT.POSSESSUM.POSS-AGR [ PER 3rd,
+                                          NUM sg ] ].
 
-noun-pc101_lrt5-lex-rule := noun_pc_non_abs_sg-lex-rule-super &
-  [ SYNSEM.LOCAL [ CAT.HEAD.CASE erg,
-                   CONT.HOOK.INDEX.PNG.NUM pl ] ].
+noun-pc101_lrt3_abs_sg-lex-rule := noun_pc_non_abs_sg-lex-rule-super & possessum-lex-rule-1 &
+  [ SYNSEM.LOCAL.CAT.POSSESSUM.POSS-AGR [ PER 1st,
+                                          NUM sg ] ].
 
-noun-pc101_lrt6-lex-rule := noun_pc_non_abs_sg-lex-rule-super &
-  [ SYNSEM.LOCAL [ CAT.HEAD.CASE erg,
-                   CONT.HOOK.INDEX.PNG.NUM sg ] ].
+noun-pc101_lrt4_abs_pl-lex-rule := nonpossessive-lex-rule-1 & noun_pc_non_abs_sg-lex-rule-super.
 
-noun-pc101_lrt7-lex-rule := noun_pc_non_abs_sg-lex-rule-super &
-  [ SYNSEM.LOCAL [ CAT.HEAD.CASE abm,
-                   CONT.HOOK.INDEX.PNG.NUM sg ] ].
+noun-pc101_lrt5_erg_pl-lex-rule := nonpossessive-lex-rule-1 & noun_pc_non_abs_sg-lex-rule-super.
 
-noun-pc101_lrt8-lex-rule := noun_pc_non_abs_sg-lex-rule-super &
-  [ SYNSEM.LOCAL [ CAT.HEAD.CASE erg,
-                   CONT.HOOK.INDEX.PNG.NUM sg ] ].
+noun-pc101_lrt6_erg_sg-lex-rule := noun_pc_non_abs_sg-lex-rule-super & possessum-lex-rule-1 &
+  [ SYNSEM.LOCAL.CAT.POSSESSUM.POSS-AGR [ PER 1st,
+                                          NUM sg ] ].
 
-noun-pc101_lrt9-lex-rule := noun_pc_non_abs_sg-lex-rule-super &
-  [ SYNSEM.LOCAL [ CAT.HEAD.CASE erg,
-                   CONT.HOOK.INDEX.PNG.NUM pl ] ].
+noun-pc101_lrt7_abm_sg-lex-rule := nonpossessive-lex-rule-1 & noun_pc_non_abs_sg-lex-rule-super.
 
-noun-pc101_lrt10-lex-rule := noun_pc_non_abs_sg-lex-rule-super &
-  [ SYNSEM.LOCAL [ CAT.HEAD.CASE abs,
-                   CONT.HOOK.INDEX.PNG.NUM sg ] ].
+noun-pc101_lrt8_erg_sg-lex-rule := noun_pc_non_abs_sg-lex-rule-super & possessum-lex-rule-1 &
+  [ SYNSEM.LOCAL.CAT.POSSESSUM.POSS-AGR [ PER 3rd,
+                                          NUM sg ] ].
+
+noun-pc101_lrt9_erg_pl-lex-rule := noun_pc_non_abs_sg-lex-rule-super & possessum-lex-rule-1 &
+  [ SYNSEM.LOCAL.CAT.POSSESSUM.POSS-AGR [ PER 3rd,
+                                          NUM pl ] ].
+
+noun-pc101_lrt10_abs_sg-lex-rule := noun_pc_non_abs_sg-lex-rule-super & possessum-lex-rule-1 &
+  [ SYNSEM.LOCAL.CAT.POSSESSUM.POSS-AGR [ PER 3rd,
+                                          NUM pl ] ].
 
 noun_pc_derivational1-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & noun_pc_non_abs_sg-rule-dtr &
-  [ DTR noun_non_abs_sg-noun-lex ].
+  [ INFLECTED #infl,
+    DTR noun_non_abs_sg-noun-lex &
+        [ INFLECTED #infl ] ].
 
 noun-pc102_lrt1-lex-rule := noun_pc_derivational1-lex-rule-super.
 
@@ -701,7 +883,9 @@ noun-pc102_lrt2-lex-rule := noun_pc_derivational1-lex-rule-super.
 noun-pc102_lrt3-lex-rule := noun_pc_derivational1-lex-rule-super.
 
 verb-pc1-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR verb2-verb-lex ].
+  [ INFLECTED #infl,
+    DTR verb2-verb-lex &
+        [ INFLECTED #infl ] ].
 
 verb-pc1_lrt1-lex-rule := verb-pc1-lex-rule-super &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.MOOD opt,
@@ -711,7 +895,9 @@ verb-pc1_lrt1-lex-rule := verb-pc1-lex-rule-super &
                                                                      NUM sg ] ] ] ].
 
 verb-pc2-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR verb3-verb-lex ].
+  [ INFLECTED #infl,
+    DTR verb3-verb-lex &
+        [ INFLECTED #infl ] ].
 
 verb-pc2_lrt1-lex-rule := verb-pc2-lex-rule-super &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.MOOD ind,
@@ -719,14 +905,23 @@ verb-pc2_lrt1-lex-rule := verb-pc2-lex-rule-super &
                                                                   NUM pl ] ] ].
 
 verb-pc3-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR verb4-verb-lex ].
+  [ INFLECTED #infl,
+    DTR verb4-verb-lex &
+        [ INFLECTED #infl ] ].
 
 verb-pc3_lrt1-lex-rule := verb-pc3-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 1st,
                                                                 NUM pl ] ].
 
 verb-pc4-lex-rule-super := add-only-no-ccont-rule & verb-pc23-rule-dtr & verb-pc24-rule-dtr &
-  [ DTR verb-pc4-rule-dtr ].
+  [ INFLECTED [ VERB-PC4-FLAG +,
+                NOUN-PC3-FLAG #noun-pc3,
+                NOUN_PC_NON_ABS_SG-FLAG #noun_pc_non_abs_sg,
+                NOUN_PC_ABS_SG-FLAG #noun_pc_abs_sg ],
+    DTR verb-pc4-rule-dtr &
+        [ INFLECTED [ NOUN-PC3-FLAG #noun-pc3,
+                      NOUN_PC_NON_ABS_SG-FLAG #noun_pc_non_abs_sg,
+                      NOUN_PC_ABS_SG-FLAG #noun_pc_abs_sg ] ] ].
 
 verb-pc4_lrt1-lex-rule := infl-lex-rule & verb-pc4-lex-rule-super &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.MOOD opt,
@@ -787,7 +982,9 @@ verb-pc4-lrt13-lex-rule := const-lex-rule & verb-pc4-lex-rule-super &
                                                                   NUM sg ] ] ].
 
 verb-pc5-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR verb-pc5-rule-dtr ].
+  [ INFLECTED #infl,
+    DTR verb-pc5-rule-dtr &
+        [ INFLECTED #infl ] ].
 
 verb-pc5_lrt1-lex-rule := verb-pc5-lex-rule-super &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.MOOD ind,
@@ -795,7 +992,9 @@ verb-pc5_lrt1-lex-rule := verb-pc5-lex-rule-super &
                                                                   NUM sg ] ] ].
 
 verb-pc6-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR verb-pc6-rule-dtr ].
+  [ INFLECTED #infl,
+    DTR verb-pc6-rule-dtr &
+        [ INFLECTED #infl ] ].
 
 verb-pc6_lrt1-lex-rule := verb-pc6-lex-rule-super &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.MOOD ind,
@@ -805,24 +1004,32 @@ verb-pc6_lrt1-lex-rule := verb-pc6-lex-rule-super &
                                                                      PER 3rd ] ] ] ].
 
 verb-pc7-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb-pc8-rule-dtr &
-  [ DTR verb7-verb-lex ].
+  [ INFLECTED #infl,
+    DTR verb7-verb-lex &
+        [ INFLECTED #infl ] ].
 
 verb-pc7_lrt1-lex-rule := verb-pc7-lex-rule-super.
 
 verb-pc8-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR verb-pc8-rule-dtr ].
+  [ INFLECTED #infl,
+    DTR verb-pc8-rule-dtr &
+        [ INFLECTED #infl ] ].
 
 verb-pc8_lrt1-lex-rule := verb-pc8-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.NUM sg ].
 
 verb-pc9-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb-pc10-rule-dtr & verb-pc11-rule-dtr & verb-pc12-rule-dtr & verb-pc5-rule-dtr &
-  [ DTR verb-pc9-rule-dtr ].
+  [ INFLECTED #infl,
+    DTR verb-pc9-rule-dtr &
+        [ INFLECTED #infl ] ].
 
 verb-pc9_lrt1-lex-rule := verb-pc9-lex-rule-super &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE fut ].
 
 verb-pc10-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb-pc11-rule-dtr &
-  [ DTR verb-pc10-rule-dtr ].
+  [ INFLECTED #infl,
+    DTR verb-pc10-rule-dtr &
+        [ INFLECTED #infl ] ].
 
 verb-pc10_lrt1-lex-rule := verb-pc10-lex-rule-super.
 
@@ -838,14 +1045,18 @@ verb-pc10_lrt3-lex-rule := verb-pc10-lex-rule-super &
                                                                   NUM sg ] ] ].
 
 verb-pc11-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR verb-pc11-rule-dtr ].
+  [ INFLECTED #infl,
+    DTR verb-pc11-rule-dtr &
+        [ INFLECTED #infl ] ].
 
 verb-pc11_lrt1-lex-rule := verb-pc11-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 3rd,
                                                                 NUM sg ] ].
 
 verb-pc12-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR verb-pc12-rule-dtr ].
+  [ INFLECTED #infl,
+    DTR verb-pc12-rule-dtr &
+        [ INFLECTED #infl ] ].
 
 verb-pc12_lrt1-lex-rule := verb-pc12-lex-rule-super &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.MOOD ind,
@@ -853,13 +1064,17 @@ verb-pc12_lrt1-lex-rule := verb-pc12-lex-rule-super &
                                                                   NUM sg ] ] ].
 
 verb-pc13-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR verb11-verb-lex ].
+  [ INFLECTED #infl,
+    DTR verb11-verb-lex &
+        [ INFLECTED #infl ] ].
 
 verb-pc13_lrt1-lex-rule := verb-pc13-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.NUM sg ].
 
 verb-pc14-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR verb12-verb-lex ].
+  [ INFLECTED #infl,
+    DTR verb12-verb-lex &
+        [ INFLECTED #infl ] ].
 
 verb-pc14_lrt1-lex-rule := verb-pc14-lex-rule-super &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.MOOD opt,
@@ -867,7 +1082,9 @@ verb-pc14_lrt1-lex-rule := verb-pc14-lex-rule-super &
                                                                   NUM pl ] ] ].
 
 verb-pc15-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR verb13-verb-lex ].
+  [ INFLECTED #infl,
+    DTR verb13-verb-lex &
+        [ INFLECTED #infl ] ].
 
 verb-pc15_lrt1-lex-rule := verb-pc15-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 3rd,
@@ -876,21 +1093,27 @@ verb-pc15_lrt1-lex-rule := verb-pc15-lex-rule-super &
                                                                    PER 3rd ] ] ].
 
 verb-pc16-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR verb14-verb-lex ].
+  [ INFLECTED #infl,
+    DTR verb14-verb-lex &
+        [ INFLECTED #infl ] ].
 
 verb-pc16_lrt1-lex-rule := verb-pc16-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 3rd,
                                                                 NUM sg ] ].
 
 verb-pc17-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR verb17-verb-lex ].
+  [ INFLECTED #infl,
+    DTR verb17-verb-lex &
+        [ INFLECTED #infl ] ].
 
 verb-pc17_lrt1-lex-rule := verb-pc17-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 1st,
                                                                 NUM sg ] ].
 
 verb-pc18-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR verb18-verb-lex ].
+  [ INFLECTED #infl,
+    DTR verb18-verb-lex &
+        [ INFLECTED #infl ] ].
 
 verb-pc18_lrt1-lex-rule := verb-pc18-lex-rule-super &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.MOOD ind,
@@ -898,7 +1121,9 @@ verb-pc18_lrt1-lex-rule := verb-pc18-lex-rule-super &
                                                                   NUM pl ] ] ].
 
 verb-pc20-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR verb20-verb-lex ].
+  [ INFLECTED #infl,
+    DTR verb20-verb-lex &
+        [ INFLECTED #infl ] ].
 
 verb-pc20_lrt1-lex-rule := verb-pc20-lex-rule-super &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.MOOD ind,
@@ -908,21 +1133,27 @@ verb-pc20_lrt1-lex-rule := verb-pc20-lex-rule-super &
                                                                      NUM sg ] ] ] ].
 
 verb-pc23-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR verb-pc23-rule-dtr ].
+  [ INFLECTED #infl,
+    DTR verb-pc23-rule-dtr &
+        [ INFLECTED #infl ] ].
 
 verb-pc23_lrt1-lex-rule := verb-pc23-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 3rd,
                                                                 NUM sg ] ].
 
 verb-pc24-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR verb-pc24-rule-dtr ].
+  [ INFLECTED #infl,
+    DTR verb-pc24-rule-dtr &
+        [ INFLECTED #infl ] ].
 
 verb-pc24_lrt1-lex-rule := verb-pc24-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 3rd,
                                                                 NUM sg ] ].
 
 verb-pc26-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR verb-pc26-rule-dtr ].
+  [ INFLECTED #infl,
+    DTR verb-pc26-rule-dtr &
+        [ INFLECTED #infl ] ].
 
 verb-pc26_lrt1-lex-rule := verb-pc26-lex-rule-super &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.MOOD ind,
@@ -937,7 +1168,9 @@ verb-pc26_lrt2-lex-rule := verb-pc26-lex-rule-super &
                                                                   NUM sg ] ] ].
 
 verb-pc31-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR verb-pc31-rule-dtr ].
+  [ INFLECTED #infl,
+    DTR verb-pc31-rule-dtr &
+        [ INFLECTED #infl ] ].
 
 verb-pc31_lrt1-lex-rule := verb-pc31-lex-rule-super &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.MOOD ind,
@@ -945,38 +1178,50 @@ verb-pc31_lrt1-lex-rule := verb-pc31-lex-rule-super &
                                                                   NUM sg ] ] ].
 
 verb-pc35-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR verb-pc35-rule-dtr ].
+  [ INFLECTED #infl,
+    DTR verb-pc35-rule-dtr &
+        [ INFLECTED #infl ] ].
 
 verb-pc35_lrt1-lex-rule := verb-pc35-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 3rd,
                                                                 NUM sg ] ].
 
 verb-pc37-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb-pc23-rule-dtr & verb-pc24-rule-dtr &
-  [ DTR verb-pc37-rule-dtr ].
+  [ INFLECTED #infl,
+    DTR verb-pc37-rule-dtr &
+        [ INFLECTED #infl ] ].
 
 verb-pc37_lrt1-lex-rule := verb-pc37-lex-rule-super.
 
 verb-pc38-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR verb32-verb-lex ].
+  [ INFLECTED #infl,
+    DTR verb32-verb-lex &
+        [ INFLECTED #infl ] ].
 
 verb-pc38_lrt1-lex-rule := verb-pc38-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 1st,
                                                                 NUM pl ] ].
 
 verb-pc40-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR verb33-verb-lex ].
+  [ INFLECTED #infl,
+    DTR verb33-verb-lex &
+        [ INFLECTED #infl ] ].
 
 verb-pc40_lrt1-lex-rule := verb-pc40-lex-rule-super &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE fut ].
 
 verb-pc41-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb-pc42-rule-dtr &
-  [ DTR verb38-verb-lex ].
+  [ INFLECTED #infl,
+    DTR verb38-verb-lex &
+        [ INFLECTED #infl ] ].
 
 verb-pc41_lrt1-lex-rule := verb-pc41-lex-rule-super &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE fut ].
 
 verb-pc42-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR verb-pc42-rule-dtr ].
+  [ INFLECTED #infl,
+    DTR verb-pc42-rule-dtr &
+        [ INFLECTED #infl ] ].
 
 verb-pc42_lrt1-lex-rule := verb-pc42-lex-rule-super &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.MOOD opt,
@@ -984,7 +1229,9 @@ verb-pc42_lrt1-lex-rule := verb-pc42-lex-rule-super &
                                                                   NUM sg ] ] ].
 
 verb-pc43-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR verb39-verb-lex ].
+  [ INFLECTED #infl,
+    DTR verb39-verb-lex &
+        [ INFLECTED #infl ] ].
 
 verb-pc43_lrt1-lex-rule := verb-pc43-lex-rule-super &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.MOOD opt,
@@ -992,14 +1239,18 @@ verb-pc43_lrt1-lex-rule := verb-pc43-lex-rule-super &
                                                                   NUM sg ] ] ].
 
 verb-pc44-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR verb40-verb-lex ].
+  [ INFLECTED #infl,
+    DTR verb40-verb-lex &
+        [ INFLECTED #infl ] ].
 
 verb-pc44_lrt1-lex-rule := verb-pc44-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 1st,
                                                                 NUM sg ] ].
 
 verb-pc45-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR verb41-verb-lex ].
+  [ INFLECTED #infl,
+    DTR verb41-verb-lex &
+        [ INFLECTED #infl ] ].
 
 verb-pc45_lrt1-lex-rule := verb-pc45-lex-rule-super &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.MOOD ind,
@@ -1009,7 +1260,9 @@ verb-pc45_lrt1-lex-rule := verb-pc45-lex-rule-super &
                                                                      NUM sg ] ] ] ].
 
 verb-pc49-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR verb-pc49-rule-dtr ].
+  [ INFLECTED #infl,
+    DTR verb-pc49-rule-dtr &
+        [ INFLECTED #infl ] ].
 
 verb-pc49_lrt1-lex-rule := verb-pc49-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 1st,
@@ -1018,31 +1271,41 @@ verb-pc49_lrt1-lex-rule := verb-pc49-lex-rule-super &
                                                                    NUM pl ] ] ].
 
 verb-pc50-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR verb51-verb-lex ].
+  [ INFLECTED #infl,
+    DTR verb51-verb-lex &
+        [ INFLECTED #infl ] ].
 
 verb-pc50_lrt1-lex-rule := verb-pc50-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 1st,
                                                                 NUM sg ] ].
 
 verb-pc51-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR verb55-verb-lex ].
+  [ INFLECTED #infl,
+    DTR verb55-verb-lex &
+        [ INFLECTED #infl ] ].
 
 verb-pc51_lrt1-lex-rule := verb-pc51-lex-rule-super.
 
 verb-pc52-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb-pc53-rule-dtr &
-  [ DTR verb56-verb-lex ].
+  [ INFLECTED #infl,
+    DTR verb56-verb-lex &
+        [ INFLECTED #infl ] ].
 
 verb-pc52_lrt1-lex-rule := verb-pc52-lex-rule-super.
 
 verb-pc53-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR verb-pc53-rule-dtr ].
+  [ INFLECTED #infl,
+    DTR verb-pc53-rule-dtr &
+        [ INFLECTED #infl ] ].
 
 verb-pc53_lrt1-lex-rule := verb-pc53-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 2nd,
                                                                 NUM sg ] ].
 
 verb_pc_intrans-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR verb_pc_intrans-or-verb_pc_trans-rule-dtr ].
+  [ INFLECTED #infl,
+    DTR verb_pc_intrans-or-verb_pc_trans-rule-dtr &
+        [ INFLECTED #infl ] ].
 
 verb-pc100_lrt1-lex-rule := verb_pc_intrans-lex-rule-super &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.MOOD ind,
@@ -1075,7 +1338,9 @@ verb-pc100_lrt6-lex-rule := verb_pc_intrans-lex-rule-super &
                                                                   NUM sg ] ] ].
 
 verb_pc_trans-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR verb_pc_intrans-or-verb_pc_trans-rule-dtr ].
+  [ INFLECTED #infl,
+    DTR verb_pc_intrans-or-verb_pc_trans-rule-dtr &
+        [ INFLECTED #infl ] ].
 
 verb-pc101_lrt1-lex-rule := verb_pc_trans-lex-rule-super &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.MOOD ind,
@@ -1112,17 +1377,58 @@ verb-pc101_lrt5-lex-rule := verb_pc_trans-lex-rule-super &
                              COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 2nd,
                                                                      NUM sg ] ] ] ].
 
-verb_pc_derivation1-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb_pc_intrans-or-verb_pc_trans-rule-dtr &
-  [ DTR verb_pc_derivation1-or-verb_pc_neg_prefix-rule-dtr ].
+verb_pc_derivation1-lex-rule-super := infl-lex-rule & verb_pc_intrans-or-verb_pc_trans-rule-dtr &
+  [ INFLECTED #infl,
+    DTR verb_pc_derivation1-rule-dtr &
+        [ INFLECTED #infl ] ].
 
-verb-pc102_lrt1-lex-rule := verb_pc_derivation1-lex-rule-super.
+verb-pc102_lrt1-lex-rule := add-only-no-ccont-rule & verb_pc_derivation1-lex-rule-super &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE pst ].
 
-verb-pc102_lrt2-lex-rule := verb_pc_derivation1-lex-rule-super.
+; This adds negative semantics to the verb's
+; RELS list.
 
-verb_pc_neg_prefix-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb_pc_intrans-or-verb_pc_trans-rule-dtr &
-  [ DTR verb_pc_derivation1-or-verb_pc_neg_prefix-rule-dtr ].
+verb-pc102_lrt2-lex-rule := cont-change-only-lex-rule & verb_pc_derivation1-lex-rule-super &
+  [ C-CONT [ HOOK [ XARG #xarg,
+                    LTOP #ltop,
+                    INDEX #ind ],
+             RELS <! event-relation &
+                     [ PRED "neg_rel",
+                       LBL #ltop,
+                       ARG1 #harg ] !>,
+             HCONS <! qeq &
+                      [ HARG #harg,
+                        LARG #larg ] !> ],
+    SYNSEM.LKEYS #lkeys,
+    DTR.SYNSEM [ LKEYS #lkeys,
+                 LOCAL [ CONT.HOOK [ XARG #xarg,
+                                     INDEX #ind,
+                                     LTOP #larg ],
+                         CAT.HEAD verb ] ] ].
 
-verb-pc103_lrt1-lex-rule := verb_pc_neg_prefix-lex-rule-super.
+verb-pc102_lrt3-lex-rule := add-only-no-ccont-rule & verb_pc_derivation1-lex-rule-super &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE fut ].
+
+verb-pc102_lrt4-lex-rule := add-only-no-ccont-rule & verb_pc_derivation1-lex-rule-super &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.SITUATION cus ].
+
+;Constraint on MC used to be part of matrix.tdl
+;;it applies to all wo implementations, except for v2
+
+;Constraint on MC used to be part of matrix.tdl
+;;it applies to all wo implementations, except for v2
+
+;Constraint on MC used to be part of matrix.tdl
+;;it applies to all wo implementations, except for v2
+
+;Constraint on MC used to be part of matrix.tdl
+;;it applies to all wo implementations, except for v2
+
+;Constraint on MC used to be part of matrix.tdl
+;;it applies to all wo implementations, except for v2
+
+;Constraint on MC used to be part of matrix.tdl
+;;it applies to all wo implementations, except for v2
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Phrasal Types
@@ -1149,6 +1455,9 @@ comp-head-phrase := basic-head-1st-comp-phrase & head-final-head-nexus.
 head-comp-phrase-2 := basic-head-2nd-comp-phrase & head-initial-head-nexus.
 
 comp-head-phrase-2 := basic-head-2nd-comp-phrase & head-final-head-nexus.
+
+;Constraint on MC used to be part of matrix.tdl
+;;it applies to all wo implementations, except for v2
 
 ; Bare NP phrase.  Consider modifying the PRED value of the quantifier relation
 ; introduced to match the semantic effect of bare NPs in your language.

@@ -186,7 +186,6 @@ tuntu kenir-aat
 caribou.ABS.sg cook-IND.3pl.3sg
 `they cooked the caribou'
 
-
 #Example 21
 Source: a: 22-7/8
 Vetted: s
@@ -194,7 +193,7 @@ Judgement: g
 Phenomena: {adnominal possessives}
 Mayba-m pani-a assik-aa.
 p.n.-REL.sg. Da-ABS.3sg.sg. like-IND.3sg.3sg.
-(1) He likes Mayaq's daughter. (2) Mayaq likes his (another person than Mayaq's) daughter.
+`(1) He likes Mayaq's daughter. (2) Mayaq likes his (another person than Mayaq's) daughter.'
 
 #Example 22
 Source: a: 22-7/8
@@ -221,7 +220,7 @@ Judgement: g
 Phenomena: {TAM}
 Akwaugaq nere-llru-unga
 yesterday eat-PST-IND.1sg
-`Yesterday I ate.''
+`Yesterday I ate.'
 
 #Example 25
 Source: b
@@ -411,4 +410,31 @@ Phenomena: {adnominal possessives}
 ui-ma qimugt-iit assik-ai mikelngu-u-t
 husband-REL.1sg.sg dog-REL.3pl.sg like-IND.3sg.3pl child-EX-ABS.pl
 `my husband's dog likes the children'
+
+#Example 46
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {TAM}
+nere-llru-unga
+eat-PST-IND.1sg
+`I ate.'
+
+#Example 47
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {TAM}
+ner-ciq-ua
+eat-FUT-IND.1sg
+`I will eat.'
+
+#Example 48
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {TAM}
+nerb-lar-tua
+eat-CUS-IND.1sg
+`I regularly eat.'
 

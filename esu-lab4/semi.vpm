@@ -65,4 +65,20 @@ E.MOOD : E.MOOD
   opt <> opt
   app <> app
   int <> int
+  ptp <> ptp
+  cnnbc <> cnnbc
+  cnnwv <> cnnwv
+  cnnbf <> cnnbf
+  cnnth <> cnnth
+  cnnif <> cnnif
+  cnnid <> cnnid
+  cnnwn <> cnnwn
+  cnnwl <> cnnwl
+  cnnst <> cnnst
+  cnnqs <> cnnqs
+  cnn <> cnn
+  * <> *
+
+E.SITUATION : E.SITUATION
+  cus <> cus
   * <> *

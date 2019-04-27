@@ -25,5 +25,6 @@
 ; ((:path . "new-test-suite") (:content . "New Test Suite: A description of the new test suite located at the subdirectory new-test-suite."))
 ((:path . "corpus") (:content . "IGT provided by the linguist"))
 ((:path . "lab3") (:content . "testsutie collected for lab3"))
-((:path . "lab4") (:content . "testsutie collected for lab4 combined with lab3"))
+((:path . "lab4") (:content . "testsutie collected for lab4 and combined lab3"))
 )
+
