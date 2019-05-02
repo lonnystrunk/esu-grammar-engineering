@@ -305,6 +305,14 @@ noun-pc102_lrt3-suffix :=
 %suffix (* -u)
 noun-pc102_lrt3-lex-rule.
 
+nmz_situation-suffix :=
+%suffix (* -uci)
+nmz_situation-lex-rule.
+
+nmz_one-who-Ved-suffix :=
+%suffix (* -lleq)
+nmz_one-who-Ved-lex-rule.
+
 verb-pc1_lrt1-suffix :=
 %suffix (* -gu)
 verb-pc1_lrt1-lex-rule.

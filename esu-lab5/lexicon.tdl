@@ -665,7 +665,7 @@ na := verb1-verb-lex &
   [ STEM < "na" >,
     SYNSEM.LKEYS.KEYREL.PRED "_where_v_rel" ].
 
-tekite := verb1-verb-lex &
+tekite_1 := verb1-verb-lex &
   [ STEM < "tekite" >,
     SYNSEM.LKEYS.KEYREL.PRED "_arrive_v_rel" ].
 
@@ -901,7 +901,7 @@ nt := verb45-verb-lex &
   [ STEM < "nt" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be.at_v_rel" ].
 
-tekiy := verb46-verb-lex &
+tekiy_1 := verb46-verb-lex &
   [ STEM < "tekiy" >,
     SYNSEM.LKEYS.KEYREL.PRED "_arrive_v_rel" ].
 
@@ -965,6 +965,14 @@ tekit_2 := verb_intrans-verb-lex &
   [ STEM < "tekit" >,
     SYNSEM.LKEYS.KEYREL.PRED "_arrive_v_rel" ].
 
+tekiy_2 := verb_intrans-verb-lex &
+  [ STEM < "tekiy" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_arrive_v_rel" ].
+
+tekite_2 := verb_intrans-verb-lex &
+  [ STEM < "tekite" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_arrive_v_rel" ].
+
 kenir_2 := verb_trans-verb-lex &
   [ STEM < "kenir" >,
     SYNSEM.LKEYS.KEYREL.PRED "_cook_v_rel" ].
@@ -985,6 +993,8 @@ assike := verb_trans-verb-lex &
   [ STEM < "assike" >,
     SYNSEM.LKEYS.KEYREL.PRED "_like_v_rel" ].
 
-nallu_2 := verb_trans-verb-lex &
+nallu_2 := ccomps-verb-lex &
   [ STEM < "nallu" >,
     SYNSEM.LKEYS.KEYREL.PRED "_not.know_v_rel" ].
+
+;;; Complementizers
