@@ -573,3 +573,57 @@ Phenomena: {adnominal possessives}
 nulia-ma tuntu-an neqa-a yurar-tuq
 wife-REL.1sg.sg caribou-REL.3sg.sg fish-ABS.3sg.sg dance-IND.3sg
 `My wife's caribou's fish dances'
+
+#Example 64
+Source: a: pg.1266
+Vetted: t
+Judgement: g
+Phenomena: {evidentials}
+aya-llini-uq
+go-EVD-IND.3sg
+`he left (on either direct or indirect evidence rather than hearsay)'
+
+#Example 65
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {evidentials}
+yura-llini-uq
+dance-EVD-IND.3sg
+`he is dancing (on either direct or indirect evidence rather than hearsay)'
+
+#Example 66
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {evidentials}
+arnaq qia-llini-uq
+woman.ABS.sg cry-EVD-IND.3sg
+`the woman is crying (on either direct or indirect evidence rather than hearsay)'
+
+#Example 67
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {evidentials}
+tuntu tai-llini-uq
+caribou.ABS.sg come-EVD-IND.3sg
+`the caribou is coming (on either direct or indirect evidence rather than hearsay)'
+
+#Example 68
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {evidentials}
+tuntu-m keni-llini-a neqa
+caribou-REL.sg cook-EVD-IND.3sg.3sg fish.ABS.sg
+`the caribou is cooking fish (on either direct or indirect evidence rather than hearsay)'
+
+#Example 69
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {evidentials}
+angun nallu-llini-uq
+man.ABS.sg not.know-EVD-IND.3sg
+`the man doesn't know (on either direct or indirect evidence rather than hearsay)'
