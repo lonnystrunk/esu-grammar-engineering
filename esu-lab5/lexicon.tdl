@@ -797,10 +797,6 @@ lar%21%21%21DO-NOT-USE%21%21%21 := verb18-verb-lex &
   [ STEM < "lar!!!DO-NOT-USE!!!" >,
     SYNSEM.LKEYS.KEYREL.PRED "_cus_v_rel" ].
 
-yurar_1 := verb18-verb-lex &
-  [ STEM < "yurar" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_dance_v_rel" ].
-
 llru_3 := verb20-verb-lex &
   [ STEM < "llru" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pst_v_rel" ].
@@ -933,7 +929,7 @@ yura := verb_intrans-verb-lex &
   [ STEM < "yura" >,
     SYNSEM.LKEYS.KEYREL.PRED "_dance_v_rel" ].
 
-yurar_2 := verb_intrans-verb-lex &
+yurar := verb_intrans-verb-lex &
   [ STEM < "yurar" >,
     SYNSEM.LKEYS.KEYREL.PRED "_dance_v_rel" ].
 

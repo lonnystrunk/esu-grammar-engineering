@@ -605,6 +605,10 @@ verb-pc102_lrt4-suffix :=
 %suffix (* -lar)
 verb-pc102_lrt4-lex-rule.
 
+esu-eviden-suffix :=
+%suffix (* -llini)
+esu-eviden-lex-rule.
+
 verb-pc103_lrt1_CNNbc-suffix :=
 %suffix (* -a)
 verb-pc103_lrt1_CNNbc-lex-rule.
