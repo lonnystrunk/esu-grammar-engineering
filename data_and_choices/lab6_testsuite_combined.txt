@@ -628,51 +628,137 @@ angun nallu-llini-uq
 man.ABS.sg not.know-EVD-IND.3sg
 `the man doesn't know (on either direct or indirect evidence rather than hearsay)'
 
-
+#Example 70 //PP modifier on VP
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {locative NP}
 tuntu nerb-uq ingri-mi
-caribou.ABS.sg eat-IND.3sg mountain-LOC.sg //PP modifier on VP
+caribou.ABS.sg eat-IND.3sg mountain-LOC.sg
 `the caribou is eating in(on) the mountain'
 
+#Example 71 //PP modifier on NP
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {locative NP}
 tuntu ingri-mte-llria nerb-uq
-caribou.ABS.sg mountain-be.at(LOC)-VN(one.who).ABS.sg eat-IND.3sg //PP modifier on NP
+caribou.ABS.sg mountain-be.at(LOC)-VN(one.who).ABS.sg eat-IND.3sg
 `the caribou in(on) the mountain is eating'
 
+#Example 72 //separate verb - to stay, to reside, to live
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {locative NP}
 tuntu uita-uq ingri-mi
-caribou.ABS.sg stay-IND.3sg mountain-LOC.sg //separate verb - to stay, to reside, to live
+caribou.ABS.sg stay-IND.3sg mountain-LOC.sg
 `the caribou is in(on) the mountain'
 
+#Example 73 //compound morpheme
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {locative NP}
 tuntu ingri-mt-uq
-caribou.ABS.sg mountain-be.at(LOC)-IND.3sg //compound morpheme
+caribou.ABS.sg mountain-be.at(LOC)-IND.3sg
 `the caribou is in(on) the mountain'
 
-u-na qimugte-ngu-uq
-this-ABS.sg dog-to.be-IND.3sg
+#Example 74 //PP modifier on VP
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {locative NP}
+angun qia-guq qaya-mi
+man.ABS.sg cry-IND.3sg kayak-LOC.sg
+`the man is crying in the kayak'
+
+#Example 75 //PP modifier on NP
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {locative NP}
+angun qaya-mte-llria qia-guq
+man.ABS.sg kayak-be.at(LOC)-VN(one.who).ABS.sg cry-IND.3sg
+`the man in the kayak is crying'
+
+#Example 76 //separate verb - to stay, to reside, to live
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {locative NP}
+angun uita-uq qaya-mi
+man.ABS.sg stay-IND.3sg kayak-LOC.sg
+`the caribou is in(on) the mountain'
+
+#Example 77 //compound morpheme
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {locative NP}
+angun qaya-mt-uq
+man.ABS.sg kayak-be.at(LOC)-IND.3sg
+`the man is in the kayak'
+
+#Example 78 //compound morpheme
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {locative NP}
+neqe-mt-uq
+fish-be.at(LOC)-IND.3sg
+`it is in(on) the fish'
+
+#Example 79 //compound morpheme
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {locative NP}
+qimugte-mt-uq
+dog-be.at(LOC)-IND.3sg
+`it is in(on) the dog'
+
+#Example 80
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {copula}
+una qimugte-ngu-uq
+this.ABS.sg dog-to.be-IND.3sg
 `this is a dog'
 
-qimugta kavircet-uq
-dog.ABS.sg to.be.red-IND.sg
-`the dog is red'
+#Example 81
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {copula}
+una qaya-u-guq
+this.ABS.sg kayak-to.be-IND.3sg
+`this is a kayak'
 
-qimugta cungagli-u-guq
-dog.ABS.sg green.thing-to.be-IND.sg
-`the dog is green'
+#Example 82
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {copula}
+angun ui-ngu-uq
+man.ABS.sg husband-to.be-IND.3sg
+`the man is a husband'
 
-kavircete-llria qimugta nerb-uq
-to.be.red-VN(one.who).ABS.sg dog.ABS.sg eat-IND.3sg //appositives
-`the red dog is eating'
+#Example 83
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {copula}
+arnaq mikelngu-u-guq
+woman.ABS.sg child-to.be-IND.3sg
+`the woman is a child'
 
-
-
-
-
-
-TODO:
-non-verbal predicates
-  Locative NP -> PP (VP + PP:MOD<VP>)
-  Copula? (-ngu 'to.be')
-Not Locative Verb
-
-verb-pc_derivation1: obligatory?
-  present/recent past: empty affix instance
-  past affix
-  future affix
+#Example 84
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {copula}
+angute-t qimugte-ngu-ut
+man-ABS.pl dog-to.be-IND.3pl
+`the men are dogs'
