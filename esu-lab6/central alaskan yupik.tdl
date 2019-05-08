@@ -955,6 +955,8 @@ noun-pc101_lrt10_ABS_3pl_sg-lex-rule := noun_pc_non_abs_sg-lex-rule-super & poss
   [ SYNSEM.LOCAL.CAT.POSSESSUM.POSS-AGR [ PER 3rd,
                                           NUM pl ] ].
 
+noun-pc101_lrt11_LOC_sg-lex-rule := nonpossessive-lex-rule-1 & noun_pc_non_abs_sg-lex-rule-super.
+
 noun_pc_derivational1-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & noun_pc_non_abs_sg-rule-dtr &
   [ INFLECTED #infl,
     DTR noun_non_abs_sg-noun-lex &
@@ -981,6 +983,39 @@ noun-pc_nmz-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
 nmz_situation-lex-rule := noun-pc_nmz-lex-rule-super & noun_pc_non_abs_sg-rule-dtr.
 
 nmz_one-who-Ved-lex-rule := noun-pc_nmz-lex-rule-super & noun_pc_abs_sg-rule-dtr.
+
+denominal-verb-lex-rule-super := inflecting-lex-rule & verb_pc_intrans-or-verb_pc_trans-rule-dtr &
+ [ SYNSEM [ LOCAL [ CAT [ HEAD verb,
+                          VAL [ SPEC < >,
+                                COMPS < >,
+                                SUBJ < [ LOCAL [ CAT.HEAD noun &
+                                                         [ CASE real-case ],
+                                                 CONT.HOOK.INDEX #xarg ] ] > ] ],
+                    CONT.HOOK #hook  ],
+            LKEYS.KEYREL #keyrel ],
+  C-CONT [ HCONS <! qeq & [ HARG #harg,
+                            LARG #larg ] !>,
+           RELS <! #keyrel & arg12-ev-relation & 
+                   [ LBL #ltop,
+                     ARG0 #index,
+                     ARG1 #xarg,
+                     ARG2 #dtr_ind ],
+                   quant-relation &
+                   [ PRED "exist_q_rel",
+                     ARG0 #dtr_ind,
+                     RSTR #harg ] !>,
+           ICONS <! !>,
+           HOOK #hook & [ LTOP #ltop,
+                  INDEX #index,
+                  XARG #xarg ] ],
+  DTR noun_non_abs_sg-noun-lex & [ SYNSEM.LOCAL.CONT.HOOK [ INDEX #dtr_ind,
+                                               LTOP #larg ] ] ].
+
+vbz_LOC-verb-lex-rule := denominal-verb-lex-rule-super &
+  [ SYNSEM.LKEYS.KEYREL.PRED "_be+at_v_rel" ].
+
+vbz_to_be-verb-lex-rule := denominal-verb-lex-rule-super &
+  [ SYNSEM.LKEYS.KEYREL.PRED "_be_v_id_rel" ].
 
 verb-pc1-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
   [ INFLECTED #infl,
@@ -1443,6 +1478,12 @@ verb-pc100_lrt6_INT_3sg-lex-rule := verb_pc_intrans-lex-rule-super &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.MOOD int,
                    CAT [ VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 3rd,
                                                                     NUM sg ],
+                         HEAD.FORM finite ] ] ].
+
+verb-pc100_lrt7_IND_3pl-lex-rule := verb_pc_intrans-lex-rule-super &
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.MOOD ind,
+                   CAT [ VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 3rd,
+                                                                    NUM pl ],
                          HEAD.FORM finite ] ] ].
 
 verb_pc_trans-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &

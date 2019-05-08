@@ -93,10 +93,6 @@ ene := noun1-noun-lex &
   [ STEM < "ene" >,
     SYNSEM.LKEYS.KEYREL.PRED "_house_n_rel" ].
 
-qaya := noun1-noun-lex &
-  [ STEM < "qaya" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_kayak_n_rel" ].
-
 q := noun1-noun-lex &
   [ STEM < "q" >,
     SYNSEM.LKEYS.KEYREL.PRED "_have.as_n_rel" ].
@@ -493,6 +489,10 @@ mikelnguq := noun_abs_sg-noun-lex &
   [ STEM < "mikelnguq" >,
     SYNSEM.LKEYS.KEYREL.PRED "_child_n_rel" ].
 
+una := noun_abs_sg-noun-lex &
+  [ STEM < "una" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_this_n_rel" ].
+
 tuntu_2 := noun_non_abs_sg-noun-lex &
   [ STEM < "tuntu" >,
     SYNSEM.LKEYS.KEYREL.PRED "_caribou_n_rel" ].
@@ -544,6 +544,18 @@ arna_2 := noun_non_abs_sg-noun-lex &
 neqa_2 := noun_non_abs_sg-noun-lex &
   [ STEM < "neqa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_fish_n_rel" ].
+
+qaya := noun_non_abs_sg-noun-lex &
+  [ STEM < "qaya" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kayak_n_rel" ].
+
+ingri := noun_non_abs_sg-noun-lex &
+  [ STEM < "ingri" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_mountain_n_rel" ].
+
+qimugte := noun_non_abs_sg-noun-lex &
+  [ STEM < "qimugte" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_dog_n_rel" ].
 
 akwaugaq := noun_particles-noun-lex &
   [ STEM < "akwaugaq" >,
@@ -968,6 +980,10 @@ tekiy_2 := verb_intrans-verb-lex &
 tekite_2 := verb_intrans-verb-lex &
   [ STEM < "tekite" >,
     SYNSEM.LKEYS.KEYREL.PRED "_arrive_v_rel" ].
+
+uita := verb_intrans-verb-lex &
+  [ STEM < "uita" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_stay_v_rel" ].
 
 kenir_2 := verb_trans-verb-lex &
   [ STEM < "kenir" >,

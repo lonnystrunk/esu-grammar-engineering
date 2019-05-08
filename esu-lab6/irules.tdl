@@ -293,6 +293,10 @@ noun-pc101_lrt10_ABS_3pl_sg-suffix :=
 %suffix (* -at)
 noun-pc101_lrt10_ABS_3pl_sg-lex-rule.
 
+noun-pc101_lrt11_LOC_sg-suffix :=
+%suffix (* -mi)
+noun-pc101_lrt11_LOC_sg-lex-rule.
+
 noun-pc102_lrt1-suffix :=
 %suffix (* -ka)
 noun-pc102_lrt1-lex-rule.
@@ -312,6 +316,22 @@ nmz_situation-lex-rule.
 nmz_one-who-Ved-suffix :=
 %suffix (* -lleq)
 nmz_one-who-Ved-lex-rule.
+
+vbz_LOC-suffix1 :=
+%suffix (* -mte)
+vbz_LOC-verb-lex-rule.
+
+vbz_LOC-suffix2 :=
+%suffix (* -mt)
+vbz_LOC-verb-lex-rule.
+
+vbz_to_be-suffix1 :=
+%suffix (* -ngu)
+vbz_to_be-verb-lex-rule.
+
+vbz_to_be-suffix2 :=
+%suffix (* -u)
+vbz_to_be-verb-lex-rule.
 
 verb-pc1_lrt1-suffix :=
 %suffix (* -gu)
@@ -560,6 +580,10 @@ verb-pc100_lrt5_OPT_1pl-lex-rule.
 verb-pc100_lrt6_INT_3sg-suffix :=
 %suffix (* -a)
 verb-pc100_lrt6_INT_3sg-lex-rule.
+
+verb-pc100_lrt7_IND_3pl-suffix :=
+%suffix (* -ut)
+verb-pc100_lrt7_IND_3pl-lex-rule.
 
 verb-pc101_lrt1_IND_3sg_3sg-suffix :=
 %suffix (* -aa)
