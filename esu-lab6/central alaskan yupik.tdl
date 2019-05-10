@@ -896,7 +896,9 @@ nonpossessive-lex-rule-1 := add-only-no-ccont-rule &
                             [ POSSESSOR nonpossessive ],
                        POSSESSUM nonpossessive ] ].
 
-noun-pc101_lrt1_ERG_sg-lex-rule := nonpossessive-lex-rule-1 & noun_pc_non_abs_sg-lex-rule-super.
+noun-pc101_lrt1_ERG_sg-lex-rule := nonpossessive-lex-rule-1 & noun_pc_non_abs_sg-lex-rule-super
+  [ SYNSEM.LOCAL [ CAT.HEAD.CASE erg,
+                   CONT.HOOK.INDEX.PNG.NUM sg ] ].
 
 possessum-lex-rule-1 := val-change-with-ccont-lex-rule &
   [ C-CONT [ HOOK #hook,
@@ -926,34 +928,52 @@ possessum-lex-rule-1 := val-change-with-ccont-lex-rule &
                                                                    [ PNG #png ] ] ] ] ] ].
 
 noun-pc101_lrt2_ABS_3sg_sg-lex-rule := noun_pc_non_abs_sg-lex-rule-super & possessum-lex-rule-1 &
-  [ SYNSEM.LOCAL.CAT.POSSESSUM.POSS-AGR [ PER 3rd,
-                                          NUM sg ] ].
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG.NUM sg, 
+                   CAT [ HEAD.CASE abs, 
+                         POSSESSUM.POSS-AGR [ PER 3rd,
+                                              NUM sg ] ] ] ].
 
 noun-pc101_lrt3_ABS_1sg_sg-lex-rule := noun_pc_non_abs_sg-lex-rule-super & possessum-lex-rule-1 &
-  [ SYNSEM.LOCAL.CAT.POSSESSUM.POSS-AGR [ PER 1st,
-                                          NUM sg ] ].
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG.NUM sg, 
+                   CAT [ HEAD.CASE abs, 
+                         POSSESSUM.POSS-AGR [ PER 1st,
+                                              NUM sg ] ] ] ].
 
-noun-pc101_lrt4_ABS_pl-lex-rule := nonpossessive-lex-rule-1 & noun_pc_non_abs_sg-lex-rule-super.
+noun-pc101_lrt4_ABS_pl-lex-rule := nonpossessive-lex-rule-1 & noun_pc_non_abs_sg-lex-rule-super
+  [ SYNSEM.LOCAL [ CAT.HEAD.CASE abs,
+                   CONT.HOOK.INDEX.PNG.NUM pl ] ].
 
-noun-pc101_lrt5_ERG_pl-lex-rule := nonpossessive-lex-rule-1 & noun_pc_non_abs_sg-lex-rule-super.
+noun-pc101_lrt5_ERG_pl-lex-rule := nonpossessive-lex-rule-1 & noun_pc_non_abs_sg-lex-rule-super
+  [ SYNSEM.LOCAL [ CAT.HEAD.CASE erg,
+                   CONT.HOOK.INDEX.PNG.NUM pl ] ].
 
 noun-pc101_lrt6_ERG_1sg_sg-lex-rule := noun_pc_non_abs_sg-lex-rule-super & possessum-lex-rule-1 &
-  [ SYNSEM.LOCAL.CAT.POSSESSUM.POSS-AGR [ PER 1st,
-                                          NUM sg ] ].
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG.NUM sg, 
+                   CAT [ HEAD.CASE erg, 
+                         POSSESSUM.POSS-AGR [ PER 1st,
+                                              NUM sg ] ] ] ].
 
-noun-pc101_lrt7_ABM_sg-lex-rule := nonpossessive-lex-rule-1 & noun_pc_non_abs_sg-lex-rule-super.
+noun-pc101_lrt7_ABM_sg-lex-rule := nonpossessive-lex-rule-1 & noun_pc_non_abs_sg-lex-rule-super
+  [ SYNSEM.LOCAL [ CAT.HEAD.CASE abm,
+                   CONT.HOOK.INDEX.PNG.NUM sg ] ].
 
 noun-pc101_lrt8_ERG_3sg_sg-lex-rule := noun_pc_non_abs_sg-lex-rule-super & possessum-lex-rule-1 &
-  [ SYNSEM.LOCAL.CAT.POSSESSUM.POSS-AGR [ PER 3rd,
-                                          NUM sg ] ].
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG.NUM sg, 
+                   CAT [ HEAD.CASE erg, 
+                         POSSESSUM.POSS-AGR [ PER 3rd,
+                                              NUM sg ] ] ] ].
 
 noun-pc101_lrt9_ERG_3pl_pl-lex-rule := noun_pc_non_abs_sg-lex-rule-super & possessum-lex-rule-1 &
-  [ SYNSEM.LOCAL.CAT.POSSESSUM.POSS-AGR [ PER 3rd,
-                                          NUM pl ] ].
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG.NUM pl, 
+                   CAT [ HEAD.CASE erg, 
+                         POSSESSUM.POSS-AGR [ PER 3rd,
+                                              NUM pl ] ] ] ].
 
 noun-pc101_lrt10_ABS_3pl_sg-lex-rule := noun_pc_non_abs_sg-lex-rule-super & possessum-lex-rule-1 &
-  [ SYNSEM.LOCAL.CAT.POSSESSUM.POSS-AGR [ PER 3rd,
-                                          NUM pl ] ].
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG.NUM sg, 
+                   CAT [ HEAD.CASE abs, 
+                         POSSESSUM.POSS-AGR [ PER 3rd,
+                                              NUM pl ] ] ] ].
 
 noun-pc101_lrt11_LOC_sg-lex-rule := nonpossessive-lex-rule-1 & noun_pc_non_abs_sg-lex-rule-super &
   [ SYNSEM.LOCAL [ CAT.HEAD.CASE loc,
@@ -991,7 +1011,7 @@ denominal-verb-lex-rule-super := inflecting-lex-rule & verb_pc_intrans-or-verb_p
                           VAL [ SPEC < >,
                                 COMPS < >,
                                 SUBJ < [ LOCAL [ CAT.HEAD noun &
-                                                         [ CASE real-case ],
+                                                         [ CASE abs ],
                                                  CONT.HOOK.INDEX #xarg ] ] > ] ],
                     CONT.HOOK #hook  ],
             LKEYS.KEYREL #keyrel ],
@@ -1013,7 +1033,7 @@ denominal-verb-lex-rule-super := inflecting-lex-rule & verb_pc_intrans-or-verb_p
   DTR noun_non_abs_sg-noun-lex & [ SYNSEM.LOCAL.CONT.HOOK [ INDEX #dtr_ind,
                                                LTOP #larg ] ] ].
 
-vbz_LOC-verb-lex-rule := denominal-verb-lex-rule-super &
+vbz_be_at-verb-lex-rule := denominal-verb-lex-rule-super &
   [ SYNSEM.LKEYS.KEYREL.PRED "_be+at_v_rel" ].
 
 vbz_to_be-verb-lex-rule := denominal-verb-lex-rule-super &
@@ -1039,7 +1059,7 @@ deadjectival-verb-lex-rule := inflecting-lex-rule & verb_pc_intrans-or-verb_pc_t
                           VAL [ SPEC < >,
                                 COMPS < >,
                                 SUBJ < [ LOCAL [ CAT.HEAD noun &
-                                                         [ CASE real-case ],
+                                                         [ CASE abs ],
                                                  CONT.HOOK.INDEX #xarg ] ] > ] ],
                     CONT.HOOK #hook  ],
             LKEYS.KEYREL #keyrel ],

@@ -67,18 +67,24 @@
 67@b@@@1@evidentials@tuntu tai-llini-uq@@@@1@2@caribou.ABS.sg come-EVD-IND.3sg`the caribou is coming (on either direct or indirect evidence rather than hearsay)'@marcus martinez/lonny strunk@april 22, 2019
 68@b@@@1@evidentials@tuntu-m keni-llini-a neqa@@@@1@3@caribou-REL.sg cook-EVD-IND.3sg.3sg fish.ABS.sg`the caribou is cooking fish (on either direct or indirect evidence rather than hearsay)'@marcus martinez/lonny strunk@april 22, 2019
 69@b@@@1@evidentials@angun nallu-llini-uq@@@@1@2@man.ABS.sg not.know-EVD-IND.3sg`the man doesn't know (on either direct or indirect evidence rather than hearsay)'@marcus martinez/lonny strunk@april 22, 2019
-70@b@@@1@locativenp@tuntu nerb-uq ingri-mi@@@@1@3@caribou.ABS.sg eat-IND.3sg mountain-LOC.sg`the caribou is eating in(on) the mountain'@marcus martinez/lonny strunk@april 22, 2019
-71@b@@@1@locativenp@tuntu ingri-mte-llria nerb-uq@@@@1@3@caribou.ABS.sg mountain-be.at(LOC)-VN(one.who).ABS.sg eat-IND.3sg`the caribou in(on) the mountain is eating'@marcus martinez/lonny strunk@april 22, 2019
-72@b@@@1@locativenp@tuntu uita-uq ingri-mi@@@@1@3@caribou.ABS.sg stay-IND.3sg mountain-LOC.sg`the caribou is in(on) the mountain'@marcus martinez/lonny strunk@april 22, 2019
-73@b@@@1@locativenp@tuntu ingri-mt-uq@@@@1@2@caribou.ABS.sg mountain-be.at(LOC)-IND.3sg`the caribou is in(on) the mountain'@marcus martinez/lonny strunk@april 22, 2019
-74@b@@@1@locativenp@angun qia-guq qaya-mi@@@@1@3@man.ABS.sg cry-IND.3sg kayak-LOC.sg`the man is crying in the kayak'@marcus martinez/lonny strunk@april 22, 2019
-75@b@@@1@locativenp@angun qaya-mte-llria qia-guq@@@@1@3@man.ABS.sg kayak-be.at(LOC)-VN(one.who).ABS.sg cry-IND.3sg`the man in the kayak is crying'@marcus martinez/lonny strunk@april 22, 2019
-76@b@@@1@locativenp@angun uita-uq qaya-mi@@@@1@3@man.ABS.sg stay-IND.3sg kayak-LOC.sg`the caribou is in(on) the mountain'@marcus martinez/lonny strunk@april 22, 2019
-77@b@@@1@locativenp@angun qaya-mt-uq@@@@1@2@man.ABS.sg kayak-be.at(LOC)-IND.3sg`the man is in the kayak'@marcus martinez/lonny strunk@april 22, 2019
-78@b@@@1@locativenp@neqe-mt-uq@@@@1@1@fish-be.at(LOC)-IND.3sg`it is in(on) the fish'@marcus martinez/lonny strunk@april 22, 2019
-79@b@@@1@locativenp@qimugte-mt-uq@@@@1@1@dog-be.at(LOC)-IND.3sg`it is in(on) the dog'@marcus martinez/lonny strunk@april 22, 2019
-80@b@@@1@copula@una qimugte-ngu-uq@@@@1@2@this.ABS.sg dog-to.be-IND.3sg`this is a dog'@marcus martinez/lonny strunk@april 22, 2019
-81@b@@@1@copula@una qaya-u-guq@@@@1@2@this.ABS.sg kayak-to.be-IND.3sg`this is a kayak'@marcus martinez/lonny strunk@april 22, 2019
-82@b@@@1@copula@angun ui-ngu-uq@@@@1@2@man.ABS.sg husband-to.be-IND.3sg`the man is a husband'@marcus martinez/lonny strunk@april 22, 2019
-83@b@@@1@copula@arnaq mikelngu-u-guq@@@@1@2@woman.ABS.sg child-to.be-IND.3sg`the woman is a child'@marcus martinez/lonny strunk@april 22, 2019
-84@b@@@1@copula@angute-t qimugte-ngu-ut@@@@1@2@man-ABS.pl dog-to.be-IND.3pl`the men are dogs'@marcus martinez/lonny strunk@april 22, 2019
+70@b@@@1@locativenpmodifier@tuntu nerb-uq ingri-mi@@@@1@3@caribou.ABS.sg eat-IND.3sg mountain-LOC.sg`the caribou is eating in(on) the mountain'@marcus martinez/lonny strunk@april 22, 2019
+71@b@@@1@locativenpmodifier@angun qia-guq qaya-mi@@@@1@3@man.ABS.sg cry-IND.3sg kayak-LOC.sg`the man is crying in the kayak'@marcus martinez/lonny strunk@april 22, 2019
+72@b@@@1@locativenpmodifier@angun kenir-tuq ingri-mi@@@@1@3@man.ABS.sg cook-IND.3sg mountain-LOC.sg`the man is cooking in(on) the mountain'@marcus martinez/lonny strunk@april 22, 2019
+73@b@@@1@locativenpmodifier@arnaq yurar-tuq qaya-mi@@@@1@3@woman.ABS.sg dance-IND.3sg kayak-LOC.sg`the woman is dancing in the kayak'@marcus martinez/lonny strunk@april 22, 2019
+74@b@@@1@locativenppredicate@tuntu uita-uq ingri-mi@@@@1@3@caribou.ABS.sg stay-IND.3sg mountain-LOC.sg`the caribou is in(on) the mountain'@marcus martinez/lonny strunk@april 22, 2019
+75@b@@@1@locativenppredicate@angun uita-uq qaya-mi@@@@1@3@man.ABS.sg stay-IND.3sg kayak-LOC.sg`the man is in the kayak'@marcus martinez/lonny strunk@april 22, 2019
+76@b@@@1@locativenppredicate@arnaq uita-uq ingri-mi@@@@1@3@woman.ABS.sg stay-IND.3sg kayak-LOC.sg`the woman is in(on) the mountain'@marcus martinez/lonny strunk@april 22, 2019
+77@b@@@1@locativenppredicate@neqa uita-uq qimugte-mi@@@@1@3@dog.ABS.sg stay-IND.3sg kayak-LOC.sg`the fish is in the dog'@marcus martinez/lonny strunk@april 22, 2019
+78@b@@@1@locativeaffixpredicate@tuntu ingri-mt-uq@@@@1@2@caribou.ABS.sg mountain-be.at(LOC)-IND.3sg`the caribou is in(on) the mountain'@marcus martinez/lonny strunk@april 22, 2019
+79@b@@@1@locativeaffixpredicate@angun qaya-mt-uq@@@@1@2@man.ABS.sg kayak-be.at(LOC)-IND.3sg`the man is in the kayak'@marcus martinez/lonny strunk@april 22, 2019
+80@b@@@1@locativeaffixpredicate@neqe-mt-uq@@@@1@1@fish-be.at(LOC)-IND.3sg`it is in(on) the fish'@marcus martinez/lonny strunk@april 22, 2019
+81@b@@@1@locativeaffixpredicate@qimugte-mt-uq@@@@1@1@dog-be.at(LOC)-IND.3sg`it is in(on) the dog'@marcus martinez/lonny strunk@april 22, 2019
+82@b@@@1@nppredicate@una qimugte-ngu-uq@@@@1@2@this.ABS.sg dog-to.be-IND.3sg`this is a dog'@marcus martinez/lonny strunk@april 22, 2019
+83@b@@@1@nppredicate@una qaya-u-guq@@@@1@2@this.ABS.sg kayak-to.be-IND.3sg`this is a kayak'@marcus martinez/lonny strunk@april 22, 2019
+84@b@@@1@nppredicate@angun ui-ngu-uq@@@@1@2@man.ABS.sg husband-to.be-IND.3sg`the man is a husband'@marcus martinez/lonny strunk@april 22, 2019
+85@b@@@1@nppredicate@arnaq mikelngu-u-guq@@@@1@2@woman.ABS.sg child-to.be-IND.3sg`the woman is a child'@marcus martinez/lonny strunk@april 22, 2019
+86@b@@@1@nppredicate@angute-t qimugte-ngu-ut@@@@1@2@man-ABS.pl dog-to.be-IND.3pl`the men are dogs'@marcus martinez/lonny strunk@april 22, 2019
+87@b@@@1@appredicate@neqa kavircet-uq@@@@1@2@fish-ABS.sg to.be.red-IND.3pl`the fish is red'@marcus martinez/lonny strunk@april 22, 2019
+88@b@@@1@appredicate@tuntu angnir-tuq@@@@1@2@caribou-ABS.sg to.be.happy-IND.3pl`the caribou is happy'@marcus martinez/lonny strunk@april 22, 2019
+89@b@@@1@appredicate@arnaq qener-tuq@@@@1@2@woman-ABS.pl to.be.angry-IND.3pl`the woman is angry'@marcus martinez/lonny strunk@april 22, 2019
+90@b@@@1@appredicate@qimugta kaig-tuq@@@@1@2@woman-ABS.pl to.be.hungry-IND.3pl`the dog is hungry'@marcus martinez/lonny strunk@april 22, 2019

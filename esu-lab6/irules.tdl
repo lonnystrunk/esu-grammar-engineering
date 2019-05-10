@@ -319,11 +319,11 @@ nmz_one-who-Ved-lex-rule.
 
 vbz_LOC-suffix1 :=
 %suffix (* -mte)
-vbz_LOC-verb-lex-rule.
+vbz_be_at-verb-lex-rule.
 
 vbz_LOC-suffix2 :=
 %suffix (* -mt)
-vbz_LOC-verb-lex-rule.
+vbz_be_at-verb-lex-rule.
 
 vbz_to_be-suffix1 :=
 %suffix (* -ngu)
