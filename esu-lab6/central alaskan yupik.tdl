@@ -1040,10 +1040,11 @@ vbz_to_be-verb-lex-rule := denominal-verb-lex-rule-super &
   [ SYNSEM.LKEYS.KEYREL.PRED "_be_v_id_rel" ].
 
 copula-verb-lex := basic-verb-lex-super & trans-first-arg-raising-lex-item-2 & verb_pc_intrans-or-verb_pc_trans-rule-dtr &
-  [ SYNSEM.LOCAL [ CAT.VAL [ SUBJ < #subj >,
+  [ SYNSEM.LOCAL [ CAT [ HEAD.MOD < >,
+                         VAL [ SUBJ < #subj >,
                              COMPS < #comps >,
                              SPR < >,
-                             SPEC < > ],
+                             SPEC < > ] ],
                    CONT.HOOK.XARG #xarg ],
     ARG-ST < #subj &
              [ LOCAL [ CONT.HOOK.INDEX #xarg,
