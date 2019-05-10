@@ -955,7 +955,9 @@ noun-pc101_lrt10_ABS_3pl_sg-lex-rule := noun_pc_non_abs_sg-lex-rule-super & poss
   [ SYNSEM.LOCAL.CAT.POSSESSUM.POSS-AGR [ PER 3rd,
                                           NUM pl ] ].
 
-noun-pc101_lrt11_LOC_sg-lex-rule := nonpossessive-lex-rule-1 & noun_pc_non_abs_sg-lex-rule-super.
+noun-pc101_lrt11_LOC_sg-lex-rule := nonpossessive-lex-rule-1 & noun_pc_non_abs_sg-lex-rule-super &
+  [ SYNSEM.LOCAL [ CAT.HEAD.CASE loc,
+                   CONT.HOOK.INDEX.PNG.NUM sg ] ].
 
 noun_pc_derivational1-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & noun_pc_non_abs_sg-rule-dtr &
   [ INFLECTED #infl,
@@ -1016,6 +1018,40 @@ vbz_LOC-verb-lex-rule := denominal-verb-lex-rule-super &
 
 vbz_to_be-verb-lex-rule := denominal-verb-lex-rule-super &
   [ SYNSEM.LKEYS.KEYREL.PRED "_be_v_id_rel" ].
+
+copula-verb-lex := basic-verb-lex-super & trans-first-arg-raising-lex-item-2 & verb_pc_intrans-or-verb_pc_trans-rule-dtr &
+  [ SYNSEM.LOCAL [ CAT.VAL [ SUBJ < #subj >,
+                             COMPS < #comps >,
+                             SPR < >,
+                             SPEC < > ],
+                   CONT.HOOK.XARG #xarg ],
+    ARG-ST < #subj &
+             [ LOCAL [ CONT.HOOK.INDEX #xarg,
+                       CAT [ VAL [ SPR < >,
+                                   COMPS < > ],
+                             HEAD noun ] ] ],
+             #comps &
+             [ LOCAL.CAT [ VAL [ COMPS < > ],
+                           HEAD +jp ] ] > ].
+
+deadjectival-verb-lex-rule := inflecting-lex-rule & verb_pc_intrans-or-verb_pc_trans-rule-dtr &
+ [ SYNSEM [ LOCAL [ CAT [ HEAD verb,
+                          VAL [ SPEC < >,
+                                COMPS < >,
+                                SUBJ < [ LOCAL [ CAT.HEAD noun &
+                                                         [ CASE real-case ],
+                                                 CONT.HOOK.INDEX #xarg ] ] > ] ],
+                    CONT.HOOK #hook  ],
+            LKEYS.KEYREL #keyrel ],
+  C-CONT [ RELS <! #keyrel & arg1-ev-relation & 
+                   [ LBL #ltop,
+                     ARG0 #index,
+                     ARG1 #xarg ] !>,
+           ICONS <! !>,
+           HOOK #hook & [ LTOP #ltop,
+                  INDEX #index,
+                  XARG #xarg ] ],
+  DTR basic-intersective-adjective-lex & [ SYNSEM.LOCAL.CONT.HOOK [ INDEX #index ] ] ].
 
 verb-pc1-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
   [ INFLECTED #infl,
@@ -1756,3 +1792,26 @@ cnnif-modifying-clause-phrase := morphological-subord-clause-phrase &
                                 HEAD.FORM #feat & cnnif ] ] >,
     SYNSEM.LOCAL.CAT.HEAD.FORM #feat,
     C-CONT.RELS <! [ PRED "_if_p_rel" ] !> ].
+
+locative-pp-phrase := unary-phrase &
+  [ SYNSEM [ LOCAL.CAT [ HEAD adp & [ MOD < [ LOCAL intersective-mod &
+                                                           [ CAT.HEAD verb,
+                                                             CONT.HOOK.INDEX #xarg ] ] > ],
+                         VAL [ COMPS < >,
+                         SUBJ < >, 
+                         SPR < > ] ] ],
+    C-CONT [ HOOK [ LTOP #ltop,
+                    INDEX #index,
+                    XARG #xarg ],
+             RELS <! arg12-ev-relation &
+                     [ PRED "_loc_p_rel",
+                       LBL #ltop,
+                       ARG0 #index,
+                       ARG1 #xarg,
+                       ARG2 #dtr ] !>,
+             HCONS <! !>  ],
+    ARGS < [ SYNSEM.LOCAL [ CAT [ HEAD noun & 
+                                       [CASE loc],
+                                  VAL.SPR < > ],
+                            CONT.HOOK [ INDEX #dtr ] ] ] > ].
+

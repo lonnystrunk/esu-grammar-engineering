@@ -628,137 +628,191 @@ angun nallu-llini-uq
 man.ABS.sg not.know-EVD-IND.3sg
 `the man doesn't know (on either direct or indirect evidence rather than hearsay)'
 
-#Example 70 //PP modifier on VP
+#Example 70 // PP modifier on VP
 Source: b
 Vetted: f
 Judgement: g
-Phenomena: {locative NP}
+Phenomena: {locative NP modifier}
 tuntu nerb-uq ingri-mi
 caribou.ABS.sg eat-IND.3sg mountain-LOC.sg
 `the caribou is eating in(on) the mountain'
 
-#Example 71 //PP modifier on NP
+#Example 71 // PP modifier on VP
 Source: b
 Vetted: f
 Judgement: g
-Phenomena: {locative NP}
-tuntu ingri-mte-llria nerb-uq
-caribou.ABS.sg mountain-be.at(LOC)-VN(one.who).ABS.sg eat-IND.3sg
-`the caribou in(on) the mountain is eating'
-
-#Example 72 //separate verb - to stay, to reside, to live
-Source: b
-Vetted: f
-Judgement: g
-Phenomena: {locative NP}
-tuntu uita-uq ingri-mi
-caribou.ABS.sg stay-IND.3sg mountain-LOC.sg
-`the caribou is in(on) the mountain'
-
-#Example 73 //compound morpheme
-Source: b
-Vetted: f
-Judgement: g
-Phenomena: {locative NP}
-tuntu ingri-mt-uq
-caribou.ABS.sg mountain-be.at(LOC)-IND.3sg
-`the caribou is in(on) the mountain'
-
-#Example 74 //PP modifier on VP
-Source: b
-Vetted: f
-Judgement: g
-Phenomena: {locative NP}
+Phenomena: {locative NP modifier}
 angun qia-guq qaya-mi
 man.ABS.sg cry-IND.3sg kayak-LOC.sg
 `the man is crying in the kayak'
 
-#Example 75 //PP modifier on NP
+#Example 72 // PP modifier on VP
 Source: b
 Vetted: f
 Judgement: g
-Phenomena: {locative NP}
-angun qaya-mte-llria qia-guq
-man.ABS.sg kayak-be.at(LOC)-VN(one.who).ABS.sg cry-IND.3sg
-`the man in the kayak is crying'
+Phenomena: {locative NP modifier}
+angun kenir-tuq ingri-mi
+man.ABS.sg cook-IND.3sg mountain-LOC.sg
+`the man is cooking in(on) the mountain'
 
-#Example 76 //separate verb - to stay, to reside, to live
+#Example 73 // PP modifier on VP
 Source: b
 Vetted: f
 Judgement: g
-Phenomena: {locative NP}
-angun uita-uq qaya-mi
-man.ABS.sg stay-IND.3sg kayak-LOC.sg
+Phenomena: {locative NP modifier}
+arnaq yurar-tuq qaya-mi
+woman.ABS.sg dance-IND.3sg kayak-LOC.sg
+`the woman is dancing in the kayak'
+
+#Example 74 // separate verb - to stay, to reside, to live
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {locative NP predicate}
+tuntu uita-uq ingri-mi
+caribou.ABS.sg stay-IND.3sg mountain-LOC.sg
 `the caribou is in(on) the mountain'
 
-#Example 77 //compound morpheme
+#Example 75 // separate verb - to stay, to reside, to live
 Source: b
 Vetted: f
 Judgement: g
-Phenomena: {locative NP}
-angun qaya-mt-uq
-man.ABS.sg kayak-be.at(LOC)-IND.3sg
+Phenomena: {locative NP predicate}
+angun uita-uq qaya-mi
+man.ABS.sg stay-IND.3sg kayak-LOC.sg
 `the man is in the kayak'
+
+#Example 76 // separate verb - to stay, to reside, to live
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {locative NP predicate}
+arnaq uita-uq ingri-mi
+woman.ABS.sg stay-IND.3sg kayak-LOC.sg
+`the woman is in(on) the mountain'
+
+#Example 77 // separate verb - to stay, to reside, to live
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {locative NP predicate}
+neqa uita-uq qimugte-mi
+dog.ABS.sg stay-IND.3sg kayak-LOC.sg
+`the fish is in the dog'
 
 #Example 78 //compound morpheme
 Source: b
 Vetted: f
 Judgement: g
-Phenomena: {locative NP}
-neqe-mt-uq
-fish-be.at(LOC)-IND.3sg
-`it is in(on) the fish'
+Phenomena: {locative affix predicate}
+tuntu ingri-mt-uq
+caribou.ABS.sg mountain-be.at(LOC)-IND.3sg
+`the caribou is in(on) the mountain'
 
 #Example 79 //compound morpheme
 Source: b
 Vetted: f
 Judgement: g
-Phenomena: {locative NP}
+Phenomena: {locative affix predicate}
+angun qaya-mt-uq
+man.ABS.sg kayak-be.at(LOC)-IND.3sg
+`the man is in the kayak'
+
+#Example 80 //compound morpheme
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {locative affix predicate}
+neqe-mt-uq
+fish-be.at(LOC)-IND.3sg
+`it is in(on) the fish'
+
+#Example 81 //compound morpheme
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {locative affix predicate}
 qimugte-mt-uq
 dog-be.at(LOC)-IND.3sg
 `it is in(on) the dog'
-
-#Example 80
-Source: b
-Vetted: f
-Judgement: g
-Phenomena: {copula}
-una qimugte-ngu-uq
-this.ABS.sg dog-to.be-IND.3sg
-`this is a dog'
-
-#Example 81
-Source: b
-Vetted: f
-Judgement: g
-Phenomena: {copula}
-una qaya-u-guq
-this.ABS.sg kayak-to.be-IND.3sg
-`this is a kayak'
 
 #Example 82
 Source: b
 Vetted: f
 Judgement: g
-Phenomena: {copula}
-angun ui-ngu-uq
-man.ABS.sg husband-to.be-IND.3sg
-`the man is a husband'
+Phenomena: {NP predicate}
+una qimugte-ngu-uq
+this.ABS.sg dog-to.be-IND.3sg
+`this is a dog'
 
 #Example 83
 Source: b
 Vetted: f
 Judgement: g
-Phenomena: {copula}
-arnaq mikelngu-u-guq
-woman.ABS.sg child-to.be-IND.3sg
-`the woman is a child'
+Phenomena: {NP predicate}
+una qaya-u-guq
+this.ABS.sg kayak-to.be-IND.3sg
+`this is a kayak'
 
 #Example 84
 Source: b
 Vetted: f
 Judgement: g
-Phenomena: {copula}
+Phenomena: {NP predicate}
+angun ui-ngu-uq
+man.ABS.sg husband-to.be-IND.3sg
+`the man is a husband'
+
+#Example 85
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {NP predicate}
+arnaq mikelngu-u-guq
+woman.ABS.sg child-to.be-IND.3sg
+`the woman is a child'
+
+#Example 86
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {NP predicate}
 angute-t qimugte-ngu-ut
 man-ABS.pl dog-to.be-IND.3pl
 `the men are dogs'
+
+#Example 87
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {AP predicate}
+neqa kavircet-uq
+fish-ABS.sg to.be.red-IND.3pl
+`the fish is red'
+
+#Example 88
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {AP predicate}
+tuntu angnir-tuq
+caribou-ABS.sg to.be.happy-IND.3pl
+`the caribou is happy'
+
+#Example 89
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {AP predicate}
+arnaq qener-tuq
+woman-ABS.pl to.be.angry-IND.3pl
+`the woman is angry'
+
+#Example 90
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {AP predicate}
+qimugta kaig-tuq
+woman-ABS.pl to.be.hungry-IND.3pl
+`the dog is hungry'

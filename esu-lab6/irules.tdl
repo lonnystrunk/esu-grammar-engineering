@@ -581,8 +581,12 @@ verb-pc100_lrt6_INT_3sg-suffix :=
 %suffix (* -a)
 verb-pc100_lrt6_INT_3sg-lex-rule.
 
-verb-pc100_lrt7_IND_3pl-suffix :=
+verb-pc100_lrt7_IND_3pl-suffix1 :=
 %suffix (* -ut)
+verb-pc100_lrt7_IND_3pl-lex-rule.
+
+verb-pc100_lrt7_IND_3pl-suffix2 :=
+%suffix (* -tut)
 verb-pc100_lrt7_IND_3pl-lex-rule.
 
 verb-pc101_lrt1_IND_3sg_3sg-suffix :=
