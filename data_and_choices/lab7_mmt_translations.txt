@@ -1,30 +1,27 @@
-#Sleep should be marked plural?
 Dogs sleep
 qimugte-t qavar-tut
-dog-ABS.pl sleep-IND.3sg
+dog-ABS.pl sleep-IND.3pl
 
-#Cars should be plural?
 Dogs chase cars
-qimugte-t malriq-ait nunakuarcuute-t
-dog-REL.pl chase-IND.3pl.3pl car-ABS.sg
+qimugte-t malirq-ait nunakuarcuute-t
+dog-REL.pl chase-IND.3pl.3pl car-ABS.pl
 
 I chase you
 malriq-amken
 chase-IND.1sg.2sg
 
-#Not sure about '/b for ner
 Dogs eat
 qimugte-t nerb-ut
 dog-ABS.pl eat-IND.3pl
 
 #Should we ask Emily if we should include this since Yup'ik has no determiners?
 The dogs chase cars
-qimugte-t malriq-ait nunakuarcuute-t
-dog-REL.pl chase-IND.3pl.3pl car-ABS.sg
+qimugte-t malirq-ait nunakuarcuute-t
+dog-REL.pl chase-IND.3pl.3pl car-ABS.pl
 
 The dogs dont chase cars
-qimugte-t malriq-nrit-ait nunakuarcuute-t
-dog-REL.pl chase-NEG-IND.3pl.3pl car-ABS.sg
+qimugte-t malirqe-nrit-ait nunakuarcuute-t
+dog-REL.pl chase-NEG-IND.3pl.3pl car-ABS.pl
 
 I think that you know that dogs chase cars
 
@@ -44,19 +41,23 @@ cat-REL.pl chase-IND.3pl dog-ABS.pl sleep-APP.3pl=and
 
 Do cats chase dogs
 kuska-t!=qaa qimugte-t malirq-ait?
-cat-REL.pl!=QST dog-ABS.pl chase-IND.3pl
+cat-REL.pl!=QST dog-ABS.pl chase-IND.3pl.3pl
 
 Hungry dogs eat
+kai-lri-it qimugte-t nerb-ut
+to.be.hungry-VN(one.who).ABS.pl dog-ABS.pl eat-IND.3pl
 
 Dogs in the park eat
+qimugte-t nuna-mte-llri-it nerb-ut
+dog-ABS.pl land-be.at(LOC)-IND.3sg eat-IND.3pl
 
 Dogs eat in the park
-qimugte-t nerb-ut nuna-ni
-dog-ABS.pl eat-IND.3pl land-LOC.pl
+qimugte-t nerb-ut nuna-mi
+dog-ABS.pl eat-IND.3pl land-LOC.sg
 
 The dogs are hungry
 qimugte-t kaig-tut
-dog.ABS.pl to.be.hungry-IND.3pl
+dog-ABS.pl to.be.hungry-IND.3pl
 
 #Translated with land. Better word?
 The dogs are in the park
@@ -73,8 +74,8 @@ I asked what the dogs chased
 #Not sure I handled cases right here. Should car be rel and dog abm or vice
 # versa? Or not at all?
 The dog s car sleeps
-qimugte-an nunakuarcuute-at qavar-tuq
-dog-REL.3pl.sg car-ABS.3pl.sg sleep-IND.3sg
+qimugte-m nunakuarcuut-ii qavar-tuq
+dog-REL.sg car-ABS.3sg.sg sleep-IND.3sg
 
 My dogs sleep
 qimugte-nka qavar-tut
@@ -89,8 +90,8 @@ kina qavar-ta?
 who.ABS.sg sleep-INT.3sg
 
 What do the dogs chase
-ca-mek qimugte-t malirqatgu
-what-ABM.sg dog-REL.sg
+ca-mek qimugte-t malirq-atgu
+what-ABM.sg dog-REL.pl chase-INT.3pl.3sg
 
 What do you think the dogs chase
 
