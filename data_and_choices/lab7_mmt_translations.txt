@@ -1,0 +1,101 @@
+#Sleep should be marked plural?
+Dogs sleep
+qimugte-t qavar-tut
+dog-ABS.pl sleep-IND.3sg
+
+#Cars should be plural?
+Dogs chase cars
+qimugte-t malriq-ait nunakuarcuute-t
+dog-REL.pl chase-IND.3pl.3pl car-ABS.sg
+
+I chase you
+malriq-amken
+chase-IND.1sg.2sg
+
+#Not sure about '/b for ner
+Dogs eat
+qimugte-t nerb-ut
+dog-ABS.pl eat-IND.3pl
+
+#Should we ask Emily if we should include this since Yup'ik has no determiners?
+The dogs chase cars
+qimugte-t malriq-ait nunakuarcuute-t
+dog-REL.pl chase-IND.3pl.3pl car-ABS.sg
+
+The dogs dont chase cars
+qimugte-t malriq-nrit-ait nunakuarcuute-t
+dog-REL.pl chase-NEG-IND.3pl.3pl car-ABS.sg
+
+I think that you know that dogs chase cars
+
+I ask whether you know that dogs chase cars
+
+Cats and dogs chase cars
+kuska-t qimugte-t=llu malriq-ait nunakuarcuute-t
+cat-REL.pl dog-REL.pl=and chase-IND.3pl.3pl car-ABS.pl
+
+Dogs chase cars and cats chase dogs
+qimugte-t malirq-ait nunakuarcuute-t kuska-t=llu malirqe-lluki qimugte-t
+dog-REL.pl chase-IND.3pl.3pl car-ABS.pl cat-REL.pl=and chase-APP.3pl dog-ABS.pl
+
+Cats chase dogs and sleep
+kuska-t malirq-ait qimugte-t qavar-luteng=llu
+cat-REL.pl chase-IND.3pl dog-ABS.pl sleep-APP.3pl=and
+
+Do cats chase dogs
+kuska-t!=qaa qimugte-t malirq-ait?
+cat-REL.pl!=QST dog-ABS.pl chase-IND.3pl
+
+Hungry dogs eat
+
+Dogs in the park eat
+
+Dogs eat in the park
+qimugte-t nerb-ut nuna-ni
+dog-ABS.pl eat-IND.3pl land-LOC.pl
+
+The dogs are hungry
+qimugte-t kaig-tut
+dog.ABS.pl to.be.hungry-IND.3pl
+
+#Translated with land. Better word?
+The dogs are in the park
+qimugte-t nuna-mt-ut
+dog-ABS.pl land-be.at(LOC)-IND.3pl
+
+#-ngu- or -u-?
+The dogs are the cats
+qimugte-t kuska-u-gut
+dog-ABS.pl cat-to.be-IND.3pl
+
+I asked what the dogs chased
+
+#Not sure I handled cases right here. Should car be rel and dog abm or vice
+# versa? Or not at all?
+The dog s car sleeps
+qimugte-an nunakuarcuute-at qavar-tuq
+dog-REL.3pl.sg car-ABS.3pl.sg sleep-IND.3sg
+
+My dogs sleep
+qimugte-nka qavar-tut
+dog-ABS.1sg.pl sleep-IND.3pl
+
+The dog sleeps because the cat sleeps
+
+The dog sleeps after the cat sleeps
+
+Who sleeps
+kina qavar-ta?
+who.ABS.sg sleep-INT.3sg
+
+What do the dogs chase
+ca-mek qimugte-t malirqatgu
+what-ABM.sg dog-REL.sg
+
+What do you think the dogs chase
+
+Who asked what the dogs chase
+
+I can eat glass
+
+It doesnt hurt me
