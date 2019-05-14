@@ -14,7 +14,6 @@ Dogs eat
 qimugte-t nerb-ut
 dog-ABS.pl eat-IND.3pl
 
-#Should we ask Emily if we should include this since Yup'ik has no determiners?
 The dogs chase cars
 qimugte-t malirq-ait nunakuarcuute-t
 dog-REL.pl chase-IND.3pl.3pl car-ABS.pl
@@ -28,7 +27,7 @@ I think that you know that dogs chase cars
 I ask whether you know that dogs chase cars
 
 Cats and dogs chase cars
-kuska-t qimugte-t=llu malriq-ait nunakuarcuute-t
+kuska-t qimugte-t=llu malirq-ait nunakuarcuute-t
 cat-REL.pl dog-REL.pl=and chase-IND.3pl.3pl car-ABS.pl
 
 Dogs chase cars and cats chase dogs
@@ -59,20 +58,16 @@ The dogs are hungry
 qimugte-t kaig-tut
 dog-ABS.pl to.be.hungry-IND.3pl
 
-#Translated with land. Better word?
 The dogs are in the park
 qimugte-t nuna-mt-ut
 dog-ABS.pl land-be.at(LOC)-IND.3pl
 
-#-ngu- or -u-?
 The dogs are the cats
 qimugte-t kuska-u-gut
 dog-ABS.pl cat-to.be-IND.3pl
 
 I asked what the dogs chased
 
-#Not sure I handled cases right here. Should car be rel and dog abm or vice
-# versa? Or not at all?
 The dog s car sleeps
 qimugte-m nunakuarcuut-ii qavar-tuq
 dog-REL.sg car-ABS.3sg.sg sleep-IND.3sg
