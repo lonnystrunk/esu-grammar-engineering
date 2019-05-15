@@ -23,6 +23,8 @@ qimugte-t malirqe-nrit-ait nunakuarcuute-t
 dog-REL.pl chase-NEG-IND.3pl.3pl car-ABS.pl
 
 I think that you know that dogs chase cars
+umyuarteq-ua nallu-nri-cuk-luten qimugte-t malirqe-la-uci-itnek nunakuarcuute-nek
+think-IND.1sg not.know-NEG-possibly-APP.2sg dog-REL.pl chase-HAB-VN(situation)-ABM.3pl.pl car-ABM.pl
 
 I ask whether you know that dogs chase cars
 
