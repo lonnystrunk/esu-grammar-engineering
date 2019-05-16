@@ -912,8 +912,8 @@ Source: b
 Vetted: f
 Judgement: g
 Phenomena: {MMT}
-kuska-t!=qaa qimugte-t malirq-ait?
-cat-REL.pl!=QST dog-ABS.pl chase-IND.3pl.3pl
+kuska-t=qaa qimugte-t malirq-ait?
+cat-REL.pl=QST dog-ABS.pl chase-IND.3pl.3pl
 `Do cats chase dogs'
 
 # MMT Translations 12
@@ -1002,7 +1002,7 @@ Source: b
 Vetted: f
 Judgement: g
 Phenomena: {MMT}
-qimugta qavar-tuq kusaq qava-a-n
+qimugta qavar-tuq kuskaq qava-a-n
 dog.ABS.sg sleep-IND.3sg cat.ABS.sg sleep-CNNbc-3sg
 `The dog sleeps because the cat sleeps'
 
@@ -1011,8 +1011,8 @@ Source: b
 Vetted: f
 Judgement: g
 Phenomena: {MMT}
-qimugta qavar-tuq kuskaq qava-rrar-luni
-dog.ABS.sg sleep-IND.3sg cat.ABS.sg sleep-before-APP.3sg
+qimugta qavar-tuq kuskaq qava-rraar-luni
+dog.ABS.sg sleep-IND.3sg cat.ABS.sg sleep-after-APP.3sg
 `The dog sleeps after the cat sleeps'
 
 # MMT Translations 23
@@ -1033,27 +1033,13 @@ ca-mek qimugte-t malirq-atgu
 what-ABM.sg dog-REL.pl chase-INT.3pl.3sg
 `What do the dogs chase'
 
-# MMT Translations 25
-Source: b
-Vetted: f
-Judgement: g
-Phenomena: {MMT}
-`What do you think the dogs chase'
-
-# MMT Translations 26
-Source: b
-Vetted: f
-Judgement: g
-Phenomena: {MMT}
-`Who asked what the dogs chase'
-
 # MMT Translations 27
 Source: b
 Vetted: f
 Judgement: g
 Phenomena: {MMT}
-eat-can-IND.1sg ice-ABM.sg
 ner-yugnga-unga cikungua-mek
+eat-can-IND.1sg ice-ABM.sg
 `I can eat glass'
 
 # MMT Translations 28

@@ -6,8 +6,6 @@ malirq-amken
 
 qimugte-t nerb-ut
 
-qimugte-t malirq-ait nunakuarcuute-t
-
 qimugte-t malirqe-nrit-ait nunakuarcuute-t
 
 umyuarteq-ua nallu-nri-cuk-luten qimugte-t malirqa-la-uci-itnek nunakuarcuute-nek
@@ -20,7 +18,7 @@ qimugte-t malirq-ait nunakuarcuute-t kuska-t=llu malirqe-lluki qimugte-t
 
 kuska-t malirq-ait qimugte-t qavar-luteng=llu
 
-kuska-t!=qaa qimugte-t malirq-ait?
+kuska-t=qaa qimugte-t malirq-ait?
 
 kai-lri-it qimugte-t nerb-ut
 
@@ -40,9 +38,9 @@ qimugte-m nunakuarcuut-ii qavar-tuq
 
 qimugte-nka qavar-tut
 
-qimugta qavar-tuq kusaq qava-a-n
+qimugta qavar-tuq kuskaq qava-a-n
 
-qimugta qavar-tuq kuskaq qava-rrar-luni
+qimugta qavar-tuq kuskaq qava-rraar-luni
 
 kina qavar-ta
 
