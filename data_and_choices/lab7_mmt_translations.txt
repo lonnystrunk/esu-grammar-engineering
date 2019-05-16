@@ -7,7 +7,7 @@ qimugte-t malirq-ait nunakuarcuute-t
 dog-REL.pl chase-IND.3pl.3pl car-ABS.pl
 
 I chase you
-malriq-amken
+malirq-amken
 chase-IND.1sg.2sg
 
 Dogs eat
@@ -23,10 +23,12 @@ qimugte-t malirqe-nrit-ait nunakuarcuute-t
 dog-REL.pl chase-NEG-IND.3pl.3pl car-ABS.pl
 
 I think that you know that dogs chase cars
-umyuarteq-ua nallu-nri-cuk-luten qimugte-t malirqe-la-uci-itnek nunakuarcuute-nek
+umyuarteq-ua nallu-nri-cuk-luten qimugte-t malirqa-la-uci-itnek nunakuarcuute-nek
 think-IND.1sg not.know-NEG-possibly-APP.2sg dog-REL.pl chase-HAB-VN(situation)-ABM.3pl.pl car-ABM.pl
 
 I ask whether you know that dogs chase cars
+apt-ua nallu-nri-cuk-luten qimugte-t maliqa-la-uci-itnek nunakuarcuute-nek
+ask-IND.1sg not.know-NEG-possibly-APP.2sg dog-REL.pl chase-HAB-VN(situation)-ABM.3pl.pl car-ABM.pl
 
 Cats and dogs chase cars
 kuska-t qimugte-t=llu malirq-ait nunakuarcuute-t
@@ -69,6 +71,8 @@ qimugte-t kuska-u-gut
 dog-ABS.pl cat-to.be-IND.3pl
 
 I asked what the dogs chased
+apt-ua ca-mek qimugte-t malirqa-llru-ci-itnek
+ask-IND.1sg what-ABM.sg dog-REL.pl chase-PST-VN(situation)-ABM.3pl.pl
 
 The dog s car sleeps
 qimugte-m nunakuarcuut-ii qavar-tuq
@@ -79,11 +83,15 @@ qimugte-nka qavar-tut
 dog-ABS.1sg.pl sleep-IND.3pl
 
 The dog sleeps because the cat sleeps
+qimugta qavar-tuq kusaq qava-a-n
+dog.ABS.sg sleep-IND.3sg cat.ABS.sg sleep-CNNbc-3sg
 
 The dog sleeps after the cat sleeps
+qimugta qavar-tuq kuskaq qava-rrar-luni
+dog.ABS.sg sleep-IND.3sg cat.ABS.sg sleep-before-APP.3sg
 
 Who sleeps
-kina qavar-ta?
+kina qavar-ta
 who.ABS.sg sleep-INT.3sg
 
 What do the dogs chase
@@ -95,5 +103,9 @@ What do you think the dogs chase
 Who asked what the dogs chase
 
 I can eat glass
+ner-yugnga-unga ciku-ngua-mek
+eat-can-IND.1sg ice-fake-ABM.sg
 
 It doesnt hurt me
+akngirte-nrit-aanga
+hurt-NEG-IND.3sg.1sg
