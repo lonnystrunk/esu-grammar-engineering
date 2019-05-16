@@ -37,15 +37,6 @@ llu-from-left := phrase-or-lexrule &
   [ SYNSEM.LOCAL.CAT.LLU #llu,
     ARGS < [ SYNSEM.LOCAL.CAT.LLU #llu ] > ].
 
-unary-phrase :+ llu-from-left.
-head-valence-phrase :+ llu-from-left.
-adj-head-phrase :+ llu-from-left.
-head-adj-scop-phrase :+ llu-from-left.
-topormid-coord-phrase :+ llu-from-left.
-
-head-adj-int-phrase :+ [ SYNSEM.LOCAL.CAT.LLU #llu,
-ARGS < [ ], [ SYNSEM.LOCAL.CAT.LLU #llu ] > ].
-
 inflected :+ [ NOUN-PC3-FLAG luk,
     NOUN_PC_ABS_SG-FLAG luk,
     NOUN_PC_ABS_SG-OR-NOUN_PC_NON_ABS_SG-FLAG luk,
@@ -534,6 +525,24 @@ llu-conj-lex := basic-conj-lex & no-rels-hcons-icons-lex-item &
                          VAL [ SPR < >,
                                COMPS < >,
                                SUBJ < > ]]]]].
+
+;;; Pronouns
+
+wh-pronoun-noun-lex := norm-hook-lex-item & basic-icons-lex-item & 
+  [ SYNSEM [ LOCAL [ CAT [ HEAD noun,
+			   VAL [ SPR < >,
+				 SUBJ < >,
+				 COMPS < >,
+				 SPEC < > ] ],
+		     CONT [ HOOK.INDEX.PNG.PER 3rd,
+	                    RELS <! [ LBL #larg,
+				       ARG0 #ind & ref-ind ],
+				  [ PRED "wh_q_rel",
+				    ARG0 #ind,
+				    RSTR #harg ] !>,
+			    HCONS <! [ HARG #harg,
+				        LARG #larg ] !> ] ],
+	     NON-LOCAL.QUE <! #ind !> ] ].
 
 ;;; Intermediate rule types
 
@@ -1758,6 +1767,28 @@ verb-pc104_lrt1_CNN_1sg-lex-rule := verb_pc_CNN_ending-lex-rule-super &
 ;;;;;;;;;;;;;;;;;;;
 ;;; Phrasal Types
 ;;;;;;;;;;;;;;;;;;;
+
+basic-head-filler-phrase :+
+   [ ARGS < [ SYNSEM.LOCAL.COORD - ], [ SYNSEM.LOCAL.COORD - ] > ].
+
+wh-ques-phrase := basic-head-filler-phrase & interrogative-clause & 
+		  head-final &
+   [ SYNSEM.LOCAL.CAT [ MC bool,
+			VAL #val,
+			HEAD verb & [ FORM finite ] ],
+     HEAD-DTR.SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.MOOD int,
+			     CAT [ MC na,
+				 VAL #val & [ SUBJ < >,
+					      COMPS < > ] ] ],
+     NON-HEAD-DTR.SYNSEM.NON-LOCAL.QUE <! ref-ind !> ].
+			
+extracted-comp-phrase := basic-extracted-comp-phrase &
+  [ SYNSEM.LOCAL.CAT.HEAD verb,
+    HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.SUBJ cons ].
+
+extracted-subj-phrase := basic-extracted-subj-phrase &
+  [ SYNSEM.LOCAL.CAT.HEAD verb,
+    HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS < > ].
 
 non-event-subj-head-phrase := head-final-head-nexus & basic-head-subj-phrase &
   [ HEAD-DTR.SYNSEM [ LOCAL.CONT.HOOK.INDEX ref-ind,

@@ -56,3 +56,9 @@ cnnth-modifying-clause-phrase := cnnth-modifying-clause-phrase.
 cnnif-modifying-clause-phrase := cnnif-modifying-clause-phrase.
 
 locative-pp := locative-pp-phrase.
+
+wh-ques := wh-ques-phrase.
+
+extracted-comp := extracted-comp-phrase.
+
+extracted-subj := extracted-subj-phrase.

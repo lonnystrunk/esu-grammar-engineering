@@ -994,3 +994,13 @@ nallu_2 := ccomps-verb-lex &
 
 llu := llu-conj-lex &
 [ STEM < "llu" > ].
+
+;;; Pronouns
+
+ca := wh-pronoun-noun-lex &
+  [ STEM < "ca" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_thing_n_rel" ].
+
+kina := wh-pronoun-noun-lex &
+  [ STEM < "kina" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_person_n_rel" ].
