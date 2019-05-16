@@ -33,6 +33,19 @@ coord-phrase :+ [ SYNSEM.LOCAL.CAT.HEAD.NMZ #nmz,
 unary-bottom-coord-rule :+ [ SYNSEM.LOCAL.CAT.HEAD.NMZ #nmz,
     ARGS < [ SYNSEM.LOCAL.CAT.HEAD.NMZ #nmz ] > ].
 
+llu-from-left := phrase-or-lexrule &
+  [ SYNSEM.LOCAL.CAT.LLU #llu,
+    ARGS < [ SYNSEM.LOCAL.CAT.LLU #llu ] > ].
+
+unary-phrase :+ llu-from-left.
+head-valence-phrase :+ llu-from-left.
+adj-head-phrase :+ llu-from-left.
+head-adj-scop-phrase :+ llu-from-left.
+topormid-coord-phrase :+ llu-from-left.
+
+head-adj-int-phrase :+ [ SYNSEM.LOCAL.CAT.LLU #llu,
+ARGS < [ ], [ SYNSEM.LOCAL.CAT.LLU #llu ] > ].
+
 inflected :+ [ NOUN-PC3-FLAG luk,
     NOUN_PC_ABS_SG-FLAG luk,
     NOUN_PC_ABS_SG-OR-NOUN_PC_NON_ABS_SG-FLAG luk,
@@ -50,6 +63,8 @@ png :+ [ PER person,
 
 cat :+ [ POSSESSUM poss ].
 
+cat :+ [ LLU bool ].
+
 poss := *top* &
   [ POSS-AGR png ].
 
@@ -64,6 +79,8 @@ basic-head-1st-comp-phrase :+ [ SYNSEM.LOCAL.CAT.POSSESSUM #poss,
 
 basic-head-comp-phrase :+ [ SYNSEM.LOCAL.CAT.MC #mc,
     HEAD-DTR.SYNSEM.LOCAL.CAT.MC #mc ].
+
+basic-head-comp-phrase :+ [ SYNSEM.LIGHT - ].
 
 basic-head-opt-subj-phrase :+ [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS < > ].
 
@@ -199,7 +216,8 @@ ptp := mood.
 
 noun-lex := basic-noun-lex & basic-one-arg & no-hcons-lex-item & non-mod-lex-item &
   [ ARG-ST < #spr >,
-    SYNSEM.LOCAL.CAT [ VAL [ COMPS < >,
+    SYNSEM.LOCAL.CAT [ LLU -,
+		       VAL [ COMPS < >,
                              SUBJ < >,
                              SPEC < >,
                              SPR < #spr &
@@ -293,7 +311,8 @@ verb-lex := basic-verb-lex & non-mod-lex-item &
                                        COMPS < > ] ],
                            CONT.HOOK.INDEX #xarg ] ],
     SYNSEM.LOCAL [ CONT.HOOK.XARG #xarg,
-                   CAT [ VAL [ SPR < >,
+                   CAT [ LLU -, 
+		         VAL [ SPR < >,
                                SPEC < >,
                                SUBJ < #subj > ],
                          HEAD.NMZ - ] ] ].
@@ -505,6 +524,16 @@ low-nmz-subjid-compsid-lex-rule := low-nominalization-lex-rule &
                            SUBJ #subj ],
     DTR.SYNSEM.LOCAL.CAT.VAL [ COMPS #comps,
                                SUBJ #subj ] ].
+
+;;; Conjunction 
+
+llu-conj-lex := basic-conj-lex & no-rels-hcons-icons-lex-item &
+[ SYNSEM [ LOCAL [ CAT [ LLU +,
+                         HEAD conj & [ MOD < [ LOCAL intersective-mod, 
+                                               LIGHT + ] > ],
+                         VAL [ SPR < >,
+                               COMPS < >,
+                               SUBJ < > ]]]]].
 
 ;;; Intermediate rule types
 
@@ -1916,4 +1945,5 @@ s1-top-coord-rule := basic-s-top-coord-rule & apoly-top-coord-rule &
 
 s1-bottom-coord-rule := unary-bottom-coord-rule & s-bottom-coord-phrase &
   [ SYNSEM.LOCAL [ COORD-STRAT "1",
-                   COORD-REL.PRED "_and_coord_rel" ] ].
+                   COORD-REL.PRED "_and_coord_rel",
+		   CAT.LLU + ] ].

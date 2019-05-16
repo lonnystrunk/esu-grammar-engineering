@@ -989,3 +989,8 @@ nallu_2 := ccomps-verb-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_not.know_v_rel" ].
 
 ;;; Complementizers
+
+;;; Conjunctions
+
+llu := llu-conj-lex &
+[ STEM < "llu" > ].
