@@ -33,11 +33,14 @@ np1-same-same-same-non-sg-any-pl-top-coord := np1-same-same-same-non-sg-any-pl-t
 
 np1-same-same-same-non-sg-any-pl-mid-coord := np1-same-same-same-non-sg-any-pl-mid-coord-rule.
 
+np1-same-same-same-sg-sg-du-mid-coord := np1-same-same-same-sg-sg-du-mid-coord-rule. 
+
 np1-bottom-coord := np1-bottom-coord-rule.
 
 vp1-top-coord := vp1-top-coord-rule.
 
 vp1-mid-coord := vp1-mid-coord-rule.
+
 vp1-bottom-coord := vp1-bottom-coord-rule.
 
 s1-top-coord := s1-top-coord-rule.
