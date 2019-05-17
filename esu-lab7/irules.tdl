@@ -253,7 +253,7 @@ noun-pc101_lrt1_ERG_sg-suffix :=
 %suffix (* -m)
 noun-pc101_lrt1_ERG_sg-lex-rule.
 
-noun-pc101_lrt2_ABS_3sg_sg-suffix :=
+noun-pc101_lrt2_ABS_3sg_sg-suffix1 :=
 %suffix (* -a)
 noun-pc101_lrt2_ABS_3sg_sg-lex-rule.
 
@@ -296,6 +296,14 @@ noun-pc101_lrt10_ABS_3pl_sg-lex-rule.
 noun-pc101_lrt11_LOC_sg-suffix :=
 %suffix (* -mi)
 noun-pc101_lrt11_LOC_sg-lex-rule.
+
+noun-pc101_lrt2_ABS_3sg_sg-suffix2 :=
+%suffix (* -ii)
+noun-pc101_lrt2_ABS_3sg_sg-lex-rule.
+
+noun-pc101_lrt12_ABS_1sg_pl-suffix :=
+%suffix (* -nka)
+noun-pc101_lrt12_ABS_1sg_pl-lex-rule.
 
 noun-pc102_lrt1-suffix :=
 %suffix (* -ka)
@@ -589,6 +597,26 @@ verb-pc100_lrt7_IND_3pl-suffix2 :=
 %suffix (* -tut)
 verb-pc100_lrt7_IND_3pl-lex-rule.
 
+verb-pc100_lrt7_IND_3pl-suffix3 :=
+%suffix (* -gut)
+verb-pc100_lrt7_IND_3pl-lex-rule.
+
+verb-pc100_lrt8_APP_3pl-suffix :=
+%suffix (* -lluki)
+verb-pc100_lrt8_APP_3pl-lex-rule.
+
+verb-pc100_lrt9_INT_3sg-suffix :=
+%suffix (* -ta)
+verb-pc100_lrt9_INT_3sg-lex-rule.
+
+verb-pc100_lrt10_IND_3du-suffix :=
+%suffix (* -tuk)
+verb-pc100_lrt10_IND_3du-lex-rule.
+
+verb-pc100_lrt11_INT_2sg-suffix :=
+%suffix (* -sit)
+verb-pc100_lrt11_INT_2sg-lex-rule.
+
 verb-pc101_lrt1_IND_3sg_3sg-suffix :=
 %suffix (* -aa)
 verb-pc101_lrt1_IND_3sg_3sg-lex-rule.
@@ -613,9 +641,25 @@ verb-pc101_lrt6_IND_1pl_3sg-suffix :=
 %suffix (* -aput)
 verb-pc101_lrt6_IND_1pl_3sg-lex-rule.
 
-verb-pc20_lrt1_IND_3sg_1sg-suffix :=
+verb-pc101_lrt7_IND_3sg_1sg-suffix1 :=
 %suffix (* -anga)
-verb-pc20_lrt1_IND_3sg_1sg-lex-rule.
+verb-pc101_lrt7_IND_3sg_1sg-lex-rule.
+
+verb-pc101_lrt7_IND_3sg_1sg-suffix2 :=
+%suffix (* -aanga)
+verb-pc101_lrt7_IND_3sg_1sg-lex-rule.
+
+verb-pc101_lrt8_IND_3pl_3pl-suffix :=
+%suffix (* -ait)
+verb-pc101_lrt8_IND_3pl_3pl-lex-rule.
+
+verb-pc101_lrt9_INT_3pl_3sg-suffix :=
+%suffix (* -atgu)
+verb-pc101_lrt9_INT_3pl_3sg-lex-rule.
+
+verb-pc101_lrt10_INT_3sg_3sg-suffix :=
+%suffix (* -a)
+verb-pc101_lrt10_INT_3sg_3sg-lex-rule.
 
 verb-pc102_lrt1-suffix :=
 %suffix (* -llru)
@@ -632,6 +676,14 @@ verb-pc102_lrt3-lex-rule.
 verb-pc102_lrt4-suffix :=
 %suffix (* -lar)
 verb-pc102_lrt4-lex-rule.
+
+verb-pc102_lrt5-suffix :=
+%suffix (* -rraar)
+verb-pc102_lrt5-lex-rule.
+
+verb-pc102_lrt6-suffix :=
+%suffix (* -yugnga)
+verb-pc102_lrt6-lex-rule.
 
 esu-eviden-suffix :=
 %suffix (* -llini)
@@ -660,3 +712,9 @@ verb-pc103_lrt5_CNNif-lex-rule.
 verb-pc104_lrt1_CNN_1sg-suffix :=
 %suffix (* -ma)
 verb-pc104_lrt1_CNN_1sg-lex-rule.
+
+verb-pc104_lrt1_CNN_3sg-suffix :=
+%suffix (* -n)
+verb-pc104_lrt2_CNN_3sg-lex-rule.
+
+

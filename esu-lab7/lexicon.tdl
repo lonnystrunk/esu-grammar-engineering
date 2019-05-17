@@ -233,10 +233,6 @@ kuuvviaq := noun1-noun-lex &
   [ STEM < "kuuvviaq" >,
     SYNSEM.LKEYS.KEYREL.PRED "_coffee.abs.sg_n_rel" ].
 
-ca := noun1-noun-lex &
-  [ STEM < "ca" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_what_n_rel" ].
-
 qayaq := noun1-noun-lex &
   [ STEM < "qayaq" >,
     SYNSEM.LKEYS.KEYREL.PRED "_kayak.abs.sg_n_rel" ].
@@ -465,6 +461,10 @@ qimugta := noun_abs_sg-noun-lex &
   [ STEM < "qimugta" >,
     SYNSEM.LKEYS.KEYREL.PRED "_dog_n_rel" ].
 
+kuskaq := noun_abs_sg-noun-lex &
+  [ STEM < "kuskaq" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_cat_n_rel" ].
+
 mikelnguq := noun_abs_sg-noun-lex &
   [ STEM < "mikelnguq" >,
     SYNSEM.LKEYS.KEYREL.PRED "_child_n_rel" ].
@@ -541,9 +541,25 @@ qimugte := noun_non_abs_sg-noun-lex &
   [ STEM < "qimugte" >,
     SYNSEM.LKEYS.KEYREL.PRED "_dog_n_rel" ].
 
+kuska := noun_non_abs_sg-noun-lex &
+  [ STEM < "kuska" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_cat_n_rel" ].
+
 neqe := noun_non_abs_sg-noun-lex &
   [ STEM < "neqe" >,
     SYNSEM.LKEYS.KEYREL.PRED "_fish_n_rel" ].
+
+cikungua := noun_non_abs_sg-noun-lex &
+  [ STEM < "cikungua" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_glass_n_rel" ].
+
+nunakuarcuute := noun_non_abs_sg-noun-lex &
+  [ STEM < "nunakuarcuute" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_car_n_rel" ].
+
+nunakuarcuut := noun_non_abs_sg-noun-lex &
+  [ STEM < "nunakuarcuut" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_car_n_rel" ].
 
 ;;; Adjectives
 
@@ -957,6 +973,22 @@ kenir_1 := verb_intrans-verb-lex &
   [ STEM < "kenir" >,
     SYNSEM.LKEYS.KEYREL.PRED "_cook_v_rel" ].
 
+qavar := verb_intrans-verb-lex &
+  [ STEM < "qavar" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sleep_v_rel" ].
+
+qava := verb_intrans-verb-lex &
+  [ STEM < "qava" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sleep_v_rel" ].
+
+umyuarteq := verb_intrans-verb-lex &
+  [ STEM < "umyuarteq" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_think_v_rel" ].
+
+apt := verb_intrans-verb-lex &
+  [ STEM < "qavar" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sleep_v_rel" ].
+
 uita := copula-verb-lex &
   [ STEM < "uita" > ].
 
@@ -983,6 +1015,22 @@ assik_3 := verb_trans-verb-lex &
 assike := verb_trans-verb-lex &
   [ STEM < "assike" >,
     SYNSEM.LKEYS.KEYREL.PRED "_like_v_rel" ].
+
+malirq := verb_trans-verb-lex &
+  [ STEM < "malirq" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_chase_v_rel" ].
+
+malirqe := verb_trans-verb-lex &
+  [ STEM < "malirqe" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_chase_v_rel" ].
+
+malirqa := verb_trans-verb-lex &
+  [ STEM < "malirqa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_chase_v_rel" ].
+
+akngirte := verb_trans-verb-lex &
+  [ STEM < "akngirte" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_hurt_v_rel" ].
 
 nallu_2 := ccomps-verb-lex &
   [ STEM < "nallu" >,
