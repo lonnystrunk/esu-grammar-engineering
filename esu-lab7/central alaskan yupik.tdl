@@ -73,6 +73,8 @@ cat :+ [ POSSESSUM poss ].
 
 cat :+ [ LLU bool ].
 
+cat-sat :+ [ LLU - ].
+
 poss := *top* &
   [ POSS-AGR png ].
 
@@ -146,8 +148,9 @@ basic-head-mod-phrase-simple :+ [ SYNSEM.LOCAL.CAT.MC #mc,
 
 case := *top*.
 real-case := case.  ; intermediate case type for all real cases
-erg := real-case.  ; erg
-abs := real-case.  ; abs
+abs-or-erg := real-case.
+erg := abs-or-erg.  ; erg
+abs := abs-or-erg.  ; abs
 loc := real-case.  ; loc
 abm := real-case.  ; abm
 eql := real-case.  ; eql
@@ -1015,12 +1018,8 @@ noun-pc101_lrt3_ABS_1sg_sg-lex-rule := noun_pc_non_abs_sg-lex-rule-super & posse
                          POSSESSUM.POSS-AGR [ PER 1st,
                                               NUM sg ] ] ] ].
 
-noun-pc101_lrt4_ABS_pl-lex-rule := nonpossessive-lex-rule-1 & noun_pc_non_abs_sg-lex-rule-super &
-  [ SYNSEM.LOCAL [ CAT.HEAD.CASE abs,
-                   CONT.HOOK.INDEX.PNG.NUM pl ] ].
-
-noun-pc101_lrt5_ERG_pl-lex-rule := nonpossessive-lex-rule-1 & noun_pc_non_abs_sg-lex-rule-super &
-  [ SYNSEM.LOCAL [ CAT.HEAD.CASE erg,
+noun-pc101_lrt4_ABS-OR-ERG_pl-lex-rule := nonpossessive-lex-rule-1 & noun_pc_non_abs_sg-lex-rule-super &
+  [ SYNSEM.LOCAL [ CAT.HEAD.CASE abs-or-erg,
                    CONT.HOOK.INDEX.PNG.NUM pl ] ].
 
 noun-pc101_lrt6_ERG_1sg_sg-lex-rule := noun_pc_non_abs_sg-lex-rule-super & possessum-lex-rule-1 &
@@ -1060,17 +1059,6 @@ noun-pc101_lrt12_ABS_1sg_pl-lex-rule := noun_pc_non_abs_sg-lex-rule-super & poss
                    CAT [ HEAD.CASE abs, 
                          POSSESSUM.POSS-AGR [ PER 1st,
                                               NUM sg ] ] ] ].
-
-noun_pc_derivational1-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & noun_pc_non_abs_sg-rule-dtr &
-  [ INFLECTED #infl,
-    DTR noun_non_abs_sg-noun-lex &
-        [ INFLECTED #infl ] ].
-
-noun-pc102_lrt1-lex-rule := noun_pc_derivational1-lex-rule-super.
-
-noun-pc102_lrt2-lex-rule := noun_pc_derivational1-lex-rule-super.
-
-noun-pc102_lrt3-lex-rule := noun_pc_derivational1-lex-rule-super.
 
 noun-pc_nmz-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
   [ INFLECTED [ NOUN_PC_ABS_SG-OR-NOUN_PC_NON_ABS_SG-FLAG -,

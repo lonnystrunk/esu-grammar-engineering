@@ -1045,10 +1045,38 @@ llu := llu-conj-lex &
 
 ;;; Pronouns
 
-ca := wh-pronoun-noun-lex &
-  [ STEM < "ca" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_thing_n_rel" ].
-
 kina := wh-pronoun-noun-lex &
   [ STEM < "kina" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_person_n_rel" ].
+    SYNSEM [ LOCAL [ CAT.HEAD.CASE abs,
+		     CONT.HOOK.INDEX.PNG.NUM sg ],
+	     LKEYS.KEYREL.PRED "_person_n_rel" ] ].
+
+kia := wh-pronoun-noun-lex &
+  [ STEM < "kia" >,
+    SYNSEM [ LOCAL [ CAT.HEAD.CASE erg,
+		     CONT.HOOK.INDEX.PNG.NUM sg ],
+	     LKEYS.KEYREL.PRED "_person_n_rel" ] ].
+
+kinkut := wh-pronoun-noun-lex &
+  [ STEM < "kinkut" >,
+    SYNSEM [ LOCAL [ CAT.HEAD.CASE abs-or-erg,
+		     CONT.HOOK.INDEX.PNG.NUM pl ],
+	     LKEYS.KEYREL.PRED "_person_n_rel" ] ].
+
+kinkuk := wh-pronoun-noun-lex &
+  [ STEM < "kinkuk" >,
+    SYNSEM [ LOCAL [ CAT.HEAD.CASE abs-or-erg,
+		     CONT.HOOK.INDEX.PNG.NUM du ],
+	     LKEYS.KEYREL.PRED "_person_n_rel" ] ].
+
+camek := wh-pronoun-noun-lex &
+  [ STEM < "camek" >,
+    SYNSEM [ LOCAL [ CAT.HEAD.CASE abm,
+		     CONT.HOOK.INDEX.PNG.NUM sg ],
+	     LKEYS.KEYREL.PRED "_thing_n_rel" ] ].
+
+canek := wh-pronoun-noun-lex &
+  [ STEM < "canek" >,
+    SYNSEM [ LOCAL [ CAT.HEAD.CASE abm,
+		     CONT.HOOK.INDEX.PNG.NUM pl ],
+	     LKEYS.KEYREL.PRED "_thing_n_rel" ] ].
