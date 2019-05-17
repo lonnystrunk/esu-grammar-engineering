@@ -74,3 +74,5 @@ wh-ques := wh-ques-phrase.
 extracted-comp := extracted-comp-phrase.
 
 extracted-subj := extracted-subj-phrase.
+
+basic-head-filler := basic-head-filler-phrase.
