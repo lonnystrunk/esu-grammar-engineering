@@ -105,13 +105,13 @@
 105@b@@@1@mmt@qimugte-t kaig-tut@@@@1@2@dog-ABS.pl to.be.hungry-IND.3pl`The dogs are hungry'@marcus martinez/lonny strunk@april 22, 2019
 106@b@@@1@mmt@qimugte-t nuna-mt-ut@@@@1@2@dog-ABS.pl land-be.at(LOC)-IND.3pl`The dogs are in the park'@marcus martinez/lonny strunk@april 22, 2019
 107@b@@@1@mmt@qimugte-t kuska-u-gut@@@@1@2@dog-ABS.pl cat-to.be-IND.3pl`The dogs are the cats'@marcus martinez/lonny strunk@april 22, 2019
-108@b@@@1@mmt@apt-ua camek qimugte-t malirqa-llru-ci-itnek@@@@1@4@ask-IND.1sg what.ABM.sg dog-REL.pl chase-PST-VN(situation)-ABM.3pl.pl`I asked what the dogs chased'@marcus martinez/lonny strunk@april 22, 2019
+108@b@@@1@mmt@apt-ua ca-mek qimugte-t malirqa-llru-ci-itnek@@@@1@4@ask-IND.1sg what-ABM.sg dog-REL.pl chase-PST-VN(situation)-ABM.3pl.pl`I asked what the dogs chased'@marcus martinez/lonny strunk@april 22, 2019
 109@b@@@1@mmt@qimugte-m nunakuarcuut-ii qavar-tuq@@@@1@3@dog-REL.sg car-ABS.3sg.sg sleep-IND.3sg`The dog s car sleeps'@marcus martinez/lonny strunk@april 22, 2019
 110@b@@@1@mmt@qimugte-nka qavar-tut@@@@1@2@dog-ABS.1sg.pl sleep-IND.3pl`My dogs sleep'@marcus martinez/lonny strunk@april 22, 2019
 111@b@@@1@mmt@qimugta qavar-tuq kuskaq qava-a-n@@@@1@4@dog.ABS.sg sleep-IND.3sg cat.ABS.sg sleep-CNNbc-3sg`The dog sleeps because the cat sleeps'@marcus martinez/lonny strunk@april 22, 2019
 112@b@@@1@mmt@qimugta qavar-tuq kuskaq qava-rraar-luni@@@@1@4@dog.ABS.sg sleep-IND.3sg cat.ABS.sg sleep-after-APP.3sg`The dog sleeps after the cat sleeps'@marcus martinez/lonny strunk@april 22, 2019
 113@b@@@1@mmt@kina qavar-ta@@@@1@2@who.ABS.sg sleep-INT.3sg`Who sleeps'@marcus martinez/lonny strunk@april 22, 2019
-114@b@@@1@mmt@camek qimugte-t malirq-at@@@@1@3@what.ABM.sg dog-REL.pl chase-INT.3pl`What do the dogs chase'@marcus martinez/lonny strunk@april 22, 2019
+114@b@@@1@mmt@ca-mek qimugte-t malirq-atgu@@@@1@3@what-ABM.sg dog-REL.pl chase-INT.3pl.3sg`What do the dogs chase'@marcus martinez/lonny strunk@april 22, 2019
 115@b@@@1@mmt@ner-yugnga-unga cikungua-mek@@@@1@2@eat-can-IND.1sg ice-ABM.sg`I can eat glass'@marcus martinez/lonny strunk@april 22, 2019
 116@b@@@1@mmt@akngirte-nrit-aanga@@@@1@1@hurt-NEG-IND.3sg.1sg`It doesnt hurt me'@marcus martinez/lonny strunk@april 22, 2019
 117@b@@@1@crd@qimugte-t angun=llu yurar-tut@@@@1@3@dog-ABS.pl man.ABS.sg=and dance-IND.3pl`the dogs and the man are dancing'@marcus martinez/lonny strunk@april 22, 2019
@@ -128,9 +128,9 @@
 128@b@@@1@crd@tuntu yurar-tuq qimugta ner-luni=llu@@@@0@4@caribou.ABS.sg dance-IND.3sg dog.ABS.sg eat-APP.3sg=and`the caribou is dancing and the dog is eating'@marcus martinez/lonny strunk@april 22, 2019
 129@b@@@1@crd@qimugte-t=llu angun yurar-tut@@@@0@3@dog-ABS.pl=and man.ABS.sg dance-IND.3pl`the dogs and the man are dancing'@marcus martinez/lonny strunk@april 22, 2019
 130@b@@@1@wh@kina yurar-ta@@@@1@2@who.ABS.sg dance-INT.3sg`Who is dancing'@marcus martinez/lonny strunk@april 22, 2019
-131@b@@@1@wh@camek ner-sit@@@@1@2@what.ABM.sg eat-INT.2sg`what are you eating'@marcus martinez/lonny strunk@april 22, 2019
-132@b@@@1@wh@camek kenir-sit@@@@1@2@what.ABM.sg cook-INT.2sg`what are you cooking'@marcus martinez/lonny strunk@april 22, 2019
+131@b@@@1@wh@ca-mek ner-sit@@@@1@2@what-ABM.sg eat-INT.2sg`what are you eating'@marcus martinez/lonny strunk@april 22, 2019
+132@b@@@1@wh@ca-mek kenir-sit@@@@1@2@what-ABM.sg cook-INT.2sg`what are you cooking'@marcus martinez/lonny strunk@april 22, 2019
 133@b@@@1@wh@kina nerb-a@@@@1@2@who.ABS.sg eat-INT.3sg`Who is eating'@marcus martinez/lonny strunk@april 22, 2019
-134@b@@@1@wh@kia malirq-au qimugta@@@@1@3@who.REL.sg chase-INT.3sg.3sg dog.ABS.sg`Who is chasing the dog'@marcus martinez/lonny strunk@april 22, 2019
+134@b@@@1@wh@kia malirqa-a qimugta@@@@1@3@who.REL.sg chase-INT.3sg.3sg dog.ABS.sg`Who is chasing the dog'@marcus martinez/lonny strunk@april 22, 2019
 135@b@@@1@wh@yurar-ta kina@@@@0@2@dance-INT.3sg who.ABS.sg`Who is dancing'@marcus martinez/lonny strunk@april 22, 2019
-136@b@@@1@wh@ner-sit camek@@@@0@2@eat-INT.2sg what.ABM.sg`what are you eating'@marcus martinez/lonny strunk@april 22, 2019
+136@b@@@1@wh@ner-sit ca-mek@@@@0@2@eat-INT.2sg what-ABM.sg`what are you eating'@marcus martinez/lonny strunk@april 22, 2019

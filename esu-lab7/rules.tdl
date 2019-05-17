@@ -46,6 +46,7 @@ vp1-bottom-coord := vp1-bottom-coord-rule.
 s1-top-coord := s1-top-coord-rule.
 
 s1-mid-coord := s1-mid-coord-rule.
+
 s1-bottom-coord := s1-bottom-coord-rule.
 
 cnnbc-modifying-clause-phrase := cnnbc-modifying-clause-phrase.
