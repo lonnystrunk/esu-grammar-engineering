@@ -605,6 +605,10 @@ verb-pc100_lrt11_INT_2sg-suffix :=
 %suffix (* -sit)
 verb-pc100_lrt11_INT_2sg-lex-rule.
 
+verb-pc100_lrt12_INT_3pl-suffix :=
+%suffix (* -at)
+verb-pc100_lrt12_INT_3pl-lex-rule.
+
 verb-pc101_lrt1_IND_3sg_3sg-suffix :=
 %suffix (* -aa)
 verb-pc101_lrt1_IND_3sg_3sg-lex-rule.
@@ -646,7 +650,7 @@ verb-pc101_lrt9_INT_3pl_3sg-suffix :=
 verb-pc101_lrt9_INT_3pl_3sg-lex-rule.
 
 verb-pc101_lrt10_INT_3sg_3sg-suffix :=
-%suffix (* -a)
+%suffix (* -au)
 verb-pc101_lrt10_INT_3sg_3sg-lex-rule.
 
 verb-pc102_lrt1-suffix :=

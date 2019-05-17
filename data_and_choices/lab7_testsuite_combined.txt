@@ -975,8 +975,8 @@ Source: b
 Vetted: f
 Judgement: g
 Phenomena: {MMT}
-apt-ua ca-mek qimugte-t malirqa-llru-ci-itnek
-ask-IND.1sg what-ABM.sg dog-REL.pl chase-PST-VN(situation)-ABM.3pl.pl
+apt-ua camek qimugte-t malirqa-llru-ci-itnek
+ask-IND.1sg what.ABM.sg dog-REL.pl chase-PST-VN(situation)-ABM.3pl.pl
 `I asked what the dogs chased'
 
 # MMT Translations 19
@@ -1029,8 +1029,8 @@ Source: b
 Vetted: f
 Judgement: g
 Phenomena: {MMT}
-ca-mek qimugte-t malirq-at
-what-ABM.sg dog-REL.pl chase-INT.3pl
+camek qimugte-t malirq-at
+what.ABM.sg dog-REL.pl chase-INT.3pl
 `What do the dogs chase'
 
 # MMT Translations 27
@@ -1182,8 +1182,8 @@ Source: b
 Vetted: f
 Judgement: g
 Phenomena: {wh-questions}
-ca-mek ner-sit
-what-ABM.sg eat-INT.2sg
+camek ner-sit
+what.ABM.sg eat-INT.2sg
 `what are you eating'
 
 #Example 106
@@ -1191,11 +1191,11 @@ Source: b
 Vetted: f
 Judgement: g
 Phenomena: {wh-questions}
-ca-mek kenir-sit
-what-ABM.sg cook-INT.2sg
+camek kenir-sit
+what.ABM.sg cook-INT.2sg
 `what are you cooking'
 
-#Example 104
+#Example 107
 Source: b
 Vetted: f
 Judgement: g
@@ -1204,7 +1204,7 @@ kina nerb-a
 who.ABS.sg eat-INT.3sg
 `Who is eating'
 
-#Example 105
+#Example 108
 Source: b
 Vetted: f
 Judgement: g
@@ -1213,7 +1213,7 @@ kia malirq-au qimugta
 who.REL.sg chase-INT.3sg.3sg dog.ABS.sg
 `Who is chasing the dog'
 
-#Example 106
+#Example 109
 Source: b
 Vetted: f
 Judgement: u
@@ -1222,11 +1222,11 @@ yurar-ta kina
 dance-INT.3sg who.ABS.sg
 `Who is dancing'
 
-#Example 107
+#Example 110
 Source: b
 Vetted: f
 Judgement: u
 Phenomena: {wh-questions}
-ner-sit ca-mek
-eat-INT.2sg what-ABM.sg
+ner-sit camek
+eat-INT.2sg what.ABM.sg
 `what are you eating'

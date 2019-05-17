@@ -1641,6 +1641,12 @@ verb-pc100_lrt11_INT_2sg-lex-rule := verb_pc_intrans-lex-rule-super &
                                                                     NUM sg ],
                          HEAD.FORM finite ] ] ].
 
+verb-pc100_lrt12_INT_3pl-lex-rule := verb_pc_intrans-lex-rule-super &
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.MOOD int,
+                   CAT [ VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 3rd,
+                                                                    NUM pl ],
+                         HEAD.FORM finite ] ] ].
+
 verb_pc_trans-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
   [ INFLECTED #infl,
     DTR verb_pc_intrans-or-verb_pc_trans-rule-dtr &
