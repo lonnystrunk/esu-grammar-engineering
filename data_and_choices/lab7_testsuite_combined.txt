@@ -1029,8 +1029,8 @@ Source: b
 Vetted: f
 Judgement: g
 Phenomena: {MMT}
-ca-mek qimugte-t malirq-atgu
-what-ABM.sg dog-REL.pl chase-INT.3pl.3sg
+ca-mek qimugte-t malirq-at
+what-ABM.sg dog-REL.pl chase-INT.3pl
 `What do the dogs chase'
 
 # MMT Translations 27
@@ -1209,7 +1209,7 @@ Source: b
 Vetted: f
 Judgement: g
 Phenomena: {wh-questions}
-kia malirqa-a qimugta
+kia malirq-au qimugta
 who.REL.sg chase-INT.3sg.3sg dog.ABS.sg
 `Who is chasing the dog'
 

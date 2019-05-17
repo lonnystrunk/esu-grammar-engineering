@@ -1022,6 +1022,10 @@ noun-pc101_lrt4_ABS-OR-ERG_pl-lex-rule := nonpossessive-lex-rule-1 & noun_pc_non
   [ SYNSEM.LOCAL [ CAT.HEAD.CASE abs-or-erg,
                    CONT.HOOK.INDEX.PNG.NUM pl ] ].
 
+noun-pc101_lrt5_ABS-OR-ERG_du-lex-rule := nonpossessive-lex-rule-1 & noun_pc_non_abs_sg-lex-rule-super &
+  [ SYNSEM.LOCAL [ CAT.HEAD.CASE abs-or-erg,
+                   CONT.HOOK.INDEX.PNG.NUM du ] ].
+
 noun-pc101_lrt6_ERG_1sg_sg-lex-rule := noun_pc_non_abs_sg-lex-rule-super & possessum-lex-rule-1 &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG.NUM sg, 
                    CAT [ HEAD.CASE erg, 

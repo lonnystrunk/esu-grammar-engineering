@@ -265,6 +265,10 @@ noun-pc101_lrt4_ABS-OR-ERG_pl-suffix :=
 %suffix (* -t)
 noun-pc101_lrt4_ABS-OR-ERG_pl-lex-rule.
 
+noun-pc101_lrt5_ABS-OR-ERG_du-suffix :=
+%suffix (* -t)
+noun-pc101_lrt5_ABS-OR-ERG_du-lex-rule.
+
 noun-pc101_lrt6_ERG_1sg_sg-suffix :=
 %suffix (* -ma)
 noun-pc101_lrt6_ERG_1sg_sg-lex-rule.
