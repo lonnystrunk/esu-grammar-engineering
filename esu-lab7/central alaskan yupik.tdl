@@ -2045,7 +2045,8 @@ np1-any-same-same-non-sg-any-pl-top-coord-rule := basic-np-top-coord-rule & apol
 
 np1-bottom-coord-rule := unary-bottom-coord-rule & np-bottom-coord-phrase & pass-up-png-coord-rule &
   [ SYNSEM.LOCAL [ COORD-STRAT "1",
-                   COORD-REL.PRED "_and_coord_rel" ] ].
+                   COORD-REL.PRED "_and_coord_rel",
+		   CAT.LLU + ] ].
 
 np1-same-same-same-sg-sg-du-mid-coord-rule := basic-np-mid-coord-rule & monopoly-mid-coord-rule & any-same-same-case-coord-rule & sg-sg-du-num-coord-rule &
   [ SYNSEM.LOCAL.COORD-STRAT "1" ].
@@ -2063,7 +2064,8 @@ vp1-top-coord-rule := basic-vp-top-coord-rule & apoly-top-coord-rule &
 
 vp1-bottom-coord-rule := unary-bottom-coord-rule & vp-bottom-coord-phrase &
   [ SYNSEM.LOCAL [ COORD-STRAT "1",
-                   COORD-REL.PRED "_and_coord_rel" ] ].
+                   COORD-REL.PRED "_and_coord_rel",
+		   CAT.LLU + ] ].
 
 vp1-mid-coord-rule := basic-vp-mid-coord-rule & monopoly-mid-coord-rule &
   [ SYNSEM.LOCAL.COORD-STRAT "1" ].
@@ -2075,7 +2077,8 @@ s1-top-coord-rule := basic-s-top-coord-rule & apoly-top-coord-rule &
 
 s1-bottom-coord-rule := unary-bottom-coord-rule & s-bottom-coord-phrase &
   [ SYNSEM.LOCAL [ COORD-STRAT "1",
-                   COORD-REL.PRED "_and_coord_rel" ] ].
+                   COORD-REL.PRED "_and_coord_rel",
+		   CAT.LLU + ] ].
 
 s1-mid-coord-rule := basic-s-mid-coord-rule & monopoly-mid-coord-rule &
   [ SYNSEM.LOCAL.COORD-STRAT "1" ].
