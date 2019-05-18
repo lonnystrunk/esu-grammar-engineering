@@ -29,7 +29,7 @@ np1-any-same-same-non-sg-any-pl-top-coord := np1-any-same-same-non-sg-any-pl-top
 
 np1-same-same-same-any-non-sg-pl-mid-coord := np1-same-same-same-any-non-sg-pl-mid-coord-rule.
 
-np1-same-same-same-non-sg-any-pl-top-coord := np1-same-same-same-non-sg-any-pl-top-coord-rule.
+np1-same-same-same-non-sg-any-pl-top-coord := np1-same-same-same-non-sg-any-pl-mid-coord-rule.
 
 np1-same-same-same-non-sg-any-pl-mid-coord := np1-same-same-same-non-sg-any-pl-mid-coord-rule.
 

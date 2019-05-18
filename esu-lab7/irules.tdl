@@ -305,10 +305,6 @@ noun-pc101_lrt12_ABS_1sg_pl-suffix :=
 %suffix (* -nka)
 noun-pc101_lrt12_ABS_1sg_pl-lex-rule.
 
-noun-pc101_lrt13_ABM-suffix :=
-%suffix (* -mek)
-noun-pc101_lrt13_ABM-lex-rule.
-
 nmz_situation-suffix :=
 %suffix (* -uci)
 nmz_situation-lex-rule.
