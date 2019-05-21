@@ -1,0 +1,1232 @@
+Language: Central Alaskan Yupik
+Language code: esu
+Lines: orth gloss translat
+Author: Marcus Martinez/Lonny Strunk
+Date: April 22, 2019
+Source a: A Grammar of Central Alaskan Yupik, Miyaoka
+Source b: Lonny Strunk
+
+#Example 1
+Source: a:30-10
+Vetted: s
+Judgement: g
+Phenomena: {case, agreement}
+angun tai-guq
+man.ABS.sg come-IND.3sg
+`the man is coming'
+
+#Example 2
+Source: a:30-10 author
+Vetted: f
+Judgement: u
+Phenomena: {case}
+angun tai-guq
+man.REL.sg come-IND.3sg
+`the man is coming'
+
+#Example 3
+Source: a:30-11a
+Vetted: s
+Judgement: g
+Phenomena: {case, agreement}
+angute-m neqa ner-aa
+man-REL.sg fish.ABS.sg eat-IND.3sg.3sg
+`the man is eating the fish'
+
+#Example 4
+Source: a:30-11a author
+Vetted: f
+Judgement: u
+Phenomena: {case}
+angute-m neqa ner-aa
+man-ABS.sg fish.REL.sg eat-IND.3sg.3sg
+`the man is eating the fish'
+
+#Example 5
+Source: a:30-12a
+Vetted: s
+Judgement: g
+Phenomena: {case, agreement}
+angute-m qimugta neq-mek cikir-aa
+man-REL.sg dog.ABS.sg fish-ABM.sg gave-IND.3sg.3sg
+`the man gave fish to the dog'
+
+#Example 6
+Source: a:30-12a author
+Vetted: f
+Judgement: u
+Phenomena: {case}
+angute-m qimugta neq-mek cikir-aa
+man-ABS.sg dog.REL.sg fish-LOC.sg gave-IND.3sg.3sg
+`the man gave fish to the dog'
+
+#Example 7
+Source: a:30-53
+Vetted: s
+Judgement: g
+Phenomena: {argument optionality}
+mikelnguq nerb-uq
+child.ABS.sg eat-IND.3sg
+`the child is eating'
+
+#Example 8
+Source: a:30-53 author
+Vetted: f
+Judgement: g
+Phenomena: {argument optionality}
+nerb-uq
+eat-IND.3sg
+`he is eating'
+
+#Example 9
+Source: a:30-55
+Vetted: s
+Judgement: g
+Phenomena: {argument optionality}
+mikelngu-u-m ner-aa
+child-EV-REL.sg eat-IND.3sg.3sg
+`the child is eating it'
+
+#Example 10
+Source: a:30-55 author
+Vetted: f
+Judgement: g
+Phenomena: {argument optionality}
+ner-aa
+eat-IND.3sg.3sg
+`he is eating it'
+
+#Example 11
+Source: a:30-57
+Vetted: s
+Judgement: g
+Phenomena: {argument optionality}
+Mikelnguq nerb-uq neq-mek
+child.ABS.sg eat-IND.3sg fish-ABM.sg
+`the child is eating fish'
+
+#Example 12
+Source: a:30-52c author
+Vetted: f
+Judgement: g
+Phenomena: {agreement}
+arna-m neqe-t kenir-ai
+woman-REL.sg fish-ABS.pl cook-IND.3sg.3pl
+`the woman cooked the fish'
+
+#Example 13
+Source: a:30-52c author
+Vetted: f
+Judgement: u
+Phenomena: {agreement}
+arna-m neqe-t kenir-aa
+woman-REL.sg fish-ABS.pl cook-IND.3sg.3sg
+`the woman cooked the fish'
+
+#Example 14
+Source: b:ex1
+Vetted: f
+Judgement: g
+Phenomena: {agreement}
+angute-t tuntu kenir-aat
+man-REL.pl caribou.ABS.sg cook-IND.3pl.3sg
+`the men cooked the caribou'
+
+#Example 15
+Source: b:ex1
+Vetted: f
+Judgement: u
+Phenomena: {agreement}
+angute-t tuntu kenir-aa
+man-REL.pl caribou.ABS.sg cook-IND.3sg.3sg
+`the men cooked the caribou'
+
+#Example 16
+Source: b:ex8
+Vetted: f
+Judgement: g
+Phenomena: {agreement}
+angute-t yurar-tut
+man-REL.pl dance-IND.3pl
+`the men are dancing'
+
+#Example 17
+Source: b:ex8
+Vetted: f
+Judgement: u
+Phenomena: {agreement}
+angute-t yurar-tuq
+man-ABS.pl dance-IND.3sg
+`the men are dancing'
+
+#Example 18
+Source: b:ex1
+Vetted: f
+Judgement: u
+Phenomena: {case}
+angute-t tuntu kenir-aat
+man-ABS.pl caribou.REL.sg cook-IND.3pl.3sg
+`the men cooked the caribou'
+
+#Example 19
+Source: b:ex8
+Vetted: f
+Judgement: u
+Phenomena: {case}
+angute-t yurar-tut
+man-REL.pl dance-IND.3pl
+`the men are dancing'
+
+#Example 20
+Source: b:ex1
+Vetted: f
+Judgement: g
+Phenomena: {argument optionality}
+tuntu kenir-aat
+caribou.ABS.sg cook-IND.3pl.3sg
+`they cooked the caribou'
+
+
+#Example 21
+Source: a: 22-7/8
+Vetted: s
+Judgement: g
+Phenomena: {adnominal possessives}
+Mayba-m pani-a assik-aa.
+p.n.-REL.sg. Da-ABS.3sg.sg. like-IND.3sg.3sg.
+(1) He likes Mayaq's daughter. (2) Mayaq likes his (another person than Mayaq's) daughter.
+
+#Example 22
+Source: a: 22-7/8
+Vetted: f
+Judgement: g
+Phenomena: {adnominal possessives}
+Mayba-m assik-aa pani-a.
+p.n.-REL.sg. like-IND.3sg.3sg. Da-ABS.3sg.sg.
+`Mayaq likes his (another person than Mayaq's) daughter.'
+
+#Example 23
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {negation}
+yura-nrit-uq
+dance-NEG-IND.3sg.
+`he is not dancing'
+
+#Example 24
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {TAM}
+Akwaugaq nere-llru-unga
+yesterday eat-PST-IND.1sg
+`Yesterday I ate.''
+
+#Example 25
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {TAM}
+Akwaugaq nerb-ua
+yesterday eat-IND.1sg
+`Yesterday I ate.'
+
+#Example 26
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {TAM}
+Unuaqu ner-ciq-ua
+tomorrow eat-FUT-IND.1sg
+`Tomorrow I will eat.'
+
+#Example 27
+Source: b
+Vetted: f
+Judgement: u
+Phenomena: {TAM}
+Unuaqu nerb-ua
+tomorrow eat-IND.1sg
+`Tomorrow I will eat.'
+
+#Example 28
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {TAM}
+Assik-aqa nuliar-ka-qa
+like-IND.3sg.3sg wife-FUT-ABS.1sg.sg
+`I like my future wife.'
+
+#Example 29
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {TAM}
+Assik-aqa ui-l-qa
+like-IND.3sg.3sg husband-PST-ABS.1sg.sg
+`I like my past husband.'
+
+#Example 30
+Source: b
+Vetted: f
+Judgement: u
+Phenomena: {negation}
+nrit-yura-uq
+NEG-dance-IND.3sg.
+`he is not dancing'
+
+#Example 31
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {TAM}
+yurar-tuq ner-luni=llu
+dance-IND.3sg. eat-APP.3Rsg.=and
+`he is dancing and eating'
+
+#Example 32
+Source: b
+Vetted: f
+Judgement: u
+Phenomena: {TAM}
+yurar-tuq nerb-uq=llu
+dance-IND.3sg. eat-IND.3sg.=and
+`he is dancing and eating'
+
+#Example 33
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {TAM}
+qia-luni nerb-uq
+cry-APP.3Rsg. eat-IND.3sg.
+`crying, he is eating'
+
+#Example 34
+Source: b
+Vetted: f
+Judgement: u
+Phenomena: {TAM}
+qia-luni ner-luni
+cry-APP.3Rsg. eat-APP.3Rsg.
+`crying, he is eating'
+
+#Example 35
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {negation}
+qia-nrit-uq
+cry-NEG-IND.3sg.
+`she is not crying'
+
+#Example 36
+Source: b
+Vetted: f
+Judgement: u
+Phenomena: {negation}
+nrit-qia-uq
+NEG-cry-IND.3sg.
+`she is not crying'
+
+#Example 37
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {negation}
+assike-nrit-amken
+cry-NEG-IND.1sg.2sg.
+`I don't like you'
+
+#Example 38
+Source: b
+Vetted: f
+Judgement: u
+Phenomena: {negation}
+nrit-assike-amken
+NEG-cry-IND.1sg.2sg.
+`I don't like you'
+
+#Example 39
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {adnominal possessives}
+assik-aqa nulia-ma tuntu-a
+like-IND.1sg.3sg. wife-REL.1sg.sg caribou-ABS.3sg.sg
+`I like my wife's caribou'
+
+#Example 40
+Source: b
+Vetted: f
+Judgement: u
+Phenomena: {adnominal possessives}
+assik-aqa nulia-ma tuntu-at
+like-IND.1sg.3sg. wife-REL.1sg.sg caribou-ABS.3pl.sg
+`I like my wife's caribou'
+
+#Example 41
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {TAM}
+ner-i
+eat-OPT.2sg.
+`you (sg.) eat!'
+
+#Example 42
+Source: a:
+Vetted: f
+Judgement: g
+Phenomena: {TAM}
+aya-lta
+go-OPT.1pl.
+`let's go!'
+
+#Example 43
+Source: a:
+Vetted: f
+Judgement: g
+Phenomena: {TAM}
+ki-na tekit-a?
+who-EX.ABS.sg. arrive-INT.3sg.
+`who has arrived?'
+
+#Example 44
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {adnominal possessives}
+ui-ma qimugt-iin assik-ai mikelngu-u-t
+husband-REL.1sg.sg dog-REL.3sg.sg like-IND.3sg.3pl child-EX-ABS.pl
+`my husband's dog likes the children'
+
+#Example 45
+Source: b
+Vetted: f
+Judgement: u
+Phenomena: {adnominal possessives}
+ui-ma qimugt-iit assik-ai mikelngu-u-t
+husband-REL.1sg.sg dog-REL.3pl.sg like-IND.3sg.3pl child-EX-ABS.pl
+`my husband's dog likes the children'
+
+#Example 46
+Source: a
+Vetted: t
+Judgement: g
+Phenomena: {clausal complements}
+arna-m tekiy-uci-a nallu-aqa
+woman-REL.sg arrive-VNnm(situation)-ABS.3sg.sg not.know-IND.1sg.3sg
+I do not know that the woman arrived
+
+#Example 47
+Source: b
+Vetted: t
+Judgement: u
+Phenomena: {clausal complements}
+arnaq tekit-uq nallu-aqa
+woman.ABS.sg arrive-IND.3sg not.know-IND.1sg.3sg
+`I do not know that the woman arrived'
+
+#Example 48
+Source: a
+Vetted: t
+Judgement: g
+Phenomena: {clausal complements}
+arnaq tekite-lleq nallu-aqa
+woman.ABS.sg arrive-VNrl(one.who.Ved).ABS.sg not.know-IND.1sg.3sg
+`I do not know the woman who (had) arrived'
+
+#Example 49
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {clausal complements}
+tuntu yura-lleq nallu-aput
+caribou.ABS.sg dance-VNrl(one.who.Ved).ABS.sg not.know-IND.1pl.3sg
+`we do not know the caribou that danced'
+
+#Example 50
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {clausal complements}
+tuntu-m yura-uci-a nallu-aput
+caribou-REL.sg dance-VNnm(situation)-ABS.3sg.sg not.know-IND.1pl.3sg
+`we do not know that the caribou danced'
+
+#Example 51
+Source: b
+Vetted: f
+Judgement: u
+Phenomena: {clausal complements}
+tuntu yurar-tuq nallu-aput
+caribou.ABS.sg dance-IND.3sg not.know-IND.1pl.3sg
+`we do not know the caribou that danced'
+
+#Example 52
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {adverbial complements}
+keni-a-ma yurar-tuq
+cook-CNNbc-1sg dance-IND.3sg
+`because I cook, he dances'
+
+#Example 53
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {adverbial complements}
+kenir-aqa-ma yurar-tuq
+cook-CNNwv-1sg dance-IND.3sg
+`whenever I cook, he dances'
+
+#Example 54
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {adverbial complements}
+kenir-paileg-ma yurar-tuq
+cook-CNNbf-1sg dance-IND.3sg
+`before I cook, he dances'
+
+#Example 55
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {adverbial complements}
+keni-nger-ma yurar-tuq
+cook-CNNth-1sg dance-IND.3sg
+`even if I cook, he dances'
+
+#Example 56
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {adverbial complements}
+keni-qu-ma yurar-tuq
+cook-CNNif-1sg dance-IND.3sg
+`if I cook, he dances'
+
+#Example 57
+Source: b
+Vetted: f
+Judgement: u
+Phenomena: {adverbial complements}
+keni-qu-ma
+cook-CNNif-1sg
+`if I cook'
+
+#Example 58
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {adnominal possessives}
+assik-aqa nulia-qa
+like-IND.1sg.3sg. wife-ABS.1sg.sg
+`I like my wife'
+
+#Example 59
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {adnominal possessives}
+assik-anga nulia-ma
+like-IND.1sg.3sg. wife-REL.1sg.sg
+`My wife likes me'
+
+#Example 60
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {adnominal possessives}
+assik-aa tuntu-an neqa
+like-IND.1sg.3sg. caribou-REL.3sg.sg fish.ABS.sg
+`His caribou likes the fish'
+
+#Example 61
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {adnominal possessives}
+assik-aa Mayba-m neqa-at
+like-IND.1sg.3sg. p.n.-REL.sg fish-ABS.3pl.sg
+`Mayaq likes their fish'
+
+#Example 62
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {adnominal possessives}
+neqa-a yurar-tuq
+fish-ABS.3sg.sg dance-IND.3sg
+`his fish is dancing'
+
+#Example 63
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {adnominal possessives}
+nulia-ma tuntu-an neqa-a yurar-tuq
+wife-REL.1sg.sg caribou-REL.3sg.sg fish-ABS.3sg.sg dance-IND.3sg
+`My wife's caribou's fish dances'
+
+#Example 64
+Source: a: pg.1266
+Vetted: t
+Judgement: g
+Phenomena: {evidentials}
+aya-llini-uq
+go-EVD-IND.3sg
+`he left (on either direct or indirect evidence rather than hearsay)'
+
+#Example 65
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {evidentials}
+yura-llini-uq
+dance-EVD-IND.3sg
+`he is dancing (on either direct or indirect evidence rather than hearsay)'
+
+#Example 66
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {evidentials}
+arnaq qia-llini-uq
+woman.ABS.sg cry-EVD-IND.3sg
+`the woman is crying (on either direct or indirect evidence rather than hearsay)'
+
+#Example 67
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {evidentials}
+tuntu tai-llini-uq
+caribou.ABS.sg come-EVD-IND.3sg
+`the caribou is coming (on either direct or indirect evidence rather than hearsay)'
+
+#Example 68
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {evidentials}
+tuntu-m keni-llini-a neqa
+caribou-REL.sg cook-EVD-IND.3sg.3sg fish.ABS.sg
+`the caribou is cooking fish (on either direct or indirect evidence rather than hearsay)'
+
+#Example 69
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {evidentials}
+angun nallu-llini-uq
+man.ABS.sg not.know-EVD-IND.3sg
+`the man doesn't know (on either direct or indirect evidence rather than hearsay)'
+
+#Example 70 // PP modifier on VP
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {locative NP modifier}
+tuntu nerb-uq ingri-mi
+caribou.ABS.sg eat-IND.3sg mountain-LOC.sg
+`the caribou is eating in(on) the mountain'
+
+#Example 71 // PP modifier on VP
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {locative NP modifier}
+angun qia-guq qaya-mi
+man.ABS.sg cry-IND.3sg kayak-LOC.sg
+`the man is crying in the kayak'
+
+#Example 72 // PP modifier on VP
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {locative NP modifier}
+angun kenir-tuq ingri-mi
+man.ABS.sg cook-IND.3sg mountain-LOC.sg
+`the man is cooking in(on) the mountain'
+
+#Example 73 // PP modifier on VP
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {locative NP modifier}
+arnaq yurar-tuq qaya-mi
+woman.ABS.sg dance-IND.3sg kayak-LOC.sg
+`the woman is dancing in the kayak'
+
+#Example 74 // separate verb - to stay, to reside, to live
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {locative NP predicate}
+tuntu uita-uq ingri-mi
+caribou.ABS.sg stay-IND.3sg mountain-LOC.sg
+`the caribou is in(on) the mountain'
+
+#Example 75 // separate verb - to stay, to reside, to live
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {locative NP predicate}
+angun uita-uq qaya-mi
+man.ABS.sg stay-IND.3sg kayak-LOC.sg
+`the man is in the kayak'
+
+#Example 76 // separate verb - to stay, to reside, to live
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {locative NP predicate}
+arnaq uita-uq ingri-mi
+woman.ABS.sg stay-IND.3sg kayak-LOC.sg
+`the woman is in(on) the mountain'
+
+#Example 77 // separate verb - to stay, to reside, to live
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {locative NP predicate}
+neqa uita-uq qimugte-mi
+dog.ABS.sg stay-IND.3sg kayak-LOC.sg
+`the fish is in the dog'
+
+#Example 78 //compound morpheme
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {locative affix predicate}
+tuntu ingri-mt-uq
+caribou.ABS.sg mountain-be.at(LOC)-IND.3sg
+`the caribou is in(on) the mountain'
+
+#Example 79 //compound morpheme
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {locative affix predicate}
+angun qaya-mt-uq
+man.ABS.sg kayak-be.at(LOC)-IND.3sg
+`the man is in the kayak'
+
+#Example 80 //compound morpheme
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {locative affix predicate}
+neqe-mt-uq
+fish-be.at(LOC)-IND.3sg
+`it is in(on) the fish'
+
+#Example 81 //compound morpheme
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {locative affix predicate}
+qimugte-mt-uq
+dog-be.at(LOC)-IND.3sg
+`it is in(on) the dog'
+
+#Example 82
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {NP predicate}
+una qimugte-ngu-uq
+this.ABS.sg dog-to.be-IND.3sg
+`this is a dog'
+
+#Example 83
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {NP predicate}
+una qaya-u-guq
+this.ABS.sg kayak-to.be-IND.3sg
+`this is a kayak'
+
+#Example 84
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {NP predicate}
+angun ui-ngu-uq
+man.ABS.sg husband-to.be-IND.3sg
+`the man is a husband'
+
+#Example 85
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {NP predicate}
+arnaq mikelngu-u-guq
+woman.ABS.sg child-to.be-IND.3sg
+`the woman is a child'
+
+#Example 86
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {NP predicate}
+angute-t qimugte-ngu-ut
+man-ABS.pl dog-to.be-IND.3pl
+`the men are dogs'
+
+#Example 87
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {AP predicate}
+neqa kavircet-uq
+fish.ABS.sg to.be.red-IND.3sg
+`the fish is red'
+
+#Example 88
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {AP predicate}
+tuntu angnir-tuq
+caribou.ABS.sg to.be.happy-IND.3sg
+`the caribou is happy'
+
+#Example 89
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {AP predicate}
+arnaq qener-tuq
+woman.ABS.sg to.be.angry-IND.3sg
+`the woman is angry'
+
+#Example 90
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {AP predicate}
+qimugta kaig-tuq
+dog-ABS.sg to.be.hungry-IND.3sg
+`the dog is hungry'
+
+# MMT Translations 1
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {MMT}
+qimugte-t qavar-tut
+dog-ABS.pl sleep-IND.3pl
+`Dogs sleep'
+
+# MMT Translations 2
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {MMT}
+qimugte-t malirq-ait nunakuarcuute-t
+dog-REL.pl chase-IND.3pl.3pl car-ABS.pl
+`Dogs chase cars'
+
+# MMT Translations 3
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {MMT}
+malirq-amken
+chase-IND.1sg.2sg
+`I chase you'
+
+# MMT Translations 4
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {MMT}
+qimugte-t nerb-ut
+dog-ABS.pl eat-IND.3pl
+`Dogs eat'
+
+# MMT Translations 5
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {MMT}
+qimugte-t malirqe-nrit-ait nunakuarcuute-t
+dog-REL.pl chase-NEG-IND.3pl.3pl car-ABS.pl
+`The dogs dont chase cars'
+
+# MMT Translations 6
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {MMT}
+umyuarteq-ua nallu-nri-cuk-luten qimugte-t malirqa-la-uci-itnek nunakuarcuute-nek
+think-IND.1sg not.know-NEG-possibly-APP.2sg dog-REL.pl chase-HAB-VN(situation)-ABM.3pl.pl car-ABM.pl
+`I think that you know that dogs chase cars'
+
+# MMT Translations 7
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {MMT}
+apt-ua nallu-nri-cuk-luten qimugte-t maliqa-la-uci-itnek nunakuarcuute-nek
+ask-IND.1sg not.know-NEG-possibly-APP.2sg dog-REL.pl chase-HAB-VN(situation)-ABM.3pl.pl car-ABM.pl
+`I ask whether you know that dogs chase cars'
+
+# MMT Translations 8
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {MMT}
+kuska-t qimugte-t=llu malirq-ait nunakuarcuute-t
+cat-REL.pl dog-REL.pl=and chase-IND.3pl.3pl car-ABS.pl
+`Cats and dogs chase cars'
+
+# MMT Translations 9
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {MMT}
+qimugte-t malirq-ait nunakuarcuute-t kuska-t=llu malirqe-lluki qimugte-t
+dog-REL.pl chase-IND.3pl.3pl car-ABS.pl cat-REL.pl=and chase-APP.3pl dog-ABS.pl
+`Dogs chase cars and cats chase dogs'
+
+# MMT Translations 10
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {MMT}
+kuska-t malirq-ait qimugte-t qavar-luteng=llu
+cat-REL.pl chase-IND.3pl dog-ABS.pl sleep-APP.3pl=and
+`Cats chase dogs and sleep'
+
+# MMT Translations 11
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {MMT}
+kuska-t=qaa qimugte-t malirq-ait?
+cat-REL.pl=QST dog-ABS.pl chase-IND.3pl.3pl
+`Do cats chase dogs'
+
+# MMT Translations 12
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {MMT}
+kai-lri-it qimugte-t nerb-ut
+to.be.hungry-VN(one.who).ABS.pl dog-ABS.pl eat-IND.3pl
+`Hungry dogs eat'
+
+# MMT Translations 13
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {MMT}
+qimugte-t nuna-mte-llri-it nerb-ut
+dog-ABS.pl land-be.at(LOC)-IND.3sg eat-IND.3pl
+`Dogs in the park eat'
+
+# MMT Translations 14
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {MMT}
+qimugte-t nerb-ut nuna-mi
+dog-ABS.pl eat-IND.3pl land-LOC.sg
+`Dogs eat in the park'
+
+# MMT Translations 15
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {MMT}
+qimugte-t kaig-tut
+dog-ABS.pl to.be.hungry-IND.3pl
+`The dogs are hungry'
+
+# MMT Translations 16
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {MMT}
+qimugte-t nuna-mt-ut
+dog-ABS.pl land-be.at(LOC)-IND.3pl
+`The dogs are in the park'
+
+# MMT Translations 17
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {MMT}
+qimugte-t kuska-u-gut
+dog-ABS.pl cat-to.be-IND.3pl
+`The dogs are the cats'
+
+# MMT Translations 18
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {MMT}
+apt-ua camek qimugte-t malirqa-llru-ci-itnek
+ask-IND.1sg what.ABM.sg dog-REL.pl chase-PST-VN(situation)-ABM.3pl.pl
+`I asked what the dogs chased'
+
+# MMT Translations 19
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {MMT}
+qimugte-m nunakuarcuut-ii qavar-tuq
+dog-REL.sg car-ABS.3sg.sg sleep-IND.3sg
+`The dog s car sleeps'
+
+# MMT Translations 20
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {MMT}
+qimugte-nka qavar-tut
+dog-ABS.1sg.pl sleep-IND.3pl
+`My dogs sleep'
+
+# MMT Translations 21
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {MMT}
+qimugta qavar-tuq kuskaq qava-a-n
+dog.ABS.sg sleep-IND.3sg cat.ABS.sg sleep-CNNbc-3sg
+`The dog sleeps because the cat sleeps'
+
+# MMT Translations 22
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {MMT}
+qimugta qavar-tuq kuskaq qava-rraar-luni
+dog.ABS.sg sleep-IND.3sg cat.ABS.sg sleep-after-APP.3sg
+`The dog sleeps after the cat sleeps'
+
+# MMT Translations 23
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {MMT}
+kina qavar-ta
+who.ABS.sg sleep-INT.3sg
+`Who sleeps'
+
+# MMT Translations 24
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {MMT}
+camek qimugte-t malirq-at
+what.ABM.sg dog-REL.pl chase-INT.3pl
+`What do the dogs chase'
+
+# MMT Translations 27
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {MMT}
+ner-yugnga-unga cikungua-mek
+eat-can-IND.1sg ice-ABM.sg
+`I can eat glass'
+
+# MMT Translations 28
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {MMT}
+akngirte-nrit-aanga
+hurt-NEG-IND.3sg.1sg
+`It doesnt hurt me'
+
+#Example 91
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {coordination}
+qimugte-t angun=llu yurar-tut
+dog-ABS.pl man.ABS.sg=and dance-IND.3pl
+`the dogs and the man are dancing'
+
+#Example 92
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {coordination}
+qimugta tuntu-t=llu yurar-tut
+dog-ABS.pl caribou-ABS.pl=and dance-IND.3pl
+`the dog and the caribou are dancing'
+
+#Example 93
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {coordination}
+qimugta angun=llu yurar-tuk
+dog.ABS.sg man.ABS.sg=and dance-IND.3du
+`the dog and the man are dancing'
+
+#Example 94
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {coordination}
+qimugta angute-k=llu yurar-tut
+dog.ABS.sg man-ABS.du=and dance-IND.3pl
+`the dog and the two men are dancing'
+
+#Example 95
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {coordination}
+qimugte-k angun=llu yurar-tut
+dog-ABS.du man.ABS.sg=and dance-IND.3pl
+`the two dog and the man are dancing'
+
+#Example 96
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {coordination}
+qimugta angun tuntu=llu yurar-tut
+dog.ABS.sg man.ABS.sg caribou.ABS.sg=and dance-IND.3pl
+`the dog, the man, and the caribou are dancing'
+
+#Example 97
+Source: b
+Vetted: f
+Judgement: u
+Phenomena: {coordination}
+qimugta tuntu=llu yurar-tut
+dog.ABS.sg caribou.ABS.sg=and dance-IND.3pl
+`the dog and the caribou are dancing'
+
+#Example 98
+Source: b
+Vetted: f
+Judgement: u
+Phenomena: {coordination}
+qimugte-m tuntu-t=llu yurar-tut
+dog-REL.sg caribou-ABS.pl=and dance-IND.3pl
+`the dog and the caribou are dancing'
+
+#Example 99
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {coordination}
+tuntu yurar-tuq qimugta=llu ner-luni
+caribou.ABS.sg dance-IND.3sg dog.ABS.sg=and eat-APP.3sg
+`the caribou is dancing and the dog is eating'
+
+#Example 100
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {coordination}
+tuntu yurar-tuq ner-luni=llu
+caribou.ABS.sg dance-IND.3sg eat-APP.3sg=and
+`the caribou is dancing and eating'
+
+#Example 101
+Source: b
+Vetted: f
+Judgement: u
+Phenomena: {coordination}
+tuntu yurar-tuq nerb-uq=llu
+caribou.ABS.sg dance-IND.3sg eat-IND.3sg=and
+`the caribou is dancing and eating'
+
+#Example 102
+Source: b
+Vetted: f
+Judgement: u
+Phenomena: {coordination}
+tuntu yurar-tuq qimugta ner-luni=llu
+caribou.ABS.sg dance-IND.3sg dog.ABS.sg eat-APP.3sg=and
+`the caribou is dancing and the dog is eating'
+
+#Example 103
+Source: b
+Vetted: f
+Judgement: u
+Phenomena: {coordination}
+qimugte-t=llu angun yurar-tut
+dog-ABS.pl=and man.ABS.sg dance-IND.3pl
+`the dogs and the man are dancing'
+
+#Example 104
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {wh-questions}
+kina yurar-ta
+who.ABS.sg dance-INT.3sg
+`Who is dancing'
+
+#Example 105
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {wh-questions}
+camek ner-sit
+what.ABM.sg eat-INT.2sg
+`what are you eating'
+
+#Example 106
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {wh-questions}
+camek kenir-sit
+what.ABM.sg cook-INT.2sg
+`what are you cooking'
+
+#Example 107
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {wh-questions}
+kina nerb-a
+who.ABS.sg eat-INT.3sg
+`Who is eating'
+
+#Example 108
+Source: b
+Vetted: f
+Judgement: g
+Phenomena: {wh-questions}
+kia malirq-au qimugta
+who.REL.sg chase-INT.3sg.3sg dog.ABS.sg
+`Who is chasing the dog'
+
+#Example 109
+Source: b
+Vetted: f
+Judgement: u
+Phenomena: {wh-questions}
+yurar-ta kina
+dance-INT.3sg who.ABS.sg
+`Who is dancing'
+
+#Example 110
+Source: b
+Vetted: f
+Judgement: u
+Phenomena: {wh-questions}
+ner-sit camek
+eat-INT.2sg what.ABM.sg
+`what are you eating'
