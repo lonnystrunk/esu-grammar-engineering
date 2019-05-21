@@ -69,11 +69,11 @@ infl-satisfied :+ [ NOUN-PC3-FLAG na-or-+,
 png :+ [ PER person,
     NUM number ].
 
-cat :+ [ POSSESSUM poss ].
-
 cat :+ [ LLU bool ].
 
 ; cat-sat :+ [ LLU - ]. ; commented out to allow LLU in VP/S
+
+cat :+ [ POSSESSUM poss ].
 
 poss := *top* &
   [ POSS-AGR png ].
@@ -82,7 +82,7 @@ basic-bare-np-phrase :+ [ SYNSEM.LOCAL.CAT [ VAL.SPEC < >,
                        HEAD #head,
                        POSSESSUM #possessum ],
     HEAD-DTR.SYNSEM.LOCAL.CAT [ HEAD #head,
-                                POSSESSUM #possessum ] ].
+                                POSSESSUM #possessum & nonpossessive ] ].
 
 basic-head-1st-comp-phrase :+ [ SYNSEM.LOCAL.CAT.POSSESSUM #poss,
     HEAD-DTR.SYNSEM.LOCAL.CAT.POSSESSUM #poss ].
@@ -182,6 +182,12 @@ possessum := possessive.
 possessive-1 := possessive.  ; supertype for strategy 1
 possessor-1 := possessor & possessive-1.
 possessum-1 := possessum & possessive-1.
+
+;;; Possession
+
+possessive-pron-1 := possessive.  ; supertype for strategy pron-1
+possessor-pron-1 := possessor & possessive-pron-1.
+possessum-pron-1 := possessum & possessive-pron-1.
 
 ;;; Form
 
@@ -979,43 +985,68 @@ noun-pc101_lrt1_ERG_sg-lex-rule := nonpossessive-lex-rule-1 & noun_pc_non_abs_sg
   [ SYNSEM.LOCAL [ CAT.HEAD.CASE erg,
                    CONT.HOOK.INDEX.PNG.NUM sg ] ].
 
-possessum-lex-rule-1 := val-change-with-ccont-lex-rule &
-  [ C-CONT [ HOOK #hook,
-             RELS <! arg12-ev-relation &
-                     [ PRED "poss_rel",
-                       LBL #lbl,
-                       ARG1 #possessum,
-                       ARG2 #possessor ] !>,
-             HCONS <!  !>,
-             ICONS <!  !> ],
-    DTR.SYNSEM.LOCAL [ CAT [ HEAD.PRON -,
-                             VAL [ SPR #spr ] ],
-                       CONT.HOOK #hook &
-                                 [ INDEX #possessum,
-                                   LTOP #lbl ] ],
-    SYNSEM.LOCAL.CAT [ HEAD noun &
+possessum-lex-rule-1 := cat-change-only-lex-rule &
+  [ SYNSEM.LOCAL.CAT [ HEAD noun &
                             [ POSSESSOR nonpossessive ],
-                       POSSESSUM possessum-1 &
-                                 [ POSS-AGR #png ],
-                       VAL [ SPR #spr,
-                             COMPS.FIRST [ LOCAL [ CAT cat-sat &
-                                                       [ VAL.SPR < >,
-                                                         HEAD +np &
-                                                              [ CASE erg ] ],
-                                                   CONT.HOOK.INDEX #possessor &
-                                                                   [ PNG #png ] ] ] ] ] ].
+                       POSSESSUM possessum-1,
+                       VAL #val &
+                           [ SPEC < >,
+                             SPR < [ LOCAL.CAT [ VAL.SPR < >,
+                                                 HEAD.POSSESSOR possessor-1 ] ] > ] ],
+    C-CONT [ HCONS <!  !>,
+             ICONS <!  !>,
+             RELS <!  !> ],
+    DTR.SYNSEM.LOCAL.CAT [ POSSESSUM nonpossessive,
+                           HEAD.PRON -,
+                           VAL #val ],
+    ARGS < [ SYNSEM.LOCAL.CAT.HEAD.CASE erg ] > ].
 
 noun-pc101_lrt2_ABS_3sg_sg-lex-rule := noun_pc_non_abs_sg-lex-rule-super & possessum-lex-rule-1 &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG.NUM sg, 
-                   CAT [ HEAD.CASE abs, 
-                         POSSESSUM.POSS-AGR [ PER 3rd,
-                                              NUM sg ] ] ] ].
+  [ SYNSEM.LOCAL [ CAT [ POSSESSUM.POSS-AGR [ PER 3rd,
+                                              NUM sg ],
+                         HEAD.CASE abs ],
+                   CONT.HOOK.INDEX.PNG.NUM sg ] ].
 
-noun-pc101_lrt3_ABS_1sg_sg-lex-rule := noun_pc_non_abs_sg-lex-rule-super & possessum-lex-rule-1 &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG.NUM sg, 
-                   CAT [ HEAD.CASE abs, 
-                         POSSESSUM.POSS-AGR [ PER 1st,
-                                              NUM sg ] ] ] ].
+noun-pc101_lrt3_ABS_1sg_sg-lex-rule := noun_pc_non_abs_sg-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT [ HEAD #head &
+                            [ CASE abs ],
+                       VAL [ SPR < >,
+                             SPEC #spec,
+                             SUBJ #subj,
+                             COMPS #comps ] ],
+    C-CONT [ HOOK #hook,
+             RELS <! noun-relation &
+                     [ PRED "pron_rel",
+                       LBL #lbl2,
+                       ARG0 #possessor &
+                            [ PNG [ PER 1st,
+                                    NUM sg ],
+                              COG-ST activ-or-more,
+                              SPECI + ] ], quant-relation &
+                                           [ PRED "exist_q_rel",
+                                             ARG0 #possessum,
+                                             RSTR #harg ], arg12-ev-relation &
+                                                           [ PRED "poss_rel",
+                                                             LBL #lbl,
+                                                             ARG1 #possessum,
+                                                             ARG2 #possessor ], quant-relation &
+                                                                                [ PRED "exist_q_rel",
+                                                                                  ARG0 #possessor,
+                                                                                  RSTR #harg2 ] !>,
+             HCONS <! qeq &
+                      [ HARG #harg,
+                        LARG #lbl ], qeq &
+                                     [ HARG #harg2,
+                                       LARG #lbl2 ] !> ],
+    DTR.SYNSEM.LOCAL [ CONT.HOOK #hook &
+                                 [ INDEX #possessum &
+                                         [ COG-ST activ-or-more ],
+                                   LTOP #lbl ],
+                       CAT [ HEAD #head &
+                                  [ PRON - ],
+                             VAL [ SPEC #spec,
+                                   SUBJ #subj,
+                                   COMPS #comps ] ] ] ].
 
 noun-pc101_lrt4_ABS-OR-ERG_pl-lex-rule := nonpossessive-lex-rule-1 & noun_pc_non_abs_sg-lex-rule-super &
   [ SYNSEM.LOCAL [ CAT.HEAD.CASE abs-or-erg,
@@ -1903,6 +1934,56 @@ comp-head-phrase := basic-head-1st-comp-phrase & head-final-head-nexus &
 head-comp-phrase-2 := basic-head-2nd-comp-phrase & head-initial-head-nexus.
 
 comp-head-phrase-2 := basic-head-2nd-comp-phrase & head-final-head-nexus.
+
+head-spec-phrase := head-final & basic-head-spec-phrase &
+  [ NON-HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.SPEC < [ LOCAL.CAT.POSSESSUM #poss ] >,
+    HEAD-DTR.SYNSEM.LOCAL.CAT.POSSESSUM #poss ].
+
+head-spec-phrase-2 := head-initial & basic-head-spec-phrase &
+  [ NON-HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.SPEC < [ LOCAL.CAT.POSSESSUM #poss ] >,
+    HEAD-DTR.SYNSEM.LOCAL.CAT.POSSESSUM #poss ].
+
+poss-unary-phrase := basic-unary-phrase &
+  [ SYNSEM.LOCAL [ COORD -,
+                   CONT.HOOK #hook,
+                   CAT [ HEAD det &
+                              [ POSSESSOR possessor ],
+                         VAL [ SPR < >,
+                               COMPS < >,
+                               SUBJ < >,
+                               SPEC < [ LOCAL [ CAT [ VAL.COMPS < >,
+                                                      HEAD noun &
+                                                           [ PRON - ] ],
+                                                CONT.HOOK #hook &
+                                                          [ INDEX #possessum &
+                                                                  [ COG-ST uniq-id ],
+                                                            LTOP #lbl ] ] ] > ] ] ],
+    C-CONT [ RELS <! arg12-ev-relation &
+                     [ PRED "poss_rel",
+                       LBL #lbl,
+                       ARG1 #possessum,
+                       ARG2 #possessor ], quant-relation &
+                                          [ PRED "exist_q_rel",
+                                            ARG0 #possessum,
+                                            RSTR #harg ] !>,
+             HCONS <! qeq &
+                      [ HARG #harg,
+                        LARG #lbl ] !>,
+             ICONS <!  !> ],
+    ARGS < [ SYNSEM.LOCAL [ COORD -,
+                            CAT [ VAL [ SPR < >,
+                                        COMPS < >,
+                                        SUBJ < >,
+                                        SPEC < > ],
+                                  HEAD +np ],
+                            CONT.HOOK.INDEX #possessor ] ] > ].
+
+poss-unary-phrase-1 := poss-unary-phrase &
+  [ ARGS < [ SYNSEM.LOCAL [ CAT [ HEAD.POSSESSOR nonpossessive,
+                                  POSSESSUM nonpossessive ],
+                            CONT.HOOK.INDEX.PNG #png-um ] ] >,
+    SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CAT.POSSESSUM possessum-1 &
+                                                        [ POSS-AGR #png-um ] ].
 
 ;Constraint on MC used to be part of matrix.tdl
 ;;it applies to all wo implementations, except for v2

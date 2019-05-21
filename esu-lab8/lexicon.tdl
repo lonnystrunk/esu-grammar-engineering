@@ -745,10 +745,6 @@ nrit_2 := verb6-verb-lex &
   [ STEM < "nrit" >,
     SYNSEM.LKEYS.KEYREL.PRED "_neg_v_rel" ].
 
-assik_2 := verb6-verb-lex &
-  [ STEM < "assik" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_like_v_rel" ].
-
 tuqut := verb6-verb-lex &
   [ STEM < "tuqut" >,
     SYNSEM.LKEYS.KEYREL.PRED "_kill_v_rel" ].
@@ -1000,7 +996,7 @@ ner_2 := verb_trans-verb-lex &
   [ STEM < "ner" >,
     SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
 
-assik_3 := verb_trans-verb-lex &
+assik := verb_trans-verb-lex &
   [ STEM < "assik" >,
     SYNSEM.LKEYS.KEYREL.PRED "_like_v_rel" ].
 
