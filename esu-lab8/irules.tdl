@@ -249,9 +249,21 @@ noun-pc101_lrt1_ERG_sg-suffix :=
 %suffix (* -m)
 noun-pc101_lrt1_ERG_sg-lex-rule.
 
-noun-pc101_lrt2_ABS_3sg_sg-suffix1 :=
+noun-pc101_lrt2_ABS_3sg_sg-suffix1a :=
 %suffix (* -a)
-noun-pc101_lrt2_ABS_3sg_sg-lex-rule.
+noun-pc101_lrt2_ABS_3sg_sg-lex-rule-poss.
+
+noun-pc101_lrt2_ABS_3sg_sg-suffix1b :=
+%suffix (* -a)
+noun-pc101_lrt2_ABS_3sg_sg-lex-rule-pron.
+
+noun-pc101_lrt2_ABS_3sg_sg-suffix2a :=
+%suffix (* -ii)
+noun-pc101_lrt2_ABS_3sg_sg-lex-rule-poss.
+
+noun-pc101_lrt2_ABS_3sg_sg-suffix2b :=
+%suffix (* -ii)
+noun-pc101_lrt2_ABS_3sg_sg-lex-rule-pron.
 
 noun-pc101_lrt3_ABS_1sg_sg-suffix :=
 %suffix (* -qa)
@@ -292,10 +304,6 @@ noun-pc101_lrt10_ABS_3pl_sg-lex-rule.
 noun-pc101_lrt11_LOC_sg-suffix :=
 %suffix (* -mi)
 noun-pc101_lrt11_LOC_sg-lex-rule.
-
-noun-pc101_lrt2_ABS_3sg_sg-suffix2 :=
-%suffix (* -ii)
-noun-pc101_lrt2_ABS_3sg_sg-lex-rule.
 
 noun-pc101_lrt12_ABS_1sg_pl-suffix :=
 %suffix (* -nka)

@@ -241,10 +241,6 @@ aata := noun2-noun-lex &
   [ STEM < "aata" >,
     SYNSEM.LKEYS.KEYREL.PRED "_father_n_rel" ].
 
-nulia_1 := noun2-noun-lex &
-  [ STEM < "nulia" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_wife_n_rel" ].
-
 akuta := noun3-noun-lex &
   [ STEM < "akuta" >,
     SYNSEM.LKEYS.KEYREL.PRED "_ice.cream_n_rel" ].
@@ -493,7 +489,7 @@ angute := noun_non_abs_sg-noun-lex &
   [ STEM < "angute" >,
     SYNSEM.LKEYS.KEYREL.PRED "_man_n_rel" ].
 
-nulia_2 := noun_non_abs_sg-noun-lex &
+nulia := noun_non_abs_sg-noun-lex &
   [ STEM < "nulia" >,
     SYNSEM.LKEYS.KEYREL.PRED "_wife_n_rel" ].
 

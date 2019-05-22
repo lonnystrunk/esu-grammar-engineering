@@ -59,10 +59,12 @@ s1-bottom-coord := s1-bottom-coord-rule.
 
 cnnbc-modifying-clause-phrase := cnnbc-modifying-clause-phrase.
 
+; clausal modifiers
 adj-head-scop := adj-head-scop-phrase.
 
 head-adj-scop := head-adj-scop-phrase.
 
+; locative PP over NP
 adj-head-int := adj-head-int-phrase.
 
 head-adj-int := head-adj-int-phrase.
