@@ -1059,12 +1059,12 @@ kinkuk := wh-pronoun-noun-lex &
 
 camek := wh-pronoun-noun-lex &
   [ STEM < "camek" >,
-    SYNSEM [ LOCAL [ CAT.HEAD.CASE abs,
+    SYNSEM [ LOCAL [ CAT.HEAD.CASE abm,
 		     CONT.HOOK.INDEX.PNG.NUM sg ],
 	     LKEYS.KEYREL.PRED "_thing_n_rel" ] ].
 
 canek := wh-pronoun-noun-lex &
   [ STEM < "canek" >,
-    SYNSEM [ LOCAL [ CAT.HEAD.CASE abs,
+    SYNSEM [ LOCAL [ CAT.HEAD.CASE abm,
 		     CONT.HOOK.INDEX.PNG.NUM pl ],
 	     LKEYS.KEYREL.PRED "_thing_n_rel" ] ].

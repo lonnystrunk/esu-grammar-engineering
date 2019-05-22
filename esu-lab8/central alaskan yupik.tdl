@@ -1017,8 +1017,52 @@ noun-pc101_lrt2_ABS_3sg_sg-lex-rule := noun_pc_non_abs_sg-lex-rule-super & posse
                                               NUM sg ],
                          HEAD.CASE abs ],
                    CONT.HOOK.INDEX.PNG.NUM sg ] ].
-
-poss-pron-lex-rule :=
+; 
+; poss-pron-lex-rule := 
+;   [ SYNSEM.LOCAL.CAT [ HEAD #head,
+;                        VAL [ SPR < >,
+;                              SPEC #spec,
+;                              SUBJ #subj,
+;                              COMPS #comps ] ],
+;     C-CONT [ HOOK #hook,
+;              RELS <! noun-relation &
+;                      [ PRED "pron_rel",
+;                        LBL #lbl2,
+;                        ARG0 #possessor &
+;                             [ COG-ST activ-or-more,
+;                               SPECI + ] ], quant-relation &
+;                                            [ PRED "exist_q_rel",
+;                                              ARG0 #possessum,
+;                                              RSTR #harg ], arg12-ev-relation &
+;                                                            [ PRED "poss_rel",
+;                                                              LBL #lbl,
+;                                                              ARG1 #possessum,
+;                                                              ARG2 #possessor ], quant-relation &
+;                                                                                 [ PRED "exist_q_rel",
+;                                                                                   ARG0 #possessor,
+;                                                                                   RSTR #harg2 ] !>,
+;              HCONS <! qeq &
+;                       [ HARG #harg,
+;                         LARG #lbl ], qeq &
+;                                      [ HARG #harg2,
+;                                        LARG #lbl2 ] !> ],
+;     DTR.SYNSEM.LOCAL [ CONT.HOOK #hook &
+;                                  [ INDEX #possessum &
+;                                          [ COG-ST activ-or-more ],
+;                                    LTOP #lbl ],
+;                        CAT [ HEAD #head &
+;                                   [ PRON - ],
+;                              VAL [ SPEC #spec,
+;                                    SUBJ #subj,
+;                                    COMPS #comps ] ] ] ].
+; 
+; noun-pc101_lrt3_ABS_1sg_sg-lex-rule := poss-pron-lex-rule & noun_pc_non_abs_sg-lex-rule-super &
+;   [ SYNSEM.LOCAL [ CAT.HEAD.CASE abs,
+;                    CONT.HOOK.INDEX.PNG.NUM sg ],
+;     C-CONT.RELS <! [ ARG0.PNG [ PER 1st,
+;                                 NUM sg ] ] !> ].
+; 
+noun-pc101_lrt3_ABS_1sg_sg-lex-rule := noun_pc_non_abs_sg-lex-rule-super &
   [ SYNSEM.LOCAL.CAT [ HEAD #head,
                        VAL [ SPR < >,
                              SPEC #spec,
@@ -1029,7 +1073,9 @@ poss-pron-lex-rule :=
                      [ PRED "pron_rel",
                        LBL #lbl2,
                        ARG0 #possessor &
-                            [ COG-ST activ-or-more,
+                            [ PNG [ PER 1st,
+                                    NUM sg ],
+                              COG-ST activ-or-more,
                               SPECI + ] ], quant-relation &
                                            [ PRED "exist_q_rel",
                                              ARG0 #possessum,
@@ -1055,12 +1101,6 @@ poss-pron-lex-rule :=
                              VAL [ SPEC #spec,
                                    SUBJ #subj,
                                    COMPS #comps ] ] ] ].
-
-noun-pc101_lrt3_ABS_1sg_sg-lex-rule := poss-pron-lex-rule & noun_pc_non_abs_sg-lex-rule-super &
-  [ SYNSEM.LOCAL [ CAT.HEAD.CASE abs,
-                   CONT.HOOK.INDEX.PNG.NUM sg ],
-    C-CONT.RELS <! [ ARG0.PNG [ PER 1st,
-                                NUM sg ] ] !> ].
 
 noun-pc101_lrt4_ABS-OR-ERG_pl-lex-rule := nonpossessive-lex-rule-1 & noun_pc_non_abs_sg-lex-rule-super &
   [ SYNSEM.LOCAL [ CAT.HEAD.CASE abs-or-erg,
