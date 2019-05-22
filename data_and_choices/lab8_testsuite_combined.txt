@@ -1232,17 +1232,15 @@ ner-sit camek
 eat-INT.2sg what.ABM.sg
 `what are you eating'
 
-#Is this nerb-tuq?
 #Example 111
 Source: c
 Vetted: f
 Judgement: g
 Phenomena: {adnominal possessives}
-mikelngu-n ner-tuq
-child-ABS.2sg.sg eat-IND.3sg
+mikelngu-u-n nerb-uq
+child-EV-ABS.2sg.sg eat-IND.3sg
 `your child is eating'
 
-#Should this be -put or .vut or +put?
 #Example 112
 Source: c
 Vetted: f
@@ -1258,16 +1256,16 @@ Source: c
 Vetted: f
 Judgement: g
 Phenomena: {adnominal possessives}
-assik-aa qimugte-put nulia-m
+assik-aa qimugte-vut neqe-m
 like-IND.3sg.3sg. dog-ABS.1pl.sg fish-REL.sg
-`Our dog likes fish'
+`The fish likes our dog'
 
 #Example 114
 Source: c
 Vetted: f
 Judgement: g
 Phenomena: {adnominal possessives}
-assik-aa nulia-an qimugte
+assik-aa nuliar-an qimugta
 like-IND.3sg.3sg. wife-REL.3sg.sg dog.ABS.sg
 `His wife likes the dog'
 
@@ -1276,7 +1274,7 @@ Source: c
 Vetted: f
 Judgement: g
 Phenomena: {adnominal possessives}
-nerb-aa Mayba-m neqa-ka
+ner-aa Mayba-m neq-ka
 eat-IND.3sg.3sg. p.n.-REL.sg fish-ABS.1sg.sg
 `Mayaq is eating my fish'
 
@@ -1285,26 +1283,24 @@ Source: c
 Vetted: f
 Judgement: u
 Phenomena: {adnominal possessives}
-nerb-aa Mayba neqa-ka
+ner-aa Maybaq neq-ka
 eat-IND.3sg.3sg. p.n.-ABS.sg fish-ABS.1sg.sg
 `Mayaq is eating my fish'
 
-#Is this nerb-tuq?
 #Example 117
 Source: c
 Vetted: f
 Judgement: u
 Phenomena: {adnominal possessives}
-mikelngu-vet ner-tuq
+mikelngu-vet nerb-uq
 child-REL.2sg.sg eat-IND.3sg
 `your child is eating'
 
-#Should this be -put or .vut or +put?
 #Example 118
 Source: c
 Vetted: f
 Judgement: u
 Phenomena: {adnominal possessives}
-assik-aa qimugte-mta nulia-m
+assik-aa qimugte-mta neqe-m
 like-IND.3sg.3sg. dog-REL.1pl.sg fish-REL.sg
 `Our dog likes fish'

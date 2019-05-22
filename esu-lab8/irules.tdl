@@ -301,6 +301,18 @@ noun-pc101_lrt12_ABS_1sg_pl-suffix :=
 %suffix (* -nka)
 noun-pc101_lrt12_ABS_1sg_pl-lex-rule.
 
+noun-pc101_lrt13_ABS_1pl_sg-suffix :=
+%suffix (* -vut)
+noun-pc101_lrt13_ABS_1pl_sg-lex-rule.
+
+noun-pc101_lrt14_ERG_2sg_sg-suffix :=
+%suffix (* -vet)
+noun-pc101_lrt14_ERG_2sg_sg-lex-rule.
+
+noun-pc101_lrt14_ERG_1pl_sg-suffix :=
+%suffix (* -mta)
+noun-pc101_lrt15_ERG_1pl_sg-lex-rule.
+
 nmz_situation-suffix :=
 %suffix (* -uci)
 nmz_situation-lex-rule.

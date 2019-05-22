@@ -465,6 +465,10 @@ unuaqu := noun_abs_sg-noun-lex &
   [ STEM < "unuaqu" >,
     SYNSEM.LKEYS.KEYREL.PRED "_tomorrow_n_rel" ].
 
+maybaq := noun_abs_sg-noun-lex &
+  [ STEM < "maybaq" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_p.n._n_rel" ].
+
 tuntu_2 := noun_non_abs_sg-noun-lex &
   [ STEM < "tuntu" >,
     SYNSEM.LKEYS.KEYREL.PRED "_caribou_n_rel" ].
