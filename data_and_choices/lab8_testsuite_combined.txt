@@ -5,6 +5,7 @@ Author: Marcus Martinez/Lonny Strunk
 Date: April 22, 2019
 Source a: A Grammar of Central Alaskan Yupik, Miyaoka
 Source b: Lonny Strunk
+Source c: Marcus Martinez
 
 #Example 1
 Source: a:30-10
@@ -1230,3 +1231,80 @@ Phenomena: {wh-questions}
 ner-sit camek
 eat-INT.2sg what.ABM.sg
 `what are you eating'
+
+#Is this nerb-tuq?
+#Example 111
+Source: c
+Vetted: f
+Judgement: g
+Phenomena: {adnominal possessives}
+mikelngu-n ner-tuq
+child-ABS.2sg.sg eat-IND.3sg
+`your child is eating'
+
+#Should this be -put or .vut or +put?
+#Example 112
+Source: c
+Vetted: f
+Judgement: g
+Phenomena: {adnominal possessives}
+assik-aa tuntu-vut
+like-IND.3sg.3sg. tuntu-ABS.1pl.sg
+`He likes our caribou'
+
+#Should this be -put or .vut or +put?
+#Example 113
+Source: c
+Vetted: f
+Judgement: g
+Phenomena: {adnominal possessives}
+assik-aa qimugte-put nulia-m
+like-IND.3sg.3sg. dog-ABS.1pl.sg fish-REL.sg
+`Our dog likes fish'
+
+#Example 114
+Source: c
+Vetted: f
+Judgement: g
+Phenomena: {adnominal possessives}
+assik-aa nulia-an qimugte
+like-IND.3sg.3sg. wife-REL.3sg.sg dog.ABS.sg
+`His wife likes the dog'
+
+#Example 115
+Source: c
+Vetted: f
+Judgement: g
+Phenomena: {adnominal possessives}
+nerb-aa Mayba-m neqa-ka
+eat-IND.3sg.3sg. p.n.-REL.sg fish-ABS.1sg.sg
+`Mayaq is eating my fish'
+
+#Example 116
+Source: c
+Vetted: f
+Judgement: u
+Phenomena: {adnominal possessives}
+nerb-aa Mayba neqa-ka
+eat-IND.3sg.3sg. p.n.-ABS.sg fish-ABS.1sg.sg
+`Mayaq is eating my fish'
+
+#Is this nerb-tuq?
+#Example 117
+Source: c
+Vetted: f
+Judgement: u
+Phenomena: {adnominal possessives}
+mikelngu-vet ner-tuq
+child-REL.2sg.sg eat-IND.3sg
+`your child is eating'
+
+#Should this be -put or .vut or +put?
+#Example 118
+Source: c
+Vetted: f
+Judgement: u
+Phenomena: {adnominal possessives}
+assik-aa qimugte-mta nulia-m
+like-IND.3sg.3sg. dog-REL.1pl.sg fish-REL.sg
+`Our dog likes fish'
