@@ -101,10 +101,6 @@ noun-pc5_lrt2-suffix :=
 %suffix (* -ma)
 noun-pc5_lrt2-lex-rule.
 
-noun-pc7_lrt1-suffix :=
-%suffix (* -mek)
-noun-pc7_lrt1-lex-rule.
-
 noun-pc12_lrt1-suffix :=
 %suffix (* -an)
 noun-pc12_lrt1-lex-rule.
@@ -273,9 +269,9 @@ noun-pc101_lrt6_ERG_1sg_sg-suffix :=
 %suffix (* -ma)
 noun-pc101_lrt6_ERG_1sg_sg-lex-rule.
 
-; noun-pc101_lrt7_ABM_sg-suffix :=
-; %suffix (* -mek)
-; noun-pc101_lrt7_ABM_sg-lex-rule.
+noun-pc101_lrt7_ABM_sg-suffix :=
+%suffix (* -mek)
+noun-pc101_lrt7_ABM_sg-lex-rule.
 
 noun-pc101_lrt8_ERG_3sg_sg-suffix1 :=
 %suffix (* -iin)
@@ -385,10 +381,6 @@ verb-pc4_lrt10-suffix :=
 %suffix (* -li)
 verb-pc4_lrt10-lex-rule.
 
-verb-pc4_lrt11-suffix :=
-%suffix (* -lleq)
-verb-pc4_lrt11-lex-rule.
-
 verb-pc4_lrt12-suffix :=
 %suffix (* -llria)
 verb-pc4_lrt12-lex-rule.
@@ -404,10 +396,6 @@ verb-pc6_lrt1-lex-rule.
 verb-pc7_lrt1-suffix :=
 %suffix (* -ner)
 verb-pc7_lrt1-lex-rule.
-
-verb-pc8_lrt1-suffix :=
-%suffix (* -mek)
-verb-pc8_lrt1-lex-rule.
 
 verb-pc9_lrt1-suffix :=
 %suffix (* -ciq)
@@ -485,9 +473,9 @@ verb-pc35_lrt1-suffix :=
 %suffix (* -luku)
 verb-pc35_lrt1-lex-rule.
 
-verb-pc37_lrt1-suffix :=
-%suffix (* -uci)
-verb-pc37_lrt1-lex-rule.
+; verb-pc37_lrt1-suffix :=
+; %suffix (* -uci)
+; verb-pc37_lrt1-lex-rule.
 
 verb-pc38_lrt1-suffix :=
 %suffix (* -nata)
