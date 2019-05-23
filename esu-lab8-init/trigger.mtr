@@ -1,0 +1,6 @@
+;;; -*- Mode: TDL; Coding: utf-8 -*-
+;;; Semantically Empty Lexical Entries
+
+; llu_gr := arg0e_gtr &
+; [ CONTEXT.RELS <! [ PRED "_and_coord_rel" ] !>,
+;   FLAGS.TRIGGER "llu" ].
