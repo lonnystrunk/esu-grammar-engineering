@@ -56,11 +56,14 @@ PNG.GEND : GEND
 E.TENSE : TENSE
   pst <> pst
   fut <> fut
-  * <> *
+  rec-pst-pres >> pres
+  rec-pst-pres << [e]
+
 
 E.ASPECT : ASPECT
   cus <> cus
-  * <> *
+  * >> no-aspect
+  no-aspect << [e]
 
 E.MOOD : MOOD
   ind <> ind
