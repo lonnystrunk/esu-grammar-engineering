@@ -1158,6 +1158,12 @@ noun-pc101_lrt15_ERG_1pl_sg-lex-rule := poss-pron-lex-rule &
     C-CONT.RELS.LIST.FIRST.ARG0.PNG [ PER 1st,
                                       NUM pl ] ].
 
+noun-pc101_lrt16_ABS_1sg_sg-lex-rule := poss-pron-lex-rule &
+  [ SYNSEM.LOCAL [ CAT.HEAD.CASE abs,
+                   CONT.HOOK.INDEX.PNG.NUM sg ],
+    C-CONT.RELS.LIST.FIRST.ARG0.PNG [ PER 1st,
+                                      NUM sg ] ].
+
 nmz_situation-lex-rule := low-nmz-subjid-compsid-lex-rule & noun_pc_non_abs_sg-rule-dtr.
 
 nmz_one-who-Ved-lex-rule := low-nmz-subjid-compsid-lex-rule & noun_pc_abs_sg-rule-dtr.

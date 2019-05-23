@@ -321,6 +321,10 @@ noun-pc101_lrt14_ERG_1pl_sg-suffix :=
 %suffix (* -mta)
 noun-pc101_lrt15_ERG_1pl_sg-lex-rule.
 
+noun-pc101_lrt16_ABS_1sg_sg-suffix :=
+%suffix (* -ka)
+noun-pc101_lrt16_ABS_1sg_sg-lex-rule.
+
 nmz_situation-suffix :=
 %suffix (* -uci)
 nmz_situation-lex-rule.
