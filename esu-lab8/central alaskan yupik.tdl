@@ -213,9 +213,9 @@ fut := tense.
 
 situation := sort.
 
-;;; Situation
+;;; Aspect
 
-cus := situation.
+cus := aspect.
 
 ;;; Mood
 
@@ -1823,12 +1823,7 @@ verb-pc102_lrt3-lex-rule := add-only-no-ccont-rule & verb_pc_derivation1-lex-rul
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE fut ].
 
 verb-pc102_lrt4-lex-rule := add-only-no-ccont-rule & verb_pc_derivation1-lex-rule-super &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.SITUATION cus ].
-
-verb-pc102_lrt5-lex-rule := add-only-no-ccont-rule & verb_pc_derivation1-lex-rule-super.
-
-verb-pc102_lrt6-lex-rule := add-only-no-ccont-rule & verb_pc_derivation1-lex-rule-super.
-
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT cus ].
 
 evidential-lex-rule := cont-change-only-lex-rule & same-spr-lex-rule & same-spec-lex-rule &
   [ C-CONT [ RELS <! event-relation &

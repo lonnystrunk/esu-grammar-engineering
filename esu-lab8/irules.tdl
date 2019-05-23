@@ -677,14 +677,6 @@ verb-pc102_lrt4-suffix :=
 %suffix (* -lar)
 verb-pc102_lrt4-lex-rule.
 
-verb-pc102_lrt5-suffix :=
-%suffix (* -rraar)
-verb-pc102_lrt5-lex-rule.
-
-verb-pc102_lrt6-suffix :=
-%suffix (* -yugnga)
-verb-pc102_lrt6-lex-rule.
-
 esu-eviden-suffix :=
 %suffix (* -llini)
 esu-eviden-lex-rule.
