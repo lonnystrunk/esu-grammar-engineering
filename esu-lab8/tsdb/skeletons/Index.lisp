@@ -29,5 +29,6 @@
 ((:path . "lab5") (:content . "testsutie collected for lab5 and combined lab3, lab4"))
 ((:path . "lab6") (:content . "testsutie collected for lab6 and combined lab3, lab4, lab5"))
 ((:path . "lab7") (:content . "testsutie collected for lab7 and combined lab3, lab4, lab5, lab6"))
+((:path . "lab8") (:content . "testsutie collected for lab7 and combined lab3, lab4, lab5, lab6, lab7"))
 )
 
