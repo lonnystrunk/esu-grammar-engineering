@@ -38,9 +38,9 @@ COG-ST : COG-ST
 
 
 PNG.PER : PER
-  3rd <> 3rd
-  2nd <> 2nd
-  1st <> 1st
+  3rd <> third
+  2nd <> second
+  1st <> first	
   * <> *
 
 PNG.NUM : NUM
@@ -50,13 +50,13 @@ PNG.NUM : NUM
   pl <> pl
   * <> *
 
-PNG.GEND : GEND
-  * <> *
+: PNG.GEND : GEND
+:  * <> *
 
 E.TENSE : TENSE
   pst <> pst
   fut <> fut
-  rec-pst-pres >> pres
+  rec-pst-pres >> present
   rec-pst-pres << [e]
 
 

@@ -1106,7 +1106,8 @@ poss-unary-phrase := basic-unary-phrase &
                             CONT.HOOK.INDEX #possessor ] ] > ].
 
 poss-unary-phrase-1 := poss-unary-phrase &
-  [ ARGS < [ SYNSEM.LOCAL [ CAT [ HEAD.POSSESSOR nonpossessive,
+  [ ARGS < [ SYNSEM.LOCAL [ CAT [ HEAD [ CASE erg,
+					 POSSESSOR nonpossessive ],
                                   POSSESSUM nonpossessive ],
                             CONT.HOOK.INDEX.PNG #png-um ] ] >,
     SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CAT.POSSESSUM possessum-1 &
