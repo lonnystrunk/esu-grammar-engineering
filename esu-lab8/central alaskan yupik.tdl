@@ -653,10 +653,10 @@ denominal-verb-lex-rule-super := inflecting-lex-rule & verb_pc_intrans-rule-dtr 
   DTR noun_non_abs_sg-noun-lex & [ SYNSEM.LOCAL.CONT.HOOK [ INDEX #dtr_ind,
                                                LTOP #larg ] ] ].
 
-vbz_be_at-verb-lex-rule := denominal-verb-lex-rule-super &
+vbz_be_at-verb-lex-rule := denominal-verb-lex-rule-super & nocoord &
   [ SYNSEM.LKEYS.KEYREL.PRED "_be+at_v_rel" ].
 
-vbz_to_be-verb-lex-rule := denominal-verb-lex-rule-super &
+vbz_to_be-verb-lex-rule := denominal-verb-lex-rule-super & nocoord &
   [ SYNSEM.LKEYS.KEYREL.PRED "_be_v_id_rel" ].
 
 copula-verb-lex := basic-verb-lex-super & trans-first-arg-raising-lex-item-2 & verb_pc_intrans-rule-dtr &
@@ -675,7 +675,7 @@ copula-verb-lex := basic-verb-lex-super & trans-first-arg-raising-lex-item-2 & v
              [ LOCAL.CAT [ VAL [ COMPS < > ],
                            HEAD +jp ] ] > ].
 
-deadjectival-verb-lex-rule := inflecting-lex-rule & verb_pc_intrans-rule-dtr &
+deadjectival-verb-lex-rule := inflecting-lex-rule & verb_pc_intrans-rule-dtr & nocoord &
  [ SYNSEM [ LOCAL [ CAT [ HEAD verb,
                           VAL [ SPEC < >,
                                 COMPS < >,
