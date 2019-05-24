@@ -357,10 +357,6 @@ naqugg := noun29-noun-lex &
   [ STEM < "naqugg" >,
     SYNSEM.LKEYS.KEYREL.PRED "_put.belt_n_rel" ].
 
-neqe := noun31-noun-lex &
-  [ STEM < "neqe" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_fish_n_rel" ].
-
 sasku := noun31-noun-lex &
   [ STEM < "sasku" >,
     SYNSEM.LKEYS.KEYREL.PRED "_weapon_n_rel" ].
@@ -503,6 +499,10 @@ neq_2 := noun_non_abs_sg-noun-lex &
 
 mikelngu := noun_non_abs_sg-noun-lex &
   [ STEM < "mikelngu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_child_n_rel" ].
+
+mikelngu-u := noun_non_abs_sg-noun-lex &
+  [ STEM < "mikelngu-u" >,
     SYNSEM.LKEYS.KEYREL.PRED "_child_n_rel" ].
 
 arna := noun_non_abs_sg-noun-lex &

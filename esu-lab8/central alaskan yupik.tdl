@@ -223,6 +223,7 @@ situation := sort.
 ;;; Aspect
 
 cus := aspect.
+no-aspect := aspect.
 
 ;;; Mood
 
@@ -1943,7 +1944,8 @@ verb-pc103_lrt5_CNNif-lex-rule := verb_pc_CNN-lex-rule-super &
 verb_pc_CNN_ending-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
   [ INFLECTED #infl,
     DTR verb_pc_CNN_ending-rule-dtr &
-        [ INFLECTED #infl ] ].
+        [ INFLECTED #infl &
+                    [ VERB_TRANS-VERB-FLAG na ] ] ].
 
 verb-pc104_lrt1_CNN_1sg-lex-rule := verb_pc_CNN_ending-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 1st,
@@ -2033,11 +2035,11 @@ head-comp-phrase-2 := basic-head-2nd-comp-phrase & head-initial-head-nexus.
 
 comp-head-phrase-2 := basic-head-2nd-comp-phrase & head-final-head-nexus.
 
-head-spec-phrase := head-final & basic-head-spec-phrase &
+spec-head-phrase := head-final & basic-head-spec-phrase &
   [ NON-HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.SPEC < [ LOCAL.CAT.POSSESSUM #poss ] >,
     HEAD-DTR.SYNSEM.LOCAL.CAT.POSSESSUM #poss ].
 
-head-spec-phrase-2 := head-initial & basic-head-spec-phrase &
+head-spec-phrase := head-initial & basic-head-spec-phrase &
   [ NON-HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.SPEC < [ LOCAL.CAT.POSSESSUM #poss ] >,
     HEAD-DTR.SYNSEM.LOCAL.CAT.POSSESSUM #poss ].
 

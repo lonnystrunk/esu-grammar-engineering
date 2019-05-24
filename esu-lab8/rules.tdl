@@ -21,7 +21,7 @@ comp-head-2 := comp-head-phrase-2.
 
 head-spec := head-spec-phrase.
 
-head-spec-2 := head-spec-phrase-2.
+spec-head := spec-head-phrase.
 
 poss-unary-1 := poss-unary-phrase-1.
 
