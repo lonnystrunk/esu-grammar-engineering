@@ -27,8 +27,6 @@ poss-unary-1 := poss-unary-phrase-1.
 
 bare-np := bare-np-phrase.
 
-; possession-bare-np := possession-bare-np-phrase.
-
 np1-any-same-same-sg-sg-du-top-coord := np1-any-same-same-sg-sg-du-top-coord-rule.
 
 np1-any-same-same-any-non-sg-pl-top-coord := np1-any-same-same-any-non-sg-pl-top-coord-rule.

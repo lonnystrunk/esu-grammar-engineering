@@ -391,7 +391,7 @@ Source: a:
 Vetted: f
 Judgement: g
 Phenomena: {TAM}
-ki-na tekit-a?
+kina tekit-a?
 who-EX.ABS.sg. arrive-INT.3sg.
 `who has arrived?'
 
