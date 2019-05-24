@@ -1674,7 +1674,7 @@ verb-pc53_lrt1-lex-rule := verb-pc53-lex-rule-super &
 
 verb_pc_intrans-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
   [ INFLECTED #infl,
-    DTR verb_pc_intrans-or-verb_pc_trans-rule-dtr &
+    DTR verb_pc_intrans-rule-dtr &
         [ INFLECTED #infl &
                     [ VERB_TRANS-VERB-FLAG na ] ] ].
 
@@ -1752,7 +1752,7 @@ verb-pc100_lrt12_INT_3pl-lex-rule := verb_pc_intrans-lex-rule-super &
 
 verb_pc_trans-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
   [ INFLECTED #infl,
-    DTR verb_pc_intrans-or-verb_pc_trans-rule-dtr &
+    DTR verb_pc_trans-rule-dtr &
         [ INFLECTED #infl &
                     [ VERB_INTRANS-VERB-FLAG na ] ] ].
 
