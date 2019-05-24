@@ -440,7 +440,7 @@ noun_pc_abs_sg-lex-rule-super := add-only-no-ccont-rule & const-lex-rule &
                       VERB_TRANS-VERB-FLAG #verb_trans-verb,
                       VERB_PC_DERIVATION1-FLAG #verb_pc_derivation1 ] ] ].
 
-noun-pc100_lrt1-lex-rule := noun_pc_abs_sg-lex-rule-super &
+noun-pc100_lrt1-lex-rule := nonpossessive-lex-rule-1 & noun_pc_abs_sg-lex-rule-super &
   [ SYNSEM.LOCAL [ CAT.HEAD.CASE abs,
                    CONT.HOOK.INDEX.PNG.NUM sg ] ].
 
