@@ -50,8 +50,8 @@ PNG.NUM : NUM
   pl <> pl
   * <> *
 
-: PNG.GEND : GEND
-:  * <> *
+; PNG.GEND : GEND
+;  * <> *
 
 E.TENSE : TENSE
   pst <> pst
