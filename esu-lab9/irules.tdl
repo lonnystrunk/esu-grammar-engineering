@@ -5,28 +5,16 @@ noun-pc101_lrt1_ERG_sg-suffix :=
 %suffix (* -m)
 noun-pc101_lrt1_ERG_sg-lex-rule.
 
-noun-pc101_lrt2_ABS_3sg_sg-suffix1a :=
-%suffix (* -a)
+noun-pc101_lrt2_ABS_3sg_sg-suffixA :=
+%suffix (* -a) (* -ii)
 noun-pc101_lrt2_ABS_3sg_sg-lex-rule-poss.
 
-noun-pc101_lrt2_ABS_3sg_sg-suffix1b :=
-%suffix (* -a)
-noun-pc101_lrt2_ABS_3sg_sg-lex-rule-pron.
-
-noun-pc101_lrt2_ABS_3sg_sg-suffix2a :=
-%suffix (* -ii)
-noun-pc101_lrt2_ABS_3sg_sg-lex-rule-poss.
-
-noun-pc101_lrt2_ABS_3sg_sg-suffix2b :=
-%suffix (* -ii)
+noun-pc101_lrt2_ABS_3sg_sg-suffixB :=
+%suffix (* -a) (* -ii)
 noun-pc101_lrt2_ABS_3sg_sg-lex-rule-pron.
 
 noun-pc101_lrt3_ABS_1sg_sg-suffix :=
-%suffix (* -qa)
-noun-pc101_lrt3_ABS_1sg_sg-lex-rule.
-
-noun-pc101_lrt3_ABS_1sg_sg-suffix2 :=
-%suffix (* -ka)
+%suffix (* -qa) (* -ka)
 noun-pc101_lrt3_ABS_1sg_sg-lex-rule.
 
 noun-pc101_lrt4_ABS-OR-ERG_pl-suffix :=
@@ -45,35 +33,27 @@ noun-pc101_lrt7_ABM_sg-suffix :=
 %suffix (* -mek)
 noun-pc101_lrt7_ABM_sg-lex-rule.
 
-noun-pc101_lrt8_ERG_3sg_sg-suffix1a :=
-%suffix (* -iin)
+noun-pc101_lrt8_ERG_3sg_sg-suffixA :=
+%suffix (* -iin) (* -an)
 noun-pc101_lrt8_ERG_3sg_sg-lex-rule-poss.
 
-noun-pc101_lrt8_ERG_3sg_sg-suffix1b :=
-%suffix (* -iin)
+noun-pc101_lrt8_ERG_3sg_sg-suffixB :=
+%suffix (* -iin) (* -an)
 noun-pc101_lrt8_ERG_3sg_sg-lex-rule-pron.
 
-noun-pc101_lrt8_ERG_3sg_sg-suffix2a :=
-%suffix (* -an)
-noun-pc101_lrt8_ERG_3sg_sg-lex-rule-poss.
-
-noun-pc101_lrt8_ERG_3sg_sg-suffix2b :=
-%suffix (* -an)
-noun-pc101_lrt8_ERG_3sg_sg-lex-rule-pron.
-
-noun-pc101_lrt9_ERG_3pl_pl-suffix1a :=
+noun-pc101_lrt9_ERG_3pl_pl-suffixA :=
 %suffix (* -iit)
 noun-pc101_lrt9_ERG_3pl_pl-lex-rule-poss.
 
-noun-pc101_lrt9_ERG_3pl_pl-suffix1b :=
+noun-pc101_lrt9_ERG_3pl_pl-suffixB :=
 %suffix (* -iit)
 noun-pc101_lrt9_ERG_3pl_pl-lex-rule-pron.
 
-noun-pc101_lrt10_ABS_3pl_sg-suffix1a :=
+noun-pc101_lrt10_ABS_3pl_sg-suffixA :=
 %suffix (* -at)
 noun-pc101_lrt10_ABS_3pl_sg-lex-rule-poss.
 
-noun-pc101_lrt10_ABS_3pl_sg-suffix1b :=
+noun-pc101_lrt10_ABS_3pl_sg-suffixB :=
 %suffix (* -at)
 noun-pc101_lrt10_ABS_3pl_sg-lex-rule-pron.
 
@@ -105,44 +85,20 @@ nmz_one-who-Ved-suffix :=
 %suffix (* -lleq)
 nmz_one-who-Ved-lex-rule.
 
-vbz_LOC-suffix1 :=
-%suffix (* -mte)
+vbz_LOC-suffix :=
+%suffix (* -mte) (* -mt)
 vbz_be_at-verb-lex-rule.
 
-vbz_LOC-suffix2 :=
-%suffix (* -mt)
-vbz_be_at-verb-lex-rule.
-
-vbz_to_be-suffix1 :=
-%suffix (* -ngu)
+vbz_to_be-suffix :=
+%suffix (* -ngu) (* -u)
 vbz_to_be-verb-lex-rule.
 
-vbz_to_be-suffix2 :=
-%suffix (* -u)
-vbz_to_be-verb-lex-rule.
-
-verb-pc100_lrt1_IND_3sg-suffix1 :=
-%suffix (* -uq)
+verb-pc100_lrt1_IND_3sg-suffix :=
+%suffix (* -uq) (* -tuq) (* -guq)
 verb-pc100_lrt1_IND_3sg-lex-rule.
 
-verb-pc100_lrt1_IND_3sg-suffix2 :=
-%suffix (* -tuq)
-verb-pc100_lrt1_IND_3sg-lex-rule.
-
-verb-pc100_lrt1_IND_3sg-suffix3 :=
-%suffix (* -guq)
-verb-pc100_lrt1_IND_3sg-lex-rule.
-
-verb-pc100_lrt2_IND_1sg-suffix1 :=
-%suffix (* -unga)
-verb-pc100_lrt2_IND_1sg-lex-rule.
-
-verb-pc100_lrt2_IND_1sg-suffix2 :=
-%suffix (* -ua)
-verb-pc100_lrt2_IND_1sg-lex-rule.
-
-verb-pc100_lrt2_IND_1sg-suffix3 :=
-%suffix (* -tua)
+verb-pc100_lrt2_IND_1sg-suffix :=
+%suffix (* -unga) (* -ua) (* -tua)
 verb-pc100_lrt2_IND_1sg-lex-rule.
 
 verb-pc100_lrt3_APP_3sg-suffix :=
@@ -161,16 +117,8 @@ verb-pc100_lrt6_INT_3sg-suffix :=
 %suffix (* -a)
 verb-pc100_lrt6_INT_3sg-lex-rule.
 
-verb-pc100_lrt7_IND_3pl-suffix1 :=
-%suffix (* -ut)
-verb-pc100_lrt7_IND_3pl-lex-rule.
-
-verb-pc100_lrt7_IND_3pl-suffix2 :=
-%suffix (* -tut)
-verb-pc100_lrt7_IND_3pl-lex-rule.
-
-verb-pc100_lrt7_IND_3pl-suffix3 :=
-%suffix (* -gut)
+verb-pc100_lrt7_IND_3pl-suffix :=
+%suffix (* -ut) (* -tut) (* -gut)
 verb-pc100_lrt7_IND_3pl-lex-rule.
 
 verb-pc100_lrt8_APP_3pl-suffix :=
@@ -221,12 +169,8 @@ verb-pc101_lrt6_IND_1pl_3sg-suffix :=
 %suffix (* -aput)
 verb-pc101_lrt6_IND_1pl_3sg-lex-rule.
 
-verb-pc101_lrt7_IND_3sg_1sg-suffix1 :=
-%suffix (* -anga)
-verb-pc101_lrt7_IND_3sg_1sg-lex-rule.
-
-verb-pc101_lrt7_IND_3sg_1sg-suffix2 :=
-%suffix (* -aanga)
+verb-pc101_lrt7_IND_3sg_1sg-suffix :=
+%suffix (* -anga) (* -aanga)
 verb-pc101_lrt7_IND_3sg_1sg-lex-rule.
 
 verb-pc101_lrt8_IND_3pl_3pl-suffix :=
