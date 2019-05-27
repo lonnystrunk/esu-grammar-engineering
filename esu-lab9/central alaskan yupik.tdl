@@ -679,8 +679,9 @@ deadjectival-verb-lex-rule := inflecting-lex-rule & verb_pc_intrans-rule-dtr & n
  [ SYNSEM [ LOCAL [ CAT [ HEAD verb,
                           VAL [ SPEC < >,
                                 COMPS < >,
-                                SUBJ < [ LOCAL [ CAT.HEAD noun &
+                                SUBJ < [ LOCAL [ CAT [ HEAD noun &
                                                          [ CASE abs ],
+							 VAL.SPR < > ],
                                                  CONT.HOOK.INDEX #xarg ] ] > ] ],
                     CONT.HOOK #hook  ],
             LKEYS.KEYREL #keyrel ],
