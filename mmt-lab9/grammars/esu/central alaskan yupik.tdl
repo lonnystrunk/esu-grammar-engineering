@@ -138,6 +138,13 @@ bottom-coord-phrase :+ [ SYNSEM.LOCAL.CAT [ HEAD.POSSESSOR #possessor,
                        POSSESSUM #possessum ],
     NONCONJ-DTR.SYNSEM.LOCAL.CAT [ HEAD.POSSESSOR #possessor,
                                    POSSESSUM #possessum ] ].
+unary-bottom-coord-rule :+
+  [ C-CONT.HOOK #hook,
+    ARGS < [ SYNSEM.LOCAL.CONT.HOOK #hook ] > ].
+
+binary-bottom-coord-rule :+
+  [ C-CONT.HOOK #hook,
+    NONCONJ-DTR.SYNSEM.LOCAL.CONT.HOOK #hook ].
 
 basic-head-mod-phrase-simple :+ [ SYNSEM.LOCAL.CAT.MC #mc,
     HEAD-DTR.SYNSEM.LOCAL.CAT.MC #mc ].

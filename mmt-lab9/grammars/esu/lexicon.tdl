@@ -129,9 +129,10 @@ nunakuarcuut := noun_non_abs_sg-noun-lex &
   [ STEM < "nunakuarcuut" >,
     SYNSEM.LKEYS.KEYREL.PRED "_car_n_rel" ].
 
+;;This is not correct. Nuna more accurately translates to "land." This is for the sake of mmt.
 nuna := noun_non_abs_sg-noun-lex &
   [ STEM < "nuna" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_land_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_park_n_rel" ].
 
 ;;; Adjectives
 
