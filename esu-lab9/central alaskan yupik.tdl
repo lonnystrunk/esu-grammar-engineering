@@ -1159,7 +1159,7 @@ cnnbc-modifying-clause-phrase := morphological-subord-clause-phrase &
   [ ARGS < [ SYNSEM.LOCAL.CAT [ VAL.SUBJ < >,
                                 HEAD.FORM #feat & cnnbc ] ] >,
     SYNSEM.LOCAL.CAT.HEAD.FORM #feat,
-    C-CONT.RELS <! [ PRED "_because_p_rel" ] !> ].
+    C-CONT.RELS <! [ PRED "_because_subord_rel" ] !> ].
 
 cnnwv-modifying-clause-phrase := morphological-subord-clause-phrase &
   [ ARGS < [ SYNSEM.LOCAL.CAT [ VAL.SUBJ < >,

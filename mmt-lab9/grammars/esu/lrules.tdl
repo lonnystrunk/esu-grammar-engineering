@@ -1,0 +1,4 @@
+;;; -*- Mode: TDL; Coding: utf-8 -*-
+noun-pc100_lrt1-lex := noun-pc100_lrt1-lex-rule.
+
+rec-pst-pres-lex := rec-pst-pres-lex-rule.
