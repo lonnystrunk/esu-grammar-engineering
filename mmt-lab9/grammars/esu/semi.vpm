@@ -54,16 +54,16 @@ PNG.NUM : NUM
 ;  * <> *
 
 E.TENSE : TENSE
-  pst <> pst
-  fut <> fut
+  pst <> past
+  fut <> future
   rec-pst-pres >> present
-  rec-pst-pres << [e]
+  rec-pst-pres << *
 
 
 E.ASPECT : ASPECT
   cus <> cus
   * >> no-aspect
-  no-aspect << [e]
+  no-aspect << *
 
 E.MOOD : MOOD
   ind <> ind
@@ -71,7 +71,7 @@ E.MOOD : MOOD
   app <> app
   int <> int
   ptp <> ptp
-  * <> *
+  ind << [e]
 
 E.SITUATION : SITUATION
   * <> *
