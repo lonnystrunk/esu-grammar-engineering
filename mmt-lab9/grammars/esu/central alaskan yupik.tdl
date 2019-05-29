@@ -54,18 +54,16 @@ lex-rule :+
 head-adj-int-phrase :+ [ SYNSEM.LOCAL.CAT.LLU #llu,
                          ARGS < [ ], [ SYNSEM.LOCAL.CAT.LLU #llu ] > ].
 
-inflected :+ [ NOUN_PC_ABS_SG-OR-NOUN_PC_NON_ABS_SG-FLAG luk,
-    VERB_INTRANS-VERB-FLAG luk,
+inflected :+ [ VERB_PC_INTRANS-VERB-FLAG luk,
     NOUN_PC_NON_ABS_SG-FLAG luk,
     NOUN_PC_ABS_SG-FLAG luk,
-    VERB_TRANS-VERB-FLAG luk,
+    VERB_PC_TRANS-VERB-FLAG luk,
     VERB_PC_DERIVATION1-FLAG luk ].
 
-infl-satisfied :+ [ NOUN_PC_ABS_SG-OR-NOUN_PC_NON_ABS_SG-FLAG na-or-+,
-    VERB_INTRANS-VERB-FLAG na-or-+,
+infl-satisfied :+ [ VERB_PC_INTRANS-VERB-FLAG na-or-+,
     NOUN_PC_NON_ABS_SG-FLAG na-or-+,
     NOUN_PC_ABS_SG-FLAG na-or-+,
-    VERB_TRANS-VERB-FLAG na-or-+,
+    VERB_PC_TRANS-VERB-FLAG na-or-+,
     VERB_PC_DERIVATION1-FLAG na-or-+ ].
 
 png :+ [ PER person,
@@ -325,16 +323,16 @@ clausal-erg-verb-lex := clausal-verb-lex &
                                 [ CASE erg ] ].
 
 verb_abs-intrans-verb-lex := abs-intransitive-verb-lex & verb_pc_CNN-or-verb_pc_derivation1-rule-dtr & verb_pc_CNN_ending-rule-dtr & verb_pc_intrans-rule-dtr &
- [     INFLECTED [ VERB_INTRANS-VERB-FLAG +,
-                VERB_PC_DERIVATION1-FLAG - ] ].
+ [ INFLECTED [ VERB_PC_INTRANS-VERB-FLAG -,
+               VERB_PC_DERIVATION1-FLAG - ] ].
 
 verb_abs-abm-intrans-verb-lex := abs-abm-intransitive-verb-lex & verb_pc_CNN-or-verb_pc_derivation1-rule-dtr & verb_pc_CNN_ending-rule-dtr & verb_pc_intrans-rule-dtr &
- [     INFLECTED [ VERB_INTRANS-VERB-FLAG +,
-                VERB_PC_DERIVATION1-FLAG - ] ].
+ [ INFLECTED [ VERB_PC_INTRANS-VERB-FLAG -,
+               VERB_PC_DERIVATION1-FLAG - ] ].
 
 verb_erg-abs-trans-verb-lex := erg-abs-transitive-verb-lex & verb_pc_CNN-or-verb_pc_derivation1-rule-dtr & verb_pc_CNN_ending-rule-dtr & verb_pc_trans-rule-dtr &
- [     INFLECTED [ VERB_PC_DERIVATION1-FLAG -,
-                VERB_TRANS-VERB-FLAG + ] ].
+ [ INFLECTED [ VERB_PC_TRANS-VERB-FLAG -,
+               VERB_PC_DERIVATION1-FLAG - ] ].
 
 ccomps-verb-lex := clausal-erg-abs-verb-lex & verb_pc_trans-rule-dtr & transitive-lex-item &
   [ SYNSEM.LOCAL.CAT.VAL [ SUBJ.FIRST.LOCAL.CAT.HEAD.CASE erg,
@@ -435,16 +433,15 @@ verb_pc_CNN_ending-rule-dtr := word-or-lexrule.
 ;;; Lexical rule types
 
 noun_pc_abs_sg-lex-rule-super := add-only-no-ccont-rule & const-lex-rule &
-  [ INFLECTED [ NOUN_PC_ABS_SG-OR-NOUN_PC_NON_ABS_SG-FLAG +,
-                NOUN_PC_ABS_SG-FLAG +,
-                VERB_INTRANS-VERB-FLAG #verb_intrans-verb,
+  [ INFLECTED [ NOUN_PC_ABS_SG-FLAG +,
+                VERB_PC_INTRANS-VERB-FLAG #verb_pc_intrans-verb,
                 NOUN_PC_NON_ABS_SG-FLAG #noun_pc_non_abs_sg,
-                VERB_TRANS-VERB-FLAG #verb_trans-verb,
+                VERB_PC_TRANS-VERB-FLAG #verb_pc_trans-verb,
                 VERB_PC_DERIVATION1-FLAG #verb_pc_derivation1 ],
     DTR noun_pc_abs_sg-rule-dtr &
-        [ INFLECTED [ VERB_INTRANS-VERB-FLAG #verb_intrans-verb,
+        [ INFLECTED [ VERB_PC_INTRANS-VERB-FLAG #verb_pc_intrans-verb,
                       NOUN_PC_NON_ABS_SG-FLAG #noun_pc_non_abs_sg,
-                      VERB_TRANS-VERB-FLAG #verb_trans-verb,
+                      VERB_PC_TRANS-VERB-FLAG #verb_pc_trans-verb,
                       VERB_PC_DERIVATION1-FLAG #verb_pc_derivation1 ] ] ].
 
 noun-pc100_lrt1-lex-rule := nonpossessive-lex-rule-1 & noun_pc_abs_sg-lex-rule-super &
@@ -453,15 +450,14 @@ noun-pc100_lrt1-lex-rule := nonpossessive-lex-rule-1 & noun_pc_abs_sg-lex-rule-s
 
 noun_pc_non_abs_sg-lex-rule-super := infl-lex-rule &
   [ INFLECTED [ NOUN_PC_NON_ABS_SG-FLAG +,
-                NOUN_PC_ABS_SG-OR-NOUN_PC_NON_ABS_SG-FLAG +,
-                VERB_INTRANS-VERB-FLAG #verb_intrans-verb,
+                VERB_PC_INTRANS-VERB-FLAG #verb_pc_intrans-verb,
                 NOUN_PC_ABS_SG-FLAG #noun_pc_abs_sg,
-                VERB_TRANS-VERB-FLAG #verb_trans-verb,
+                VERB_PC_TRANS-VERB-FLAG #verb_pc_trans-verb,
                 VERB_PC_DERIVATION1-FLAG #verb_pc_derivation1 ],
     DTR noun_pc_non_abs_sg-rule-dtr &
-        [ INFLECTED [ VERB_INTRANS-VERB-FLAG #verb_intrans-verb,
+        [ INFLECTED [ VERB_PC_INTRANS-VERB-FLAG #verb_pc_intrans-verb,
                       NOUN_PC_ABS_SG-FLAG #noun_pc_abs_sg,
-                      VERB_TRANS-VERB-FLAG #verb_trans-verb,
+                      VERB_PC_TRANS-VERB-FLAG #verb_pc_trans-verb,
                       VERB_PC_DERIVATION1-FLAG #verb_pc_derivation1 ] ] ].
 
 nonpossessive-lex-rule-1 := add-only-no-ccont-rule &
@@ -632,7 +628,7 @@ nmz_situation-lex-rule := low-nmz-subjid-compsid-lex-rule & noun_pc_non_abs_sg-r
 
 nmz_one-who-Ved-lex-rule := low-nmz-subjid-compsid-lex-rule & noun_pc_abs_sg-rule-dtr.
 
-denominal-verb-lex-rule-super := inflecting-lex-rule & verb_pc_intrans-rule-dtr &
+denominal-verb-lex-rule-super := inflecting-lex-rule & verb_pc_CNN-or-verb_pc_derivation1-rule-dtr & verb_pc_intrans-rule-dtr &
  [ SYNSEM [ LOCAL [ CAT [ HEAD verb,
                           VAL [ SPEC < >,
                                 COMPS < >,
@@ -660,13 +656,18 @@ denominal-verb-lex-rule-super := inflecting-lex-rule & verb_pc_intrans-rule-dtr 
   DTR noun_non_abs_sg-noun-lex & [ SYNSEM.LOCAL.CONT.HOOK [ INDEX #dtr_ind,
                                                LTOP #larg ] ] ].
 
+denominal-verb-lex-rule-super :+ 
+ [ INFLECTED [ NOUN_PC_NON_ABS_SG-FLAG +,
+               VERB_PC_INTRANS-VERB-FLAG -,
+               VERB_PC_DERIVATION1-FLAG - ] ].
+
 vbz_be_at-verb-lex-rule := denominal-verb-lex-rule-super & nocoord &
   [ SYNSEM.LKEYS.KEYREL.PRED "_be+at_v_rel" ].
 
 vbz_to_be-verb-lex-rule := denominal-verb-lex-rule-super & nocoord &
   [ SYNSEM.LKEYS.KEYREL.PRED "_be_v_id_rel" ].
 
-copula-verb-lex := basic-verb-lex-super & trans-first-arg-raising-lex-item-2 & verb_pc_intrans-rule-dtr &
+copula-verb-lex := basic-verb-lex-super & trans-first-arg-raising-lex-item-2 & verb_pc_CNN-or-verb_pc_derivation1-rule-dtr & verb_pc_intrans-rule-dtr &
   [ SYNSEM.LOCAL [ CAT [ HEAD.MOD < >,
                          VAL [ SUBJ < #subj >,
                              COMPS < #comps >,
@@ -682,7 +683,11 @@ copula-verb-lex := basic-verb-lex-super & trans-first-arg-raising-lex-item-2 & v
              [ LOCAL.CAT [ VAL [ COMPS < > ],
                            HEAD +jp ] ] > ].
 
-deadjectival-verb-lex-rule := inflecting-lex-rule & verb_pc_intrans-rule-dtr & nocoord &
+copula-verb-lex :+
+ [ INFLECTED [ VERB_PC_INTRANS-VERB-FLAG -,
+               VERB_PC_DERIVATION1-FLAG - ] ].
+
+deadjectival-verb-lex-rule := inflecting-lex-rule & verb_pc_CNN-or-verb_pc_derivation1-rule-dtr & verb_pc_intrans-rule-dtr & nocoord &
  [ SYNSEM [ LOCAL [ CAT [ HEAD verb,
                           VAL [ SPEC < >,
                                 COMPS < >,
@@ -702,11 +707,21 @@ deadjectival-verb-lex-rule := inflecting-lex-rule & verb_pc_intrans-rule-dtr & n
                   XARG #xarg ] ],
   DTR basic-intersective-adjective-lex & [ SYNSEM.LOCAL.CONT.HOOK [ INDEX #index ] ] ].
 
+deadjectival-verb-lex-rule :+
+ [ INFLECTED [ VERB_PC_INTRANS-VERB-FLAG -,
+               VERB_PC_DERIVATION1-FLAG - ] ].
+
 verb_pc_intrans-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ INFLECTED #infl,
+  [ INFLECTED [ VERB_PC_DERIVATION1-FLAG #verb_pc_derivation1,
+                VERB_PC_INTRANS-VERB-FLAG +,
+                NOUN_PC_NON_ABS_SG-FLAG #noun_pc_non_abs_sg,
+                NOUN_PC_ABS_SG-FLAG #noun_pc_abs_sg,
+                VERB_PC_TRANS-VERB-FLAG #verb_pc_trans-verb ],
     DTR verb_pc_intrans-rule-dtr &
-        [ INFLECTED #infl &
-                    [ VERB_TRANS-VERB-FLAG na ] ] ].
+        [ INFLECTED [ VERB_PC_DERIVATION1-FLAG #verb_pc_derivation1,
+                      NOUN_PC_NON_ABS_SG-FLAG #noun_pc_non_abs_sg,
+                      NOUN_PC_ABS_SG-FLAG #noun_pc_abs_sg,
+                      VERB_PC_TRANS-VERB-FLAG #verb_pc_trans-verb ] ] ].
 
 verb-pc100_lrt1_IND_3sg-lex-rule := verb_pc_intrans-lex-rule-super &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.MOOD ind,
@@ -787,10 +802,16 @@ verb-pc100_lrt13_APP_3pl-lex-rule := verb_pc_intrans-lex-rule-super &
                          HEAD.FORM finite ] ] ].
 
 verb_pc_trans-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ INFLECTED #infl,
+  [ INFLECTED [ VERB_PC_DERIVATION1-FLAG #verb_pc_derivation1,
+                VERB_PC_INTRANS-VERB-FLAG #verb_pc_intrans-verb,
+                NOUN_PC_NON_ABS_SG-FLAG #noun_pc_non_abs_sg,
+                NOUN_PC_ABS_SG-FLAG #noun_pc_abs_sg,
+                VERB_PC_TRANS-VERB-FLAG + ],
     DTR verb_pc_trans-rule-dtr &
-        [ INFLECTED #infl &
-                    [ VERB_INTRANS-VERB-FLAG na ] ] ].
+        [ INFLECTED [ VERB_PC_DERIVATION1-FLAG #verb_pc_derivation1,
+                      VERB_PC_INTRANS-VERB-FLAG #verb_pc_intrans-verb,
+                      NOUN_PC_NON_ABS_SG-FLAG #noun_pc_non_abs_sg,
+                      NOUN_PC_ABS_SG-FLAG #noun_pc_abs_sg ] ] ].
 
 verb-pc101_lrt1_IND_3sg_3sg-lex-rule := verb_pc_trans-lex-rule-super &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.MOOD ind,
@@ -880,17 +901,15 @@ verb-pc101_lrt11_APP_3pl-lex-rule := verb_pc_trans-lex-rule-super &
 
 verb_pc_derivation1-lex-rule-super := lex-rule & verb_pc_intrans-or-verb_pc_trans-rule-dtr &
   [ INFLECTED [ VERB_PC_DERIVATION1-FLAG +,
-                NOUN_PC_ABS_SG-OR-NOUN_PC_NON_ABS_SG-FLAG #noun_pc_abs_sg-or-noun_pc_non_abs_sg,
-                VERB_INTRANS-VERB-FLAG #verb_intrans-verb,
+                VERB_PC_INTRANS-VERB-FLAG #verb_pc_intrans-verb,
                 NOUN_PC_NON_ABS_SG-FLAG #noun_pc_non_abs_sg,
                 NOUN_PC_ABS_SG-FLAG #noun_pc_abs_sg,
-                VERB_TRANS-VERB-FLAG #verb_trans-verb ],
+                VERB_PC_TRANS-VERB-FLAG #verb_pc_trans-verb ],
     DTR verb_pc_CNN-or-verb_pc_derivation1-rule-dtr &
-        [ INFLECTED [ NOUN_PC_ABS_SG-OR-NOUN_PC_NON_ABS_SG-FLAG #noun_pc_abs_sg-or-noun_pc_non_abs_sg,
-                      VERB_INTRANS-VERB-FLAG #verb_intrans-verb,
+        [ INFLECTED [ VERB_PC_INTRANS-VERB-FLAG #verb_pc_intrans-verb,
                       NOUN_PC_NON_ABS_SG-FLAG #noun_pc_non_abs_sg,
                       NOUN_PC_ABS_SG-FLAG #noun_pc_abs_sg,
-                      VERB_TRANS-VERB-FLAG #verb_trans-verb ] ] ].
+                      VERB_PC_TRANS-VERB-FLAG #verb_pc_trans-verb ] ] ].
 
 
 verb-pc102_lrt1-lex-rule := add-only-no-ccont-rule & cont-change-only-lex-rule & infl-lex-rule & verb_pc_derivation1-lex-rule-super &
@@ -948,17 +967,15 @@ rec-pst-pres-lex-rule := add-only-no-ccont-rule & const-lex-rule & cont-change-o
 
 verb_pc_CNN-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb_pc_CNN_ending-rule-dtr &
   [ INFLECTED [ VERB_PC_DERIVATION1-FLAG +,
-                NOUN_PC_ABS_SG-OR-NOUN_PC_NON_ABS_SG-FLAG #noun_pc_abs_sg-or-noun_pc_non_abs_sg,
-                VERB_INTRANS-VERB-FLAG #verb_intrans-verb,
+                VERB_PC_INTRANS-VERB-FLAG #verb_pc_intrans-verb,
                 NOUN_PC_NON_ABS_SG-FLAG #noun_pc_non_abs_sg,
                 NOUN_PC_ABS_SG-FLAG #noun_pc_abs_sg,
-                VERB_TRANS-VERB-FLAG #verb_trans-verb ],
+                VERB_PC_TRANS-VERB-FLAG #verb_pc_trans-verb ],
     DTR verb_pc_CNN-or-verb_pc_derivation1-rule-dtr &
-        [ INFLECTED [ NOUN_PC_ABS_SG-OR-NOUN_PC_NON_ABS_SG-FLAG #noun_pc_abs_sg-or-noun_pc_non_abs_sg,
-                      VERB_INTRANS-VERB-FLAG #verb_intrans-verb,
+        [ INFLECTED [ VERB_PC_INTRANS-VERB-FLAG #verb_pc_intrans-verb,
                       NOUN_PC_NON_ABS_SG-FLAG #noun_pc_non_abs_sg,
                       NOUN_PC_ABS_SG-FLAG #noun_pc_abs_sg,
-                      VERB_TRANS-VERB-FLAG #verb_trans-verb ] ] ].
+                      VERB_PC_TRANS-VERB-FLAG #verb_pc_trans-verb ] ] ].
 
 verb-pc103_lrt1_CNNbc-lex-rule := verb_pc_CNN-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.HEAD.FORM cnnbc ].
@@ -976,10 +993,16 @@ verb-pc103_lrt5_CNNif-lex-rule := verb_pc_CNN-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.HEAD.FORM cnnif ].
 
 verb_pc_CNN_ending-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ INFLECTED #infl,
+  [ INFLECTED [ VERB_PC_DERIVATION1-FLAG #verb_pc_derivation1,
+                VERB_PC_INTRANS-VERB-FLAG +,
+                NOUN_PC_NON_ABS_SG-FLAG #noun_pc_non_abs_sg,
+                NOUN_PC_ABS_SG-FLAG #noun_pc_abs_sg,
+                VERB_PC_TRANS-VERB-FLAG #verb_pc_trans-verb ],
     DTR verb_pc_CNN_ending-rule-dtr &
-        [ INFLECTED #infl &
-                    [ VERB_TRANS-VERB-FLAG na ] ] ].
+        [ INFLECTED [ VERB_PC_DERIVATION1-FLAG #verb_pc_derivation1,
+                      NOUN_PC_NON_ABS_SG-FLAG #noun_pc_non_abs_sg,
+                      NOUN_PC_ABS_SG-FLAG #noun_pc_abs_sg,
+                      VERB_PC_TRANS-VERB-FLAG #verb_pc_trans-verb ] ] ].
 
 verb-pc104_lrt1_CNN_1sg-lex-rule := verb_pc_CNN_ending-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 1st,
