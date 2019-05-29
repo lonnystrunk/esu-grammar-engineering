@@ -71,7 +71,6 @@ E.MOOD : MOOD
   app <> app
   int <> int
   ptp <> ptp
-  ind << [e]
-
+  * <> *
 E.SITUATION : SITUATION
   * <> *
