@@ -228,10 +228,11 @@ no-aspect := aspect.
 
 ;;; Mood
 
-ind := mood.
+ind-or-int := mood.
+ind := ind-or-int.
 opt := mood.
 app := mood.
-int := mood.
+int := ind-or-int.
 ptp := mood.
 
 ;;;;;;;;;;;;;;;;;;;
@@ -754,7 +755,8 @@ verb-pc100_lrt5_OPT_1pl-lex-rule := verb_pc_intrans-lex-rule-super &
                          HEAD.FORM finite ] ] ].
 
 verb-pc100_lrt6_INT_3sg-lex-rule := verb_pc_intrans-lex-rule-super &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.MOOD int,
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX [ SF ques,
+				     E.MOOD int ],
                    CAT [ VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 3rd,
                                                                     NUM sg ],
                          HEAD.FORM finite ] ] ].
@@ -772,7 +774,8 @@ verb-pc100_lrt8_APP_3pl-lex-rule := verb_pc_intrans-lex-rule-super &
                          HEAD.FORM finite ] ] ].
 
 verb-pc100_lrt9_INT_3sg-lex-rule := verb_pc_intrans-lex-rule-super &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.MOOD int,
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX [ SF ques,
+				     E.MOOD int ],
                    CAT [ VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 3rd,
                                                                     NUM sg ],
                          HEAD.FORM finite ] ] ].
@@ -784,13 +787,15 @@ verb-pc100_lrt10_IND_3du-lex-rule := verb_pc_intrans-lex-rule-super &
                          HEAD.FORM finite ] ] ].
 
 verb-pc100_lrt11_INT_2sg-lex-rule := verb_pc_intrans-lex-rule-super & 
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.MOOD int,
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX [ SF ques,
+				     E.MOOD int ],
                    CAT [ VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 2nd,
                                                                     NUM sg ],
                          HEAD.FORM finite ] ] ].
 
 verb-pc100_lrt12_INT_3pl-lex-rule := verb_pc_intrans-lex-rule-super & 
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.MOOD int,
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX [ SF ques,
+				     E.MOOD int ],
                    CAT [ VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 3rd,
                                                                     NUM pl ],
                          HEAD.FORM finite ] ] ].
@@ -878,7 +883,8 @@ verb-pc101_lrt8_IND_3pl_3pl-lex-rule := verb_pc_trans-lex-rule-super &
                          HEAD.FORM finite ] ] ].
 
 verb-pc101_lrt9_INT_3pl_3sg-lex-rule := verb_pc_trans-lex-rule-super & 
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.MOOD int,
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX [SF ques,
+				    E.MOOD int ],
                    CAT [ VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 3rd,
                                                                       NUM pl ],
                                COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 3rd,
@@ -886,7 +892,8 @@ verb-pc101_lrt9_INT_3pl_3sg-lex-rule := verb_pc_trans-lex-rule-super &
                          HEAD.FORM finite ] ] ].
 
 verb-pc101_lrt10_INT_3sg_3sg-lex-rule := verb_pc_trans-lex-rule-super &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.MOOD int,
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX [ SF ques,
+				     E.MOOD int ],
                    CAT [ VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 3rd,
                                                                       NUM sg ],
                                COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 3rd,

@@ -17,6 +17,7 @@ ace="/usr/local/bin/ace"
 #Full pipeline; errors from last step; allow subsumption check
 #echo $SENTENCE | $ace -g grammars/$SOURCE/$SOURCE.dat 2>/dev/null | $ace -g tm/$TARGET/$TARGET.dat 2>/dev/null | $ace -g grammars/$TARGET/$TARGET.dat -e
 
+#this is normal
 #Full pipeline; verbose
 echo $SENTENCE | $ace -g grammars/$SOURCE/$SOURCE.dat | $ace -g tm/$TARGET/$TARGET.dat | $ace -g grammars/$TARGET/$TARGET.dat -e --disable-subsumption-test
 
