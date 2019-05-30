@@ -36,7 +36,6 @@ COG-ST : COG-ST
   activ-or-less <> activ-or-less
   * <> *
 
-
 PNG.PER : PER
   3rd <> third
   2nd <> second
@@ -59,7 +58,6 @@ E.TENSE : TENSE
   rec-pst-pres >> present
   rec-pst-pres << *
   rec-pst-pres << [e]
-
 
 E.ASPECT : ASPECT
   cus <> cus

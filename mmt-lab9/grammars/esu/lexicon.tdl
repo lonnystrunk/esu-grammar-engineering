@@ -45,88 +45,66 @@ maybaq := noun_abs_sg-noun-lex &
   [ STEM < "maybaq" >,
     SYNSEM.LKEYS.KEYREL.PRED "_p.n._n_rel" ].
 
+
+
 tuntu_non := noun_non_abs_sg-noun-lex &
   [ STEM < "tuntu" >,
     SYNSEM.LKEYS.KEYREL.PRED "_caribou_n_rel" ].
 
-mayba := noun_non_abs_sg-noun-lex &
-  [ STEM < "mayba" >,
+maybar := noun_non_abs_sg-noun-lex &
+  [ STEM < "maybar" >,
     SYNSEM.LKEYS.KEYREL.PRED "_p.n._n_rel" ].
 
-pani := noun_non_abs_sg-noun-lex &
-  [ STEM < "pani" >,
+panig := noun_non_abs_sg-noun-lex &
+  [ STEM < "panig" >,
     SYNSEM.LKEYS.KEYREL.PRED "_daughter_n_rel" ].
 
 ui := noun_non_abs_sg-noun-lex &
   [ STEM < "ui" >,
     SYNSEM.LKEYS.KEYREL.PRED "_husband_n_rel" ].
 
-qimugt := noun_non_abs_sg-noun-lex &
-  [ STEM < "qimugt" >,
+qimugte := noun_non_abs_sg-noun-lex &
+  [ STEM < "qimugte" >,
     SYNSEM.LKEYS.KEYREL.PRED "_dog_n_rel" ].
 
 angute := noun_non_abs_sg-noun-lex &
   [ STEM < "angute" >,
     SYNSEM.LKEYS.KEYREL.PRED "_man_n_rel" ].
 
-nulia := noun_non_abs_sg-noun-lex &
-  [ STEM < "nulia" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_wife_n_rel" ].
-
 nuliar := noun_non_abs_sg-noun-lex &
   [ STEM < "nuliar" >,
     SYNSEM.LKEYS.KEYREL.PRED "_wife_n_rel" ].
 
-neq_non := noun_non_abs_sg-noun-lex &
-  [ STEM < "neq" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_fish_n_rel" ].
-
-mikelngu := noun_non_abs_sg-noun-lex &
-  [ STEM < "mikelngu" >,
+mikelngur- := noun_non_abs_sg-noun-lex &
+  [ STEM < "mikelngur-" >,
     SYNSEM.LKEYS.KEYREL.PRED "_child_n_rel" ].
 
-mikelngu-u := noun_non_abs_sg-noun-lex &
-  [ STEM < "mikelngu-u" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_child_n_rel" ].
-
-arna := noun_non_abs_sg-noun-lex &
-  [ STEM < "arna" >,
+arnar := noun_non_abs_sg-noun-lex &
+  [ STEM < "arnar" >,
     SYNSEM.LKEYS.KEYREL.PRED "_woman_n_rel" ].
 
-neqa_non := noun_non_abs_sg-noun-lex &
-  [ STEM < "neqa" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_fish_n_rel" ].
-
-qaya := noun_non_abs_sg-noun-lex &
-  [ STEM < "qaya" >,
+qayar := noun_non_abs_sg-noun-lex &
+  [ STEM < "qayar" >,
     SYNSEM.LKEYS.KEYREL.PRED "_kayak_n_rel" ].
 
-ingri := noun_non_abs_sg-noun-lex &
-  [ STEM < "ingri" >,
+ingrir := noun_non_abs_sg-noun-lex &
+  [ STEM < "ingrir" >,
     SYNSEM.LKEYS.KEYREL.PRED "_mountain_n_rel" ].
 
-qimugte := noun_non_abs_sg-noun-lex &
-  [ STEM < "qimugte" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_dog_n_rel" ].
-
-kuska := noun_non_abs_sg-noun-lex &
-  [ STEM < "kuska" >,
+kuskar := noun_non_abs_sg-noun-lex &
+  [ STEM < "kuskar" >,
     SYNSEM.LKEYS.KEYREL.PRED "_cat_n_rel" ].
 
 neqe := noun_non_abs_sg-noun-lex &
   [ STEM < "neqe" >,
     SYNSEM.LKEYS.KEYREL.PRED "_fish_n_rel" ].
 
-cikungua := noun_non_abs_sg-noun-lex &
-  [ STEM < "cikungua" >,
+cikunguar := noun_non_abs_sg-noun-lex &
+  [ STEM < "cikunguar" >,
     SYNSEM.LKEYS.KEYREL.PRED "_glass_n_rel" ].
 
 nunakuarcuute := noun_non_abs_sg-noun-lex &
   [ STEM < "nunakuarcuute" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_car_n_rel" ].
-
-nunakuarcuut := noun_non_abs_sg-noun-lex &
-  [ STEM < "nunakuarcuut" >,
     SYNSEM.LKEYS.KEYREL.PRED "_car_n_rel" ].
 
 ;;This is not correct. Nuna more accurately translates to "land." This is for the sake of mmt.
@@ -134,10 +112,12 @@ nuna := noun_non_abs_sg-noun-lex &
   [ STEM < "nuna" >,
     SYNSEM.LKEYS.KEYREL.PRED "_park_n_rel" ].
 
+
+
 ;;; Adjectives
 
-kavircet := deadjectival-verb-lex-rule &
-  [ STEM < "kavircet" >,
+kavircete := deadjectival-verb-lex-rule &
+  [ STEM < "kavircete" >,
     SYNSEM.LKEYS.KEYREL.PRED "_red_a_rel"].
 
 angnir := deadjectival-verb-lex-rule &
@@ -152,29 +132,19 @@ kaig := deadjectival-verb-lex-rule &
   [ STEM < "kaig" >,
     SYNSEM.LKEYS.KEYREL.PRED "_hungry_a_rel"].
 
-;;; Verbs
 
-yura := verb_abs-intrans-verb-lex &
-  [ STEM < "yura" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_dance_v_rel" ].
+
+;;; Verbs
 
 yurar := verb_abs-intrans-verb-lex &
   [ STEM < "yurar" >,
     SYNSEM.LKEYS.KEYREL.PRED "_dance_v_rel" ].
 
-nerb := verb_abs-abm-intrans-verb-lex &
-  [ STEM < "nerb" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
-
 nere_int := verb_abs-abm-intrans-verb-lex &
   [ STEM < "nere" >,
     SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
 
-ner_int := verb_abs-abm-intrans-verb-lex &
-  [ STEM < "ner" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
-
-tai_int := verb_abs-intrans-verb-lex &
+tai := verb_abs-intrans-verb-lex &
   [ STEM < "tai" >,
     SYNSEM.LKEYS.KEYREL.PRED "_come_v_rel" ].
 
@@ -182,87 +152,55 @@ qia := verb_abs-intrans-verb-lex &
   [ STEM < "qia" >,
     SYNSEM.LKEYS.KEYREL.PRED "_cry_v_rel" ].
 
-aya := verb_abs-intrans-verb-lex &
-  [ STEM < "aya" >,
+ayag := verb_abs-intrans-verb-lex &
+  [ STEM < "ayag" >,
     SYNSEM.LKEYS.KEYREL.PRED "_go_v_rel" ].
 
-tekit_int := verb_abs-intrans-verb-lex &
-  [ STEM < "tekit" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_arrive_v_rel" ].
-
-tekiy := verb_abs-intrans-verb-lex &
-  [ STEM < "tekiy" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_arrive_v_rel" ].
-
 tekite_int := verb_abs-intrans-verb-lex &
-  [ STEM < "tekite" >,
+  [ STEM < "tekit" >,
     SYNSEM.LKEYS.KEYREL.PRED "_arrive_v_rel" ].
 
 kenir_int := verb_abs-abm-intrans-verb-lex &
   [ STEM < "kenir" >,
     SYNSEM.LKEYS.KEYREL.PRED "_cook_v_rel" ].
 
-keni_int := verb_abs-abm-intrans-verb-lex &
-  [ STEM < "keni" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_cook_v_rel" ].
-
 qavar := verb_abs-intrans-verb-lex &
   [ STEM < "qavar" >,
     SYNSEM.LKEYS.KEYREL.PRED "_sleep_v_rel" ].
 
-qava := verb_abs-intrans-verb-lex &
-  [ STEM < "qava" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_sleep_v_rel" ].
-
-umyuarteq := verb_abs-intrans-verb-lex &
-  [ STEM < "umyuarteq" >,
+umyuarteqe := verb_abs-intrans-verb-lex &
+  [ STEM < "umyuarteqe" >,
     SYNSEM.LKEYS.KEYREL.PRED "_think_v_rel" ].
 
-apt := verb_abs-abm-intrans-verb-lex &
-  [ STEM < "apt" >,
+apte := verb_abs-abm-intrans-verb-lex &
+  [ STEM < "apte" >,
     SYNSEM.LKEYS.KEYREL.PRED "_ask_v_rel" ].
 
-malirq_int := verb_abs-abm-intrans-verb-lex &
-  [ STEM < "malirq" >,
+malirqe_int := verb_abs-abm-intrans-verb-lex &
+  [ STEM < "malirqe" >,
     SYNSEM.LKEYS.KEYREL.PRED "_chase_v_rel" ].
+
+
 
 uita := copula-verb-lex &
   [ STEM < "uita" > ].
 
+
+
 kenir_tr := verb_erg-abs-trans-verb-lex &
   [ STEM < "kenir" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_cook_v_rel" ].
-
-keni_tr := verb_erg-abs-trans-verb-lex &
-  [ STEM < "keni" >,
     SYNSEM.LKEYS.KEYREL.PRED "_cook_v_rel" ].
 
 nere_tr := verb_erg-abs-trans-verb-lex &
   [ STEM < "nere" >,
     SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
 
-ner_tr := verb_erg-abs-trans-verb-lex &
-  [ STEM < "ner" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
-
-assik := verb_erg-abs-trans-verb-lex &
-  [ STEM < "assik" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_like_v_rel" ].
-
 assike := verb_erg-abs-trans-verb-lex &
   [ STEM < "assike" >,
     SYNSEM.LKEYS.KEYREL.PRED "_like_v_rel" ].
 
-malirq_tr := verb_erg-abs-trans-verb-lex &
-  [ STEM < "malirq" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_chase_v_rel" ].
-
-malirqe := verb_erg-abs-trans-verb-lex &
+malirqe_tr := verb_erg-abs-trans-verb-lex &
   [ STEM < "malirqe" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_chase_v_rel" ].
-
-malirqa := verb_erg-abs-trans-verb-lex &
-  [ STEM < "malirqa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_chase_v_rel" ].
 
 akngirte := verb_erg-abs-trans-verb-lex &
