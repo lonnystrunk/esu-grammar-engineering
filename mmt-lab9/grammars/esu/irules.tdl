@@ -2,7 +2,9 @@
 ;;; Inflecting Lexical Rule Instances
 
 %(letter-set (!a aeiu))
+%(letter-set (!v aeiu))
 %(letter-set (!c cgklmnpqrstvwy))
+%(letter-set (!k cgklmnpqrstvwy))
 %(letter-set (!r rg))
 
 noun-pc101_lrt1_ERG_sg-suffix :=
@@ -10,11 +12,11 @@ noun-pc101_lrt1_ERG_sg-suffix :=
 noun-pc101_lrt1_ERG_sg-lex-rule.
 
 noun-pc101_lrt2_ABS_3sg_sg-suffixA :=
-%suffix (* -a) (g -a) (r- -a) (r -a) (!a!a!r !a!a!r-a) (!a!a !a!a-nga) (!ca !c-ii) (e -ii)
+%suffix (* -a) (g -a) (r- -a) (r -a) (!a!v!r !a!v!r-a) (!a!v !a!v-nga) (!ca !c-ii) (e -ii)
 noun-pc101_lrt2_ABS_3sg_sg-lex-rule-poss.
 
 noun-pc101_lrt2_ABS_3sg_sg-suffixB :=
-%suffix (* -a) (g -a) (r- -a) (r -a) (!a!a!r !a!a!r-a) (!a!a !a!a-nga) (!ca !c-ii) (e -ii)
+%suffix (* -a) (g -a) (r- -a) (r -a) (!a!v!r !a!v!r-a) (!a!v !a!v-nga) (!ca !c-ii) (e -ii)
 noun-pc101_lrt2_ABS_3sg_sg-lex-rule-pron.
 
 noun-pc101_lrt3_ABS_1sg_sg-suffix :=
@@ -38,27 +40,27 @@ noun-pc101_lrt7_ABM_sg-suffix :=
 noun-pc101_lrt7_ABM_sg-lex-rule.
 
 noun-pc101_lrt8_ERG_3sg_sg-suffixA :=
-%suffix (* -an) (g -an) (r- -an) (r -an) (!a!a!r !a!a!r-an) (!a!a !a!a-ngan) (!ca !c-iin) (e -iin)
+%suffix (* -an) (g -an) (r- -an) (r -an) (!a!v!r !a!v!r-an) (!a!v !a!v-ngan) (!ca !c-iin) (e -iin)
 noun-pc101_lrt8_ERG_3sg_sg-lex-rule-poss.
 
 noun-pc101_lrt8_ERG_3sg_sg-suffixB :=
-%suffix (* -an) (g -an) (r- -an) (r -an) (!a!a!r !a!a!r-an) (!a!a !a!a-ngan) (!ca !c-iin) (e -iin)
+%suffix (* -an) (g -an) (r- -an) (r -an) (!a!v!r !a!v!r-an) (!a!v !a!v-ngan) (!ca !c-iin) (e -iin)
 noun-pc101_lrt8_ERG_3sg_sg-lex-rule-pron.
 
 noun-pc101_lrt9_ERG_3pl_pl-suffixA :=
-%suffix (* -it) (g -it) (r- -it) (r -it) (!a!a!r !a!a!r-it) (!a!a !a!a-ngit) (e -ait)
+%suffix (* -it) (g -it) (r- -it) (r -it) (!a!v!r !a!v!r-it) (!a!v !a!v-ngit) (e -ait)
 noun-pc101_lrt9_ERG_3pl_pl-lex-rule-poss.
 
 noun-pc101_lrt9_ERG_3pl_pl-suffixB :=
-%suffix (* -it) (g -it) (r- -it) (r -it) (!a!a!r !a!a!r-it) (!a!a !a!a-ngit) (e -ait)
+%suffix (* -it) (g -it) (r- -it) (r -it) (!a!v!r !a!v!r-it) (!a!v !a!v-ngit) (e -ait)
 noun-pc101_lrt9_ERG_3pl_pl-lex-rule-pron.
 
 noun-pc101_lrt10_ABS_3pl_sg-suffixA :=
-%suffix (* -at) (g -at) (r- -at) (r -at) (!a!a!r !a!a!r-at) (!a!a !a!a-ngat) (!ca !c-iit) (e -iit)
+%suffix (* -at) (g -at) (r- -at) (r -at) (!a!v!r !a!v!r-at) (!a!v !a!v-ngat) (!ca !c-iit) (e -iit)
 noun-pc101_lrt10_ABS_3pl_sg-lex-rule-poss.
 
 noun-pc101_lrt10_ABS_3pl_sg-suffixB :=
-%suffix (* -at) (g -at) (r- -at) (r -at) (!a!a!r !a!a!r-at) (!a!a !a!a-ngat) (!ca !c-iit) (e -iit)
+%suffix (* -at) (g -at) (r- -at) (r -at) (!a!v!r !a!v!r-at) (!a!v !a!v-ngat) (!ca !c-iit) (e -iit)
 noun-pc101_lrt10_ABS_3pl_sg-lex-rule-pron.
 
 noun-pc101_lrt11_LOC_sg-suffix :=
@@ -81,10 +83,14 @@ noun-pc101_lrt15_ERG_1pl_sg-suffix :=
 %suffix (* -mta) (!c -mta) (r- -mta)
 noun-pc101_lrt15_ERG_1pl_sg-lex-rule.
 
+noun-pc101_lrt16_ABS_2sg_sg-suffix :=
+%suffix (* -n) (r -n) (r- -u-n) (g -i-n)
+noun-pc101_lrt16_ABS_2sg_sg-lex-rule.
+
 
 
 nmz_situation-suffix :=
-%suffix (* -cir) (!r -ucir) (!a!a!r !a!a!r-ucir) (e -ucir) (te y-ucir)
+%suffix (* -cir) (!r -ucir) (!a!v!r !a!v!r-ucir) (e -ucir) (te y-ucir)
 nmz_situation-lex-rule.
 
 nmz_one-who-Ved-suffix :=
@@ -96,25 +102,25 @@ vbz_LOC-suffix :=
 vbz_be_at-verb-lex-rule.
 
 vbz_to_be-suffix :=
-%suffix (* -u) (g -u) (r -u) (r- -u) (!a!a!r !a!a!r-u) (!a!a !a!a-ngu) (e -ngu) (!cte !cte-ngu)
+%suffix (* -u) (g -u) (r -u) (r- -u) (!a!v!r !a!v!r-u) (!a!v !a!v-ngu) (e -ngu) (!cte !cte-ngu)
 vbz_to_be-verb-lex-rule.
 
 
 
 verb-pc100_lrt1_IND_3sg-suffix :=
-%suffix (* -uq) (e -uq) (!r !r-tuq) (!a!a !a!a-guq) (nere nerb-uq)
+%suffix (* -uq) (e -uq) (!r !r-tuq) (!a!v !a!v-guq) (!a-!v !a-!v-guq) (nere nerb-uq)
 verb-pc100_lrt1_IND_3sg-lex-rule.
 
 verb-pc100_lrt2_IND_1sg-suffix :=
-%suffix (* -ua) (!a !a-unga) (e -ua) (!r !r-tua) (!a!a !a!a-gua) (!a-!a !a-!a-gua) (nere nerb-ua)
+%suffix (* -ua) (!a !a-unga) (e -ua) (!r !r-tua) (!a!v !a!v-gua) (!a-!v !a-!v-gua) (nere nerb-ua)
 verb-pc100_lrt2_IND_1sg-lex-rule.
 
 verb-pc100_lrt3_APP_3sg-suffix :=
-%suffix (* -luni) (e -luni) (te -lluni) (nere ner-luni)
+%suffix (* -luni) (e -luni) (!c!ke !c!ke-lluni) (te -lluni) (nere ner-luni)
 verb-pc100_lrt3_APP_3sg-lex-rule.
 
 verb-pc100_lrt4_OPT_2sg-suffix :=
-%suffix (* -a) (!a!a !a!a-gi) (!r -a) (!a!a!r !a!a!r-a) (e -i) (te te-n)
+%suffix (* -a) (!a!v !a!v-gi) (!r -a) (!a!v!r !a!v!r-a) (e -i) (te te-n)
 verb-pc100_lrt4_OPT_2sg-lex-rule.
 
 verb-pc100_lrt5_OPT_1pl-suffix :=
@@ -122,19 +128,19 @@ verb-pc100_lrt5_OPT_1pl-suffix :=
 verb-pc100_lrt5_OPT_1pl-lex-rule.
 
 verb-pc100_lrt6_INT_3sg-suffix :=
-%suffix (* -a) (e -a) (!r !r-ta) (!a!a !a!a-ga) (nere nerb-a)
+%suffix (* -a) (e -a) (!r !r-ta) (!a!v !a!v-ga) (nere nerb-a)
 verb-pc100_lrt6_INT_3sg-lex-rule.
 
 verb-pc100_lrt7_IND_3pl-suffix :=
-%suffix (* -ut) (e -ut) (!r !r-tut) (!a!a !a!a-gut) (nere nerb-ut)
+%suffix (* -ut) (e -ut) (!r !r-tut) (!a!v !a!v-gut) (!a-!v !a-!v-gut) (nere nerb-ut)
 verb-pc100_lrt7_IND_3pl-lex-rule.
 
 verb-pc100_lrt8_APP_3pl-suffix :=
-%suffix (* -luki) (e -luki) (te -lluki) (nere ner-luki)
+%suffix (* -luki) (e -luki) (!c!ke !c!ke-lluki) (te -lluki) (nere ner-luki)
 verb-pc100_lrt8_APP_3pl-lex-rule.
 
 verb-pc100_lrt10_IND_3du-suffix :=
-%suffix (* -uk) (e -uk) (!r !r-tuk) (!a!a !a!a-guk) (nere nerb-uk)
+%suffix (* -uk) (e -uk) (!r !r-tuk) (!a!v !a!v-guk) (!a-!v !a-!v-guk) (nere nerb-uk)
 verb-pc100_lrt10_IND_3du-lex-rule.
 
 verb-pc100_lrt11_INT_2sg-suffix :=
@@ -142,57 +148,57 @@ verb-pc100_lrt11_INT_2sg-suffix :=
 verb-pc100_lrt11_INT_2sg-lex-rule.
 
 verb-pc100_lrt12_INT_3pl-suffix :=
-%suffix (* -at) (e -at) (!r !r-tat) (!a!a !a!a-gat) (nere nerb-at)
+%suffix (* -at) (e -at) (!r !r-tat) (!a!v !a!v-gat) (nere nerb-at)
 verb-pc100_lrt12_INT_3pl-lex-rule.
 
 verb-pc100_lrt13_APP_3sg-suffix :=
-%suffix (* -luteng) (e -luteng) (te -lluteng) (nere ner-luteng)
+%suffix (* -luteng) (e -luteng) (!c!ke !c!ke-lluteng) (te -lluteng) (nere ner-luteng)
 verb-pc100_lrt13_APP_3pl-lex-rule.
 
 
 
 verb-pc101_lrt1_IND_3sg_3sg-suffix :=
-%suffix (* -aa) (!a !a-a) (e -aa) (!a!a !a!a-gaa) (nere nerb-aa)
+%suffix (* -aa) (!a !a-a) (e -aa) (!a!v !a!v-gaa) (nere nerb-aa)
 verb-pc101_lrt1_IND_3sg_3sg-lex-rule.
 
 verb-pc101_lrt2_IND_3sg_3pl-suffix :=
-%suffix (* -ai) (!a !a-i) (e -ai) (!a!a !a!a-gai) (nere nerb-ai)
+%suffix (* -ai) (!a !a-i) (e -ai) (!a!v !a!v-gai) (nere nerb-ai)
 verb-pc101_lrt2_IND_3sg_3pl-lex-rule.
 
 verb-pc101_lrt3_IND_3pl_3sg-suffix :=
-%suffix (* -aat) (!a !a-at) (e -aat) (!a!a !a!a-gaat) (nere nerb-aat)
+%suffix (* -aat) (!a !a-at) (e -aat) (!a!v !a!v-gaat) (nere nerb-aat)
 verb-pc101_lrt3_IND_3pl_3sg-lex-rule.
 
 verb-pc101_lrt4_IND_1sg_3sg-suffix :=
-%suffix (* -aqa) (e -aqa) (!a!a !a!a-gaqa) (nere nerb-aqa)
+%suffix (* -aqa) (e -aqa) (!a!v !a!v-gaqa) (nere nerb-aqa)
 verb-pc101_lrt4_IND_1sg_3sg-lex-rule.
 
 verb-pc101_lrt5_IND_1sg_2sg-suffix :=
-%suffix (* -amken) (e -amken) (!a!a !a!a-gamken) (nere nerb-amken)
+%suffix (* -amken) (e -amken) (!a!v !a!v-gamken) (nere nerb-amken)
 verb-pc101_lrt5_IND_1sg_2sg-lex-rule.
 
 verb-pc101_lrt6_IND_1pl_3sg-suffix :=
-%suffix (* -aput) (e -aput) (!a!a !a!a-gaput) (nere nerb-aput)
+%suffix (* -aput) (e -aput) (!a!v !a!v-gaput) (nere nerb-aput)
 verb-pc101_lrt6_IND_1pl_3sg-lex-rule.
 
 verb-pc101_lrt7_IND_3sg_1sg-suffix :=
-%suffix (* -aanga) (!a !a-anga) (e -aanga) (!a!a !a!a-gaanga) (nere nerb-aanga)
+%suffix (* -aanga) (!a !a-anga) (e -aanga) (!a!v !a!v-gaanga) (nere nerb-aanga)
 verb-pc101_lrt7_IND_3sg_1sg-lex-rule.
 
 verb-pc101_lrt8_IND_3pl_3pl-suffix :=
-%suffix (* -ait) (!a !a-it) (e -ait) (!a!a !a!a-gait) (nere nerb-ait)
+%suffix (* -ait) (!a !a-it) (e -ait) (!a!v !a!v-gait) (nere nerb-ait)
 verb-pc101_lrt8_IND_3pl_3pl-lex-rule.
 
 verb-pc101_lrt9_INT_3pl_3sg-suffix :=
-%suffix (* -atgu) (e -atgu) (!r !r-tatgu) (!a!a -gatgu) (nere nerb-atgu)
+%suffix (* -atgu) (e -atgu) (!r !r-tatgu) (!a!v !a!v-gatgu) (nere nerb-atgu)
 verb-pc101_lrt9_INT_3pl_3sg-lex-rule.
 
 verb-pc101_lrt10_INT_3sg_3sg-suffix :=
-%suffix (* -au) (!a !a-agu) (e -au) (!r !r-tau) (!a!a -gau) (nere nerb-au)
+%suffix (* -au) (!a !a-agu) (e -au) (!r !r-tau) (!a!v !a!v-gau) (nere nerb-au)
 verb-pc101_lrt10_INT_3sg_3sg-lex-rule.
 
 verb-pc101_lrt11_APP_3pl-suffix :=
-%suffix (* -luki) (e -luki) (te -lluki) (nere ner-luki)
+%suffix (* -luki) (e -luki) (!c!ke !c!ke-lluki) (te -lluki) (nere ner-luki)
 verb-pc101_lrt11_APP_3pl-lex-rule.
 
 
@@ -220,11 +226,11 @@ esu-eviden-lex-rule.
 
 
 verb-pc103_lrt1_CNNbc-suffix :=
-%suffix (* -a) (r -a) (ag -ii) (!a!a !a!a-nga) (!a!a!r !a!a!r-a) (e -nga) (te c-a)
+%suffix (* -a) (r -a) (ag -ii) (!a!v !a!v-nga) (!a!v!r !a!v!r-a) (e -nga) (te c-a)
 verb-pc103_lrt1_CNNbc-lex-rule.
 
 verb-pc103_lrt2_CNNwv-suffix :=
-%suffix (* -aqa) (e -aqa) (!a!a !a!a-gaqa) (nere nerb-aqa)
+%suffix (* -aqa) (e -aqa) (!a!v !a!v-gaqa) (nere nerb-aqa)
 verb-pc103_lrt2_CNNwv-lex-rule.
 
 verb-pc103_lrt3_CNNbf-suffix :=
