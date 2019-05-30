@@ -304,8 +304,9 @@ abs-intransitive-verb-lex := intransitive-verb-lex &
 abs-abm-intransitive-verb-lex := transitive-verb-lex &
   [ ARG-ST < [ LOCAL.CAT.HEAD noun &
                               [ CASE abs ] ],
-             [ LOCAL.CAT.HEAD noun &
-                              [ CASE abm ] ] > ].
+             [ LOCAL [ CONT.HOOK.INDEX.PNG.PER 3rd,
+		       CAT.HEAD noun &
+                              [ CASE abm ] ] ] > ].
 
 erg-abs-transitive-verb-lex := transitive-verb-lex &
   [ ARG-ST < [ LOCAL.CAT.HEAD noun &

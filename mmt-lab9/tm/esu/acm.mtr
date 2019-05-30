@@ -5,9 +5,9 @@
 ; pro-insert-arg2 := pro-insert-arg2-mtr & [].
 
 ; Overt pronouns -> pro-drop
-pro-delete := pronoun-delete-mtr & [].
+pro-delete := pronoun-delete-mtr.
 
 ;Locative stuff
-in-loc := in-loc-mtr & [].
+in-loc := in-loc-mtr.
 
 ; loc-in := loc-in-mtr & [].
