@@ -901,7 +901,7 @@ verb-pc101_lrt10_INT_3sg_3sg-lex-rule := verb_pc_trans-lex-rule-super &
                          HEAD.FORM finite ] ] ].
 
 verb-pc101_lrt11_APP_3pl-lex-rule := verb_pc_trans-lex-rule-super & 
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.MOOD int,
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.MOOD app,
                    CAT [ VAL [ COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 3rd,
                                                                        NUM pl ] ],
                          HEAD.FORM finite ] ] ].

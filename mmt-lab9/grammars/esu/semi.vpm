@@ -58,12 +58,14 @@ E.TENSE : TENSE
   fut <> future
   rec-pst-pres >> present
   rec-pst-pres << *
+  rec-pst-pres << [e]
 
 
 E.ASPECT : ASPECT
   cus <> cus
   * >> no-aspect
   no-aspect << *
+  no-aspect << [e]
 
 E.MOOD : MOOD
   ind <> ind
@@ -72,6 +74,7 @@ E.MOOD : MOOD
   int <> int
   ptp <> ptp
   ind-or-int << [e]
+  ind-or-int << *
 
 E.SITUATION : SITUATION
   * <> *
