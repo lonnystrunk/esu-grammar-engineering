@@ -90,11 +90,11 @@ noun-pc101_lrt16_ABS_2sg_sg-lex-rule.
 
 
 nmz_situation-suffix :=
-%suffix (* -cir) (!r -ucir) (!a!v!r !a!v!r-ucir) (e -ucir) (te y-ucir)
+%suffix (* -cir) (e -ucir) (r -ucir) (g -ucir) (!a!v!r !a!v!r-ucir) (te y-ucir)
 nmz_situation-lex-rule.
 
 nmz_one-who-Ved-suffix :=
-%suffix (* -lleq) (!r -lleq)
+%suffix (* -lleq) (r -lleq) (g -lleq)
 nmz_one-who-Ved-lex-rule.
 
 vbz_LOC-suffix :=
