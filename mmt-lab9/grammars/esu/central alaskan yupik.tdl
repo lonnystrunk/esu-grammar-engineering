@@ -574,15 +574,15 @@ noun-pc101_lrt8_ERG_3sg_sg-lex-rule-pron := poss-pron-lex-rule &
     C-CONT.RELS.LIST.FIRST.ARG0.PNG [ PER 3rd,
                                       NUM sg ] ].
 
-noun-pc101_lrt9_ERG_3pl_pl-lex-rule-poss := noun_pc_non_abs_sg-lex-rule-super & possessum-lex-rule-1 &
+noun-pc101_lrt9_ERG_3pl_sg-lex-rule-poss := noun_pc_non_abs_sg-lex-rule-super & possessum-lex-rule-1 &
   [ SYNSEM.LOCAL [ CAT [ POSSESSUM.POSS-AGR [ PER 3rd,
                                               NUM pl ],
                          HEAD.CASE erg ],
-                   CONT.HOOK.INDEX.PNG.NUM pl ] ].
+                   CONT.HOOK.INDEX.PNG.NUM sg ] ].
 
-noun-pc101_lrt9_ERG_3pl_pl-lex-rule-pron := poss-pron-lex-rule &
+noun-pc101_lrt9_ERG_3pl_sg-lex-rule-pron := poss-pron-lex-rule &
   [ SYNSEM.LOCAL [ CAT.HEAD.CASE erg,
-                   CONT.HOOK.INDEX.PNG.NUM pl ],
+                   CONT.HOOK.INDEX.PNG.NUM sg ],
     C-CONT.RELS.LIST.FIRST.ARG0.PNG [ PER 3rd,
                                       NUM pl ] ].
 
@@ -743,7 +743,7 @@ verb-pc100_lrt2_IND_1sg-lex-rule := verb_pc_intrans-lex-rule-super &
                                                                     NUM sg ],
                          HEAD.FORM finite ] ] ].
 
-verb-pc100_lrt3_APP_3sg-lex-rule := verb_pc_intrans-lex-rule-super &
+verb-pc100_lrt3_APP_3Rsg-lex-rule := verb_pc_intrans-lex-rule-super &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.MOOD app,
                    CAT [ VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 3rd,
                                                                     NUM sg ],
@@ -774,7 +774,7 @@ verb-pc100_lrt7_IND_3pl-lex-rule := verb_pc_intrans-lex-rule-super &
                                                                     NUM pl ],
                          HEAD.FORM finite ] ] ].
 
-verb-pc100_lrt8_APP_3pl-lex-rule := verb_pc_intrans-lex-rule-super &
+verb-pc100_lrt8_APP_3Rpl-lex-rule := verb_pc_intrans-lex-rule-super &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.MOOD app,
                    CAT [ VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 3rd,
                                                                     NUM pl ],
@@ -796,12 +796,6 @@ verb-pc100_lrt11_INT_2sg-lex-rule := verb_pc_intrans-lex-rule-super &
 verb-pc100_lrt12_INT_3pl-lex-rule := verb_pc_intrans-lex-rule-super & 
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX [ SF ques,
 				                             E.MOOD int ],
-                   CAT [ VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 3rd,
-                                                                    NUM pl ],
-                         HEAD.FORM finite ] ] ].
-
-verb-pc100_lrt13_APP_3pl-lex-rule := verb_pc_intrans-lex-rule-super &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.MOOD app,
                    CAT [ VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ PER 3rd,
                                                                     NUM pl ],
                          HEAD.FORM finite ] ] ].

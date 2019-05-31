@@ -24,11 +24,12 @@
 ; New test suites here. For example:
 ; ((:path . "new-test-suite") (:content . "New Test Suite: A description of the new test suite located at the subdirectory new-test-suite."))
 ((:path . "corpus") (:content . "IGT provided by the linguist"))
-((:path . "lab3") (:content . "testsutie collected for lab3"))
-((:path . "lab4") (:content . "testsutie collected for lab4 and combined lab3"))
-((:path . "lab5") (:content . "testsutie collected for lab5 and combined lab3, lab4"))
-((:path . "lab6") (:content . "testsutie collected for lab6 and combined lab3, lab4, lab5"))
-((:path . "lab7") (:content . "testsutie collected for lab7 and combined lab3, lab4, lab5, lab6"))
-((:path . "lab8") (:content . "testsutie collected for lab8 and combined lab3, lab4, lab5, lab6, lab7"))
+((:path . "lab3") (:content . "testsuite collected for lab3"))
+((:path . "lab4") (:content . "testsuite collected for lab4 and combined lab3"))
+((:path . "lab5") (:content . "testsuite collected for lab5 and combined lab3, lab4"))
+((:path . "lab6") (:content . "testsuite collected for lab6 and combined lab3, lab4, lab5"))
+((:path . "lab7") (:content . "testsuite collected for lab7 and combined lab3, lab4, lab5, lab6"))
+((:path . "lab8") (:content . "testsuite collected for lab8 and combined lab3, lab4, lab5, lab6, lab7"))
+((:path . "lab9") (:content . "testsuite collected for lab9 and combined lab3, lab4, lab5, lab6, lab7, lab8"))
 )
 

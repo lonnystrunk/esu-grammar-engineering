@@ -21,8 +21,8 @@ Source: a:30-10 author
 Vetted: f
 Judgement: u
 Phenomena: {case}
-angun tai-guq
-man.REL.sg come-IND.3sg
+angute-m tai-guq
+man-REL.sg come-IND.3sg
 `the man is coming'
 
 #Example 3
@@ -39,8 +39,8 @@ Source: a:30-11a author
 Vetted: f
 Judgement: u
 Phenomena: {case}
-angute-m neqa ner-aa
-man-ABS.sg fish.REL.sg eat-IND.3sg.3sg
+angute-m neqe-m ner-aa
+man-REL.sg fish-REL.sg eat-IND.3sg.3sg
 `the man is eating the fish'
 
 #Example 5
@@ -57,7 +57,7 @@ Source: a:30-12a author
 Vetted: f
 Judgement: u
 Phenomena: {case}
-angute-m qimugta neq-mek cikir-aa
+angute-m qimugta neq-mi cikir-aa
 man-ABS.sg dog.REL.sg fish-LOC.sg gave-IND.3sg.3sg
 `the man gave fish to the dog'
 
@@ -148,7 +148,7 @@ Vetted: f
 Judgement: g
 Phenomena: {agreement}
 angute-t yurar-tut
-man-REL.pl dance-IND.3pl
+man-ABS.pl dance-IND.3pl
 `the men are dancing'
 
 #Example 17
@@ -194,7 +194,7 @@ Vetted: s
 Judgement: g
 Phenomena: {adnominal possessives}
 Mayba-m pani-a assik-aa.
-p.n.-REL.sg. Da-ABS.3sg.sg. like-IND.3sg.3sg.
+p.n.-REL.sg daughter-ABS.3sg.sg like-IND.3sg.3sg 
 (1) He likes Mayaq's daughter. (2) Mayaq likes his (another person than Mayaq's) daughter.
 
 #Example 22
@@ -203,7 +203,7 @@ Vetted: f
 Judgement: g
 Phenomena: {adnominal possessives}
 Mayba-m assik-aa pani-a.
-p.n.-REL.sg. like-IND.3sg.3sg. Da-ABS.3sg.sg.
+p.n.-REL.sg like-IND.3sg.3sg daughter-ABS.3sg.sg
 `Mayaq likes his (another person than Mayaq's) daughter.'
 
 #Example 23
@@ -212,7 +212,7 @@ Vetted: f
 Judgement: g
 Phenomena: {negation}
 yura-nrit-uq
-dance-NEG-IND.3sg.
+dance-NEG-IND.3sg
 `he is not dancing'
 
 #Example 24
@@ -229,7 +229,7 @@ Source: b
 Vetted: f
 Judgement: g
 Phenomena: {TAM}
-Akwaugaq nerb-ua
+akwaugaq nerb-ua
 yesterday eat-IND.1sg
 `Yesterday I ate.'
 
@@ -238,7 +238,7 @@ Source: b
 Vetted: f
 Judgement: g
 Phenomena: {TAM}
-Unuaqu ner-ciq-ua
+unuaqu ner-ciq-ua
 tomorrow eat-FUT-IND.1sg
 `Tomorrow I will eat.'
 
@@ -256,8 +256,8 @@ Source: b
 Vetted: f
 Judgement: g
 Phenomena: {TAM}
-Assik-aqa nuliar-ka-qa
-like-IND.3sg.3sg wife-FUT-ABS.1sg.sg
+assik-aqa nuliar-ka-qa
+like-IND.1sg.3sg wife-FUT-ABS.1sg.sg
 `I like my future wife.'
 
 #Example 29
@@ -265,8 +265,8 @@ Source: b
 Vetted: f
 Judgement: g
 Phenomena: {TAM}
-Assik-aqa ui-l-qa
-like-IND.3sg.3sg husband-PST-ABS.1sg.sg
+assik-aqa ui-l-qa
+like-IND.1sg.3sg husband-PST-ABS.1sg.sg
 `I like my past husband.'
 
 #Example 30
@@ -275,7 +275,7 @@ Vetted: f
 Judgement: u
 Phenomena: {negation}
 nrit-yura-uq
-NEG-dance-IND.3sg.
+NEG-dance-IND.3sg
 `he is not dancing'
 
 #Example 31
@@ -284,7 +284,7 @@ Vetted: f
 Judgement: g
 Phenomena: {TAM}
 yurar-tuq ner-luni=llu
-dance-IND.3sg. eat-APP.3Rsg.=and
+dance-IND.3sg eat-APP.3Rsg=and
 `he is dancing and eating'
 
 #Example 32
@@ -293,7 +293,7 @@ Vetted: f
 Judgement: u
 Phenomena: {TAM}
 yurar-tuq nerb-uq=llu
-dance-IND.3sg. eat-IND.3sg.=and
+dance-IND.3sg eat-IND.3sg=and
 `he is dancing and eating'
 
 #Example 33
@@ -302,7 +302,7 @@ Vetted: f
 Judgement: g
 Phenomena: {TAM}
 qia-luni nerb-uq
-cry-APP.3Rsg. eat-IND.3sg.
+cry-APP.3Rsg eat-IND.3sg
 `crying, he is eating'
 
 #Example 34
@@ -311,7 +311,7 @@ Vetted: f
 Judgement: u
 Phenomena: {TAM}
 qia-luni ner-luni
-cry-APP.3Rsg. eat-APP.3Rsg.
+cry-APP.3Rsg eat-APP.3Rsg
 `crying, he is eating'
 
 #Example 35
@@ -320,7 +320,7 @@ Vetted: f
 Judgement: g
 Phenomena: {negation}
 qia-nrit-uq
-cry-NEG-IND.3sg.
+cry-NEG-IND.3sg
 `she is not crying'
 
 #Example 36
@@ -329,7 +329,7 @@ Vetted: f
 Judgement: u
 Phenomena: {negation}
 nrit-qia-uq
-NEG-cry-IND.3sg.
+NEG-cry-IND.3sg
 `she is not crying'
 
 #Example 37
@@ -338,7 +338,7 @@ Vetted: f
 Judgement: g
 Phenomena: {negation}
 assike-nrit-amken
-cry-NEG-IND.1sg.2sg.
+cry-NEG-IND.1sg.2sg
 `I don't like you'
 
 #Example 38
@@ -347,7 +347,7 @@ Vetted: f
 Judgement: u
 Phenomena: {negation}
 nrit-assike-amken
-NEG-cry-IND.1sg.2sg.
+NEG-cry-IND.1sg.2sg
 `I don't like you'
 
 #Example 39
@@ -392,7 +392,7 @@ Vetted: f
 Judgement: g
 Phenomena: {TAM}
 kina tekit-a?
-who.ABS.sg. arrive-INT.3sg
+who.ABS.sg arrive-INT.3sg
 `who has arrived?'
 
 #Example 44
@@ -409,7 +409,7 @@ Source: b
 Vetted: f
 Judgement: u
 Phenomena: {adnominal possessives}
-ui-ma qimugt-iit assik-ai mikelngu-u-t
+ui-ma qimugt-iita assik-ai mikelngu-u-t
 husband-REL.1sg.sg dog-REL.3pl.sg like-IND.3sg.3pl child-EX-ABS.pl
 `my husband's dog likes the children'
 
@@ -420,7 +420,7 @@ Judgement: g
 Phenomena: {clausal complements}
 arna-m tekiy-uci-a nallu-aqa
 woman-REL.sg arrive-VNnm(situation)-ABS.3sg.sg not.know-IND.1sg.3sg
-I do not know that the woman arrived
+`I do not know that the woman arrived'
 
 #Example 47
 Source: b
@@ -527,7 +527,7 @@ Vetted: f
 Judgement: g
 Phenomena: {adnominal possessives}
 assik-aqa nulia-qa
-like-IND.1sg.3sg. wife-ABS.1sg.sg
+like-IND.1sg.3sg wife-ABS.1sg.sg
 `I like my wife'
 
 #Example 59
@@ -536,7 +536,7 @@ Vetted: f
 Judgement: g
 Phenomena: {adnominal possessives}
 assik-aanga nulia-ma
-like-IND.3sg.1sg. wife-REL.1sg.sg
+like-IND.3sg.1sg wife-REL.1sg.sg
 `My wife likes me'
 
 #Example 60
@@ -545,7 +545,7 @@ Vetted: f
 Judgement: g
 Phenomena: {adnominal possessives}
 assik-aa tuntu-an neqa
-like-IND.1sg.3sg. caribou-REL.3sg.sg fish.ABS.sg
+like-IND.3sg.3sg caribou-REL.3sg.sg fish.ABS.sg
 `His caribou likes the fish'
 
 #Example 61
@@ -554,7 +554,7 @@ Vetted: f
 Judgement: g
 Phenomena: {adnominal possessives}
 assik-aa Mayba-m neqa-at
-like-IND.1sg.3sg. p.n.-REL.sg fish-ABS.3pl.sg
+like-IND.3sg.3sg p.n.-REL.sg fish-ABS.3pl.sg
 `Mayaq likes their fish'
 
 #Example 62
@@ -582,7 +582,7 @@ Judgement: g
 Phenomena: {evidentials}
 aya-llini-uq
 go-EVD-IND.3sg
-`he left (on either direct or indirect evidence rather than hearsay)'
+`he left (on either direct or indirect evidence rather than hearsay)'
 
 #Example 65
 Source: b
@@ -689,7 +689,7 @@ Vetted: f
 Judgement: g
 Phenomena: {locative NP predicate}
 arnaq uita-uq ingri-mi
-woman.ABS.sg stay-IND.3sg kayak-LOC.sg
+woman.ABS.sg stay-IND.3sg mountain-LOC.sg
 `the woman is in(on) the mountain'
 
 #Example 77 // separate verb - to stay, to reside, to live
@@ -698,7 +698,7 @@ Vetted: f
 Judgement: g
 Phenomena: {locative NP predicate}
 neqa uita-uq qimugte-mi
-dog.ABS.sg stay-IND.3sg kayak-LOC.sg
+dog.ABS.sg stay-IND.3sg dog-LOC.sg
 `the fish is in the dog'
 
 #Example 78 //compound morpheme
@@ -815,7 +815,7 @@ Vetted: f
 Judgement: g
 Phenomena: {AP predicate}
 qimugta kaig-tuq
-dog-ABS.sg to.be.hungry-IND.3sg
+dog.ABS.sg to.be.hungry-IND.3sg
 `the dog is hungry'
 
 # MMT Translations 1
@@ -905,7 +905,7 @@ Vetted: f
 Judgement: g
 Phenomena: {MMT}
 kuska-t malirq-ait qimugte-t qavar-luteng=llu
-cat-REL.pl chase-IND.3pl dog-ABS.pl sleep-APP.3pl=and
+cat-REL.pl chase-IND.3pl.3pl dog-ABS.pl sleep-APP.3Rpl=and
 `Cats chase dogs and sleep'
 
 # MMT Translations 11
@@ -922,8 +922,8 @@ Source: b
 Vetted: f
 Judgement: g
 Phenomena: {MMT}
-kai-lri-it qimugte-t nerb-ut
-to.be.hungry-VN(one.who).ABS.pl dog-ABS.pl eat-IND.3pl
+kai-lri-i-t qimugte-t nerb-ut
+to.be.hungry-VN(one.who)-EV-ABS.pl dog-ABS.pl eat-IND.3pl
 `Hungry dogs eat'
 
 # MMT Translations 13
@@ -931,8 +931,8 @@ Source: b
 Vetted: f
 Judgement: g
 Phenomena: {MMT}
-qimugte-t nuna-mte-llri-it nerb-ut
-dog-ABS.pl land-be.at(LOC)-IND.3sg eat-IND.3pl
+qimugte-t nuna-mte-llri-i-t nerb-ut
+dog-ABS.pl land-be.at(LOC)-VN(one.who)-EV-ABS.pl eat-IND.3pl
 `Dogs in the park eat'
 
 # MMT Translations 14
@@ -1013,7 +1013,7 @@ Vetted: f
 Judgement: g
 Phenomena: {MMT}
 qimugta qavar-tuq kuskaq qava-rraar-luni
-dog.ABS.sg sleep-IND.3sg cat.ABS.sg sleep-after-APP.3sg
+dog.ABS.sg sleep-IND.3sg cat.ABS.sg sleep-after-APP.3Rsg
 `The dog sleeps after the cat sleeps'
 
 # MMT Translations 23
@@ -1067,7 +1067,7 @@ Vetted: f
 Judgement: g
 Phenomena: {coordination}
 qimugta tuntu-t=llu yurar-tut
-dog-ABS.pl caribou-ABS.pl=and dance-IND.3pl
+dog.ABS.sg caribou-ABS.pl=and dance-IND.3pl
 `the dog and the caribou are dancing'
 
 #Example 93
@@ -1130,7 +1130,7 @@ Vetted: f
 Judgement: g
 Phenomena: {coordination}
 tuntu yurar-tuq qimugta=llu ner-luni
-caribou.ABS.sg dance-IND.3sg dog.ABS.sg=and eat-APP.3sg
+caribou.ABS.sg dance-IND.3sg dog.ABS.sg=and eat-APP.3Rsg
 `the caribou is dancing and the dog is eating'
 
 #Example 100
@@ -1139,7 +1139,7 @@ Vetted: f
 Judgement: g
 Phenomena: {coordination}
 tuntu yurar-tuq ner-luni=llu
-caribou.ABS.sg dance-IND.3sg eat-APP.3sg=and
+caribou.ABS.sg dance-IND.3sg eat-APP.3Rsg=and
 `the caribou is dancing and eating'
 
 #Example 101
@@ -1157,7 +1157,7 @@ Vetted: f
 Judgement: u
 Phenomena: {coordination}
 tuntu yurar-tuq qimugta ner-luni=llu
-caribou.ABS.sg dance-IND.3sg dog.ABS.sg eat-APP.3sg=and
+caribou.ABS.sg dance-IND.3sg dog.ABS.sg eat-APP.3Rsg=and
 `the caribou is dancing and the dog is eating'
 
 #Example 103
@@ -1247,17 +1247,16 @@ Vetted: f
 Judgement: g
 Phenomena: {adnominal possessives}
 assik-aa tuntu-vut
-like-IND.3sg.3sg. tuntu-ABS.1pl.sg
+like-IND.3sg.3sg tuntu-ABS.1pl.sg
 `He likes our caribou'
 
-#Should this be -put or .vut or +put?
 #Example 113
 Source: c
 Vetted: f
 Judgement: g
 Phenomena: {adnominal possessives}
 assik-aa qimugte-vut neqe-m
-like-IND.3sg.3sg. dog-ABS.1pl.sg fish-REL.sg
+like-IND.3sg.3sg dog-ABS.1pl.sg fish-REL.sg
 `The fish likes our dog'
 
 #Example 114
@@ -1266,7 +1265,7 @@ Vetted: f
 Judgement: g
 Phenomena: {adnominal possessives}
 assik-aa nuliar-an qimugta
-like-IND.3sg.3sg. wife-REL.3sg.sg dog.ABS.sg
+like-IND.3sg.3sg wife-REL.3sg.sg dog.ABS.sg
 `His wife likes the dog'
 
 #Example 115
@@ -1275,7 +1274,7 @@ Vetted: f
 Judgement: g
 Phenomena: {adnominal possessives}
 ner-aa Mayba-m neq-ka
-eat-IND.3sg.3sg. p.n.-REL.sg fish-ABS.1sg.sg
+eat-IND.3sg.3sg p.n.-REL.sg fish-ABS.1sg.sg
 `Mayaq is eating my fish'
 
 #Example 116
@@ -1284,7 +1283,7 @@ Vetted: f
 Judgement: u
 Phenomena: {adnominal possessives}
 ner-aa Maybaq neq-ka
-eat-IND.3sg.3sg. p.n.-ABS.sg fish-ABS.1sg.sg
+eat-IND.3sg.3sg p.n.-ABS.sg fish-ABS.1sg.sg
 `Mayaq is eating my fish'
 
 #Example 117
@@ -1302,5 +1301,5 @@ Vetted: f
 Judgement: u
 Phenomena: {adnominal possessives}
 assik-aa qimugte-mta neqe-m
-like-IND.3sg.3sg. dog-REL.1pl.sg fish-REL.sg
+like-IND.3sg.3sg dog-REL.1pl.sg fish-REL.sg
 `Our dog likes fish'
