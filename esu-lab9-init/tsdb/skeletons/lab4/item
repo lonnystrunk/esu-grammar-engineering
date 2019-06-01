@@ -1,0 +1,48 @@
+1@a:30-10@@@1@c,agr@angun tai-guq@@@@1@2@man.ABS.sg come-IND.3sg`the man is coming'@marcus martinez/lonny strunk@april 22, 2019
+2@a:30-10 author@@@1@c@angun tai-guq@@@@0@2@man.REL.sg come-IND.3sg`the man is coming'@marcus martinez/lonny strunk@april 22, 2019
+3@a:30-11a@@@1@c,agr@angute-m neqa ner-aa@@@@1@3@man-REL.sg fish.ABS.sg eat-IND.3sg.3sg`the man is eating the fish'@marcus martinez/lonny strunk@april 22, 2019
+4@a:30-11a author@@@1@c@angute-m neqa ner-aa@@@@0@3@man-ABS.sg fish.REL.sg eat-IND.3sg.3sg`the man is eating the fish'@marcus martinez/lonny strunk@april 22, 2019
+5@a:30-12a@@@1@c,agr@angute-m qimugta neq-mek cikir-aa@@@@1@4@man-REL.sg dog.ABS.sg fish-ABM.sg gave-IND.3sg.3sg`the man gave fish to the dog'@marcus martinez/lonny strunk@april 22, 2019
+6@a:30-12a author@@@1@c@angute-m qimugta neq-mek cikir-aa@@@@0@4@man-ABS.sg dog.REL.sg fish-LOC.sg gave-IND.3sg.3sg`the man gave fish to the dog'@marcus martinez/lonny strunk@april 22, 2019
+7@a:30-53@@@1@pro-d@mikelnguq nerb-uq@@@@1@2@child.ABS.sg eat-IND.3sg`the child is eating'@marcus martinez/lonny strunk@april 22, 2019
+8@a:30-53 author@@@1@pro-d@nerb-uq@@@@1@1@eat-IND.3sg`he is eating'@marcus martinez/lonny strunk@april 22, 2019
+9@a:30-55@@@1@pro-d@mikelngu-u-m ner-aa@@@@1@2@child-EV-REL.sg eat-IND.3sg.3sg`the child is eating it'@marcus martinez/lonny strunk@april 22, 2019
+10@a:30-55 author@@@1@pro-d@ner-aa@@@@1@1@eat-IND.3sg.3sg`he is eating it'@marcus martinez/lonny strunk@april 22, 2019
+11@a:30-57@@@1@pro-d@Mikelnguq nerb-uq neq-mek@@@@1@3@child.ABS.sg eat-IND.3sg fish-ABM.sg`the child is eating fish'@marcus martinez/lonny strunk@april 22, 2019
+12@a:30-52c author@@@1@agr@arna-m neqe-t kenir-ai@@@@1@3@woman-REL.sg fish-ABS.pl cook-IND.3sg.3pl`the woman cooked the fish'@marcus martinez/lonny strunk@april 22, 2019
+13@a:30-52c author@@@1@agr@arna-m neqe-t kenir-aa@@@@0@3@woman-REL.sg fish-ABS.pl cook-IND.3sg.3sg`the woman cooked the fish'@marcus martinez/lonny strunk@april 22, 2019
+14@b:ex1@@@1@agr@angute-t tuntu kenir-aat@@@@1@3@man-REL.pl caribou.ABS.sg cook-IND.3pl.3sg`the men cooked the caribou'@marcus martinez/lonny strunk@april 22, 2019
+15@b:ex1@@@1@agr@angute-t tuntu kenir-aa@@@@0@3@man-REL.pl caribou.ABS.sg cook-IND.3sg.3sg`the men cooked the caribou'@marcus martinez/lonny strunk@april 22, 2019
+16@b:ex8@@@1@agr@angute-t yurar-tut@@@@1@2@man-REL.pl dance-IND.3pl`the men are dancing'@marcus martinez/lonny strunk@april 22, 2019
+17@b:ex8@@@1@agr@angute-t yurar-tuq@@@@0@2@man-ABS.pl dance-IND.3sg`the men are dancing'@marcus martinez/lonny strunk@april 22, 2019
+18@b:ex1@@@1@c@angute-t tuntu kenir-aat@@@@0@3@man-ABS.pl caribou.REL.sg cook-IND.3pl.3sg`the men cooked the caribou'@marcus martinez/lonny strunk@april 22, 2019
+19@b:ex8@@@1@c@angute-t yurar-tut@@@@0@2@man-REL.pl dance-IND.3pl`the men are dancing'@marcus martinez/lonny strunk@april 22, 2019
+20@b:ex1@@@1@pro-d@tuntu kenir-aat@@@@1@2@caribou.ABS.sg cook-IND.3pl.3sg`they cooked the caribou'@marcus martinez/lonny strunk@april 22, 2019
+21@a: 22-7/8@@@1@adnominalpossessives@Mayba-m pani-a assik-aa.@@@@1@3@p.n.-REL.sg. Da-ABS.3sg.sg. like-IND.3sg.3sg.`(1) He likes Mayaq's daughter. (2) Mayaq likes his (another person than Mayaq's) daughter.'@marcus martinez/lonny strunk@april 22, 2019
+22@a: 22-7/8@@@1@adnominalpossessives@Mayba-m assik-aa pani-a.@@@@1@3@p.n.-REL.sg. like-IND.3sg.3sg. Da-ABS.3sg.sg.`Mayaq likes his (another person than Mayaq's) daughter.'@marcus martinez/lonny strunk@april 22, 2019
+23@b@@@1@neg@yura-nrit-uq@@@@1@1@dance-NEG-IND.3sg.`he is not dancing'@marcus martinez/lonny strunk@april 22, 2019
+24@b@@@1@tam@Akwaugaq nere-llru-unga@@@@1@2@yesterday eat-PST-IND.1sg`Yesterday I ate.'@marcus martinez/lonny strunk@april 22, 2019
+25@b@@@1@tam@Akwaugaq nerb-ua@@@@1@2@yesterday eat-IND.1sg`Yesterday I ate.'@marcus martinez/lonny strunk@april 22, 2019
+26@b@@@1@tam@Unuaqu ner-ciq-ua@@@@1@2@tomorrow eat-FUT-IND.1sg`Tomorrow I will eat.'@marcus martinez/lonny strunk@april 22, 2019
+27@b@@@1@tam@Unuaqu nerb-ua@@@@0@2@tomorrow eat-IND.1sg`Tomorrow I will eat.'@marcus martinez/lonny strunk@april 22, 2019
+28@b@@@1@tam@Assik-aqa nuliar-ka-qa@@@@1@2@like-IND.3sg.3sg wife-FUT-ABS.1sg.sg`I like my future wife.'@marcus martinez/lonny strunk@april 22, 2019
+29@b@@@1@tam@Assik-aqa ui-l-qa@@@@1@2@like-IND.3sg.3sg husband-PST-ABS.1sg.sg`I like my past husband.'@marcus martinez/lonny strunk@april 22, 2019
+30@b@@@1@neg@nrit-yura-uq@@@@0@1@NEG-dance-IND.3sg.`he is not dancing'@marcus martinez/lonny strunk@april 22, 2019
+31@b@@@1@tam@yurar-tuq ner-luni=llu@@@@1@2@dance-IND.3sg. eat-APP.3Rsg.=and`he is dancing and eating'@marcus martinez/lonny strunk@april 22, 2019
+32@b@@@1@tam@yurar-tuq nerb-uq=llu@@@@0@2@dance-IND.3sg. eat-IND.3sg.=and`he is dancing and eating'@marcus martinez/lonny strunk@april 22, 2019
+33@b@@@1@tam@qia-luni nerb-uq@@@@1@2@cry-APP.3Rsg. eat-IND.3sg.`crying, he is eating'@marcus martinez/lonny strunk@april 22, 2019
+34@b@@@1@tam@qia-luni ner-luni@@@@0@2@cry-APP.3Rsg. eat-APP.3Rsg.`crying, he is eating'@marcus martinez/lonny strunk@april 22, 2019
+35@b@@@1@neg@qia-nrit-uq@@@@1@1@cry-NEG-IND.3sg.`she is not crying'@marcus martinez/lonny strunk@april 22, 2019
+36@b@@@1@neg@nrit-qia-uq@@@@0@1@NEG-cry-IND.3sg.`she is not crying'@marcus martinez/lonny strunk@april 22, 2019
+37@b@@@1@neg@assike-nrit-amken@@@@1@1@cry-NEG-IND.1sg.2sg.`I don't like you'@marcus martinez/lonny strunk@april 22, 2019
+38@b@@@1@neg@nrit-assike-amken@@@@0@1@NEG-cry-IND.1sg.2sg.`I don't like you'@marcus martinez/lonny strunk@april 22, 2019
+39@b@@@1@adnominalpossessives@assik-aqa nulia-ma tuntu-a@@@@1@3@like-IND.1sg.3sg. wife-REL.1sg.sg caribou-ABS.3sg.sg`I like my wife's caribou'@marcus martinez/lonny strunk@april 22, 2019
+40@b@@@1@adnominalpossessives@assik-aqa nulia-ma tuntu-at@@@@0@3@like-IND.1sg.3sg. wife-REL.1sg.sg caribou-ABS.3pl.sg`I like my wife's caribou'@marcus martinez/lonny strunk@april 22, 2019
+41@b@@@1@tam@ner-i@@@@1@1@eat-OPT.2sg.`you (sg.) eat!'@marcus martinez/lonny strunk@april 22, 2019
+42@a:@@@1@tam@aya-lta@@@@1@1@go-OPT.1pl.`let's go!'@marcus martinez/lonny strunk@april 22, 2019
+43@a:@@@1@tam@ki-na tekit-a?@@@@1@2@who-EX.ABS.sg. arrive-INT.3sg.`who has arrived?'@marcus martinez/lonny strunk@april 22, 2019
+44@b@@@1@adnominalpossessives@ui-ma qimugt-iin assik-ai mikelngu-u-t@@@@1@4@husband-REL.1sg.sg dog-REL.3sg.sg like-IND.3sg.3pl child-EX-ABS.pl`my husband's dog likes the children'@marcus martinez/lonny strunk@april 22, 2019
+45@b@@@1@adnominalpossessives@ui-ma qimugt-iit assik-ai mikelngu-u-t@@@@0@4@husband-REL.1sg.sg dog-REL.3pl.sg like-IND.3sg.3pl child-EX-ABS.pl`my husband's dog likes the children'@marcus martinez/lonny strunk@april 22, 2019
+46@b@@@1@tam@nere-llru-unga@@@@1@1@eat-PST-IND.1sg`I ate.'@marcus martinez/lonny strunk@april 22, 2019
+47@b@@@1@tam@ner-ciq-ua@@@@1@1@eat-FUT-IND.1sg`I will eat.'@marcus martinez/lonny strunk@april 22, 2019
+48@b@@@1@tam@nerb-lar-tua@@@@1@1@eat-CUS-IND.1sg`I regularly eat.'@marcus martinez/lonny strunk@april 22, 2019
