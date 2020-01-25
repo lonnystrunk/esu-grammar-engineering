@@ -29,9 +29,9 @@ Grammar Coverage:
 -Evidentials <br>
 -Locative Noun Phrase Modifiers <br>
 -Locative Noun Phrase Predicates <br>
--Locative Affix Predicates
--Noun Phrase Predicates
--Adjective Phrase Predicates (incomplete)
--Wh-Questions
+-Locative Affix Predicates <br>
+-Noun Phrase Predicates <br>
+-Adjective Phrase Predicates (incomplete) <br>
+-Wh-Questions <br>
 -Coordination
 
