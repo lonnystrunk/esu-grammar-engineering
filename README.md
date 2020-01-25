@@ -17,7 +17,7 @@ esu-lab9 contains the most recent grammar tdl files <br>
 The latest test sentences can be found at data_and_choices/lab9_testsuite_combined.txt <br>
 The latest choices file (unedited tdl exported from the grammar matrix) can be found at data_and_choices/lab7_choices_file_7.t.txt
 
-Grammar Coverage:
+Grammar Coverage: <br>
 -Case <br>
 -Agreement <br>
 -Argument Optionality <br>
