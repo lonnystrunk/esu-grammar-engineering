@@ -15,12 +15,12 @@ Documentation for the matrix - [http://moin.delph-in.net/MatrixDocTop]() <br>
 Documentation for working in the LKB environment - [http://moin.delph-in.net/GrammarEngineeringFaq]() and - [http://moin.delph-in.net/LkbTop]() <br>
 Shortcuts for LKB in emacs - [http://moin.delph-in.net/LkbMode]()
 
-####Latest Relevant Files
+#### Latest Relevant Files
 `esu-lab9` - the most recent grammar tdl files <br>
 `data_and_choices/lab9_testsuite_combined.txt` - the latest test sentences <br>
 `data_and_choices/lab7_choices_file_7.txt` - the latest choices file (unedited tdl exported from the grammar matrix) 
 
-####Grammar Coverage
+#### Grammar Coverage
 -Case <br>
 -Agreement <br>
 -Argument Optionality <br>
